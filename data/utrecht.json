@@ -3,9 +3,13 @@
     "province": "Utrecht",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-06-08T22:54:16+00:00",
+    "generated_at": "2026-06-08T23:22:34+00:00",
     "source": "https://www.stateninformatie.provincie-utrecht.nl",
     "license": "Open data - Provincie Utrecht / Statengriffie",
+    "style": {
+      "accent": "#EC0000",
+      "headerBg": "#1b1b1b"
+    },
     "counts": {
       "moties": 566,
       "parties": 16

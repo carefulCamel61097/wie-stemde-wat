@@ -181,6 +181,8 @@ def main():
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
             "source": BASE,
             "license": "Open data - Provincie Utrecht / Statengriffie",
+            # Province house style (huisstijl) — drives the site theme. Per-province for v2.
+            "style": {"accent": "#EC0000", "headerBg": "#1b1b1b"},
             "counts": {"moties": len(motie_list), "parties": len(columns)},
         },
         "parties": [{"slug": p["slug"], "name": p["name"]} for p in columns],

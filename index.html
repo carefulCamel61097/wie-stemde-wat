@@ -9,20 +9,26 @@
     --voor:#d3f0db; --voor-tx:#14532d;
     --tegen:#ffd5d5; --tegen-tx:#7f1d1d;
     --neutraal:#e9e9ee; --neutraal-tx:#444;
-    --afw:#f7f7f9; --line:#e2e2e8; --ink:#1c1c22; --muted:#6b6b76;
-    --bg:#fafafb; --chip:#eef0f4;
+    --afw:#f6f5f3; --line:#e3e1dc; --ink:#1c1c22; --muted:#6b6b76;
+    --bg:#f4f3f1; --chip:#ecebe7;
+    --accent:#EC0000; --header-bg:#1b1b1b;   /* overridden per province from data.meta.style */
   }
   *{box-sizing:border-box}
   body{margin:0;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
-  header.top{padding:20px 22px 10px}
-  h1{margin:0 0 2px;font-size:22px}
-  .lead{margin:0 0 4px;color:var(--muted)}
-  .src{font-size:12.5px;color:var(--muted)}
-  .src a{color:var(--muted)}
+  a{color:var(--accent)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+
+  header.top{padding:20px 22px 18px;background:var(--header-bg);color:#fff;border-bottom:4px solid var(--accent)}
+  h1{margin:0 0 4px;font-size:23px;letter-spacing:-.01em}
+  h1 .q{color:var(--accent)}
+  .lead{margin:0 0 6px;color:#d7d7db}
+  .src{font-size:12.5px;color:#a9a9b1}
+  .src a{color:#d9d9df;text-decoration:underline}
 
   .controls{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:10px 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}
   .controls label.field{display:flex;flex-direction:column;font-size:11px;color:var(--muted);gap:3px}
   select,input[type=search]{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:#fff}
+  select:focus,input[type=search]:focus{border-color:var(--accent);outline:none}
   input[type=search]{min-width:230px}
 
   .chips{display:flex;gap:6px}
@@ -45,8 +51,8 @@
   .count{margin-left:auto;font-size:12.5px;color:var(--muted)}
 
   .wrap{padding:0 14px 40px}
-  .tbl-title{margin:16px 8px 6px;font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
-  .table-scroll{overflow:auto;max-height:74vh;border:1px solid var(--line);border-radius:10px;background:#fff}
+  .tbl-title{margin:18px 8px 8px;font-size:12.5px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.04em;border-left:3px solid var(--accent);padding-left:8px}
+  .table-scroll{overflow:auto;max-height:74vh;border:1px solid var(--line);border-radius:10px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.06)}
   table{border-collapse:separate;border-spacing:0;width:100%}
   th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:0}
   thead th{position:sticky;top:0;background:#fff;z-index:3;font-size:11.5px;color:var(--muted);font-weight:600;padding:6px 4px;text-align:center;white-space:nowrap}
@@ -83,7 +89,7 @@
 </head>
 <body>
 <header class="top">
-  <h1>Wie stemde wat?</h1>
+  <h1>Wie stemde wat<span class="q">?</span></h1>
   <p class="lead">Stemgedrag per partij in de Provinciale Staten — <b>Voor</b> of <b>Tegen</b> per stemming.</p>
   <p class="src" id="src"></p>
 </header>
@@ -162,8 +168,23 @@ async function init(){
     sort:"date-desc",
     pinned: new Set(JSON.parse(localStorage.getItem(PIN_KEY)||"[]")),
   };
+  // Province house style drives the theme (see data.meta.style).
+  const st = DATA.meta.style || {};
+  if(st.accent)   document.documentElement.style.setProperty("--accent", st.accent);
+  if(st.headerBg) document.documentElement.style.setProperty("--header-bg", st.headerBg);
+
   $("#src").innerHTML = `Bron: <a href="${DATA.meta.source}" target="_blank" rel="noopener">${DATA.meta.body}, provincie ${DATA.meta.province}</a> · open data · periode ${DATA.meta.term} · bijgewerkt ${DATA.meta.generated_at.slice(0,10)}`;
   buildControls(types);
+
+  // Close the party dropdown when clicking outside or pressing Escape.
+  document.addEventListener("click", e => {
+    const d = document.querySelector("details.parties");
+    if(d && d.open && !d.contains(e.target)) d.open = false;
+  });
+  document.addEventListener("keydown", e => {
+    if(e.key === "Escape"){ const d = document.querySelector("details.parties"); if(d) d.open = false; }
+  });
+
   render();
 }
 
