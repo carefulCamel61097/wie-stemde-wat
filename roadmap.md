@@ -56,12 +56,12 @@ votes: { "<party>": { agree, disagree, abstain } }   # absent party => key missi
    → First run: **566 stemmingen, 16 partijen** (motie 320, amendement 179, besluit 65,
      ordevoorstel 2), bereik 2023-05-31 .. 2026-06-03.
 
-### Phase 2 — Frontend (one view first)
-7. Static page: pick province → load `data/<province>.json`.
-8. View 1: moties = rows, parties = cols; V green / T red / - grey / blank afwezig;
-   tooltip shows raw counts. Sticky header row+col.
-9. Add: filter by type/date/party, search; **deselect moties**; **transpose / party-compare**
-   view (parties = rows). (can be incremental)
+### Phase 2 — Frontend  ✅ DONE (`index.html` at repo root)
+Served from repo root (GitHub Pages "deploy from branch" only allows root or /docs), loads
+`data/utrecht.json`. Implements the locked v1 feature set: province selector, type chips,
+party show/hide, search, pin + show-only-pinned, sort, result filter, "alleen omstreden",
+raw-numbers toggle, split-vote markers, legend, source links, sticky header + first column.
+Vanilla JS/CSS, no dependencies. `.nojekyll` added. Transpose/party-compare view = parked v1.1.
 
 ### Phase 3 — More vendors + publish + automate
 10. Add iBabs and Notubiz adapters → more provinces, same schema.
