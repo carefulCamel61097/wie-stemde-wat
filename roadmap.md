@@ -91,9 +91,18 @@ Cell display (LOCKED):
 - **blank** light-grey = afwezig (party absent for that stemming → not in its data)
 - small marker (•) on V/T when the fractie was **not unanimous** (split vote)
 
-Parked for later (v1.1 / v2 — data already supports these):
-- Transpose / party-compare view (parties as rows). Shareable URL encoding filter state.
-  CSV download. Per-party voor/tegen summary stats. Member-level detail (privacy: later).
+Extra views (data already supports these):
+- ✅ **Party-agreement matrix** (popup) — parties × parties heatmap, % of stemmingen where
+  each pair voted the same. DONE.
+- ❌ **Transpose view (moties as columns)** — DROPPED: motie titles are too long to be
+  column headers; a single-party view is already possible by deselecting all but one party.
+- ⏳ **Party profile** (popup, planned) — % on the winning side, totals voor/tegen,
+  lone-dissenter list. Likely opened by clicking a party.
+- ⏳ **"Waar verschillen X en Y"** (planned) — moties where two parties voted oppositely;
+  natural to open from a matrix cell click.
+
+Parked (v1.1 / v2):
+- Shareable URL encoding filter state. CSV download. Member-level detail (privacy: later).
 - Multi-province (iBabs + Notubiz adapters). Other bodies (Tweede Kamer, etc.).
 
 ## Decisions
