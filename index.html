@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wie stemde wat? — Provinciale Staten</title>
+<style>
+  :root{
+    --voor:#d3f0db; --voor-tx:#14532d;
+    --tegen:#ffd5d5; --tegen-tx:#7f1d1d;
+    --neutraal:#e9e9ee; --neutraal-tx:#444;
+    --afw:#f7f7f9; --line:#e2e2e8; --ink:#1c1c22; --muted:#6b6b76;
+    --bg:#fafafb; --chip:#eef0f4;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+  header.top{padding:20px 22px 10px}
+  h1{margin:0 0 2px;font-size:22px}
+  .lead{margin:0 0 4px;color:var(--muted)}
+  .src{font-size:12.5px;color:var(--muted)}
+  .src a{color:var(--muted)}
+
+  .controls{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:10px 22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}
+  .controls label.field{display:flex;flex-direction:column;font-size:11px;color:var(--muted);gap:3px}
+  select,input[type=search]{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:#fff}
+  input[type=search]{min-width:230px}
+
+  .chips{display:flex;gap:6px}
+  .chip{cursor:pointer;border:1px solid var(--line);background:var(--chip);border-radius:999px;padding:5px 11px;font-size:13px;user-select:none}
+  .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  details.parties{position:relative}
+  details.parties>summary{cursor:pointer;list-style:none;border:1px solid var(--line);background:#fff;border-radius:7px;padding:6px 10px;font-size:13px}
+  details.parties>summary::-webkit-details-marker{display:none}
+  .ppanel{position:absolute;z-index:20;margin-top:6px;background:#fff;border:1px solid var(--line);border-radius:9px;box-shadow:0 8px 24px rgba(0,0,0,.12);padding:10px;width:230px;max-height:320px;overflow:auto}
+  .ppanel .pp-actions{display:flex;gap:8px;margin-bottom:8px}
+  .ppanel .pp-actions button{font:inherit;font-size:12px;border:1px solid var(--line);background:#fff;border-radius:6px;padding:3px 8px;cursor:pointer}
+  .ppanel label{display:flex;gap:7px;align-items:center;padding:3px 2px;font-size:13.5px;cursor:pointer}
+
+  .toggles{display:flex;gap:14px;flex-wrap:wrap}
+  .toggles label{display:flex;gap:6px;align-items:center;font-size:13px;cursor:pointer}
+
+  .legend{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;padding:8px 22px;font-size:12.5px;color:var(--muted)}
+  .legend .sw{display:inline-block;width:18px;height:18px;border-radius:4px;text-align:center;line-height:18px;font-weight:700;font-size:12px;vertical-align:middle;margin-right:4px}
+  .count{margin-left:auto;font-size:12.5px;color:var(--muted)}
+
+  .wrap{padding:0 14px 40px}
+  .tbl-title{margin:16px 8px 6px;font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .table-scroll{overflow:auto;max-height:74vh;border:1px solid var(--line);border-radius:10px;background:#fff}
+  table{border-collapse:separate;border-spacing:0;width:100%}
+  th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:0}
+  thead th{position:sticky;top:0;background:#fff;z-index:3;font-size:11.5px;color:var(--muted);font-weight:600;padding:6px 4px;text-align:center;white-space:nowrap}
+  th.onderwerp-h{left:0;z-index:5;text-align:left;padding-left:10px;min-width:300px}
+  thead th[title]{cursor:help}
+
+  td.onderwerp{position:sticky;left:0;background:#fff;z-index:2;min-width:300px;max-width:440px;padding:7px 10px 7px 8px;vertical-align:top}
+  tr:hover td.onderwerp{background:#fbfbfd}
+  .ond-row{display:flex;gap:7px;align-items:flex-start}
+  button.pin{border:none;background:none;cursor:pointer;font-size:15px;line-height:1;filter:grayscale(1) opacity(.45);padding:1px 2px}
+  button.pin.on{filter:none}
+  .titel{font-size:13.7px}
+  .titel a.ext{text-decoration:none;color:var(--muted);font-size:12px;margin-left:3px}
+  .meta{margin-top:3px;font-size:11.5px;color:var(--muted);display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+  .type{font-size:10.5px;padding:1px 6px;border-radius:999px;font-weight:600;text-transform:capitalize}
+  .t-motie{background:#e3eefe;color:#1e40af}
+  .t-amendement{background:#fdeede;color:#9a4d00}
+  .t-besluit{background:#e8e6fb;color:#4c3fb5}
+  .t-ordevoorstel{background:#eef0f4;color:#555}
+  .res{font-weight:600}
+  .r-accepted{color:#15803d}.r-rejected{color:#b91c1c}
+
+  td.cell{width:42px;min-width:42px;text-align:center;font-weight:700;font-size:13px;position:relative}
+  td.voor{background:var(--voor);color:var(--voor-tx)}
+  td.tegen{background:var(--tegen);color:var(--tegen-tx)}
+  td.neutraal{background:var(--neutraal);color:var(--neutraal-tx)}
+  td.afw{background:var(--afw)}
+  td.cell.split::after{content:"";position:absolute;top:3px;right:3px;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.7}
+  td.cell.raw{font-size:11px;font-weight:600}
+
+  .empty{padding:30px;text-align:center;color:var(--muted)}
+  @media (max-width:640px){ th.onderwerp-h,td.onderwerp{min-width:200px;max-width:240px} input[type=search]{min-width:150px} }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Wie stemde wat?</h1>
+  <p class="lead">Stemgedrag per partij in de Provinciale Staten — <b>Voor</b> of <b>Tegen</b> per stemming.</p>
+  <p class="src" id="src"></p>
+</header>
+
+<div class="controls">
+  <label class="field">Provincie
+    <select id="province"><option value="utrecht">Utrecht</option></select>
+  </label>
+  <label class="field">Zoek
+    <input type="search" id="search" placeholder="Zoek op onderwerp of indiener…">
+  </label>
+  <label class="field">Type
+    <span class="chips" id="typeChips"></span>
+  </label>
+  <label class="field">Partijen
+    <details class="parties"><summary id="psummary">Alle partijen</summary>
+      <div class="ppanel">
+        <div class="pp-actions"><button id="pAll">Alle</button><button id="pNone">Geen</button></div>
+        <div id="pList"></div>
+      </div>
+    </details>
+  </label>
+  <label class="field">Uitslag
+    <select id="result">
+      <option value="all">Alle</option>
+      <option value="accepted">Aangenomen</option>
+      <option value="rejected">Verworpen</option>
+    </select>
+  </label>
+  <label class="field">Sorteer
+    <select id="sort">
+      <option value="date-desc">Nieuwste eerst</option>
+      <option value="date-asc">Oudste eerst</option>
+      <option value="result">Op uitslag</option>
+    </select>
+  </label>
+  <div class="toggles">
+    <label><input type="checkbox" id="controversial"> Alleen omstreden</label>
+    <label><input type="checkbox" id="onlyPinned"> Alleen vastgepind</label>
+    <label><input type="checkbox" id="raw"> Ruwe getallen</label>
+  </div>
+</div>
+
+<div class="legend">
+  <span><span class="sw voor">V</span>Voor</span>
+  <span><span class="sw tegen">T</span>Tegen</span>
+  <span><span class="sw neutraal">O</span>Onthouden / staken</span>
+  <span><span class="sw afw">&nbsp;</span>Afwezig</span>
+  <span><span class="sw voor split" style="position:relative">V</span>• = fractie niet unaniem</span>
+  <span class="count" id="count"></span>
+</div>
+
+<div class="wrap">
+  <div id="pinnedBlock"></div>
+  <div id="mainBlock"></div>
+</div>
+
+<script>
+const PIN_KEY = "wsw_pinned_utrecht";
+const ABBR = {bbb:"BBB",groenlinks:"GL",vvd:"VVD",d66:"D66",utrechtnu:"U!",cda:"CDA",
+  pvda:"PvdA","partij-voor-de-dieren":"PvdD",christenunie:"CU",volt:"Volt",ja21:"JA21",
+  pvv:"PVV",sgp:"SGP",sp:"SP","forum-voor-democratie":"FvD","50plus":"50+"};
+const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel"};
+
+let DATA, state;
+const $ = s => document.querySelector(s);
+const esc = s => (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+async function init(){
+  DATA = await (await fetch("data/utrecht.json")).json();
+  const types = [...new Set(DATA.moties.map(m=>m.type))];
+  state = {
+    types: new Set(types),
+    parties: new Set(DATA.parties.map(p=>p.slug)),
+    search:"", result:"all", controversial:false, onlyPinned:false, raw:false,
+    sort:"date-desc",
+    pinned: new Set(JSON.parse(localStorage.getItem(PIN_KEY)||"[]")),
+  };
+  $("#src").innerHTML = `Bron: <a href="${DATA.meta.source}" target="_blank" rel="noopener">${DATA.meta.body}, provincie ${DATA.meta.province}</a> · open data · periode ${DATA.meta.term} · bijgewerkt ${DATA.meta.generated_at.slice(0,10)}`;
+  buildControls(types);
+  render();
+}
+
+function buildControls(types){
+  // type chips
+  $("#typeChips").innerHTML = types.map(t=>`<span class="chip on" data-type="${t}">${TYPE_LABEL[t]||t}</span>`).join("");
+  $("#typeChips").onclick = e => {
+    const c = e.target.closest(".chip"); if(!c) return;
+    const t = c.dataset.type;
+    state.types.has(t) ? state.types.delete(t) : state.types.add(t);
+    c.classList.toggle("on"); render();
+  };
+  // party checkboxes
+  $("#pList").innerHTML = DATA.parties.map(p=>
+    `<label><input type="checkbox" data-slug="${p.slug}" checked> ${esc(p.name)}</label>`).join("");
+  $("#pList").onchange = e => {
+    const s = e.target.dataset.slug;
+    e.target.checked ? state.parties.add(s) : state.parties.delete(s);
+    updatePartySummary(); render();
+  };
+  $("#pAll").onclick = ()=>{ DATA.parties.forEach(p=>state.parties.add(p.slug)); $("#pList").querySelectorAll("input").forEach(i=>i.checked=true); updatePartySummary(); render(); };
+  $("#pNone").onclick = ()=>{ state.parties.clear(); $("#pList").querySelectorAll("input").forEach(i=>i.checked=false); updatePartySummary(); render(); };
+
+  $("#search").oninput = e => { state.search = e.target.value.toLowerCase().trim(); render(); };
+  $("#result").onchange = e => { state.result = e.target.value; render(); };
+  $("#sort").onchange = e => { state.sort = e.target.value; render(); };
+  $("#controversial").onchange = e => { state.controversial = e.target.checked; render(); };
+  $("#onlyPinned").onchange = e => { state.onlyPinned = e.target.checked; render(); };
+  $("#raw").onchange = e => { state.raw = e.target.checked; render(); };
+}
+
+function updatePartySummary(){
+  const n = state.parties.size, total = DATA.parties.length;
+  $("#psummary").textContent = n===total ? "Alle partijen" : (n===0 ? "Geen partijen" : `${n} van ${total} partijen`);
+}
+
+function visibleParties(){ return DATA.parties.filter(p=>state.parties.has(p.slug)); }
+
+function cellVerdict(v){ // returns {cls,label} or null for afwezig
+  if(!v) return null;
+  if(v.agree>v.disagree) return {cls:"voor",label:"V"};
+  if(v.disagree>v.agree) return {cls:"tegen",label:"T"};
+  return {cls:"neutraal",label:"O"};
+}
+function isControversial(m){
+  let hasV=false,hasT=false;
+  for(const p of visibleParties()){
+    const r = cellVerdict(m.votes[p.slug]); if(!r) continue;
+    if(r.label==="V") hasV=true; else if(r.label==="T") hasT=true;
+    if(hasV&&hasT) return true;
+  }
+  return false;
+}
+function passes(m){
+  if(!state.types.has(m.type)) return false;
+  if(state.result!=="all" && m.result!==state.result) return false;
+  if(state.search && !m.title.toLowerCase().includes(state.search)) return false;
+  if(state.controversial && !isControversial(m)) return false;
+  return true;
+}
+function sortRows(rows){
+  const c = {
+    "date-desc": (a,b)=> b.date.localeCompare(a.date) || a.title.localeCompare(b.title),
+    "date-asc":  (a,b)=> a.date.localeCompare(b.date) || a.title.localeCompare(b.title),
+    "result":    (a,b)=> (a.result||"").localeCompare(b.result||"") || b.date.localeCompare(a.date),
+  }[state.sort];
+  return rows.sort(c);
+}
+
+function cellHTML(m, slug, name){
+  const v = m.votes[slug];
+  const r = cellVerdict(v);
+  if(!r) return `<td class="cell afw" title="${esc(name)}: afwezig"></td>`;
+  const split = v.agree>0 && v.disagree>0;
+  const disp = state.raw ? `${v.agree}-${v.disagree}` : r.label;
+  const tip = `${name}: ${v.agree} voor, ${v.disagree} tegen` + (v.abstain?`, ${v.abstain} onthouden`:"") + (split?" (niet unaniem)":"");
+  return `<td class="cell ${r.cls}${split&&!state.raw?" split":""}${state.raw?" raw":""}" title="${esc(tip)}">${disp}</td>`;
+}
+function rowHTML(m, vps){
+  const pinned = state.pinned.has(m.id);
+  const ext = m.source ? `<a class="ext" href="${m.source}" target="_blank" rel="noopener" title="Bekijk op stateninformatie">&#8599;</a>` : "";
+  const res = m.resultLabel ? `<span class="res r-${m.result}">${esc(m.resultLabel)}</span>` : "";
+  const first = `<td class="onderwerp"><div class="ond-row">
+      <button class="pin${pinned?" on":""}" data-id="${m.id}" title="${pinned?"Losmaken":"Vastpinnen"}">&#128204;</button>
+      <div><div class="titel">${esc(m.title)}${ext}</div>
+      <div class="meta"><span>${m.date}</span><span class="type t-${m.type}">${TYPE_LABEL[m.type]||m.type}</span>${res}</div></div>
+    </div></td>`;
+  return `<tr>${first}${vps.map(p=>cellHTML(m,p.slug,p.name)).join("")}</tr>`;
+}
+function tableHTML(rows, vps){
+  if(!rows.length) return `<div class="empty">Geen stemmingen voor deze selectie.</div>`;
+  const head = `<thead><tr><th class="onderwerp-h">Onderwerp · datum · type · uitslag</th>${
+    vps.map(p=>`<th title="${esc(p.name)}">${ABBR[p.slug]||p.name}</th>`).join("")}</tr></thead>`;
+  return `<div class="table-scroll"><table>${head}<tbody>${rows.map(m=>rowHTML(m,vps)).join("")}</tbody></table></div>`;
+}
+
+function render(){
+  const vps = visibleParties();
+  const all = DATA.moties.filter(passes);
+  const pinnedRows = sortRows(DATA.moties.filter(m=>state.pinned.has(m.id)));
+  const mainRows = state.onlyPinned ? [] : sortRows(all.filter(m=>!state.pinned.has(m.id)));
+
+  $("#pinnedBlock").innerHTML = pinnedRows.length
+    ? `<div class="tbl-title">&#128204; Vastgepind (${pinnedRows.length})</div>${tableHTML(pinnedRows, vps)}`
+    : "";
+  $("#mainBlock").innerHTML = state.onlyPinned
+    ? (pinnedRows.length?"":`<div class="empty">Nog niets vastgepind.</div>`)
+    : `<div class="tbl-title">Alle stemmingen</div>${tableHTML(mainRows, vps)}`;
+
+  const shown = (state.onlyPinned?pinnedRows.length:mainRows.length+pinnedRows.length);
+  $("#count").textContent = `${shown} van ${DATA.moties.length} stemmingen · ${vps.length} partijen`;
+
+  document.querySelectorAll("button.pin").forEach(b=>{
+    b.onclick = ()=>{
+      const id = +b.dataset.id;
+      state.pinned.has(id) ? state.pinned.delete(id) : state.pinned.add(id);
+      localStorage.setItem(PIN_KEY, JSON.stringify([...state.pinned]));
+      render();
+    };
+  });
+}
+
+init().catch(e => { document.querySelector(".wrap").innerHTML = `<div class="empty">Kon data niet laden: ${esc(""+e)}<br><small>Draai lokaal met een server (zie README).</small></div>`; });
+</script>
+</body>
+</html>

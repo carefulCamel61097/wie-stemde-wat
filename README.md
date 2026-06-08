@@ -1,5 +1,7 @@
 # Wie stemde wat?
 
+**▶ Live: https://carefulcamel61097.github.io/wie-stemde-wat/**
+
 > Ik wil zien wie wat gestemd heeft in de provinciale staten.
 
 Een overzicht van het **stemgedrag per partij** op moties, amendementen en besluiten in de
@@ -29,8 +31,11 @@ Technische details en de teruggevonden endpoints: [data-sources.md](data-sources
 ## Lokaal draaien
 
 ```bash
-python collector/collect.py      # schrijft data/utrecht.json (alleen stdlib, geen install)
+python collector/collect.py      # ververs data/utrecht.json (alleen stdlib, geen install)
+python -m http.server 8000       # bekijk de site op http://localhost:8000
 ```
+> De site moet via een server bekeken worden (niet `index.html` dubbelklikken): browsers
+> blokkeren `fetch` van het databestand bij openen via `file://`.
 
 ## Documentatie
 - [context.md](context.md) — doel, visie en scope
