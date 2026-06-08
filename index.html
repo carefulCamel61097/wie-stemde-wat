@@ -6,10 +6,10 @@
 <title>Wie stemde wat? — Provinciale Staten</title>
 <style>
   :root{
-    --voor:#d3f0db; --voor-tx:#14532d;
-    --tegen:#ffd5d5; --tegen-tx:#7f1d1d;
-    --neutraal:#e9e9ee; --neutraal-tx:#444;
-    --afw:#f0eeea; --line:#e3e1dc; --ink:#1c1c22; --muted:#6b6b76;
+    --voor:#8fd3a6; --voor-tx:#0a3a20;
+    --tegen:#f59a9a; --tegen-tx:#6d1414;
+    --neutraal:#d7d4cd; --neutraal-tx:#444;
+    --afw:#eceae5; --line:#e3e1dc; --row-line:#cdc9c0; --ink:#1c1c22; --muted:#6b6b76;
     --bg:#efece7; --chip:#e7e5df;
     --surface:#fbf9f6; --surface-2:#f1eee8;   /* off-white cards / header row (no pure white) */
     --accent:#EC0000; --header-bg:#1b1b1b;   /* overridden per province from data.meta.style */
@@ -28,20 +28,36 @@
 
   .controls{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:10px 22px;border-bottom:1px solid var(--line);background:var(--surface-2);position:sticky;top:0;z-index:10}
   .controls label.field{display:flex;flex-direction:column;font-size:11px;color:var(--muted);gap:3px}
-  select,input[type=search]{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:7px;background:#fff}
-  select:focus,input[type=search]:focus{border-color:var(--accent);outline:none}
+  select,input[type=search],details.parties>summary{
+    font:inherit;font-size:13.5px;color:var(--ink);
+    border:1px solid var(--line);border-radius:9px;background:#fff;
+    padding:7px 11px;box-shadow:0 1px 2px rgba(0,0,0,.04);
+    transition:border-color .12s,box-shadow .12s}
+  select{appearance:none;-webkit-appearance:none;padding-right:30px;cursor:pointer;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M2 4l4 4 4-4' fill='none' stroke='%236b6b76' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat:no-repeat;background-position:right 10px center}
   input[type=search]{min-width:230px}
+  select:focus,input[type=search]:focus,details.parties>summary:focus-visible{
+    border-color:var(--accent);outline:none;
+    box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent)}
+  input[type=checkbox]{accent-color:var(--accent);width:16px;height:16px;cursor:pointer}
 
   .chips{display:flex;gap:6px}
-  .chip{cursor:pointer;border:1px solid var(--line);background:var(--chip);border-radius:999px;padding:5px 11px;font-size:13px;user-select:none}
+  .chip{cursor:pointer;border:1px solid var(--line);background:var(--chip);border-radius:999px;padding:6px 12px;font-size:13px;user-select:none;transition:.12s}
+  .chip:hover{border-color:var(--accent)}
   .chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .chip.on:hover{filter:brightness(1.07)}
 
   details.parties{position:relative}
-  details.parties>summary{cursor:pointer;list-style:none;border:1px solid var(--line);background:#fff;border-radius:7px;padding:6px 10px;font-size:13px}
+  details.parties>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px}
   details.parties>summary::-webkit-details-marker{display:none}
+  details.parties>summary::after{content:"";width:11px;height:11px;flex:none;transition:transform .15s;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M2 4l4 4 4-4' fill='none' stroke='%236b6b76' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/contain no-repeat}
+  details.parties[open]>summary::after{transform:rotate(180deg)}
   .ppanel{position:absolute;z-index:20;margin-top:6px;background:var(--surface);border:1px solid var(--line);border-radius:9px;box-shadow:0 8px 24px rgba(0,0,0,.12);padding:10px;width:230px;max-height:320px;overflow:auto}
   .ppanel .pp-actions{display:flex;gap:8px;margin-bottom:8px}
-  .ppanel .pp-actions button{font:inherit;font-size:12px;border:1px solid var(--line);background:#fff;border-radius:6px;padding:3px 8px;cursor:pointer}
+  .ppanel .pp-actions button{font:inherit;font-size:12px;border:1px solid var(--line);background:#fff;border-radius:7px;padding:4px 10px;cursor:pointer;transition:.12s}
+  .ppanel .pp-actions button:hover{border-color:var(--accent);color:var(--accent);background:color-mix(in srgb,var(--accent) 7%,#fff)}
   .ppanel label{display:flex;gap:7px;align-items:center;padding:3px 2px;font-size:13.5px;cursor:pointer}
 
   .toggles{display:flex;gap:14px;flex-wrap:wrap}
@@ -56,6 +72,7 @@
   .table-scroll{overflow:auto;max-height:74vh;border:1px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.06)}
   table{border-collapse:separate;border-spacing:0;width:100%}
   th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:0}
+  tbody td{border-bottom:1px solid var(--row-line)}
   thead th{position:sticky;top:0;background:var(--surface-2);z-index:3;font-size:11.5px;color:var(--ink);font-weight:600;padding:6px 4px;text-align:center;white-space:nowrap;border-bottom:2px solid var(--accent)}
   th.onderwerp-h{left:0;z-index:5;text-align:left;padding-left:10px;min-width:300px}
   thead th[title]{cursor:help}
