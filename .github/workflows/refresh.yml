@@ -1,0 +1,35 @@
+name: Refresh voting data
+
+# Wekelijks de stemdata verversen + handmatig te starten.
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # elke maandag 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run collector
+        run: python collector/collect.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/utrecht.json
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            git commit -m "chore: refresh voting data"
+            git push
+          fi
