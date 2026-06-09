@@ -134,6 +134,24 @@
   .matrix-controls .mc-label{font-size:11.5px;color:var(--muted);font-weight:600}
   .matrix-legend{display:flex;align-items:center;gap:9px;margin-top:14px;font-size:12px;color:var(--muted)}
   .matrix-legend .bar{height:12px;width:170px;border-radius:6px;background:linear-gradient(90deg,hsl(0,70%,72%),hsl(67,70%,72%),hsl(135,70%,72%))}
+
+  .actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .modal-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:4px 0 16px}
+  .modal-controls .field{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+  .stat-grid{display:flex;flex-wrap:wrap;gap:10px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 14px;min-width:92px}
+  .stat .num{font-size:22px;font-weight:700;line-height:1.1}
+  .stat .lab{font-size:11px;color:var(--muted);margin-top:2px}
+  .stat.primary{border-color:var(--accent)} .stat.primary .num{color:var(--accent)}
+  .vbadge{display:inline-block;min-width:22px;padding:1px 6px;border-radius:5px;font-weight:700;font-size:12px;text-align:center}
+  .vbadge.voor{background:var(--voor);color:var(--voor-tx)} .vbadge.tegen{background:var(--tegen);color:var(--tegen-tx)} .vbadge.neutraal{background:var(--neutraal);color:var(--neutraal-tx)}
+  .scrollbox{max-height:52vh;overflow:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+  table.list{border-collapse:collapse;width:100%;font-size:13px}
+  table.list th,table.list td{text-align:left;padding:6px 9px;border-bottom:1px solid var(--row-line);vertical-align:top}
+  table.list th{font-size:11px;color:var(--muted);font-weight:600;position:sticky;top:0;background:var(--surface-2);white-space:nowrap}
+  table.list td:first-child{white-space:nowrap;color:var(--muted)}
+  .cmp-summary{margin:0 0 12px;font-size:13.5px}
+  h3.section{margin:16px 0 7px;font-size:14px}
 </style>
 </head>
 <body>
@@ -180,7 +198,11 @@
     <label><input type="checkbox" id="onlyPinned"> Alleen vastgepind</label>
     <label><input type="checkbox" id="raw"> Ruwe getallen</label>
   </div>
-  <button id="matrixBtn" class="bigbtn">&#128202; Partij-overeenkomst</button>
+  <div class="actions">
+    <button id="matrixBtn" class="bigbtn">&#128202; Overeenkomst</button>
+    <button id="profileBtn" class="bigbtn">&#128100; Partijprofiel</button>
+    <button id="compareBtn" class="bigbtn">&#8646; Vergelijken</button>
+  </div>
 </div>
 
 <div class="legend">
@@ -200,13 +222,38 @@
 <div class="modal" id="matrixModal" hidden>
   <div class="modal-card">
     <div class="modal-head"><h2>&#128202; Partij-overeenkomst</h2>
-      <button class="modal-close" id="matrixClose" title="Sluiten">&times;</button></div>
+      <button class="modal-close" data-close="matrixModal" title="Sluiten">&times;</button></div>
     <p class="modal-sub">Percentage van de stemmingen waarin twee partijen hetzelfde stemden
       (voor / tegen / onthouden), over stemmingen waarbij beide aanwezig waren. Partijen die
       vaak hetzelfde stemmen staan bij elkaar.</p>
     <div class="matrix-controls"><span class="mc-label">Tel mee:</span><span class="chips" id="matrixTypes"></span></div>
     <div id="matrixBody"></div>
     <div class="matrix-legend"><span>weinig overeenkomst</span><span class="bar"></span><span>veel overeenkomst</span></div>
+  </div>
+</div>
+
+<div class="modal" id="profileModal" hidden>
+  <div class="modal-card">
+    <div class="modal-head"><h2>&#128100; Partijprofiel</h2>
+      <button class="modal-close" data-close="profileModal" title="Sluiten">&times;</button></div>
+    <div class="modal-controls">
+      <label class="field">Partij: <select id="profileParty"></select></label>
+      <span class="mc-label">Tel mee:</span><span class="chips" id="profileTypes"></span>
+    </div>
+    <div id="profileBody"></div>
+  </div>
+</div>
+
+<div class="modal" id="compareModal" hidden>
+  <div class="modal-card">
+    <div class="modal-head"><h2>&#8646; Vergelijk partijen</h2>
+      <button class="modal-close" data-close="compareModal" title="Sluiten">&times;</button></div>
+    <div class="modal-controls">
+      <label class="field">Partij A: <select id="cmpA"></select></label>
+      <label class="field">Partij B: <select id="cmpB"></select></label>
+      <span class="mc-label">Tel mee:</span><span class="chips" id="compareTypes"></span>
+    </div>
+    <div id="compareBody"></div>
   </div>
 </div>
 
@@ -217,7 +264,7 @@ const ABBR = {bbb:"BBB",groenlinks:"GL",vvd:"VVD",d66:"D66",utrechtnu:"U!",cda:"
   pvv:"PVV",sgp:"SGP",sp:"SP","forum-voor-democratie":"FvD","50plus":"50+"};
 const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel"};
 
-let DATA, state, AG = null, ORDER = null, ALLTYPES = null, MTYPES = null;
+let DATA, state, AG = null, ORDER = null, ALLTYPES = null, MTYPES = null, PTYPES = null, CTYPES = null;
 const $ = s => document.querySelector(s);
 const esc = s => (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
@@ -248,32 +295,37 @@ async function init(){
   document.addEventListener("keydown", e => {
     if(e.key === "Escape"){
       const d = document.querySelector("details.parties"); if(d) d.open = false;
-      $("#matrixModal").hidden = true;
+      document.querySelectorAll(".modal").forEach(mo => mo.hidden = true);
     }
   });
 
-  // Party-agreement matrix popup
+  // View popups
   $("#matrixBtn").onclick = () => {
-    if(!MTYPES){ MTYPES = new Set(ALLTYPES); buildMatrixChips(); }
+    if(!MTYPES) MTYPES = new Set(ALLTYPES);
+    typeChips($("#matrixTypes"), MTYPES, refreshMatrix);
     refreshMatrix();
     $("#matrixModal").hidden = false;
   };
-  $("#matrixClose").onclick = () => $("#matrixModal").hidden = true;
-  $("#matrixModal").onclick = e => { if(e.target.id === "matrixModal") $("#matrixModal").hidden = true; };
+  $("#profileBtn").onclick = openProfile;
+  $("#compareBtn").onclick = openCompare;
+  document.querySelectorAll(".modal").forEach(mo => mo.addEventListener("click", e => { if(e.target === mo) mo.hidden = true; }));
+  document.querySelectorAll("[data-close]").forEach(btn => btn.onclick = () => { document.getElementById(btn.dataset.close).hidden = true; });
 
   render();
 }
 
-function buildMatrixChips(){
-  const el = $("#matrixTypes");
-  el.innerHTML = ALLTYPES.map(t => `<span class="chip${MTYPES.has(t)?" on":""}" data-type="${t}">${TYPE_LABEL[t]||t}</span>`).join("");
+// Shared type-filter chips for the popups.
+function typeChips(el, set, cb){
+  el.innerHTML = ALLTYPES.map(t => `<span class="chip${set.has(t)?" on":""}" data-type="${t}">${TYPE_LABEL[t]||t}</span>`).join("");
   el.onclick = e => {
     const c = e.target.closest(".chip"); if(!c) return;
     const t = c.dataset.type;
-    if(MTYPES.has(t)){ if(MTYPES.size === 1) return; MTYPES.delete(t); } else MTYPES.add(t);
-    c.classList.toggle("on"); refreshMatrix();
+    if(set.has(t)){ if(set.size === 1) return; set.delete(t); } else set.add(t);
+    c.classList.toggle("on"); cb();
   };
 }
+const pName = slug => { const p = DATA.parties.find(x => x.slug === slug); return p ? p.name : slug; };
+
 function refreshMatrix(){ AG = computeAgreement(MTYPES); ORDER = clusterOrder(); renderMatrix(); }
 
 function computeAgreement(types){
@@ -328,6 +380,98 @@ function renderMatrix(){
       return `<td style="background:hsl(${Math.round(c.pct*1.35)},70%,72%)" title="${esc(name(a))} &amp; ${esc(name(b))}: ${c.pct}% gelijk (${c.n} stemmingen)">${c.pct}</td>`;
     }).join("")}</tr>`).join("");
   $("#matrixBody").innerHTML = `<table class="matrix"><thead>${head}</thead><tbody>${rows}</tbody></table>`;
+}
+
+/* ---- Party profile ---- */
+function openProfile(){
+  if(!PTYPES){
+    PTYPES = new Set(ALLTYPES);
+    $("#profileParty").innerHTML = DATA.parties.map(p => `<option value="${p.slug}">${esc(p.name)}</option>`).join("");
+    $("#profileParty").onchange = renderProfile;
+  }
+  typeChips($("#profileTypes"), PTYPES, renderProfile);
+  renderProfile();
+  $("#profileModal").hidden = false;
+}
+function profileStats(slug, types){
+  let voor=0, tegen=0, onth=0, afw=0, win=0, decided=0;
+  const lone = [];
+  for(const m of DATA.moties){
+    if(!types.has(m.type)) continue;
+    const v = m.votes[slug];
+    if(!v){ afw++; continue; }
+    const r = cellVerdict(v);
+    if(r.label === "V") voor++; else if(r.label === "T") tegen++; else onth++;
+    if(r.label !== "O" && m.result){
+      decided++;
+      if((r.label === "V" && m.result === "accepted") || (r.label === "T" && m.result === "rejected")) win++;
+    }
+    if(r.label !== "O"){
+      let same=0, opposite=0;
+      for(const p of DATA.parties){
+        if(p.slug === slug) continue;
+        const ov = m.votes[p.slug]; if(!ov) continue;
+        const orr = cellVerdict(ov);
+        if(orr.label === r.label) same++;
+        else if(orr.label !== "O") opposite++;
+      }
+      if(same === 0 && opposite > 0) lone.push(m);
+    }
+  }
+  return {voor, tegen, onth, afw, win, decided, winPct: decided ? Math.round(100*win/decided) : null, lone};
+}
+function renderProfile(){
+  const slug = $("#profileParty").value;
+  const st = profileStats(slug, PTYPES);
+  const lone = st.lone.slice().sort((a,b) => b.date.localeCompare(a.date));
+  $("#profileBody").innerHTML = `
+    <div class="stat-grid">
+      <div class="stat primary"><div class="num">${st.winPct===null?"&ndash;":st.winPct+"%"}</div><div class="lab">aan de winnende kant<br>(${st.decided} beslissende)</div></div>
+      <div class="stat"><div class="num">${st.voor}</div><div class="lab">voor</div></div>
+      <div class="stat"><div class="num">${st.tegen}</div><div class="lab">tegen</div></div>
+      <div class="stat"><div class="num">${st.onth}</div><div class="lab">onthouden</div></div>
+      <div class="stat"><div class="num">${st.afw}</div><div class="lab">afwezig</div></div>
+    </div>
+    <h3 class="section">Als enige tegen de rest in (${lone.length})</h3>
+    ${lone.length ? `<div class="scrollbox"><table class="list"><thead><tr><th>Datum</th><th>Onderwerp</th><th>Stem</th></tr></thead><tbody>${
+      lone.map(m => { const r = cellVerdict(m.votes[slug]);
+        return `<tr><td>${m.date}</td><td>${esc(m.title)}</td><td><span class="vbadge ${r.cls}">${r.label}</span></td></tr>`; }).join("")
+    }</tbody></table></div>` : `<p class="modal-sub">Geen stemmingen waarbij ${esc(pName(slug))} als enige tegen de rest in stemde (binnen deze types).</p>`}
+  `;
+}
+
+/* ---- Compare two parties ---- */
+function openCompare(){
+  if(!CTYPES){
+    CTYPES = new Set(ALLTYPES);
+    const opts = DATA.parties.map(p => `<option value="${p.slug}">${esc(p.name)}</option>`).join("");
+    $("#cmpA").innerHTML = opts; $("#cmpB").innerHTML = opts;
+    if(DATA.parties.length > 1) $("#cmpB").selectedIndex = 1;
+    $("#cmpA").onchange = renderCompare; $("#cmpB").onchange = renderCompare;
+  }
+  typeChips($("#compareTypes"), CTYPES, renderCompare);
+  renderCompare();
+  $("#compareModal").hidden = false;
+}
+function renderCompare(){
+  const a = $("#cmpA").value, b = $("#cmpB").value;
+  if(a === b){ $("#compareBody").innerHTML = `<p class="modal-sub">Kies twee verschillende partijen.</p>`; return; }
+  let agree = 0; const rows = [];
+  for(const m of DATA.moties){
+    if(!CTYPES.has(m.type)) continue;
+    const va = m.votes[a], vb = m.votes[b]; if(!va || !vb) continue;
+    const ra = cellVerdict(va), rb = cellVerdict(vb);
+    if(ra.label === rb.label) agree++; else rows.push({m, ra, rb});
+  }
+  rows.sort((x,y) => y.m.date.localeCompare(x.m.date));
+  const tot = agree + rows.length;
+  $("#compareBody").innerHTML = `
+    <p class="cmp-summary"><b>${esc(pName(a))}</b> en <b>${esc(pName(b))}</b> stemden
+      <b>${tot?Math.round(100*agree/tot):0}% gelijk</b> &mdash; ${agree} gelijk, <b>${rows.length} verschillend</b> (van ${tot} gezamenlijke stemmingen).</p>
+    ${rows.length ? `<div class="scrollbox"><table class="list"><thead><tr><th>Datum</th><th>Onderwerp</th><th>${esc(ABBR[a]||pName(a))}</th><th>${esc(ABBR[b]||pName(b))}</th></tr></thead><tbody>${
+      rows.map(({m,ra,rb}) => `<tr><td>${m.date}</td><td>${esc(m.title)}</td><td><span class="vbadge ${ra.cls}">${ra.label}</span></td><td><span class="vbadge ${rb.cls}">${rb.label}</span></td></tr>`).join("")
+    }</tbody></table></div>` : `<p class="modal-sub">Geen stemmingen waarbij ze verschillend stemden (binnen deze types).</p>`}
+  `;
 }
 
 function buildControls(types){
