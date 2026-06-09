@@ -104,7 +104,15 @@ Extra views (data already supports these):
 
 Parked (v1.1 / v2):
 - Shareable URL encoding filter state. CSV download. Member-level detail (privacy: later).
-- Multi-province (iBabs + Notubiz adapters). Other bodies (Tweede Kamer, etc.).
+- Other bodies (Tweede Kamer, etc.).
+
+### Multi-province (Phase 3) — discovery done, see [provinces.md](provinces.md)
+3a complete. Key finding: the clean per-party vote API is **Utrecht-only** (GO stemgedrag
+module is opt-in; Flevoland/Drenthe GO have the API but votes 404). Vendor split: GO 3,
+Notubiz 5, iBabs 4. iBabs + Notubiz are JS SPAs → votes need backend reverse-engineering
+(one effort per vendor unlocks its 4–5 provinces); they expose **faction-level** votes
+(fine for V/T, degrades "ruwe getallen"/split). Next: 3b generalize collector+frontend,
+then crack one SPA vendor (Notubiz = most reach, or iBabs via Zeeland's Stemming report).
 
 ## Decisions
 **Locked**
