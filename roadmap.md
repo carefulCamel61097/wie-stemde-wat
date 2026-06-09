@@ -111,8 +111,14 @@ Parked (v1.1 / v2):
 module is opt-in; Flevoland/Drenthe GO have the API but votes 404). Vendor split: GO 3,
 Notubiz 5, iBabs 4. iBabs + Notubiz are JS SPAs → votes need backend reverse-engineering
 (one effort per vendor unlocks its 4–5 provinces); they expose **faction-level** votes
-(fine for V/T, degrades "ruwe getallen"/split). Next: 3b generalize collector+frontend,
-then crack one SPA vendor (Notubiz = most reach, or iBabs via Zeeland's Stemming report).
+(fine for V/T, degrades "ruwe getallen"/split).
+- **3b DONE**: collector has a PROVINCES registry + pluggable vendor adapters; frontend is
+  province-driven (selector from `data/provinces.json`, per-province data + huisstijl).
+- **Next (3c)**: crack one SPA vendor — Notubiz (most reach) or iBabs via Zeeland's Stemming report.
+- **Action — lobby for the easy wins**: e-mail the Statengriffie of **Flevoland** and **Drenthe**
+  (GO provinces) asking them to enable the GO **stemgedrag** module / publish per-party votes as
+  open data like Utrecht. If they do, those provinces become config-only (free). Same ask could
+  apply to Notubiz provinces with the module off (e.g. Gelderland). Contact the province, not GO.
 
 ## Decisions
 **Locked**
@@ -126,13 +132,12 @@ then crack one SPA vendor (Notubiz = most reach, or iBabs via Zeeland's Stemming
 
 - Item types: include moties + amendementen + besluiten + ordevoorstellen, type filter (chips).
 - Cell display + edge cases: locked (see "v1 UI" above).
-- Refresh: **GitHub Actions weekly cron** (Mon 06:00 UTC) + manual dispatch. Scaffolded in
-  `.github/workflows/refresh.yml`.
+- Refresh: **GitHub Actions weekly cron** (Thu 06:00 UTC — day after the usual Wed
+  Statenvergadering) + manual dispatch. Live & verified in `.github/workflows/refresh.yml`.
 - Privacy: v1 party-level only (no member names). Member-level = personal data, later.
-
-**Open**
-- **Domain**: free `*.github.io` (v1) vs custom domain later (small cost).
-- **Transpose view**: in v1 or as the first v1.1 fast-follow? (currently parked → v1.1)
+- **Domain**: SETTLED — free `*.github.io`, no custom domain (can revisit later, not planned).
+- **Transpose view**: SETTLED — will NOT add; deselecting all-but-one party already gives a
+  single-party view, so it's unnecessary (see dropped note above).
 
 ## Cost
 €0 with GitHub (repo + Pages + Actions) and a free `*.github.io` domain. Only a custom
