@@ -27,7 +27,8 @@
   .src{font-size:12.5px;color:#a9a9b1}
   .src a{color:#d9d9df;text-decoration:underline}
 
-  .controls{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:10px 22px;border-bottom:1px solid var(--line);background:var(--surface-2);position:sticky;top:0;z-index:10}
+  .controls{display:flex;flex-direction:column;gap:9px;padding:11px 22px;border-bottom:1px solid var(--line);background:var(--surface-2);position:sticky;top:0;z-index:10}
+  .controls-row{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:flex-end}
   .controls label.field{display:flex;flex-direction:column;font-size:11px;font-weight:500;color:#4b4b53;gap:4px}
   select,input[type=search],details.parties>summary{
     font:inherit;font-size:13.5px;color:var(--ink);
@@ -104,7 +105,21 @@
   td.cell.raw{font-size:11px;font-weight:600}
 
   .empty{padding:30px;text-align:center;color:var(--muted)}
-  @media (max-width:640px){ th.onderwerp-h,td.onderwerp{min-width:200px;max-width:240px} input[type=search]{min-width:150px} }
+  @media (max-width:640px){
+    th.onderwerp-h,td.onderwerp{min-width:170px;max-width:220px}
+    input[type=search]{min-width:140px}
+    header.top{padding:15px 15px 13px}
+    h1{font-size:20px} .lead{font-size:13px}
+    .helpbtn{top:13px;right:13px;padding:5px 10px;font-size:12px}
+    .controls{position:static;padding:10px 14px;gap:8px}
+    .controls-row{gap:8px 12px}
+    .legend{padding:8px 14px}
+    .wrap{padding:0 8px 28px}
+    .actions{width:100%} .bigbtn{flex:1 1 auto;text-align:center}
+    table.matrix td{width:27px;height:24px;font-size:10px}
+    table.matrix th{padding:2px 4px;font-size:10px}
+    .modal{padding:10px} .modal-card{padding:14px 15px 18px}
+  }
 
   /* prominent action button */
   .bigbtn{align-self:center;cursor:pointer;border:none;border-radius:9px;background:var(--accent);
@@ -179,46 +194,52 @@
 </header>
 
 <div class="controls">
-  <label class="field">Provincie
-    <select id="province"><option value="utrecht">Utrecht</option></select>
-  </label>
-  <label class="field">Zoek
-    <input type="search" id="search" placeholder="Zoek op onderwerp of indiener…">
-  </label>
-  <label class="field">Type
-    <span class="chips" id="typeChips"></span>
-  </label>
-  <label class="field">Partijen
-    <details class="parties"><summary id="psummary">Alle partijen</summary>
-      <div class="ppanel">
-        <div class="pp-actions"><button id="pAll">Alle</button><button id="pNone">Geen</button></div>
-        <div id="pList"></div>
-      </div>
-    </details>
-  </label>
-  <label class="field">Uitslag
-    <select id="result">
-      <option value="all">Alle</option>
-      <option value="accepted">Aangenomen</option>
-      <option value="rejected">Verworpen</option>
-    </select>
-  </label>
-  <label class="field">Sorteer
-    <select id="sort">
-      <option value="date-desc">Nieuwste eerst</option>
-      <option value="date-asc">Oudste eerst</option>
-      <option value="result">Op uitslag</option>
-    </select>
-  </label>
-  <div class="toggles">
-    <span class="tog"><label><input type="checkbox" id="controversial"> Alleen omstreden</label><span class="help-q" title="Toon alleen stemmingen waarbij de partijen niet allemaal hetzelfde stemden">?</span></span>
-    <label><input type="checkbox" id="onlyPinned"> Alleen vastgepind</label>
-    <span class="tog"><label><input type="checkbox" id="raw"> Ruwe getallen</label><span class="help-q" title="Toon de aantallen (bijv. 6-0) in plaats van V/T">?</span></span>
+  <div class="controls-row">
+    <label class="field">Provincie
+      <select id="province"><option value="utrecht">Utrecht</option></select>
+    </label>
+    <label class="field">Zoek
+      <input type="search" id="search" placeholder="Zoek op onderwerp of indiener…">
+    </label>
+    <label class="field">Partijen
+      <details class="parties"><summary id="psummary">Alle partijen</summary>
+        <div class="ppanel">
+          <div class="pp-actions"><button id="pAll">Alle</button><button id="pNone">Geen</button></div>
+          <div id="pList"></div>
+        </div>
+      </details>
+    </label>
+    <label class="field">Uitslag
+      <select id="result">
+        <option value="all">Alle</option>
+        <option value="accepted">Aangenomen</option>
+        <option value="rejected">Verworpen</option>
+      </select>
+    </label>
+    <label class="field">Sorteer
+      <select id="sort">
+        <option value="date-desc">Nieuwste eerst</option>
+        <option value="date-asc">Oudste eerst</option>
+        <option value="result">Op uitslag</option>
+      </select>
+    </label>
   </div>
-  <div class="actions">
-    <button id="matrixBtn" class="bigbtn">&#128202; Overeenkomst</button>
-    <button id="profileBtn" class="bigbtn">&#128100; Partijprofiel</button>
-    <button id="compareBtn" class="bigbtn">&#8646; Vergelijken</button>
+  <div class="controls-row">
+    <label class="field">Type
+      <span class="chips" id="typeChips"></span>
+    </label>
+    <div class="toggles">
+      <span class="tog"><label><input type="checkbox" id="controversial"> Alleen omstreden</label><span class="help-q" title="Toon alleen stemmingen waarbij de partijen niet allemaal hetzelfde stemden">?</span></span>
+      <label><input type="checkbox" id="onlyPinned"> Alleen vastgepind</label>
+      <span class="tog"><label><input type="checkbox" id="raw"> Ruwe getallen</label><span class="help-q" title="Toon de aantallen (bijv. 6-0) in plaats van V/T">?</span></span>
+    </div>
+  </div>
+  <div class="controls-row">
+    <div class="actions">
+      <button id="matrixBtn" class="bigbtn">&#128202; Overeenkomst</button>
+      <button id="profileBtn" class="bigbtn">&#128100; Partijprofiel</button>
+      <button id="compareBtn" class="bigbtn">&#8646; Vergelijken</button>
+    </div>
   </div>
 </div>
 
