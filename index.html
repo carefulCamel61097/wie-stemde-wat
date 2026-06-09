@@ -28,7 +28,7 @@
   .src a{color:#d9d9df;text-decoration:underline}
 
   .controls{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;padding:10px 22px;border-bottom:1px solid var(--line);background:var(--surface-2);position:sticky;top:0;z-index:10}
-  .controls label.field{display:flex;flex-direction:column;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#3a3a42;gap:4px}
+  .controls label.field{display:flex;flex-direction:column;font-size:11px;font-weight:500;color:#4b4b53;gap:4px}
   select,input[type=search],details.parties>summary{
     font:inherit;font-size:13.5px;color:var(--ink);
     border:1.5px solid var(--control-line);border-radius:9px;background:#fff;
@@ -130,8 +130,10 @@
   table.matrix td{width:34px;height:28px;text-align:center;font-weight:600;color:#222;border:1px solid var(--surface)}
   table.matrix td.diag{background:#e3e1da;color:#b3b0a8}
   table.matrix td.na{color:#bbb}
+  .matrix-controls{display:flex;align-items:center;gap:8px;margin:2px 0 14px;flex-wrap:wrap}
+  .matrix-controls .mc-label{font-size:11.5px;color:var(--muted);font-weight:600}
   .matrix-legend{display:flex;align-items:center;gap:9px;margin-top:14px;font-size:12px;color:var(--muted)}
-  .matrix-legend .bar{height:12px;width:170px;border-radius:6px;background:linear-gradient(90deg,hsl(0,60%,80%),hsl(65,60%,80%),hsl(130,60%,80%))}
+  .matrix-legend .bar{height:12px;width:170px;border-radius:6px;background:linear-gradient(90deg,hsl(0,70%,72%),hsl(67,70%,72%),hsl(135,70%,72%))}
 </style>
 </head>
 <body>
@@ -200,7 +202,9 @@
     <div class="modal-head"><h2>&#128202; Partij-overeenkomst</h2>
       <button class="modal-close" id="matrixClose" title="Sluiten">&times;</button></div>
     <p class="modal-sub">Percentage van de stemmingen waarin twee partijen hetzelfde stemden
-      (voor / tegen / onthouden), berekend over alle stemmingen waarbij beide partijen aanwezig waren.</p>
+      (voor / tegen / onthouden), over stemmingen waarbij beide aanwezig waren. Partijen die
+      vaak hetzelfde stemmen staan bij elkaar.</p>
+    <div class="matrix-controls"><span class="mc-label">Tel mee:</span><span class="chips" id="matrixTypes"></span></div>
     <div id="matrixBody"></div>
     <div class="matrix-legend"><span>weinig overeenkomst</span><span class="bar"></span><span>veel overeenkomst</span></div>
   </div>
@@ -213,13 +217,14 @@ const ABBR = {bbb:"BBB",groenlinks:"GL",vvd:"VVD",d66:"D66",utrechtnu:"U!",cda:"
   pvv:"PVV",sgp:"SGP",sp:"SP","forum-voor-democratie":"FvD","50plus":"50+"};
 const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel"};
 
-let DATA, state, AG = null;
+let DATA, state, AG = null, ORDER = null, ALLTYPES = null, MTYPES = null;
 const $ = s => document.querySelector(s);
 const esc = s => (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 async function init(){
   DATA = await (await fetch("data/utrecht.json")).json();
   const types = [...new Set(DATA.moties.map(m=>m.type))];
+  ALLTYPES = types;
   state = {
     types: new Set(types),
     parties: new Set(DATA.parties.map(p=>p.slug)),
@@ -248,17 +253,32 @@ async function init(){
   });
 
   // Party-agreement matrix popup
-  $("#matrixBtn").onclick = () => { if(!AG){ AG = computeAgreement(); renderMatrix(); } $("#matrixModal").hidden = false; };
+  $("#matrixBtn").onclick = () => {
+    if(!MTYPES){ MTYPES = new Set(ALLTYPES); buildMatrixChips(); }
+    refreshMatrix();
+    $("#matrixModal").hidden = false;
+  };
   $("#matrixClose").onclick = () => $("#matrixModal").hidden = true;
   $("#matrixModal").onclick = e => { if(e.target.id === "matrixModal") $("#matrixModal").hidden = true; };
 
   render();
 }
 
-function computeAgreement(){
+function buildMatrixChips(){
+  const el = $("#matrixTypes");
+  el.innerHTML = ALLTYPES.map(t => `<span class="chip${MTYPES.has(t)?" on":""}" data-type="${t}">${TYPE_LABEL[t]||t}</span>`).join("");
+  el.onclick = e => {
+    const c = e.target.closest(".chip"); if(!c) return;
+    const t = c.dataset.type;
+    if(MTYPES.has(t)){ if(MTYPES.size === 1) return; MTYPES.delete(t); } else MTYPES.add(t);
+    c.classList.toggle("on"); refreshMatrix();
+  };
+}
+function refreshMatrix(){ AG = computeAgreement(MTYPES); ORDER = clusterOrder(); renderMatrix(); }
+
+function computeAgreement(types){
   const ps = DATA.parties;
-  // verdict (V/T/O) per motie per party, present-only
-  const vd = DATA.moties.map(m => {
+  const vd = DATA.moties.filter(m => types.has(m.type)).map(m => {
     const o = {};
     for(const p of ps){ const r = cellVerdict(m.votes[p.slug]); if(r) o[p.slug] = r.label; }
     return o;
@@ -276,16 +296,36 @@ function computeAgreement(){
   }
   return M;
 }
+// Seriation: average-linkage clustering so similar-voting parties end up adjacent.
+function clusterOrder(){
+  const slugs = DATA.parties.map(p => p.slug);
+  const dist = (a,b) => { const c = AG[a] && AG[a][b]; return c ? 100 - c.pct : 100; };
+  let cl = slugs.map(s => ({m:[s]}));
+  const cd = (c1,c2) => { let s=0,n=0; for(const a of c1.m) for(const b of c2.m){ s+=dist(a,b); n++; } return s/n; };
+  while(cl.length > 1){
+    let bi=0, bj=1, best=Infinity;
+    for(let i=0;i<cl.length;i++) for(let j=i+1;j<cl.length;j++){ const d=cd(cl[i],cl[j]); if(d<best){best=d;bi=i;bj=j;} }
+    const A=cl[bi], B=cl[bj];
+    const aF=A.m[0], aL=A.m[A.m.length-1], bF=B.m[0], bL=B.m[B.m.length-1];
+    const opts = [[0,0,dist(aL,bF)],[0,1,dist(aL,bL)],[1,0,dist(aF,bF)],[1,1,dist(aF,bL)]].sort((x,y)=>x[2]-y[2]);
+    const ma = opts[0][0] ? [...A.m].reverse() : A.m;
+    const mb = opts[0][1] ? [...B.m].reverse() : B.m;
+    cl = cl.filter((_,k)=>k!==bi && k!==bj); cl.push({m:[...ma,...mb]});
+  }
+  return cl[0].m;
+}
 function renderMatrix(){
-  const ps = DATA.parties;
-  const head = `<tr><th></th>${ps.map(p=>`<th title="${esc(p.name)}">${ABBR[p.slug]||p.name}</th>`).join("")}</tr>`;
-  const rows = ps.map(a => `<tr><th class="rowh" title="${esc(a.name)}">${ABBR[a.slug]||a.name}</th>${
-    ps.map(b => {
-      const c = AG[a.slug][b.slug];
+  const order = ORDER || DATA.parties.map(p => p.slug);
+  const pmap = Object.fromEntries(DATA.parties.map(p => [p.slug, p]));
+  const name = s => pmap[s] ? pmap[s].name : s;
+  const lbl = s => ABBR[s] || name(s);
+  const head = `<tr><th></th>${order.map(s=>`<th title="${esc(name(s))}">${lbl(s)}</th>`).join("")}</tr>`;
+  const rows = order.map(a => `<tr><th class="rowh" title="${esc(name(a))}">${lbl(a)}</th>${
+    order.map(b => {
+      const c = AG[a][b];
       if(c === null) return `<td class="diag">&ndash;</td>`;
       if(!c) return `<td class="na" title="geen gezamenlijke stemmingen">&middot;</td>`;
-      const bg = `hsl(${Math.round(c.pct*1.3)},60%,80%)`;
-      return `<td style="background:${bg}" title="${esc(a.name)} &amp; ${esc(b.name)}: ${c.pct}% gelijk (${c.n} stemmingen)">${c.pct}</td>`;
+      return `<td style="background:hsl(${Math.round(c.pct*1.35)},70%,72%)" title="${esc(name(a))} &amp; ${esc(name(b))}: ${c.pct}% gelijk (${c.n} stemmingen)">${c.pct}</td>`;
     }).join("")}</tr>`).join("");
   $("#matrixBody").innerHTML = `<table class="matrix"><thead>${head}</thead><tbody>${rows}</tbody></table>`;
 }
