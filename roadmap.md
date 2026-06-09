@@ -96,10 +96,11 @@ Extra views (data already supports these):
   each pair voted the same. DONE.
 - ❌ **Transpose view (moties as columns)** — DROPPED: motie titles are too long to be
   column headers; a single-party view is already possible by deselecting all but one party.
-- ⏳ **Party profile** (popup, planned) — % on the winning side, totals voor/tegen,
-  lone-dissenter list. Likely opened by clicking a party.
-- ⏳ **"Waar verschillen X en Y"** (planned) — moties where two parties voted oppositely;
-  natural to open from a matrix cell click.
+- ✅ **Party profile** (popup) — % on the winning side, voor/tegen/onthouden/afwezig totals,
+  and the lone-dissenter list. Party picker + type chips. DONE.
+- ✅ **Compare two parties** (popup) — % agreement + list of stemmingen where they differ,
+  with V/T/O badges. Two pickers + type chips. DONE.
+- ⏳ (optional) link matrix cell click → open Compare for that pair, pre-filled.
 
 Parked (v1.1 / v2):
 - Shareable URL encoding filter state. CSV download. Member-level detail (privacy: later).
