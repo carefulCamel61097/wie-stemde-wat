@@ -267,6 +267,7 @@ const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",orde
 let DATA, state, AG = null, ORDER = null, ALLTYPES = null, MTYPES = null, PTYPES = null, CTYPES = null;
 const $ = s => document.querySelector(s);
 const esc = s => (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const srcLink = m => m.source ? ` <a class="ext" href="${m.source}" target="_blank" rel="noopener" title="Bekijk op stateninformatie">&#8599;</a>` : "";
 
 async function init(){
   DATA = await (await fetch("data/utrecht.json")).json();
@@ -435,7 +436,7 @@ function renderProfile(){
     <h3 class="section">Als enige tegen de rest in (${lone.length})</h3>
     ${lone.length ? `<div class="scrollbox"><table class="list"><thead><tr><th>Datum</th><th>Onderwerp</th><th>Stem</th></tr></thead><tbody>${
       lone.map(m => { const r = cellVerdict(m.votes[slug]);
-        return `<tr><td>${m.date}</td><td>${esc(m.title)}</td><td><span class="vbadge ${r.cls}">${r.label}</span></td></tr>`; }).join("")
+        return `<tr><td>${m.date}</td><td>${esc(m.title)}${srcLink(m)}</td><td><span class="vbadge ${r.cls}">${r.label}</span></td></tr>`; }).join("")
     }</tbody></table></div>` : `<p class="modal-sub">Geen stemmingen waarbij ${esc(pName(slug))} als enige tegen de rest in stemde (binnen deze types).</p>`}
   `;
 }
@@ -469,7 +470,7 @@ function renderCompare(){
     <p class="cmp-summary"><b>${esc(pName(a))}</b> en <b>${esc(pName(b))}</b> stemden
       <b>${tot?Math.round(100*agree/tot):0}% gelijk</b> &mdash; ${agree} gelijk, <b>${rows.length} verschillend</b> (van ${tot} gezamenlijke stemmingen).</p>
     ${rows.length ? `<div class="scrollbox"><table class="list"><thead><tr><th>Datum</th><th>Onderwerp</th><th>${esc(ABBR[a]||pName(a))}</th><th>${esc(ABBR[b]||pName(b))}</th></tr></thead><tbody>${
-      rows.map(({m,ra,rb}) => `<tr><td>${m.date}</td><td>${esc(m.title)}</td><td><span class="vbadge ${ra.cls}">${ra.label}</span></td><td><span class="vbadge ${rb.cls}">${rb.label}</span></td></tr>`).join("")
+      rows.map(({m,ra,rb}) => `<tr><td>${m.date}</td><td>${esc(m.title)}${srcLink(m)}</td><td><span class="vbadge ${ra.cls}">${ra.label}</span></td><td><span class="vbadge ${rb.cls}">${rb.label}</span></td></tr>`).join("")
     }</tbody></table></div>` : `<p class="modal-sub">Geen stemmingen waarbij ze verschillend stemden (binnen deze types).</p>`}
   `;
 }

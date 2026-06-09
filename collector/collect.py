@@ -148,7 +148,10 @@ def main():
                         "type": classify(it["description"]),
                         "result": (it.get("voteResult") or {}).get("name"),
                         "resultLabel": (it.get("voteResult") or {}).get("label"),
-                        "source": f"{BASE}/vergaderingen/stemmingen/document/{it.get('documentId')}",
+                        # Human-facing page (301-redirects to the pretty agenda-item URL).
+                        "source": (f"{BASE}/vergaderingen/document/{it['documentId']}" if it.get("documentId")
+                                   else f"{BASE}/vergaderingen/agendapunt/{it['meetingItemId']}" if it.get("meetingItemId")
+                                   else f"{BASE}/vergaderingen/{mid}"),
                         "votes": {},
                     }
                 vc = (it.get("voteResult") or {}).get("voteCounts", {})
