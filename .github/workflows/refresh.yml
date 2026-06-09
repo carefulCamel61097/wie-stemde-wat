@@ -1,9 +1,11 @@
 name: Refresh voting data
 
 # Wekelijks de stemdata verversen + handmatig te starten.
+# De Statenvergadering (met de stemmingen) is vrijwel altijd op woensdag, dus we
+# verversen donderdagochtend — de dag erna — zodat nieuwe stemmingen snel meegenomen worden.
 on:
   schedule:
-    - cron: "0 6 * * 1"   # elke maandag 06:00 UTC
+    - cron: "0 6 * * 4"   # elke donderdag 06:00 UTC (~08:00 NL)
   workflow_dispatch: {}
 
 permissions:
