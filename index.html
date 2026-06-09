@@ -183,6 +183,16 @@
   .splitdot::after{content:"";position:absolute;top:2px;right:2px;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.75}
   .toggles .tog{display:inline-flex;align-items:center;gap:6px}
   .help-q{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1px solid var(--control-line);color:var(--muted);font-size:10px;font-weight:700;cursor:help}
+
+  .controls-row-2{align-items:center}
+  .controls-row-2 .actions{margin-left:auto}
+  .tbl-toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 8px 8px}
+  .tbl-toolbar-title{font-size:12.5px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.04em;border-left:3px solid var(--accent);padding-left:8px}
+  .tbl-toolbar .tb-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+  .tbl-toolbar .count{font-size:12.5px;color:var(--muted);margin-left:0}
+  .chips.small .chip{padding:4px 10px;font-size:12px}
+  .iconbtn{cursor:pointer;border:1.5px solid var(--control-line);background:#fff;color:var(--muted);width:27px;height:27px;border-radius:50%;font-size:14px;display:inline-flex;align-items:center;justify-content:center;transition:.12s;flex:none}
+  .iconbtn:hover{border-color:var(--accent);color:var(--accent)}
 </style>
 </head>
 <body>
@@ -224,17 +234,12 @@
       </select>
     </label>
   </div>
-  <div class="controls-row">
-    <label class="field">Type
-      <span class="chips" id="typeChips"></span>
-    </label>
+  <div class="controls-row controls-row-2">
     <div class="toggles">
       <span class="tog"><label><input type="checkbox" id="controversial"> Alleen omstreden</label><span class="help-q" title="Toon alleen stemmingen waarbij de partijen niet allemaal hetzelfde stemden">?</span></span>
       <label><input type="checkbox" id="onlyPinned"> Alleen vastgepind</label>
       <span class="tog"><label><input type="checkbox" id="raw"> Ruwe getallen</label><span class="help-q" title="Toon de aantallen (bijv. 6-0) in plaats van V/T">?</span></span>
     </div>
-  </div>
-  <div class="controls-row">
     <div class="actions">
       <button id="matrixBtn" class="bigbtn">&#128202; Overeenkomst</button>
       <button id="profileBtn" class="bigbtn">&#128100; Partijprofiel</button>
@@ -243,16 +248,15 @@
   </div>
 </div>
 
-<div class="legend">
-  <span><span class="sw voor">V</span>Voor</span>
-  <span><span class="sw tegen">T</span>Tegen</span>
-  <span><span class="sw neutraal">O</span>Onthouden / staken</span>
-  <span><span class="sw afw">&nbsp;</span>Afwezig</span>
-  <span><span class="sw voor split" style="position:relative">V</span>• = fractie niet unaniem</span>
-  <span class="count" id="count"></span>
-</div>
-
 <div class="wrap">
+  <div class="tbl-toolbar">
+    <span class="tbl-toolbar-title">Stemmingen</span>
+    <span class="chips small" id="typeChips"></span>
+    <span class="tb-right">
+      <span class="count" id="count"></span>
+      <button id="legendBtn" class="iconbtn" title="Uitleg van de kleuren">&#9432;</button>
+    </span>
+  </div>
   <div id="pinnedBlock"></div>
   <div id="mainBlock"></div>
 </div>
@@ -341,6 +345,20 @@
   </div>
 </div>
 
+<div class="modal" id="legendModal" hidden>
+  <div class="modal-card" style="max-width:440px">
+    <div class="modal-head"><h2>Kleuren in de tabel</h2>
+      <button class="modal-close" data-close="legendModal" title="Sluiten">&times;</button></div>
+    <ul class="legenda">
+      <li><span class="vbadge voor">V</span> Voor</li>
+      <li><span class="vbadge tegen">T</span> Tegen</li>
+      <li><span class="vbadge neutraal">O</span> Onthouden of staken van stemmen</li>
+      <li><span class="swatch afw"></span> leeg = afwezig (fractie deed niet mee)</li>
+      <li><span class="vbadge voor splitdot">V</span> stip = fractie stemde niet unaniem</li>
+    </ul>
+  </div>
+</div>
+
 <script>
 const PIN_KEY = "wsw_pinned_utrecht";
 const ABBR = {bbb:"BBB",groenlinks:"GL",vvd:"VVD",d66:"D66",utrechtnu:"U!",cda:"CDA",
@@ -394,6 +412,7 @@ async function init(){
   $("#profileBtn").onclick = openProfile;
   $("#compareBtn").onclick = openCompare;
   $("#helpBtn").onclick = () => $("#helpModal").hidden = false;
+  $("#legendBtn").onclick = () => $("#legendModal").hidden = false;
   document.querySelectorAll(".modal").forEach(mo => mo.addEventListener("click", e => { if(e.target === mo) mo.hidden = true; }));
   document.querySelectorAll("[data-close]").forEach(btn => btn.onclick = () => { document.getElementById(btn.dataset.close).hidden = true; });
 
@@ -648,7 +667,7 @@ function rowHTML(m, vps){
 }
 function tableHTML(rows, vps){
   if(!rows.length) return `<div class="empty">Geen stemmingen voor deze selectie.</div>`;
-  const head = `<thead><tr><th class="onderwerp-h">Onderwerp · datum · type · uitslag</th>${
+  const head = `<thead><tr><th class="onderwerp-h">Onderwerp</th>${
     vps.map(p=>`<th title="${esc(p.name)}">${ABBR[p.slug]||p.name}</th>`).join("")}</tr></thead>`;
   return `<div class="table-scroll"><table>${head}<tbody>${rows.map(m=>rowHTML(m,vps)).join("")}</tbody></table></div>`;
 }
@@ -664,7 +683,7 @@ function render(){
     : "";
   $("#mainBlock").innerHTML = state.onlyPinned
     ? (pinnedRows.length?"":`<div class="empty">Nog niets vastgepind.</div>`)
-    : `<div class="tbl-title">Alle stemmingen</div>${tableHTML(mainRows, vps)}`;
+    : tableHTML(mainRows, vps);
 
   const shown = (state.onlyPinned?pinnedRows.length:mainRows.length+pinnedRows.length);
   $("#count").textContent = `${shown} van ${DATA.moties.length} stemmingen · ${vps.length} partijen`;
