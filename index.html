@@ -360,7 +360,7 @@
 </div>
 
 <script>
-const PIN_KEY = "wsw_pinned_utrecht";
+let PIN_KEY = "wsw_pinned_utrecht";   // becomes wsw_pinned_<province>
 const ABBR = {bbb:"BBB",groenlinks:"GL",vvd:"VVD",d66:"D66",utrechtnu:"U!",cda:"CDA",
   pvda:"PvdA","partij-voor-de-dieren":"PvdD",christenunie:"CU",volt:"Volt",ja21:"JA21",
   pvv:"PVV",sgp:"SGP",sp:"SP","forum-voor-democratie":"FvD","50plus":"50+"};
@@ -372,24 +372,45 @@ const esc = s => (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&
 const srcLink = m => m.source ? ` <a class="ext" href="${m.source}" target="_blank" rel="noopener" title="Bekijk op stateninformatie">&#8599;</a>` : "";
 
 async function init(){
-  DATA = await (await fetch("data/utrecht.json")).json();
-  const types = [...new Set(DATA.moties.map(m=>m.type))];
-  ALLTYPES = types;
+  // Build the province selector from the index, then load the default province.
+  const idx = await (await fetch("data/provinces.json")).json();
+  const sel = $("#province");
+  sel.innerHTML = idx.provinces.map(p =>
+    `<option value="${p.key}"${p.available ? "" : " disabled"}>${esc(p.name)}${p.available ? "" : " (binnenkort)"}</option>`).join("");
+  sel.value = idx.default || (idx.provinces.find(p => p.available) || {}).key;
+  sel.onchange = () => loadProvince(sel.value);
+
+  setupGlobalHandlers();
+  await loadProvince(sel.value);
+}
+
+async function loadProvince(key){
+  DATA = await (await fetch(`data/${key}.json`)).json();
+  ALLTYPES = [...new Set(DATA.moties.map(m => m.type))];
+  AG = ORDER = MTYPES = PTYPES = CTYPES = null;   // reset per-province popup caches
+  PIN_KEY = `wsw_pinned_${key}`;
   state = {
-    types: new Set(types),
-    parties: new Set(DATA.parties.map(p=>p.slug)),
-    search:"", result:"all", controversial:false, onlyPinned:false, raw:false,
-    sort:"date-desc",
-    pinned: new Set(JSON.parse(localStorage.getItem(PIN_KEY)||"[]")),
+    types: new Set(ALLTYPES),
+    parties: new Set(DATA.parties.map(p => p.slug)),
+    search: "", result: "all", controversial: false, onlyPinned: false, raw: false,
+    sort: "date-desc",
+    pinned: new Set(JSON.parse(localStorage.getItem(PIN_KEY) || "[]")),
   };
   // Province house style drives the theme (see data.meta.style).
   const st = DATA.meta.style || {};
-  if(st.accent)   document.documentElement.style.setProperty("--accent", st.accent);
-  if(st.headerBg) document.documentElement.style.setProperty("--header-bg", st.headerBg);
+  document.documentElement.style.setProperty("--accent", st.accent || "#EC0000");
+  document.documentElement.style.setProperty("--header-bg", st.headerBg || "#1b1b1b");
 
   $("#src").innerHTML = `Bron: <a href="${DATA.meta.source}" target="_blank" rel="noopener">${DATA.meta.body}, provincie ${DATA.meta.province}</a> · open data · periode ${DATA.meta.term} · bijgewerkt ${DATA.meta.generated_at.slice(0,10)}`;
-  buildControls(types);
 
+  buildControls(ALLTYPES);
+  $("#search").value = ""; $("#result").value = "all"; $("#sort").value = "date-desc";
+  $("#controversial").checked = false; $("#onlyPinned").checked = false; $("#raw").checked = false;
+  updatePartySummary();
+  render();
+}
+
+function setupGlobalHandlers(){
   // Close the party dropdown when clicking outside or pressing Escape.
   document.addEventListener("click", e => {
     const d = document.querySelector("details.parties");
@@ -401,7 +422,6 @@ async function init(){
       document.querySelectorAll(".modal").forEach(mo => mo.hidden = true);
     }
   });
-
   // View popups
   $("#matrixBtn").onclick = () => {
     if(!MTYPES) MTYPES = new Set(ALLTYPES);
@@ -415,8 +435,6 @@ async function init(){
   $("#legendBtn").onclick = () => $("#legendModal").hidden = false;
   document.querySelectorAll(".modal").forEach(mo => mo.addEventListener("click", e => { if(e.target === mo) mo.hidden = true; }));
   document.querySelectorAll("[data-close]").forEach(btn => btn.onclick = () => { document.getElementById(btn.dataset.close).hidden = true; });
-
-  render();
 }
 
 // Shared type-filter chips for the popups.

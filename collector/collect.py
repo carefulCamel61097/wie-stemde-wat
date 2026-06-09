@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
-Collector — Provinciale Staten Utrecht voting overview (GO adapter).
+Collector — Provinciale Staten voting overview.
 
-Pulls per-party voting records from the GemeenteOplossingen platform behind
-stateninformatie.provincie-utrecht.nl, unions them into one motie list, and writes a
-normalized data/utrecht.json that the static site reads.
+Pulls per-party voting records per province, unions them into one motie list, and writes a
+normalized data/<province>.json that the static site reads, plus a data/provinces.json index.
+
+Multi-province / multi-vendor: each province in PROVINCES names a `vendor`, dispatched to an
+adapter in ADAPTERS. Currently only the GemeenteOplossingen ("go") adapter is implemented
+(Utrecht). iBabs / Notubiz adapters are TODO — see ../provinces.md.
 
 Zero dependencies (stdlib only) so GitHub Actions needs no install step.
-
-See ../data-sources.md for the reverse-engineered endpoints.
+See ../data-sources.md for the reverse-engineered GO endpoints.
 """
 
 import json
@@ -20,17 +22,26 @@ import urllib.error
 from datetime import datetime, date, timezone
 from pathlib import Path
 
-BASE = "https://www.stateninformatie.provincie-utrecht.nl"
-API = BASE + "/api/v2"
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
-# Current term started with the PS election of 29 March 2023.
-TERM_START = date(2023, 3, 29)
-TERM_LABEL = "2023-2027"
+# --- Province registry --------------------------------------------------------
+# Each entry: key, name, vendor, base, term_start (y,m,d), term_label, style, license.
+# Add a province here once its vendor adapter exists (see ../provinces.md for the map).
+PROVINCES = [
+    {
+        "key": "utrecht",
+        "name": "Utrecht",
+        "vendor": "go",
+        "base": "https://www.stateninformatie.provincie-utrecht.nl",
+        "term_start": (2023, 3, 29),   # PS election 29 March 2023
+        "term_label": "2023-2027",
+        "style": {"accent": "#EC0000", "headerBg": "#1b1b1b"},
+        "license": "Open data - Provincie Utrecht / Statengriffie",
+    },
+]
 
-# Bodies that are type "Fractie" in the API but are not voting parties.
+# Bodies that are type "Fractie" in the GO API but are not voting parties.
 NOT_A_PARTY = {"Gedeputeerde Staten"}
-
-OUT = Path(__file__).resolve().parent.parent / "data" / "utrecht.json"
 
 HEADERS = {
     "User-Agent": "wie-stemde-wat collector (open-data overview; contact via GitHub)",
@@ -76,55 +87,44 @@ def classify(title):
     return "overig"
 
 
-def fetch_parties():
-    """Authoritative party list from the API, slugified to site slugs."""
-    data = get_json(f"{API}/groups?limit=100")
-    parties = []
-    for g in data["result"]["groups"]:
-        if g.get("type") != "Fractie" or g["name"] in NOT_A_PARTY:
-            continue
-        parties.append({
-            "name": g["name"],
-            "slug": slugify(g["name"]),
-            "sortOrder": g.get("sortOrder", 999),
-        })
-    return parties
+# --- GemeenteOplossingen (GO) adapter ----------------------------------------
+def collect_go(p):
+    """Return {parties, moties} for a GO province, or None if it has no votes endpoint."""
+    base = p["base"].rstrip("/")
+    api = base + "/api/v2"
+    term_start = date(*p["term_start"])
+    mcache = {}
 
+    def meeting_date(mid):
+        if mid in mcache:
+            return mcache[mid]
+        d = None
+        data = try_json(f"{api}/meetings/{mid}")
+        if data and data.get("result", {}).get("meeting"):
+            d = data["result"]["meeting"].get("date")
+        mcache[mid] = d
+        time.sleep(SLEEP)
+        return d
 
-_meeting_cache = {}
+    gdata = try_json(f"{api}/groups?limit=100")
+    if not gdata or "result" not in gdata:
+        return None
+    parties = [{"name": g["name"], "slug": slugify(g["name"]), "sortOrder": g.get("sortOrder", 999)}
+               for g in gdata["result"]["groups"]
+               if g.get("type") == "Fractie" and g["name"] not in NOT_A_PARTY]
+    print(f"  candidate parties: {len(parties)}")
 
-
-def meeting_date(meeting_id):
-    if meeting_id in _meeting_cache:
-        return _meeting_cache[meeting_id]
-    d = None
-    data = try_json(f"{API}/meetings/{meeting_id}")
-    if data and data.get("result", {}).get("meeting"):
-        d = data["result"]["meeting"].get("date")
-    _meeting_cache[meeting_id] = d
-    time.sleep(SLEEP)
-    return d
-
-
-def main():
-    parties = fetch_parties()
-    print(f"Candidate parties from API: {len(parties)}")
-
-    moties = {}            # votingId -> motie record
-    parties_with_data = {} # slug -> party meta (only those with current-term votes)
-
-    for p in parties:
-        url = f"{BASE}/Samenstelling/{p['slug']}/votings"
-        data = try_json(url)
+    moties = {}
+    parties_with_data = {}
+    for party in parties:
+        data = try_json(f"{base}/Samenstelling/{party['slug']}/votings")
         time.sleep(SLEEP)
         items_by_year = data.get("items") if data else None
-        if not isinstance(items_by_year, dict):   # empty result is [] not {}
-            print(f"  - {p['slug']:<28} no data (skip)")
+        if not isinstance(items_by_year, dict):   # empty result is [] not {}, or 404
             continue
-
         kept = 0
         for year, items in items_by_year.items():
-            if int(year) < TERM_START.year:
+            if int(year) < term_start.year:
                 continue
             for it in items:
                 mid = it["meetingId"]
@@ -133,9 +133,8 @@ def main():
                     d = datetime.strptime(mdate[:10], "%Y-%m-%d").date()
                 except ValueError:
                     continue
-                if d < TERM_START:
+                if d < term_start:
                     continue
-
                 vid = it["votingId"]
                 if vid not in moties:
                     moties[vid] = {
@@ -149,61 +148,77 @@ def main():
                         "result": (it.get("voteResult") or {}).get("name"),
                         "resultLabel": (it.get("voteResult") or {}).get("label"),
                         # Human-facing page (301-redirects to the pretty agenda-item URL).
-                        "source": (f"{BASE}/vergaderingen/document/{it['documentId']}" if it.get("documentId")
-                                   else f"{BASE}/vergaderingen/agendapunt/{it['meetingItemId']}" if it.get("meetingItemId")
-                                   else f"{BASE}/vergaderingen/{mid}"),
+                        "source": (f"{base}/vergaderingen/document/{it['documentId']}" if it.get("documentId")
+                                   else f"{base}/vergaderingen/agendapunt/{it['meetingItemId']}" if it.get("meetingItemId")
+                                   else f"{base}/vergaderingen/{mid}"),
                         "votes": {},
                     }
                 vc = (it.get("voteResult") or {}).get("voteCounts", {})
-                moties[vid]["votes"][p["slug"]] = {
+                moties[vid]["votes"][party["slug"]] = {
                     "agree": vc.get("agree", 0),
                     "disagree": vc.get("disagree", 0),
                     "abstain": vc.get("abstain", 0),
                 }
                 kept += 1
-
         if kept:
-            parties_with_data[p["slug"]] = p
-            print(f"  + {p['slug']:<28} {kept} votes")
-        else:
-            print(f"  - {p['slug']:<28} no current-term votes (skip)")
+            parties_with_data[party["slug"]] = party
 
-    # Overall totals = sum across present parties (absent members not counted).
     motie_list = sorted(moties.values(), key=lambda m: (m["date"], m["title"]), reverse=True)
     for m in motie_list:
-        agree = sum(v["agree"] for v in m["votes"].values())
-        disagree = sum(v["disagree"] for v in m["votes"].values())
-        m["totals"] = {"agree": agree, "disagree": disagree}
+        m["totals"] = {"agree": sum(v["agree"] for v in m["votes"].values()),
+                       "disagree": sum(v["disagree"] for v in m["votes"].values())}
+    columns = sorted(parties_with_data.values(), key=lambda x: x["sortOrder"])
+    return {"parties": [{"slug": x["slug"], "name": x["name"]} for x in columns], "moties": motie_list}
 
-    columns = sorted(parties_with_data.values(), key=lambda p: p["sortOrder"])
-    out = {
-        "meta": {
-            "province": "Utrecht",
-            "body": "Provinciale Staten",
-            "term": TERM_LABEL,
-            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-            "source": BASE,
-            "license": "Open data - Provincie Utrecht / Statengriffie",
-            # Province house style (huisstijl) — drives the site theme. Per-province for v2.
-            "style": {"accent": "#EC0000", "headerBg": "#1b1b1b"},
-            "counts": {"moties": len(motie_list), "parties": len(columns)},
-        },
-        "parties": [{"slug": p["slug"], "name": p["name"]} for p in columns],
-        "moties": motie_list,
-    }
 
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+ADAPTERS = {"go": collect_go}
 
-    # Summary
-    by_type = {}
-    for m in motie_list:
-        by_type[m["type"]] = by_type.get(m["type"], 0) + 1
-    print(f"\nWrote {OUT}")
-    print(f"  parties (columns): {len(columns)} -> {[p['slug'] for p in columns]}")
-    print(f"  moties total: {len(motie_list)}")
-    print(f"  by type: {by_type}")
-    print(f"  date range: {motie_list[-1]['date']} .. {motie_list[0]['date']}" if motie_list else "  (no moties)")
+
+def main():
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    index = []
+    for p in PROVINCES:
+        print(f"== {p['name']} ({p['vendor']}) ==")
+        adapter = ADAPTERS.get(p["vendor"])
+        res = None
+        if adapter:
+            try:
+                res = adapter(p)
+            except Exception as e:
+                print(f"  ERROR: {e}")
+        available = bool(res and res["moties"])
+        if available:
+            out = {
+                "meta": {
+                    "province": p["name"],
+                    "body": "Provinciale Staten",
+                    "term": p["term_label"],
+                    "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                    "source": p["base"],
+                    "license": p.get("license", ""),
+                    "style": p.get("style", {}),
+                    "counts": {"moties": len(res["moties"]), "parties": len(res["parties"])},
+                },
+                "parties": res["parties"],
+                "moties": res["moties"],
+            }
+            (DATA_DIR / f"{p['key']}.json").write_text(
+                json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+            by_type = {}
+            for m in res["moties"]:
+                by_type[m["type"]] = by_type.get(m["type"], 0) + 1
+            print(f"  wrote {p['key']}.json: {len(res['moties'])} moties, "
+                  f"{len(res['parties'])} parties, {by_type}")
+        else:
+            print("  (no data — marked unavailable)")
+        index.append({"key": p["key"], "name": p["name"], "available": available})
+
+    (DATA_DIR / "provinces.json").write_text(json.dumps(
+        {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+         "default": next((i["key"] for i in index if i["available"]), None),
+         "provinces": index},
+        ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"\nWrote provinces.json: available = {[i['key'] for i in index if i['available']]}")
 
 
 if __name__ == "__main__":
