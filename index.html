@@ -20,7 +20,7 @@
   a{color:var(--accent)}
   :focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 
-  header.top{padding:20px 22px 18px;background:var(--header-bg);color:#fff;border-bottom:4px solid var(--accent)}
+  header.top{position:relative;padding:20px 22px 18px;background:var(--header-bg);color:#fff;border-bottom:4px solid var(--accent)}
   h1{margin:0 0 4px;font-size:23px;letter-spacing:-.01em}
   h1 .q{color:var(--accent)}
   .lead{margin:0 0 6px;color:#d7d7db}
@@ -153,10 +153,26 @@
   table.list td:first-child{white-space:nowrap;color:var(--muted)}
   .cmp-summary{margin:0 0 12px;font-size:13.5px}
   h3.section{margin:16px 0 7px;font-size:14px}
+
+  .helpbtn{position:absolute;top:18px;right:20px;cursor:pointer;border:1.5px solid rgba(255,255,255,.5);background:transparent;color:#fff;border-radius:8px;padding:7px 13px;font:inherit;font-size:13px;font-weight:600;transition:.12s}
+  .helpbtn:hover{background:rgba(255,255,255,.14);border-color:#fff}
+  .help h3.section:first-child{margin-top:2px}
+  .help p{margin:0 0 9px;font-size:13.5px;color:#2c2c30;max-width:76ch;line-height:1.5}
+  .legenda{list-style:none;margin:4px 0 10px;padding:0}
+  .legenda li{display:flex;align-items:center;gap:9px;margin:5px 0;font-size:13.5px}
+  .help-list{margin:4px 0 10px;padding-left:18px}
+  .help-list li{margin:5px 0;font-size:13.5px;line-height:1.5}
+  .swatch{display:inline-block;width:22px;height:20px;border-radius:4px;border:1px solid var(--line)}
+  .swatch.afw{background:var(--afw)}
+  .splitdot{position:relative}
+  .splitdot::after{content:"";position:absolute;top:2px;right:2px;width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.75}
+  .toggles .tog{display:inline-flex;align-items:center;gap:6px}
+  .help-q{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1px solid var(--control-line);color:var(--muted);font-size:10px;font-weight:700;cursor:help}
 </style>
 </head>
 <body>
 <header class="top">
+  <button id="helpBtn" class="helpbtn">&#9432; Uitleg</button>
   <h1>Wie stemde wat<span class="q">?</span></h1>
   <p class="lead">Stemgedrag per partij in de Provinciale Staten — <b>Voor</b> of <b>Tegen</b> per stemming.</p>
   <p class="src" id="src"></p>
@@ -195,9 +211,9 @@
     </select>
   </label>
   <div class="toggles">
-    <label><input type="checkbox" id="controversial"> Alleen omstreden</label>
+    <span class="tog"><label><input type="checkbox" id="controversial"> Alleen omstreden</label><span class="help-q" title="Toon alleen stemmingen waarbij de partijen niet allemaal hetzelfde stemden">?</span></span>
     <label><input type="checkbox" id="onlyPinned"> Alleen vastgepind</label>
-    <label><input type="checkbox" id="raw"> Ruwe getallen</label>
+    <span class="tog"><label><input type="checkbox" id="raw"> Ruwe getallen</label><span class="help-q" title="Toon de aantallen (bijv. 6-0) in plaats van V/T">?</span></span>
   </div>
   <div class="actions">
     <button id="matrixBtn" class="bigbtn">&#128202; Overeenkomst</button>
@@ -237,6 +253,7 @@
   <div class="modal-card">
     <div class="modal-head"><h2>&#128100; Partijprofiel</h2>
       <button class="modal-close" data-close="profileModal" title="Sluiten">&times;</button></div>
+    <p class="modal-sub">Hoe vaak een partij aan de winnende kant stond, en de stemmingen waarbij ze als enige tegen de rest in stemde.</p>
     <div class="modal-controls">
       <label class="field">Partij: <select id="profileParty"></select></label>
       <span class="mc-label">Tel mee:</span><span class="chips" id="profileTypes"></span>
@@ -249,12 +266,57 @@
   <div class="modal-card">
     <div class="modal-head"><h2>&#8646; Vergelijk partijen</h2>
       <button class="modal-close" data-close="compareModal" title="Sluiten">&times;</button></div>
+    <p class="modal-sub">Kies twee partijen om te zien op welke stemmingen ze verschillend stemden.</p>
     <div class="modal-controls">
       <label class="field">Partij A: <select id="cmpA"></select></label>
       <label class="field">Partij B: <select id="cmpB"></select></label>
       <span class="mc-label">Tel mee:</span><span class="chips" id="compareTypes"></span>
     </div>
     <div id="compareBody"></div>
+  </div>
+</div>
+
+<div class="modal" id="helpModal" hidden>
+  <div class="modal-card">
+    <div class="modal-head"><h2>&#9432; Hoe werkt deze site?</h2>
+      <button class="modal-close" data-close="helpModal" title="Sluiten">&times;</button></div>
+    <div class="help">
+      <h3 class="section">Wat is dit?</h3>
+      <p>Per stemming &mdash; een motie, amendement of besluit in de Provinciale Staten van Utrecht &mdash;
+        zie je hoe elke fractie stemde.</p>
+
+      <h3 class="section">De tabel</h3>
+      <p>Rijen zijn stemmingen (nieuwste boven), kolommen zijn partijen. In elke cel:</p>
+      <ul class="legenda">
+        <li><span class="vbadge voor">V</span> Voor</li>
+        <li><span class="vbadge tegen">T</span> Tegen</li>
+        <li><span class="vbadge neutraal">O</span> Onthouden of staken van stemmen</li>
+        <li><span class="swatch afw"></span> leeg = afwezig (de fractie deed niet mee aan deze stemming)</li>
+        <li><span class="vbadge voor splitdot">V</span> stip = de fractie stemde niet unaniem</li>
+      </ul>
+      <p>Beweeg met de muis over een cel voor de exacte aantallen voor/tegen.</p>
+
+      <h3 class="section">Filteren &amp; pinnen</h3>
+      <p>Filter op type, toon of verberg partijen, zoek op onderwerp of indiener, en sorteer.
+        Toon desgewenst alleen aangenomen/verworpen of <i>omstreden</i> stemmingen (waarbij partijen
+        het oneens waren). Met <b>Ruwe getallen</b> zie je bijv. 6&ndash;0 in plaats van V/T.
+        Klik op &#128204; om een stemming vast te pinnen en bovenaan te vergelijken.</p>
+
+      <h3 class="section">De drie analyses</h3>
+      <ul class="help-list">
+        <li><b>Overeenkomst</b> &mdash; hoe vaak twee partijen hetzelfde stemden. Partijen die vaak
+          gelijk stemmen staan bij elkaar.</li>
+        <li><b>Partijprofiel</b> &mdash; o.a. hoe vaak een partij aan de winnende kant stond, en
+          wanneer ze als enige tegen de rest in stemde.</li>
+        <li><b>Vergelijken</b> &mdash; de stemmingen waarop twee gekozen partijen verschillend stemden.</li>
+      </ul>
+
+      <h3 class="section">Bron &amp; methode</h3>
+      <p>Open data van <a href="https://www.stateninformatie.provincie-utrecht.nl" target="_blank" rel="noopener">Provincie
+        Utrecht / Statengriffie</a>, periode 2023&ndash;2027, wekelijks bijgewerkt. V of T is de meerderheid
+        van de fractie; afwezige fracties tellen niet mee in de percentages. Dit is geen offici&euml;le
+        uitgave van de provincie.</p>
+    </div>
   </div>
 </div>
 
@@ -310,6 +372,7 @@ async function init(){
   };
   $("#profileBtn").onclick = openProfile;
   $("#compareBtn").onclick = openCompare;
+  $("#helpBtn").onclick = () => $("#helpModal").hidden = false;
   document.querySelectorAll(".modal").forEach(mo => mo.addEventListener("click", e => { if(e.target === mo) mo.hidden = true; }));
   document.querySelectorAll("[data-close]").forEach(btn => btn.onclick = () => { document.getElementById(btn.dataset.close).hidden = true; });
 
