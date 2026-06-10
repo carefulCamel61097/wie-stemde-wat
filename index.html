@@ -368,6 +368,9 @@ const ABBR = {bbb:"BBB",groenlinks:"GL",vvd:"VVD",d66:"D66",utrechtnu:"U!",cda:"
   // Limburg (iBabs): local fracties
   "lokaal-limburg":"LL","oos-limburg":"oos",horizon:"Horizon",svl:"SVL"};
 const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel"};
+// Min. stemmingen a party must have voted on to appear in the Overeenkomst matrix — below this an
+// agreement % is noise (a party that voted once is "100% gelijk" with everyone).
+const MATRIX_MIN = 5;
 
 let DATA, state, AG = null, ORDER = null, ALLTYPES = null, MTYPES = null, PTYPES = null, CTYPES = null;
 const $ = s => document.querySelector(s);
@@ -457,12 +460,18 @@ const pName = slug => { const p = DATA.parties.find(x => x.slug === slug); retur
 function refreshMatrix(){ AG = computeAgreement(MTYPES); ORDER = clusterOrder(); renderMatrix(); }
 
 function computeAgreement(types){
-  const ps = DATA.parties;
+  // Count how often each party cast a (decided) vote within the selected types, then drop the
+  // parties below MATRIX_MIN — they only add misleading 100%/0% cells.
+  const counts = {};
   const vd = DATA.moties.filter(m => types.has(m.type)).map(m => {
     const o = {};
-    for(const p of ps){ const r = cellVerdict(m.votes[p.slug]); if(r) o[p.slug] = r.label; }
+    for(const p of DATA.parties){
+      const r = cellVerdict(m.votes[p.slug]);
+      if(r){ o[p.slug] = r.label; counts[p.slug] = (counts[p.slug]||0) + 1; }
+    }
     return o;
   });
+  const ps = DATA.parties.filter(p => (counts[p.slug]||0) >= MATRIX_MIN);
   const M = {};
   for(const a of ps){ M[a.slug] = {};
     for(const b of ps){
@@ -478,7 +487,8 @@ function computeAgreement(types){
 }
 // Seriation: average-linkage clustering so similar-voting parties end up adjacent.
 function clusterOrder(){
-  const slugs = DATA.parties.map(p => p.slug);
+  const slugs = Object.keys(AG);   // only the parties that cleared MATRIX_MIN
+  if(slugs.length < 2) return slugs;
   const dist = (a,b) => { const c = AG[a] && AG[a][b]; return c ? 100 - c.pct : 100; };
   let cl = slugs.map(s => ({m:[s]}));
   const cd = (c1,c2) => { let s=0,n=0; for(const a of c1.m) for(const b of c2.m){ s+=dist(a,b); n++; } return s/n; };
@@ -495,7 +505,7 @@ function clusterOrder(){
   return cl[0].m;
 }
 function renderMatrix(){
-  const order = ORDER || DATA.parties.map(p => p.slug);
+  const order = ORDER || Object.keys(AG);
   const pmap = Object.fromEntries(DATA.parties.map(p => [p.slug, p]));
   const name = s => pmap[s] ? pmap[s].name : s;
   const lbl = s => ABBR[s] || name(s);
@@ -507,7 +517,11 @@ function renderMatrix(){
       if(!c) return `<td class="na" title="geen gezamenlijke stemmingen">&middot;</td>`;
       return `<td style="background:hsl(${Math.round(c.pct*1.35)},70%,72%)" title="${esc(name(a))} &amp; ${esc(name(b))}: ${c.pct}% gelijk (${c.n} stemmingen)">${c.pct}</td>`;
     }).join("")}</tr>`).join("");
-  $("#matrixBody").innerHTML = `<table class="matrix"><thead>${head}</thead><tbody>${rows}</tbody></table>`;
+  const excluded = DATA.parties.filter(p => !(p.slug in AG));
+  const note = excluded.length
+    ? `<p class="modal-sub" style="margin-top:10px">Niet getoond (minder dan ${MATRIX_MIN} stemmingen): ${excluded.map(p => esc(p.name)).join(", ")}.</p>`
+    : "";
+  $("#matrixBody").innerHTML = `<table class="matrix"><thead>${head}</thead><tbody>${rows}</tbody></table>${note}`;
 }
 
 /* ---- Party profile ---- */

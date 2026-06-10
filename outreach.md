@@ -6,6 +6,8 @@ for why. Both are about **open data**, so there's good precedent (Utrecht alread
 ---
 
 ## 1. Notubiz — request an open-data API token
+> **✅ Sent 2026-06-10.** Awaiting reply. If granted, build the Notubiz adapter (see roadmap NEXT).
+
 **Unlocks (if granted):** Fryslân, Groningen, Gelderland, Zuid-Holland, Overijssel (5 provinces).
 **Why:** `api.notubiz.nl/agenda_items/votings` already gives outcomes + roll-call publicly, but
 votes are keyed by `role_id` and the `role_id → fractie` map sits behind the auth-gated `/roles`
