@@ -58,6 +58,25 @@ PROVINCES = [
         "note": "De bron (iBabs-registers) bevat alleen aangenomen moties en amendementen; "
                 "stemmen zijn op fractieniveau geregistreerd, dus zonder exacte aantallen per fractie.",
     },
+    {
+        "key": "limburg",
+        "name": "Limburg",
+        "vendor": "ibabs",
+        "votes": "stemmen",   # structured per-fractie member counts (not NH's free text)
+        "base": "https://limburg.bestuurlijkeinformatie.nl",
+        "reports": [
+            {"guid": "0493fdd4-4d92-45b7-9645-64a5cb38e1dd", "type": "motie"},
+            {"guid": "34a4e0ce-064b-4457-9acb-8e89a2a93019", "type": "amendement"},
+        ],
+        "term_start": (2023, 3, 29),
+        "term_label": "2023-2027",
+        "style": {"accent": "#0059a2", "headerBg": "#0a2540"},   # Limburg portal huisstijl blue
+        "license": "Open data - Provincie Limburg (iBabs publieksportaal)",
+        # Richer than NH: includes verworpen moties/amendementen and exact per-fractie counts. Moties
+        # zonder hoofdelijke stemming (bij acclamatie) hebben geen telling en worden overgeslagen.
+        "note": "Stemmen zijn per fractie met aantallen geregistreerd (aangenomen én verworpen). "
+                "Moties/amendementen zonder hoofdelijke stemming zijn niet opgenomen.",
+    },
 ]
 
 # Bodies that are type "Fractie" in the GO API but are not voting parties.
@@ -441,30 +460,33 @@ def ibabs_title(r):
     return title
 
 
-def collect_ibabs(p):
-    """Return {parties, moties} for an iBabs province, or None if no report is reachable.
-    A province may expose several vote-bearing reports (Moties, Amendementen, …); each entry in
-    p["reports"] is {"guid", "type"} and gets a distinct id_base so ids stay unique across them."""
+def _list_year(r):
+    """Best 4-digit year from a list row's date-ish fields (schema varies per portal)."""
+    for k in ("ingediendindatum", "datum", "registrationdate"):
+        m = re.search(r"(?:19|20)\d{2}", str(r.get(k, "") or ""))
+        if m:
+            return int(m.group(0))
+    return 0
+
+
+def ibabs_fetch(p):
+    """Common iBabs fetch: for every report, pull the DataTables list + each in-term detail page.
+    Returns [(row, date, html, type, id_base)] with row['status'] resolved (list / detail field /
+    attachment filename). Each report gets its own id_base since `identity` restarts per report."""
     base = p["base"].rstrip("/")
     reports = p.get("reports") or [{"guid": p["report"], "type": "motie"}]
     term_start = date(*p["term_start"])
-
-    # Fetch each report's list + detail pages; parse the in-term Stemverhoudingen. We carry the
-    # item type and a per-report id_base (the same identity counter restarts per report).
-    parsed = []   # (row, date, spec, rtype, id_base)
-    skipped = 0
+    raw, skipped = [], 0
     for ri, rep in enumerate(reports):
         id_base = ri * 10_000_000
         listing = post_json(f"{base}/Reports/GetReportData/{rep['guid']}", "draw=1&start=0&length=2000")
         rows = listing.get("data") if isinstance(listing, dict) else None
         if not rows:
-            print(f"  {rep['type']}: report {rep['guid']} unreachable — skipped")
+            print(f"  {rep['type']}: report {rep['guid']} unreachable/empty — skipped")
             continue
-        # Pre-filter by indiening year to avoid fetching pre-term detail pages; the real term cut
-        # is applied on each item's "Datum PS" below (a 1-year margin covers late-indiened votes).
-        cand = [r for r in rows
-                if (str(r.get("ingediendindatum", ""))[-4:].isdigit()
-                    and int(str(r["ingediendindatum"])[-4:]) >= term_start.year - 1)]
+        # Pre-filter by year to skip pre-term detail pages; the exact term cut is on the item's own
+        # date below (a 1-year margin covers items indiened just before the term).
+        cand = [r for r in rows if _list_year(r) >= term_start.year - 1]
         kept = 0
         for r in cand:
             html = try_text(f"{base}/Reports/Item/{r['DT_RowId']}")
@@ -472,30 +494,70 @@ def collect_ibabs(p):
             if not html:
                 skipped += 1
                 continue
-            d = ibabs_date(ibabs_field(html, "Datum PS") or r.get("ingediendindatum"))
+            # Date label varies per portal: NH "Datum PS", Limburg list "datum" / detail "Datum".
+            d = ibabs_date(ibabs_field(html, "Datum PS") or r.get("datum")
+                           or ibabs_field(html, "Datum") or r.get("ingediendindatum"))
             if not d or d < term_start:
                 continue
-            # Some reports (Amendementen) carry no list "status" and no Status field on the detail
-            # page — the outcome is only in the attachment filename ("A8-2026 AANGENOMEN …").
-            # (Deriving it from the tally is unreliable: we count fracties, not zetels.)
             if not (r.get("status") or "").strip():
                 r["status"] = ibabs_field(html, "Status") or ibabs_status_from_bijlage(html)
-            parsed.append((r, d, ibabs_parse(ibabs_field(html, "Stemverhouding")), rep["type"], id_base))
+            raw.append((r, d, html, rep["type"], id_base))
             kept += 1
         print(f"  {rep['type']}: {len(rows)} rows, {len(cand)} candidates, {kept} in-term")
-    if not parsed:
-        return None
     if skipped:
         print(f"  WARN: {skipped} detail page(s) failed to fetch")
+    return raw
 
-    # Pass 1: build the term's party universe from every explicitly-named fractie, and record
-    # each fractie's earliest "present" date. Composition shifts WITHIN a term (e.g. a mid-term
-    # splinter), so a fractie may only join "overige fracties" from when it first exists. We date
-    # that from explicit-presence signals — named on a side, noted afwezig, or listed as indiener
-    # — which catch established parties at term start but a splinter only once it appears. (We do
-    # NOT use "overige" itself as a signal: that's exactly what we're gating.)
-    universe = set()
-    first_seen = {}
+
+def ibabs_item(base, r, d, rtype, id_base, votes):
+    status = (r.get("status") or "").strip()
+    return {
+        "id": ibabs_id(r) + id_base,
+        "date": d.isoformat(),
+        "title": ibabs_title(r),
+        "type": rtype,
+        "result": ibabs_result(status),
+        "resultLabel": status or None,
+        "source": f"{base}/Reports/Item/{r['DT_RowId']}",
+        "votes": votes,
+    }
+
+
+def ibabs_finalize(items, appear, name_by_slug):
+    """Shared tail: per-item totals, newest-first sort, party columns ordered by activity."""
+    items.sort(key=lambda m: (m["date"], m["title"]), reverse=True)
+    for m in items:
+        m["totals"] = {"agree": sum(1 for v in m["votes"].values() if v["agree"] > v["disagree"]),
+                       "disagree": sum(1 for v in m["votes"].values() if v["disagree"] > v["agree"])}
+    order = sorted(appear, key=lambda s: (-appear[s], name_by_slug[s].lower()))
+    by_type = {}
+    for m in items:
+        by_type[m["type"]] = by_type.get(m["type"], 0) + 1
+    print(f"  items with votes: {len(items)} {by_type}; fracties: {len(appear)}")
+    return {"parties": [{"slug": s, "name": name_by_slug[s]} for s in order], "moties": items}
+
+
+def collect_ibabs(p):
+    """iBabs province. Two vote formats (set per province via "votes"):
+    - "stemverhouding" (default, Noord-Holland): free-text, faction-level, "overige fracties" inferred.
+    - "stemmen" (Limburg): structured per-fractie member counts — exact, with real split votes."""
+    raw = ibabs_fetch(p)
+    if not raw:
+        return None
+    return (ibabs_assemble_stemmen if p.get("votes") == "stemmen"
+            else ibabs_assemble_stemverhouding)(p, raw)
+
+
+def ibabs_assemble_stemverhouding(p, raw):
+    """NH free-text "Stemverhouding". Two passes: build the term party universe (+ a first_seen gate
+    for mid-term splinters), then resolve each item's "overige fracties" against the fracties that
+    already existed on its date."""
+    base = p["base"].rstrip("/")
+    term_start = date(*p["term_start"])
+    parsed = [(r, d, ibabs_parse(ibabs_field(html, "Stemverhouding")), rtype, id_base)
+              for (r, d, html, rtype, id_base) in raw]
+
+    universe, first_seen = set(), {}
 
     def mark(party, d):
         if party and (party not in first_seen or d < first_seen[party]):
@@ -513,51 +575,77 @@ def collect_ibabs(p):
         for party in explicit | set(ibabs_parties(r.get("fracties", ""))):
             mark(party, d)
 
-    # Pass 2: resolve each item's votes against the fracties that already existed on its date.
     items, appear, name_by_slug = [], {}, {}
-    no_votes = 0
     for r, d, spec, rtype, id_base in parsed:
         if not spec:
-            no_votes += 1
             continue
-        present_universe = {p for p in universe if first_seen.get(p, term_start) <= d}
-        voor, tegen, split = ibabs_resolve(*spec, present_universe)
+        present = {q for q in universe if first_seen.get(q, term_start) <= d}
+        voor, tegen, split = ibabs_resolve(*spec, present)
         if not voor and not tegen and not split:
-            no_votes += 1
             continue
         votes = {}
-        # split (= "verdeeld gestemd") -> agree==disagree, which the frontend renders as "O" + split dot.
-        tagged = [(x, 1, 0) for x in voor] + [(x, 0, 1) for x in tegen] + [(x, 1, 1) for x in split]
-        for party, agree, disagree in tagged:
+        # split (= "verdeeld gestemd") -> agree==disagree, rendered as "O" + split dot.
+        for party, agree, disagree in ([(x, 1, 0) for x in voor] + [(x, 0, 1) for x in tegen]
+                                       + [(x, 1, 1) for x in split]):
             slug = slugify(party)
             name_by_slug[slug] = party
             votes[slug] = {"agree": agree, "disagree": disagree, "abstain": 0}
             appear[slug] = appear.get(slug, 0) + 1
-        status = (r.get("status") or "").strip()
-        items.append({
-            "id": ibabs_id(r) + id_base,
-            "date": d.isoformat(),
-            "title": ibabs_title(r),
-            "type": rtype,
-            "result": ibabs_result(status),
-            "resultLabel": status or None,
-            "source": f"{base}/Reports/Item/{r['DT_RowId']}",
-            "votes": votes,
-        })
-    by_type = {}
-    for m in items:
-        by_type[m["type"]] = by_type.get(m["type"], 0) + 1
-    print(f"  in-term items with votes: {len(items)} {by_type} (no parseable vote: {no_votes}); "
-          f"universe: {len(appear)} fracties")
-    moties = items
+        items.append(ibabs_item(base, r, d, rtype, id_base, votes))
+    return ibabs_finalize(items, appear, name_by_slug)
 
-    moties.sort(key=lambda m: (m["date"], m["title"]), reverse=True)
-    for m in moties:
-        m["totals"] = {"agree": sum(1 for v in m["votes"].values() if v["agree"] > v["disagree"]),
-                       "disagree": sum(1 for v in m["votes"].values() if v["disagree"] > v["agree"])}
-    # Columns ordered by how often a fractie appears (most active first), then by name.
-    order = sorted(appear, key=lambda s: (-appear[s], name_by_slug[s].lower()))
-    return {"parties": [{"slug": s, "name": name_by_slug[s]} for s in order], "moties": moties}
+
+def ibabs_assemble_stemmen(p, raw):
+    """Limburg "Stemmen": structured per-fractie member counts for the voor and tegen sides.
+    Self-contained (nothing inferred); a fractie on both sides is a real split (agree>0, disagree>0)."""
+    base = p["base"].rstrip("/")
+    items, appear, name_by_slug = [], {}, {}
+    for r, d, html, rtype, id_base in raw:
+        votes = ibabs_parse_stemmen(html, name_by_slug)
+        if not votes:
+            continue
+        for slug in votes:
+            appear[slug] = appear.get(slug, 0) + 1
+        items.append(ibabs_item(base, r, d, rtype, id_base, votes))
+    return ibabs_finalize(items, appear, name_by_slug)
+
+
+# Limburg "Stemmen" markup: <div class="vote-summary-legend-{in-favour|against}"> … <div
+# class="text">Fractie (Statenleden) (N), …</div>. A fractie on both sides = a split vote.
+def ibabs_parse_stemmen(html, name_by_slug):
+    m = re.search(r"<dt[^>]*>\s*Stemmen\s*</dt>\s*<dd[^>]*>(.*?)</dd>", html, re.S)
+    if not m:
+        return {}
+    block = m.group(1)
+    votes = {}
+
+    def side(css, key):
+        sm = re.search(r'vote-summary-legend-' + css + r'\b.*?<div class="text">(.*?)</div>', block, re.S)
+        if not sm:
+            return
+        text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", sm.group(1))).strip()
+        for name, cnt in ibabs_stemmen_items(text):
+            slug = slugify(name)
+            name_by_slug.setdefault(slug, name)
+            votes.setdefault(slug, {"agree": 0, "disagree": 0, "abstain": 0})[key] += cnt
+
+    side("in-favour", "agree")
+    side("against", "disagree")
+    return votes
+
+
+def ibabs_stemmen_items(text):
+    """"50PLUS (Statenlid) (1), CDA (Statenleden) (4), Horizon (1)" -> [(canon_name, count)].
+    Fractie names contain no commas in this summary, so a plain comma split is safe."""
+    out = []
+    for chunk in text.split(","):
+        chunk = chunk.strip()
+        m = re.match(r"^(.*?)\s*(?:\((?:Statenlid|Statenleden)\)\s*)?\((\d+)\)\s*$", chunk)
+        if m:
+            name = ibabs_canon(m.group(1))
+            if name:
+                out.append((name, int(m.group(2))))
+    return out
 
 
 ADAPTERS = {"go": collect_go, "ibabs": collect_ibabs}

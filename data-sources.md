@@ -243,6 +243,24 @@ What the live build surfaced beyond the recipe above:
   use the list `identity` int. Pick the huisstijl `accent` from `/Base/SiteCss` `--button-color`
   (NH = `#2891e0`). Party slugs reuse the existing `ABBR` map where they slugify the same.
 
+### Other iBabs provinces (probed)
+Not every iBabs portal is like NH — the vote *format* varies, and two are dead ends:
+- **Limburg** — BEST iBabs province (built). Detail pages have a structured **"Stemmen"** field
+  (not "Stemverhouding"): `<div class="vote-summary-legend-{in-favour|against}"><div class="text">
+  Fractie (Statenleden) (N), …</div>` — i.e. **per-fractie member counts** for the voor and tegen
+  sides (tier A, like Utrecht). A fractie on both sides = a real split. The register **includes
+  verworpen** (status field: Aangenomen/Verworpen/Ingetrokken/Aangehouden). Date = list `datum`.
+  321 in-term items (271 moties + 50 amendementen). Moties decided *bij acclamatie* (no hoofdelijke
+  stemming) have an empty Stemmen field → skipped. Reports: Moties `0493fdd4-…`, Amendementen
+  `34a4e0ce-…`. Handled by the adapter's `votes: "stemmen"` format.
+- **Noord-Brabant** — Moties register has the status (incl. verworpen) but **no per-fractie
+  breakdown** on the detail page → unusable for our table (outcome only).
+- **Zeeland** — all three registers (Moties, Amendementen, **Stemming** `8f77ee0a-…`) return
+  **0 rows**. Empty; nothing to collect.
+
+⇒ The adapter now branches on a province `votes` format: `"stemverhouding"` (NH free-text,
+faction-level, inference) vs `"stemmen"` (Limburg structured, per-member counts, exact).
+
 ### HTML parsing is fragile — avoid it
 The per-motie `voteResultHtml` is rendered HTML (per-member rows). A quick parse already
 mis-read the proposer's row. **Prefer the structured `/Samenstelling/{party}/votings`

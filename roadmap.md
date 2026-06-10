@@ -1,31 +1,23 @@
 # Roadmap — "Wie heeft wat gestemd?" (multi-province voting overview)
 
 > ## ▶ NEXT (resume here)
-> **Add the remaining iBabs provinces** — the adapter (`collect_ibabs`) is built & proven on
-> Noord-Holland, so each new one is mostly config:
-> - Get each report GUID via `GET /Reports` on `{prov}.bestuurlijkeinformatie.nl`:
->   **Limburg** (`limburg.…`) and **Noord-Brabant** (`noordbrabant.…`) → their "Moties" report;
->   **Zeeland** (`zeeland.…`) → the dedicated **"Stemming"** report
->   `8f77ee0a-822e-4cbe-8acc-7ff35488c8ac` (may include *verworpen* too, unlike NH's
->   adopted-only motieregister).
-> - Add each to `PROVINCES` (vendor `ibabs`, `base`, `report` GUID, `term_start`, `style`,
->   optional `note`). Pull the huisstijl accent from `/Base/SiteCss` (`--button-color`).
-> - Run collector → eyeball `data/<prov>.json` vs the portal. Watch for **local fracties** not
->   in `IBABS_ALIASES` (add them) and any new Stemverhouding phrasings (the parser already
->   handles unaniem / overige-fracties / `(… afwezig)` / "Verdeeld gestemd:" / glued labels).
-> - Heads-up: ~one HTTP request per motie (a few hundred) — rate-limited (0.3s); fine weekly.
-> - In parallel (user action): send the [outreach.md](outreach.md) e-mails (Notubiz token →
->   unlocks 5 provinces; Flevoland/Drenthe griffie).
+> **iBabs is largely exhausted (2 live, 2 dead) — next frontier is Notubiz (5 provinces).**
+> - **Send the [outreach.md](outreach.md) Notubiz token e-mail** (user action) — cheapest big
+>   unlock, and it has lead time. Once a token arrives, build the **Notubiz adapter** (vendor #3):
+>   `api.notubiz.nl/agenda_items/votings` gives outcomes + roll-call; the token unlocks the
+>   `role_id → fractie` map (`/roles?field_id=105`) to group per party. Unlocks Fryslân, Groningen,
+>   Gelderland, Zuid-Holland, Overijssel.
+> - **GO Flevoland/Drenthe** — votes only in besluitenlijst PDFs → PDF parsing, or lobby the griffie
+>   ([outreach.md](outreach.md) §2) to enable the GO stemgedrag module (then config-only).
+> - Smaller: per-province frontend polish for tier-B (hide/relabel "ruwe getallen" where votes are
+>   faction-level — NH); a coverage/gaps view on the website (deferred).
 
-> **DONE (Phase 3d):** iBabs adapter built + **Noord-Holland live** as the 2nd province (141
-> moties + 40 amendementen, aangenomen only, 15 fracties, 2023–2027). Adapter unions multiple
-> reports per province (`reports: [{guid, type}]`). See [data-sources.md](data-sources.md) §7 for
-> the parsing notes (Datum PS, glued labels, split-vote clause, first-seen gating, Bijlage-status).
->
-> **Open gap (deferred, per discussion):** the iBabs registers hold *aangenomen* items only — the
-> **niet-aangenomen** moties/amendementen aren't published per-fractie anywhere (only in PDFs).
-> Revisit after the low-hanging fruit. Coverage + per-source **reliability** is tracked in
-> [coverage.md](coverage.md).
+> **DONE (Phase 3d):** iBabs adapter (`collect_ibabs`) built; **Noord-Holland** (181 items, faction-
+> level, aangenomen only) and **Limburg** (321 items, **per-member counts incl. verworpen**) live as
+> provinces 2 & 3. Adapter unions multiple reports per province and supports two vote formats
+> (`votes`: `stemverhouding` = NH free-text, `stemmen` = Limburg structured counts). The other two
+> iBabs provinces are **dead ends**: **Zeeland** registers are empty; **Noord-Brabant** publishes
+> outcomes but no per-fractie breakdown. Coverage + per-source **reliability**: [coverage.md](coverage.md).
 
 v1 goal: a website where you pick a **province** and see a table — rows = moties,
 columns = parties, cells = **V** (green) / **T** (red) / **-** (tie) / blank (afwezig).

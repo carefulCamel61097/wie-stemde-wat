@@ -55,10 +55,12 @@ view is already possible by deselecting parties.)
 - [x] **Phase 3b** — collector + frontend generalized to multi-province (PROVINCES registry +
   vendor adapters, `data/provinces.json` index, province selector, per-province theme).
 - [x] **Phase 3c** — cracked the iBabs vote endpoints ([data-sources.md](data-sources.md) §7).
-- [x] **Phase 3d** — built the iBabs adapter (`collect_ibabs`) and shipped **Noord-Holland** as
-  the 2nd selectable province (141 aangenomen moties, 15 fracties, faction-level votes).
-- [ ] **NEXT** — add the remaining iBabs provinces (Limburg, Noord-Brabant, Zeeland) and/or
-  Notubiz once a token arrives (see the **NEXT** pointer at the top of [roadmap.md](roadmap.md)).
+- [x] **Phase 3d** — built the iBabs adapter (`collect_ibabs`, two vote formats) and shipped
+  **Noord-Holland** (181 items, faction-level, aangenomen only) and **Limburg** (321 items,
+  per-member counts **incl. verworpen**) as provinces 2 & 3. Zeeland (empty) and Noord-Brabant
+  (no per-fractie breakdown) are dead ends. Coverage + reliability: [coverage.md](coverage.md).
+- [ ] **NEXT** — Notubiz (5 provinces, needs a token — see [outreach.md](outreach.md)); GO
+  Flevoland/Drenthe via PDF/lobby. See the **NEXT** pointer at the top of [roadmap.md](roadmap.md).
 
 Repo: https://github.com/carefulCamel61097/wie-stemde-wat ·
 Live: https://carefulcamel61097.github.io/wie-stemde-wat/

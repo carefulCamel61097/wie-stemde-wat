@@ -13,17 +13,23 @@ the "things we DO have" companion to [provinces.md](provinces.md) (feasibility f
 | Province | Vendor | Method | Granularity | Item types | Items | Scope | Reliability |
 |---|---|---|---|---|---|---|---|
 | **Utrecht** | GO | clean JSON API | per **member** (counts) | motie, amendement, besluit, ordevoorstel | 566 | all (aangenomen + verworpen) | **A — exact** |
+| **Limburg** | iBabs | HTML structured parse | per **member** (counts) | motie, amendement | 321 | **aangenomen + verworpen** | **A — exact** |
 | **Noord-Holland** | iBabs | HTML free-text parse | per **fractie** (V/T only) | motie, amendement | 181 | **aangenomen only** | **B — parsed/inferred** |
 
 (Counts as of the last refresh; the weekly Action keeps them current.)
+
+> Note: vendor ≠ reliability. Both Limburg and Noord-Holland run iBabs, but Limburg's portal
+> publishes structured per-member vote counts (tier A) while NH publishes only free-text faction
+> outcomes (tier B). The portal's *vote format* decides the tier, not the vendor.
 
 ## Reliability tiers
 
 How directly the published data maps to what we display, and how much we infer.
 
-- **A — exact (structured source).** The endpoint returns the vote itself as structured data; we
-  normalize, we don't interpret. Exact counts, split votes, abstentions and absences are all real.
-  *Utrecht* (GO `/Samenstelling/{fractie}/votings` — per-member tallies).
+- **A — exact (structured source).** The source gives the vote itself as structured data; we
+  normalize, we don't interpret. Exact counts and real split votes; minimal inference.
+  *Utrecht* (GO JSON, per-member tallies) and *Limburg* (iBabs "Stemmen" field — per-fractie member
+  counts for the voor/tegen sides; a fractie on both sides is a real split).
 - **B — parsed / inferred (semi-structured source).** The outcome is published, but as text we must
   parse, and part of the result is *computed* rather than stated. Correct for "which fractie voted
   voor/tegen" on the items present, with the caveats below. *Noord-Holland* (iBabs "Stemverhouding").
@@ -37,6 +43,15 @@ How directly the published data maps to what we display, and how much we infer.
 - The dataset mirrors the GO stemgedrag module. The main residual risk is upstream: if a vote was
   mis-recorded in the source, we faithfully reproduce it. Dates are resolved via `meetingId`.
 - Practically nothing is inferred on our side.
+
+### Limburg — tier A
+- The "Stemmen" field lists each fractie with its member count on the voor and tegen sides, so
+  counts and splits are exact (27 in-term moties have a real fractie split). **Includes verworpen**
+  moties and amendementen — the only iBabs province so far with rejected items.
+- The one gap: moties/amendementen decided **without a hoofdelijke stemming** (bij acclamatie /
+  handopsteken) carry no per-fractie tally and are skipped. In practice this only drops the
+  ingetrokken/aangehouden items; essentially all *decided* moties have a recorded breakdown.
+- Local fracties (LOKAAL-LIMBURG, Horizon, oos limburg, SVL) pass through un-aliased.
 
 ### Noord-Holland — tier B
 Reliable for the headline question ("did fractie X vote voor or tegen this adopted motie?"), but
@@ -56,9 +71,10 @@ know these limits before trusting an exact figure:
    are absent entirely** (not published per-fractie anywhere on the portal; see the gap below).
 
 ## Known gaps to revisit
-- **Niet-aangenomen items (iBabs provinces).** Rejected moties/amendementen aren't published
-  per-fractie — they'd only be in besluitenlijst/notulen PDFs. Open question whether any province
-  exposes them; Zeeland's dedicated "Stemming" report is the best lead.
+- **Niet-aangenomen items (some iBabs provinces).** Limburg publishes verworpen items; **Noord-Holland
+  does not** (its registers are adopted-only — rejected ones live only in besluitenlijst/notulen PDFs).
+  So the gap is portal-specific, not vendor-wide. (Zeeland's "Stemming" report turned out **empty**;
+  Noord-Brabant publishes outcomes but no per-fractie breakdown — neither is usable yet.)
 - **Faction-level provinces lose "ruwe getallen" / exact splits** — inherent to iBabs/Notubiz.
 - **Spot-checking.** Tier-B data isn't self-verifying; eyeball a few moties against the portal after
   big parser changes. Method per source is in [data-sources.md](data-sources.md).

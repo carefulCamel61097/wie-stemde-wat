@@ -17,9 +17,9 @@ research + live probing (curl with a browser UA; Notubiz/iBabs block plain bots)
 | Zuid-Holland | pzh.notubiz.nl | Notubiz | ⚠️ public, behind SPA/API |
 | Overijssel | overijssel.notubiz.nl | Notubiz | ⚠️ public, behind SPA/API |
 | **Noord-Holland** | noordholland.bestuurlijkeinformatie.nl | **iBabs** | ✅ **done** (adapter; 141 moties + 40 amendementen, aangenomen only) |
-| Limburg | limburg.bestuurlijkeinformatie.nl | iBabs | ⚠️ likely in minutes only |
-| Noord-Brabant | noordbrabant.bestuurlijkeinformatie.nl | iBabs | ⚠️ no dedicated feature found |
-| Zeeland | zeeland.bestuurlijkeinformatie.nl | iBabs | ⚠️ **dedicated "Stemming" report** |
+| **Limburg** | limburg.bestuurlijkeinformatie.nl | **iBabs** | ✅ **done** — "Stemmen" field, **per-member counts + verworpen** (321 items) |
+| Noord-Brabant | noordbrabant.bestuurlijkeinformatie.nl | iBabs | ❌ outcomes (incl. verworpen) but **no per-fractie breakdown** |
+| Zeeland | zeeland.bestuurlijkeinformatie.nl | iBabs | ❌ all registers (Moties/Amendementen/Stemming) **empty** |
 
 **Vendor split:** GO = 3 (Utrecht, Flevoland, Drenthe) · Notubiz = 5 (Fryslân, Groningen,
 Gelderland, Zuid-Holland, Overijssel) · iBabs = 4 (Noord-Holland, Limburg, Noord-Brabant, Zeeland).
