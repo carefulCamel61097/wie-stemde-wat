@@ -122,7 +122,8 @@ Extra views (data already supports these):
 - ⏳ (optional) link matrix cell click → open Compare for that pair, pre-filled.
 
 Parked (v1.1 / v2):
-- Shareable URL encoding filter state. CSV download. Member-level detail (privacy: later).
+- Shareable URL encoding filter state. Member-level detail (privacy: later).
+- ✅ CSV download (filtered rows → semicolon CSV + BOM) — DONE.
 - Other bodies (Tweede Kamer, etc.).
 
 ### Multi-province (Phase 3) — discovery done, see [provinces.md](provinces.md)
