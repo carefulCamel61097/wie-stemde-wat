@@ -11,6 +11,7 @@
       "headerBg": "#1b1b1b"
     },
     "note": "",
+    "granularity": "member",
     "counts": {
       "moties": 566,
       "parties": 16

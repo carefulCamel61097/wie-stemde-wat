@@ -238,7 +238,7 @@
     <div class="toggles">
       <span class="tog"><label><input type="checkbox" id="controversial"> Alleen omstreden</label><span class="help-q" title="Toon alleen stemmingen waarbij de partijen niet allemaal hetzelfde stemden">?</span></span>
       <label><input type="checkbox" id="onlyPinned"> Alleen vastgepind</label>
-      <span class="tog"><label><input type="checkbox" id="raw"> Ruwe getallen</label><span class="help-q" title="Toon de aantallen (bijv. 6-0) in plaats van V/T">?</span></span>
+      <span class="tog" id="rawToggle"><label><input type="checkbox" id="raw"> Ruwe getallen</label><span class="help-q" title="Toon de aantallen (bijv. 6-0) in plaats van V/T">?</span></span>
     </div>
     <div class="actions">
       <button id="matrixBtn" class="bigbtn">&#128202; Overeenkomst</button>
@@ -410,6 +410,12 @@ async function loadProvince(key){
   $("#src").innerHTML = `Bron: <a href="${DATA.meta.source}" target="_blank" rel="noopener">${DATA.meta.body}, provincie ${DATA.meta.province}</a> · open data · periode ${DATA.meta.term} · bijgewerkt ${DATA.meta.generated_at.slice(0,10)}`;
   $("#helpSource").innerHTML = `Open data van de <a href="${DATA.meta.source}" target="_blank" rel="noopener">${esc(DATA.meta.body)} van ${esc(DATA.meta.province)}</a>, periode ${esc(DATA.meta.term)}, wekelijks bijgewerkt.`
     + (DATA.meta.note ? ` ${esc(DATA.meta.note)}` : "");
+
+  // Faction-level provinces (e.g. NH) store votes as 1/0, so "ruwe getallen" would show a
+  // meaningless "1-0". Hide the toggle and keep it off there.
+  const faction = DATA.meta.granularity === "fractie";
+  $("#rawToggle").style.display = faction ? "none" : "";
+  if(faction) state.raw = false;
 
   buildControls(ALLTYPES);
   $("#search").value = ""; $("#result").value = "all"; $("#sort").value = "date-desc";
@@ -688,7 +694,10 @@ function cellHTML(m, slug, name){
   if(!r) return `<td class="cell afw" title="${esc(name)}: afwezig"></td>`;
   const split = v.agree>0 && v.disagree>0;
   const disp = state.raw ? `${v.agree}-${v.disagree}` : r.label;
-  const tip = `${name}: ${v.agree} voor, ${v.disagree} tegen` + (v.abstain?`, ${v.abstain} onthouden`:"") + (split?" (niet unaniem)":"");
+  // Faction-level data has no real counts; describe the vote in words instead of "1 voor, 0 tegen".
+  const tip = DATA.meta.granularity === "fractie"
+    ? `${name}: ${split ? "verdeeld gestemd" : r.label==="V" ? "voor" : r.label==="T" ? "tegen" : "onthouden"}`
+    : `${name}: ${v.agree} voor, ${v.disagree} tegen` + (v.abstain?`, ${v.abstain} onthouden`:"") + (split?" (niet unaniem)":"");
   return `<td class="cell ${r.cls}${split&&!state.raw?" split":""}${state.raw?" raw":""}" title="${esc(tip)}">${disp}</td>`;
 }
 function rowHTML(m, vps){

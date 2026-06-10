@@ -56,8 +56,10 @@ How directly the published data maps to what we display, and how much we infer.
 ### Noord-Holland — tier B
 Reliable for the headline question ("did fractie X vote voor or tegen this adopted motie?"), but
 know these limits before trusting an exact figure:
-1. **No exact counts.** Votes are stored `1–0` per fractie, so the "ruwe getallen" toggle shows
-   `1–0`, not seat counts, and the agreement %s weight every fractie equally (not by zetels).
+1. **No exact counts.** Votes are stored `1–0` per fractie. The UI reads `meta.granularity:
+   "fractie"` and **hides the "ruwe getallen" toggle** (and describes cells in words, not "1 voor
+   0 tegen") so the missing counts aren't shown as if real. Agreement %s weight every fractie
+   equally (not by zetels).
 2. **"Overige fracties" is inferred, not stated.** The losing side is named; the winning side is
    "overige fracties", which we expand against a *computed* party universe (built from the data)
    minus afwezig/split, with a `first_seen` gate for mid-term splinters. This is the layer most

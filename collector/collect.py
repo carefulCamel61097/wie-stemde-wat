@@ -648,6 +648,15 @@ def ibabs_stemmen_items(text):
     return out
 
 
+def province_granularity(p):
+    """Vote detail level, for the frontend: "member" = real per-fractie counts (GO, Limburg
+    "stemmen") so "ruwe getallen" are meaningful; "fractie" = faction-level V/T only
+    (NH "stemverhouding"), where counts are just 1/0 and must not be shown as tallies."""
+    if p["vendor"] == "ibabs" and p.get("votes", "stemverhouding") == "stemverhouding":
+        return "fractie"
+    return "member"
+
+
 ADAPTERS = {"go": collect_go, "ibabs": collect_ibabs}
 
 
@@ -675,6 +684,7 @@ def main():
                     "license": p.get("license", ""),
                     "style": p.get("style", {}),
                     "note": p.get("note", ""),
+                    "granularity": province_granularity(p),
                     "counts": {"moties": len(res["moties"]), "parties": len(res["parties"])},
                 },
                 "parties": res["parties"],

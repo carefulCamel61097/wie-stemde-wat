@@ -11,6 +11,7 @@
       "headerBg": "#0e2438"
     },
     "note": "De bron (iBabs-registers) bevat alleen aangenomen moties en amendementen; stemmen zijn op fractieniveau geregistreerd, dus zonder exacte aantallen per fractie.",
+    "granularity": "fractie",
     "counts": {
       "moties": 181,
       "parties": 15

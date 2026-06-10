@@ -11,6 +11,7 @@
       "headerBg": "#0a2540"
     },
     "note": "Stemmen zijn per fractie met aantallen geregistreerd (aangenomen én verworpen). Moties/amendementen zonder hoofdelijke stemming zijn niet opgenomen.",
+    "granularity": "member",
     "counts": {
       "moties": 321,
       "parties": 16
