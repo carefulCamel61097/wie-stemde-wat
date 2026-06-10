@@ -24,7 +24,8 @@
 >
 > **Open gap (deferred, per discussion):** the iBabs registers hold *aangenomen* items only — the
 > **niet-aangenomen** moties/amendementen aren't published per-fractie anywhere (only in PDFs).
-> Revisit after the low-hanging fruit; capture per province in a future coverage/gaps overview.
+> Revisit after the low-hanging fruit. Coverage + per-source **reliability** is tracked in
+> [coverage.md](coverage.md).
 
 v1 goal: a website where you pick a **province** and see a table — rows = moties,
 columns = parties, cells = **V** (green) / **T** (red) / **-** (tie) / blank (afwezig).
