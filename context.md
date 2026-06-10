@@ -19,11 +19,14 @@ Cell value rule: per party per motie we have two numbers (voor, tegen) — usual
 whole fractie votes the same. V/T = `voor > tegen`. We keep BOTH numbers stored so the
 rare split votes / abstentions / absences stay visible (tooltip, and useful later).
 
-## Planned views (frontend, all from one dataset)
-1. Moties as rows, parties as columns (default).
-2. Pick a party (or a selection of parties to compare) → parties as rows, moties as cols.
-3. In view 1, be able to **deselect moties** to shrink the list and compare more easily.
-Plus filters (by type, date, party).
+## Views (built — all from one dataset)
+1. Main table: moties as rows, parties as columns. Filters (type chips, party show/hide,
+   search, result, "alleen omstreden"), pin rows, sort, raw-numbers toggle, legend/help popups.
+2. **Overeenkomst** popup — party-agreement matrix (clustered so like-voting parties sit together).
+3. **Partijprofiel** popup — % aan de winnende kant, totals, lone-dissenter list.
+4. **Vergelijken** popup — two parties → the stemmingen where they voted differently.
+(Transpose / moties-as-columns was considered and DROPPED — titles too long; a single-party
+view is already possible by deselecting parties.)
 
 ## Key facts established
 - Provincial voting data exists and is **open data** — see [data-sources.md](data-sources.md).
@@ -41,12 +44,19 @@ Plus filters (by type, date, party).
 - [x] **Stack**: Python (collector).
 - [x] **Provinces in v1**: **Utrecht only**. But build the UI multi-province-ready: there
   IS a province selector, it just only offers Utrecht for now (multi-province = v2).
-- [ ] **What to include**: moties only, or also amendementen / besluiten (with filters)?
-  (leaning: include all, filter by type)
+- [x] **What to include**: moties + amendementen + besluiten + ordevoorstellen, with a type filter.
 - [x] **Body**: Provinciale Staten plenair only (not commissies — those don't hold the votes).
 
-## Status
-- [x] Reverse-engineered the GO (Utrecht) voting endpoints, verified structured JSON
-- [x] Confirmed multi-vendor reality + completeness/union model
-- [ ] Map all 12 provinces → vendor + endpoint
-- [ ] Finalize v1 scope, then build collector → dataset → static site
+## Status (June 2026)
+- [x] **v1 LIVE** — Utrecht: collector (GO adapter) → `data/utrecht.json` → static site, themed
+  to the provincie huisstijl. Weekly GitHub Actions refresh (Thu, day after the Wed vergadering),
+  verified. Three analysis popups + help/legend. Hosted on GitHub Pages.
+- [x] **Phase 3a** — mapped all 12 provinces to vendor + vote feasibility ([provinces.md](provinces.md)).
+- [x] **Phase 3b** — collector + frontend generalized to multi-province (PROVINCES registry +
+  vendor adapters, `data/provinces.json` index, province selector, per-province theme).
+- [x] **Phase 3c** — cracked the iBabs vote endpoints ([data-sources.md](data-sources.md) §7).
+- [ ] **NEXT** — build the iBabs adapter + add Noord-Holland as the 2nd province (see the
+  **NEXT** pointer at the top of [roadmap.md](roadmap.md)).
+
+Repo: https://github.com/carefulCamel61097/wie-stemde-wat ·
+Live: https://carefulcamel61097.github.io/wie-stemde-wat/

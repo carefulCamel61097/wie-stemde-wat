@@ -1,5 +1,21 @@
 # Roadmap — "Wie heeft wat gestemd?" (multi-province voting overview)
 
+> ## ▶ NEXT (resume here)
+> **Build the iBabs adapter and add Noord-Holland as the 2nd province.**
+> - Add `collect_ibabs(p)` to `collector/collect.py` (registry has GO only so far).
+> - Recipe is in [data-sources.md](data-sources.md) **§7** (proven): POST
+>   `/Reports/GetReportData/{guid}` → motie list JSON; GET `/Reports/Item/{DT_RowId}` →
+>   parse the **"Stemverhouding"** text for per-fractie Voor/Tegen.
+> - NH Moties report GUID = `84a8ac43-1424-48a9-8a1a-0c0bbcdfd8ed`; base
+>   `https://noordholland.bestuurlijkeinformatie.nl`. Use a browser User-Agent.
+> - Parser must handle: `Unaniem`; `Voor:`/`Tegen:` lists; separators `/`, `/ `, `, `;
+>   abbreviations (CU→ChristenUnie…); `(… afwezig)`; expand **"overige fracties"** vs the
+>   term's party universe (build it from the data + the report's `fracties` filter).
+> - Store faction votes as `agree/disagree = 1/0`. Add NH to `PROVINCES` with its huisstijl
+>   color. Run collector → eyeball `data/noord-holland.json` vs the live portal → push.
+> - Heads-up: ~one HTTP request per motie (a few hundred) — cache + rate-limit; fine weekly.
+> - In parallel (user action): send the [outreach.md](outreach.md) e-mails (Notubiz token; Flevoland/Drenthe griffie).
+
 v1 goal: a website where you pick a **province** and see a table — rows = moties,
 columns = parties, cells = **V** (green) / **T** (red) / **-** (tie) / blank (afwezig).
 Free to build and host. See [context.md](context.md) and [data-sources.md](data-sources.md).
