@@ -69,3 +69,37 @@ counts) — store as agree/disagree = 1/0 and disable those toggles per-province
 
 Each vendor adapter is a one-time reverse-engineering effort (like Utrecht's GO was) that then
 unlocks 4–5 provinces at once.
+
+## 3c spike findings (Notubiz vs iBabs) — IMPORTANT
+
+Spiked both SPA vendors. Result flips the recommendation: **iBabs is the better target for
+per-party votes, despite fewer provinces.**
+
+### Notubiz (5 provinces) — clean API, but per-party is GATED
+- Public JSON API works with `&format=json&version=…`. Per-meeting votings:
+  `GET https://api.notubiz.nl/agenda_items/votings?format=json&version=1.25.11&organisation_id={ORG}&meeting_id={ID}`
+  → per voting: `type_data.title`, `voting_type`, `voting_result` (adopted/rejected/withdrawn/equal),
+  and `votes: [{role_id, vote: in_favor|against|absent|abstained|blank}]`.
+- **Blocker:** votes are keyed by **`role_id` (individual statenlid), not party.** The
+  `role_id → party` map lives only in `/roles?...&field_id=105`, which is **auth-gated**
+  ("Insufficient rights"). The public `/parties/{org}` endpoint uses *person* ids that have
+  **zero overlap** with `role_id`. So per-party is NOT retrievable anonymously.
+- ⇒ Notubiz per-party needs either **(a) a Notubiz API token** (outreach — would unlock all 5
+  provinces cleanly), or **(b) PDF besluitenlijst parsing**. Outcome + numeric tally ARE public.
+
+### iBabs (4 provinces) — per-FRACTIE natively (no mapping problem)
+- The publieksportaal renders votes **already grouped by fractie** (e.g. Noord-Holland motie:
+  "Tegen: VVD, JA21, PVV, FvD, SP, 50plus / Voor: Overige fracties"). That's exactly our model —
+  **no role_id→party bridge needed.**
+- Data loads via the SPA endpoint **`/Reports/GetReportData`** (+ `/Reports/Item/{guid}`). Exact
+  call params/POST body still need reverse-engineering (GET 404s; POST redirects → needs the right
+  body, likely reportId + filters + an antiforgery token). That's the remaining work.
+
+### Updated recommendation
+1. **Build iBabs first** — it gives per-fractie votes directly (sidesteps Notubiz's exact blocker).
+   Crack `/Reports/GetReportData` → adapter → 4 provinces (Noord-Holland, Limburg, Noord-Brabant,
+   Zeeland; Zeeland also has a dedicated Stemming report).
+2. **In parallel, request a Notubiz open-data API token** (outreach). If granted, the Notubiz
+   adapter becomes clean and unlocks the other 5 provinces. Token is the cheapest unlock for the
+   biggest group.
+3. GO Flevoland/Drenthe — still lobby the griffie to enable the stemgedrag module (config-only).
