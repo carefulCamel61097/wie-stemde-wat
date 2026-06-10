@@ -16,7 +16,7 @@ research + live probing (curl with a browser UA; Notubiz/iBabs block plain bots)
 | Gelderland | gelderland.stateninformatie.nl | Notubiz (org 1769) | ⚠️ outcome only (stemgedrag off) |
 | Zuid-Holland | pzh.notubiz.nl | Notubiz | ⚠️ public, behind SPA/API |
 | Overijssel | overijssel.notubiz.nl | Notubiz | ⚠️ public, behind SPA/API |
-| Noord-Holland | noordholland.bestuurlijkeinformatie.nl | iBabs | ⚠️ public, behind SPA/API |
+| **Noord-Holland** | noordholland.bestuurlijkeinformatie.nl | **iBabs** | ✅ **done** (adapter; 141 aangenomen moties) |
 | Limburg | limburg.bestuurlijkeinformatie.nl | iBabs | ⚠️ likely in minutes only |
 | Noord-Brabant | noordbrabant.bestuurlijkeinformatie.nl | iBabs | ⚠️ no dedicated feature found |
 | Zeeland | zeeland.bestuurlijkeinformatie.nl | iBabs | ⚠️ **dedicated "Stemming" report** |
@@ -99,6 +99,8 @@ per-party votes, despite fewer provinces.**
 1. **Build iBabs first** — it gives per-fractie votes directly (sidesteps Notubiz's exact blocker).
    Crack `/Reports/GetReportData` → adapter → 4 provinces (Noord-Holland, Limburg, Noord-Brabant,
    Zeeland; Zeeland also has a dedicated Stemming report).
+   - ✅ **DONE**: `collect_ibabs` built & shipped on **Noord-Holland** (data-sources.md §7).
+     Remaining iBabs provinces are config-only (report GUID + huisstijl + any local fracties).
 2. **In parallel, request a Notubiz open-data API token** (outreach). If granted, the Notubiz
    adapter becomes clean and unlocks the other 5 provinces. Token is the cheapest unlock for the
    biggest group.

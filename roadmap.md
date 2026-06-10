@@ -1,20 +1,25 @@
 # Roadmap — "Wie heeft wat gestemd?" (multi-province voting overview)
 
 > ## ▶ NEXT (resume here)
-> **Build the iBabs adapter and add Noord-Holland as the 2nd province.**
-> - Add `collect_ibabs(p)` to `collector/collect.py` (registry has GO only so far).
-> - Recipe is in [data-sources.md](data-sources.md) **§7** (proven): POST
->   `/Reports/GetReportData/{guid}` → motie list JSON; GET `/Reports/Item/{DT_RowId}` →
->   parse the **"Stemverhouding"** text for per-fractie Voor/Tegen.
-> - NH Moties report GUID = `84a8ac43-1424-48a9-8a1a-0c0bbcdfd8ed`; base
->   `https://noordholland.bestuurlijkeinformatie.nl`. Use a browser User-Agent.
-> - Parser must handle: `Unaniem`; `Voor:`/`Tegen:` lists; separators `/`, `/ `, `, `;
->   abbreviations (CU→ChristenUnie…); `(… afwezig)`; expand **"overige fracties"** vs the
->   term's party universe (build it from the data + the report's `fracties` filter).
-> - Store faction votes as `agree/disagree = 1/0`. Add NH to `PROVINCES` with its huisstijl
->   color. Run collector → eyeball `data/noord-holland.json` vs the live portal → push.
-> - Heads-up: ~one HTTP request per motie (a few hundred) — cache + rate-limit; fine weekly.
-> - In parallel (user action): send the [outreach.md](outreach.md) e-mails (Notubiz token; Flevoland/Drenthe griffie).
+> **Add the remaining iBabs provinces** — the adapter (`collect_ibabs`) is built & proven on
+> Noord-Holland, so each new one is mostly config:
+> - Get each report GUID via `GET /Reports` on `{prov}.bestuurlijkeinformatie.nl`:
+>   **Limburg** (`limburg.…`) and **Noord-Brabant** (`noordbrabant.…`) → their "Moties" report;
+>   **Zeeland** (`zeeland.…`) → the dedicated **"Stemming"** report
+>   `8f77ee0a-822e-4cbe-8acc-7ff35488c8ac` (may include *verworpen* too, unlike NH's
+>   adopted-only motieregister).
+> - Add each to `PROVINCES` (vendor `ibabs`, `base`, `report` GUID, `term_start`, `style`,
+>   optional `note`). Pull the huisstijl accent from `/Base/SiteCss` (`--button-color`).
+> - Run collector → eyeball `data/<prov>.json` vs the portal. Watch for **local fracties** not
+>   in `IBABS_ALIASES` (add them) and any new Stemverhouding phrasings (the parser already
+>   handles unaniem / overige-fracties / `(… afwezig)` / "Verdeeld gestemd:" / glued labels).
+> - Heads-up: ~one HTTP request per motie (a few hundred) — rate-limited (0.3s); fine weekly.
+> - In parallel (user action): send the [outreach.md](outreach.md) e-mails (Notubiz token →
+>   unlocks 5 provinces; Flevoland/Drenthe griffie).
+
+> **DONE (Phase 3d):** iBabs adapter built + **Noord-Holland live** as the 2nd province (141
+> aangenomen moties, 15 fracties, 2023–2027). See [data-sources.md](data-sources.md) §7 for the
+> parsing notes that emerged (Datum PS date, glued labels, split-vote clause, first-seen gating).
 
 v1 goal: a website where you pick a **province** and see a table — rows = moties,
 columns = parties, cells = **V** (green) / **T** (red) / **-** (tie) / blank (afwezig).
@@ -130,7 +135,12 @@ Notubiz 5, iBabs 4. iBabs + Notubiz are JS SPAs → votes need backend reverse-e
 (fine for V/T, degrades "ruwe getallen"/split).
 - **3b DONE**: collector has a PROVINCES registry + pluggable vendor adapters; frontend is
   province-driven (selector from `data/provinces.json`, per-province data + huisstijl).
-- **Next (3c)**: crack one SPA vendor — Notubiz (most reach) or iBabs via Zeeland's Stemming report.
+- **3c DONE**: cracked the iBabs vote endpoints (data-sources.md §7).
+- **3d DONE**: built the iBabs adapter (`collect_ibabs`) and shipped **Noord-Holland** (2nd
+  province). Votes are faction-level (`agree/disagree = 1/0`); NH's motieregister holds
+  *aangenomen* moties only (surfaced via `meta.note`).
+- **Next**: replicate to the other iBabs provinces (Limburg, Noord-Brabant, Zeeland) — see the
+  NEXT block at the top — and/or crack **Notubiz** (5 provinces) once a token arrives.
 - **Action — lobby for the easy wins**: e-mail the Statengriffie of **Flevoland** and **Drenthe**
   (GO provinces) asking them to enable the GO **stemgedrag** module / publish per-party votes as
   open data like Utrecht. If they do, those provinces become config-only (free). Same ask could

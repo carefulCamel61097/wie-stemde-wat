@@ -307,7 +307,7 @@
       <button class="modal-close" data-close="helpModal" title="Sluiten">&times;</button></div>
     <div class="help">
       <h3 class="section">Wat is dit?</h3>
-      <p>Per stemming &mdash; een motie, amendement of besluit in de Provinciale Staten van Utrecht &mdash;
+      <p>Per stemming &mdash; een motie, amendement of besluit in de Provinciale Staten &mdash;
         zie je hoe elke fractie stemde.</p>
 
       <h3 class="section">De tabel</h3>
@@ -337,10 +337,9 @@
       </ul>
 
       <h3 class="section">Bron &amp; methode</h3>
-      <p>Open data van <a href="https://www.stateninformatie.provincie-utrecht.nl" target="_blank" rel="noopener">Provincie
-        Utrecht / Statengriffie</a>, periode 2023&ndash;2027, wekelijks bijgewerkt. V of T is de meerderheid
-        van de fractie; afwezige fracties tellen niet mee in de percentages. Dit is geen offici&euml;le
-        uitgave van de provincie.</p>
+      <p id="helpSource"></p>
+      <p>V of T is de meerderheid van de fractie; afwezige fracties tellen niet mee in de
+        percentages. Dit is geen offici&euml;le uitgave van de provincie.</p>
     </div>
   </div>
 </div>
@@ -363,7 +362,9 @@
 let PIN_KEY = "wsw_pinned_utrecht";   // becomes wsw_pinned_<province>
 const ABBR = {bbb:"BBB",groenlinks:"GL",vvd:"VVD",d66:"D66",utrechtnu:"U!",cda:"CDA",
   pvda:"PvdA","partij-voor-de-dieren":"PvdD",christenunie:"CU",volt:"Volt",ja21:"JA21",
-  pvv:"PVV",sgp:"SGP",sp:"SP","forum-voor-democratie":"FvD","50plus":"50+"};
+  pvv:"PVV",sgp:"SGP",sp:"SP","forum-voor-democratie":"FvD","50plus":"50+",
+  // Noord-Holland (iBabs): short labels where the canonical name is long
+  pvdd:"PvdD",fvd:"FvD","fractie-de-weerdt":"Weerdt"};
 const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel"};
 
 let DATA, state, AG = null, ORDER = null, ALLTYPES = null, MTYPES = null, PTYPES = null, CTYPES = null;
@@ -402,6 +403,8 @@ async function loadProvince(key){
   document.documentElement.style.setProperty("--header-bg", st.headerBg || "#1b1b1b");
 
   $("#src").innerHTML = `Bron: <a href="${DATA.meta.source}" target="_blank" rel="noopener">${DATA.meta.body}, provincie ${DATA.meta.province}</a> · open data · periode ${DATA.meta.term} · bijgewerkt ${DATA.meta.generated_at.slice(0,10)}`;
+  $("#helpSource").innerHTML = `Open data van de <a href="${DATA.meta.source}" target="_blank" rel="noopener">${esc(DATA.meta.body)} van ${esc(DATA.meta.province)}</a>, periode ${esc(DATA.meta.term)}, wekelijks bijgewerkt.`
+    + (DATA.meta.note ? ` ${esc(DATA.meta.note)}` : "");
 
   buildControls(ALLTYPES);
   $("#search").value = ""; $("#result").value = "all"; $("#sort").value = "date-desc";

@@ -4,6 +4,9 @@ __pycache__/
 .venv/
 venv/
 
+# Scratch / local working files
+.tmp/
+
 # Editor / OS
 .vscode/
 .idea/

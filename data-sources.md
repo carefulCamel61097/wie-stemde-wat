@@ -206,6 +206,31 @@ Stemverhouding parsing notes (free text — handle all):
 - Granularity = per-fractie V/T only (no counts) → store agree/disagree = 1/0; "ruwe getallen"
   and split-vote degrade gracefully for iBabs provinces.
 
+### Implementation notes (Noord-Holland — adapter BUILT, `collect_ibabs`)
+What the live build surfaced beyond the recipe above:
+- **Date**: the detail page has a `Datum PS` field (dd-mm-yyyy) = the plenary vote date — use it
+  for term-scoping (`>= 2023-03-29`), not the list's `ingediendindatum`. Pre-fetch only rows
+  with `ingediendindatum` year `>= term-1` to avoid pulling all ~800 detail pages.
+- **Scope**: NH's report is the *motie-volgsysteem* → **only `Aangenomen` moties** (147 in-term,
+  no verworpen). Disclosed to users via `meta.note`. (Zeeland's "Stemming" report may differ.)
+- **UA**: the collector's plain UA works against iBabs (HTTP 200) — no browser spoofing needed
+  in GitHub Actions; POST `GetReportData` needs `Content-Type: application/x-www-form-urlencoded`.
+- **Free-text quirks the parser must handle** (all real, in-term):
+  - `Tegen: JA 21 /PVV /50PLUS` — abbreviations with stray spaces ("JA 21" → JA21).
+  - separators mix `/`, `, `, ` en `, and even **space-only** ("Tegen: PVV FvD") → tokenize
+    space lists greedily, longest-alias-first, so "Fractie De Weerdt" stays whole.
+  - **glued labels**: `…FvD, SPVerdeeld gestemd: VVD, PvdAVoor: Overige fracties` — un-glue with
+    a regex that inserts a space before `Voor/Tegen/Afwezig:` / `Verdeeld gestemd:` stuck to a name.
+  - **`Verdeeld gestemd:` clause** = fracties that split their own vote → store `agree==disagree`
+    (renders as "O" + split-dot).
+- **"overige fracties" expansion** = term party universe (built data-driven from every explicitly
+  named fractie) **minus afwezig minus split**. Composition shifts *within* a term too: gate each
+  fractie by a `first_seen` date (earliest time it's named on a side, noted afwezig, or appears as
+  indiener) so a mid-term splinter (NH's **Fractie De Weerdt**) isn't back-filled into older moties.
+- **Frontend contract**: `id` must be a number (the table coerces `+dataset.id` for pinning) →
+  use the list `identity` int. Pick the huisstijl `accent` from `/Base/SiteCss` `--button-color`
+  (NH = `#2891e0`). Party slugs reuse the existing `ABBR` map where they slugify the same.
+
 ### HTML parsing is fragile — avoid it
 The per-motie `voteResultHtml` is rendered HTML (per-member rows). A quick parse already
 mis-read the proposer's row. **Prefer the structured `/Samenstelling/{party}/votings`
