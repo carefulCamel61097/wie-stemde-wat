@@ -193,6 +193,8 @@
   .chips.small .chip{padding:4px 10px;font-size:12px}
   .iconbtn{cursor:pointer;border:1.5px solid var(--control-line);background:#fff;color:var(--muted);width:27px;height:27px;border-radius:50%;font-size:14px;display:inline-flex;align-items:center;justify-content:center;transition:.12s;flex:none}
   .iconbtn:hover{border-color:var(--accent);color:var(--accent)}
+  .csvbtn{cursor:pointer;border:1.5px solid var(--control-line);background:#fff;color:var(--ink);border-radius:8px;padding:5px 11px;font:inherit;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:5px;transition:.12s;white-space:nowrap}
+  .csvbtn:hover{border-color:var(--accent);color:var(--accent)}
 </style>
 </head>
 <body>
@@ -254,6 +256,7 @@
     <span class="chips small" id="typeChips"></span>
     <span class="tb-right">
       <span class="count" id="count"></span>
+      <button id="csvBtn" class="csvbtn" title="Download de getoonde stemmingen als CSV-bestand">&#8675; CSV</button>
       <button id="legendBtn" class="iconbtn" title="Uitleg van de kleuren">&#9432;</button>
     </span>
   </div>
@@ -447,6 +450,7 @@ function setupGlobalHandlers(){
   $("#compareBtn").onclick = openCompare;
   $("#helpBtn").onclick = () => $("#helpModal").hidden = false;
   $("#legendBtn").onclick = () => $("#legendModal").hidden = false;
+  $("#csvBtn").onclick = exportCSV;
   document.querySelectorAll(".modal").forEach(mo => mo.addEventListener("click", e => { if(e.target === mo) mo.hidden = true; }));
   document.querySelectorAll("[data-close]").forEach(btn => btn.onclick = () => { document.getElementById(btn.dataset.close).hidden = true; });
 }
@@ -742,6 +746,36 @@ function render(){
       render();
     };
   });
+}
+
+// Download the currently filtered/sorted stemmingen as CSV. Columns = all parties; cell values
+// follow the "ruwe getallen" toggle for member-level provinces (e.g. "6-0"), else words.
+function exportCSV(){
+  const vps = DATA.parties;   // every party as a column, regardless of show/hide
+  const base = DATA.moties.filter(passes);
+  const rows = sortRows((state.onlyPinned ? base.filter(m => state.pinned.has(m.id)) : base).slice());
+  const faction = DATA.meta.granularity === "fractie";
+  const SEP = ";";   // semicolon: opens cleanly in Dutch Excel; quoting handles the rest
+  const q = s => { s = (s==null ? "" : String(s)); return /["\n\r;]/.test(s) ? `"${s.replace(/"/g,'""')}"` : s; };
+  const cellVal = v => {
+    const r = cellVerdict(v);
+    if(!r) return "";   // afwezig
+    if(state.raw && !faction) return `${v.agree}-${v.disagree}`;
+    return r.label === "V" ? "Voor" : r.label === "T" ? "Tegen" : faction ? "Verdeeld" : "Onthouden";
+  };
+  const header = ["Datum","Type","Onderwerp","Uitslag","Bron", ...vps.map(p => p.name)];
+  const lines = [header.map(q).join(SEP)];
+  for(const m of rows){
+    lines.push([m.date, TYPE_LABEL[m.type]||m.type, m.title, m.resultLabel||"", m.source||"",
+                ...vps.map(p => cellVal(m.votes[p.slug]))].map(q).join(SEP));
+  }
+  const blob = new Blob(["﻿" + lines.join("\r\n")], {type:"text/csv;charset=utf-8"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `wie-stemde-wat_${(DATA.meta.province||"").toLowerCase().replace(/\s+/g,"-")}_${DATA.meta.generated_at.slice(0,10)}.csv`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 0);
 }
 
 init().catch(e => { document.querySelector(".wrap").innerHTML = `<div class="empty">Kon data niet laden: ${esc(""+e)}<br><small>Draai lokaal met een server (zie README).</small></div>`; });
