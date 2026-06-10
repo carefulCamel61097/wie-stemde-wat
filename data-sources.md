@@ -179,6 +179,33 @@ too, same software).
   "regional voting records untraceable"). Good for documents, unreliable for votes.
 - Use as a cross-check / fallback, not the source of the vote data.
 
+## 7. iBabs adapter — endpoints (CRACKED, Noord-Holland)
+The iBabs publieksportaal (`{prov}.bestuurlijkeinformatie.nl`) is an ASP.NET SPA with a
+DataTables server-side table. Per-fractie votes ARE retrievable (no auth):
+
+- **Reports list / GUIDs**: `GET /Reports` → each report = `/Reports/Details/{guid}`.
+  NH **Moties** report = `84a8ac43-1424-48a9-8a1a-0c0bbcdfd8ed`; Zeeland **Stemming** report =
+  `8f77ee0a-822e-4cbe-8acc-7ff35488c8ac`.
+- **Motie list (clean JSON)**:
+  `POST /Reports/GetReportData/{reportGuid}` — body `draw=1&start=0&length=1000`,
+  header `X-Requested-With: XMLHttpRequest`. (GUID is in the PATH; GET 404s; must be POST.)
+  Returns `{draw, recordsTotal, data:[ {DT_RowId, identity, ingediendindatum (dd-mm-yyyy),
+  motienummer, title, fracties (=INDIENERS, not votes), status, behandelenin} ]}`.
+- **Per-fractie votes**: `GET /Reports/Item/{DT_RowId}` → server-rendered HTML with a
+  **"Stemverhouding"** field, e.g. `Tegen: VVD /BBB /JA21. Voor: overige fracties (X afwezig).`
+
+Stemverhouding parsing notes (free text — handle all):
+- `Unaniem` → all parties voor.
+- `Tegen: A /B /C. Voor: overige fracties.` (and the reverse) → one side listed, other = the rest.
+- separators vary: `/`, `/ `, `, `. Names: VVD, BBB, JA21, PVV, FvD, PvdD, SP, 50PLUS, Volt,
+  ChristenUnie/CU, GroenLinks, PvdA, D66, …  (need an abbreviation→canonical map).
+- `(… afwezig)` notes → afwezig fractions (exclude from "overige fracties").
+- **"overige fracties" must be expanded vs the council composition** → scope to current term and
+  build the party universe from the data (+ the report's `fracties` filter options). Composition
+  changes across terms, so a static all-time union is wrong — term-scope it.
+- Granularity = per-fractie V/T only (no counts) → store agree/disagree = 1/0; "ruwe getallen"
+  and split-vote degrade gracefully for iBabs provinces.
+
 ### HTML parsing is fragile — avoid it
 The per-motie `voteResultHtml` is rendered HTML (per-member rows). A quick parse already
 mis-read the proposer's row. **Prefer the structured `/Samenstelling/{party}/votings`
