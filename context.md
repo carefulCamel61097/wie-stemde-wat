@@ -42,8 +42,8 @@ view is already possible by deselecting parties.)
 ## v1 scope decisions (locked / pending)
 - [x] **Period**: current term only (2023–2027).
 - [x] **Stack**: Python (collector).
-- [x] **Provinces in v1**: **Utrecht only**. But build the UI multi-province-ready: there
-  IS a province selector, it just only offers Utrecht for now (multi-province = v2).
+- [x] **Provinces**: v1 shipped **Utrecht only** with a multi-province-ready UI; **now live with
+  Utrecht, Noord-Holland and Limburg** (v2 — province selector active).
 - [x] **What to include**: moties + amendementen + besluiten + ordevoorstellen, with a type filter.
 - [x] **Body**: Provinciale Staten plenair only (not commissies — those don't hold the votes).
 

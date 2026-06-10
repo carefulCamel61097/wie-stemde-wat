@@ -1,16 +1,24 @@
 # Roadmap — "Wie heeft wat gestemd?" (multi-province voting overview)
 
 > ## ▶ NEXT (resume here)
-> **iBabs is largely exhausted (2 live, 2 dead) — next frontier is Notubiz (5 provinces).**
-> - **Send the [outreach.md](outreach.md) Notubiz token e-mail** (user action) — cheapest big
->   unlock, and it has lead time. Once a token arrives, build the **Notubiz adapter** (vendor #3):
->   `api.notubiz.nl/agenda_items/votings` gives outcomes + roll-call; the token unlocks the
->   `role_id → fractie` map (`/roles?field_id=105`) to group per party. Unlocks Fryslân, Groningen,
->   Gelderland, Zuid-Holland, Overijssel.
-> - **GO Flevoland/Drenthe** — votes only in besluitenlijst PDFs → PDF parsing, or lobby the griffie
->   ([outreach.md](outreach.md) §2) to enable the GO stemgedrag module (then config-only).
-> - Smaller: per-province frontend polish for tier-B (hide/relabel "ruwe getallen" where votes are
->   faction-level — NH); a coverage/gaps view on the website (deferred).
+> Out of low-hanging fruit (iBabs done: 2 live, 2 dead). Remaining work, by payoff:
+> 1. **Notubiz adapter** (vendor #3) — **token e-mail SENT 2026-06-10, awaiting reply**
+>    ([outreach.md](outreach.md) §1). When it arrives: `api.notubiz.nl/agenda_items/votings` gives
+>    outcomes + roll-call; the token unlocks the `role_id → fractie` map (`/roles?field_id=105`).
+>    Unlocks up to 5 provinces (Fryslân, Groningen, Zuid-Holland, Overijssel; Gelderland's module
+>    is off → outcome only). Biggest single coverage unlock.
+> 2. **Tweede Kamer** — a *new category*, not a province. Has its **own clean open-data API with
+>    votes** (much easier than provincial scraping) + a far bigger audience. The "pick category →
+>    pick scope" UX is already in the vision ([context.md](context.md)). Arguably the best ROI now.
+> 3. **GO Flevoland/Drenthe** — votes only in besluitenlijst PDFs → PDF parsing, or lobby the griffie
+>    ([outreach.md](outreach.md) §2) to enable the GO stemgedrag module (then config-only).
+> 4. **Product polish** — print stylesheet / printable report (PDF), shareable filter-state URL,
+>    grey low-n matrix cells, a coverage/gaps view on the site. All small, none blocking.
+> 5. **Strategy** (optional) — the cross-government dataset + B2B "political intelligence" angle
+>    (discussed): real category, money is B2B not consumer. Run `/analyze` to pressure-test.
+>
+> Frontend already shipped beyond v1: province selector, CSV export (atomic columns), matrix
+> minimum-vote filter, per-province `granularity` (hides "ruwe getallen" for faction-level NH).
 
 > **DONE (Phase 3d):** iBabs adapter (`collect_ibabs`) built; **Noord-Holland** (181 items, faction-
 > level, aangenomen only) and **Limburg** (321 items, **per-member counts incl. verworpen**) live as
@@ -88,7 +96,7 @@ Vanilla JS/CSS, no dependencies. `.nojekyll` added. Transpose/party-compare view
 
 ## v1 UI — feature set (LOCKED selection)
 In v1 (curated from the brainstorm):
-- **Province selector** — only Utrecht selectable (multi-province-ready shell).
+- **Province selector** — built from `data/provinces.json` (live: Utrecht, Noord-Holland, Limburg).
 - **Type filter** — multi-select **chips** (motie / amendement / besluit / ordevoorstel),
   all on by default.
 - **Parties** — checklist dropdown to show/hide columns (16 parties).
