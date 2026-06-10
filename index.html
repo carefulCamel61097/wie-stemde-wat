@@ -748,26 +748,39 @@ function render(){
   });
 }
 
-// Download the currently filtered/sorted stemmingen as CSV. Columns = all parties; cell values
-// follow the "ruwe getallen" toggle for member-level provinces (e.g. "6-0"), else words.
+// Split a title into its code (e.g. "A26"), number ("19") and the rest. Formats vary per province:
+// Utrecht/NH "M26-43 …" / "A08-2026 — …"; Limburg "[Gewijzigd] Motie|Amendement 3297 …".
+function splitTitle(title){
+  title = title || "";
+  let m = title.match(/^([A-Z]{1,3}\d+)[-–](\w+)[\s—–:.\-]*(.*)$/);
+  if(m) return {code: m[1], nr: m[2], subject: m[3].trim()};
+  m = title.match(/^((?:Gewijzigde?\s+)?(?:Motie|Amendement))\s+(\d+)\s+(.*)$/i);
+  if(m) return {code: m[1], nr: m[2], subject: m[3].trim()};
+  return {code: "", nr: "", subject: title};
+}
+
+// Download the currently filtered/sorted stemmingen as a proper CSV — one column per metadata
+// field and one per party. Every party always gets a cell (empty if afwezig) so V/T never shift
+// into the wrong party's column.
 function exportCSV(){
   const vps = DATA.parties;   // every party as a column, regardless of show/hide
   const base = DATA.moties.filter(passes);
   const rows = sortRows((state.onlyPinned ? base.filter(m => state.pinned.has(m.id)) : base).slice());
   const faction = DATA.meta.granularity === "fractie";
-  const SEP = ";";   // semicolon: opens cleanly in Dutch Excel; quoting handles the rest
-  const q = s => { s = (s==null ? "" : String(s)); return /["\n\r;]/.test(s) ? `"${s.replace(/"/g,'""')}"` : s; };
+  // RFC-4180: comma-separated, quote any field containing comma/quote/newline.
+  const q = s => { s = (s==null ? "" : String(s)); return /[",\n\r]/.test(s) ? `"${s.replace(/"/g,'""')}"` : s; };
   const cellVal = v => {
     const r = cellVerdict(v);
-    if(!r) return "";   // afwezig
-    if(state.raw && !faction) return `${v.agree}-${v.disagree}`;
-    return r.label === "V" ? "Voor" : r.label === "T" ? "Tegen" : faction ? "Verdeeld" : "Onthouden";
+    if(!r) return "";                                       // afwezig -> empty cell
+    if(state.raw && !faction) return `${v.agree}-${v.disagree}`;   // member-level + ruwe getallen
+    return r.label;                                         // V / T / O
   };
-  const header = ["Datum","Type","Onderwerp","Uitslag","Bron", ...vps.map(p => p.name)];
-  const lines = [header.map(q).join(SEP)];
+  const header = ["Datum","Type","Code","Nr.","Onderwerp","Uitslag","Bron", ...vps.map(p => p.name)];
+  const lines = [header.map(q).join(",")];
   for(const m of rows){
-    lines.push([m.date, TYPE_LABEL[m.type]||m.type, m.title, m.resultLabel||"", m.source||"",
-                ...vps.map(p => cellVal(m.votes[p.slug]))].map(q).join(SEP));
+    const t = splitTitle(m.title);
+    lines.push([m.date, TYPE_LABEL[m.type]||m.type, t.code, t.nr, t.subject, m.resultLabel||"", m.source||"",
+                ...vps.map(p => cellVal(m.votes[p.slug]))].map(q).join(","));
   }
   const blob = new Blob(["﻿" + lines.join("\r\n")], {type:"text/csv;charset=utf-8"});
   const url = URL.createObjectURL(blob);
