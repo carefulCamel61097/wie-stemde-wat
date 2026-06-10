@@ -18,8 +18,13 @@
 >   unlocks 5 provinces; Flevoland/Drenthe griffie).
 
 > **DONE (Phase 3d):** iBabs adapter built + **Noord-Holland live** as the 2nd province (141
-> aangenomen moties, 15 fracties, 2023–2027). See [data-sources.md](data-sources.md) §7 for the
-> parsing notes that emerged (Datum PS date, glued labels, split-vote clause, first-seen gating).
+> moties + 40 amendementen, aangenomen only, 15 fracties, 2023–2027). Adapter unions multiple
+> reports per province (`reports: [{guid, type}]`). See [data-sources.md](data-sources.md) §7 for
+> the parsing notes (Datum PS, glued labels, split-vote clause, first-seen gating, Bijlage-status).
+>
+> **Open gap (deferred, per discussion):** the iBabs registers hold *aangenomen* items only — the
+> **niet-aangenomen** moties/amendementen aren't published per-fractie anywhere (only in PDFs).
+> Revisit after the low-hanging fruit; capture per province in a future coverage/gaps overview.
 
 v1 goal: a website where you pick a **province** and see a table — rows = moties,
 columns = parties, cells = **V** (green) / **T** (red) / **-** (tie) / blank (afwezig).

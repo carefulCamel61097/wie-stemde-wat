@@ -16,7 +16,7 @@ research + live probing (curl with a browser UA; Notubiz/iBabs block plain bots)
 | Gelderland | gelderland.stateninformatie.nl | Notubiz (org 1769) | ⚠️ outcome only (stemgedrag off) |
 | Zuid-Holland | pzh.notubiz.nl | Notubiz | ⚠️ public, behind SPA/API |
 | Overijssel | overijssel.notubiz.nl | Notubiz | ⚠️ public, behind SPA/API |
-| **Noord-Holland** | noordholland.bestuurlijkeinformatie.nl | **iBabs** | ✅ **done** (adapter; 141 aangenomen moties) |
+| **Noord-Holland** | noordholland.bestuurlijkeinformatie.nl | **iBabs** | ✅ **done** (adapter; 141 moties + 40 amendementen, aangenomen only) |
 | Limburg | limburg.bestuurlijkeinformatie.nl | iBabs | ⚠️ likely in minutes only |
 | Noord-Brabant | noordbrabant.bestuurlijkeinformatie.nl | iBabs | ⚠️ no dedicated feature found |
 | Zeeland | zeeland.bestuurlijkeinformatie.nl | iBabs | ⚠️ **dedicated "Stemming" report** |

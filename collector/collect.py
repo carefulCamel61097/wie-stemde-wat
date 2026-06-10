@@ -43,15 +43,20 @@ PROVINCES = [
         "name": "Noord-Holland",
         "vendor": "ibabs",
         "base": "https://noordholland.bestuurlijkeinformatie.nl",
-        "report": "84a8ac43-1424-48a9-8a1a-0c0bbcdfd8ed",   # iBabs "Moties" report GUID
+        # One or more iBabs reports (GET /Reports lists them). These registers track *adopted*
+        # items only; verworpen moties/amendementen aren't published here in structured form.
+        "reports": [
+            {"guid": "84a8ac43-1424-48a9-8a1a-0c0bbcdfd8ed", "type": "motie"},
+            {"guid": "95a2053b-5dd6-4aa4-9e60-fdf5158fc48f", "type": "amendement"},
+        ],
         "term_start": (2023, 3, 29),   # PS election 15 March 2023
         "term_label": "2023-2027",
         "style": {"accent": "#2891e0", "headerBg": "#0e2438"},   # NH portal huisstijl blue
         "license": "Open data - Provincie Noord-Holland (iBabs publieksportaal)",
-        # iBabs scope: the portal's register lists adopted moties only, and votes are recorded
-        # per fractie (not per member), so "ruwe getallen" show 1–0 rather than seat counts.
-        "note": "De bron (iBabs-motieregister) bevat alleen aangenomen moties; stemmen zijn "
-                "op fractieniveau geregistreerd, dus zonder exacte aantallen per fractie.",
+        # iBabs scope: these registers list adopted items only, and votes are recorded per
+        # fractie (not per member), so "ruwe getallen" show 1–0 rather than seat counts.
+        "note": "De bron (iBabs-registers) bevat alleen aangenomen moties en amendementen; "
+                "stemmen zijn op fractieniveau geregistreerd, dus zonder exacte aantallen per fractie.",
     },
 ]
 
@@ -77,31 +82,42 @@ def http(url, data=None, ctype=None):
         return r.read().decode("utf-8", "replace")
 
 
-def get_json(url):
-    return json.loads(http(url))
+def fetch(url, data=None, ctype=None, tries=3):
+    """http() with retries on transient errors. Returns the body, or None on a 4xx/5xx or after
+    `tries` failed attempts. A 30s read timeout over hundreds of pages is normal for a weekly
+    run, so retry the non-HTTP failures (timeouts, dropped connections) instead of crashing."""
+    for attempt in range(tries):
+        try:
+            return http(url, data=data, ctype=ctype)
+        except urllib.error.HTTPError:
+            return None   # 4xx/5xx — not worth retrying for our purposes
+        except OSError:   # URLError, TimeoutError, dropped connections, …
+            if attempt + 1 == tries:
+                return None
+            time.sleep(1.5 * (attempt + 1))
+    return None
 
 
 def try_json(url):
-    """GET that tolerates 4xx/5xx (some party slugs 500); returns None on failure."""
+    """GET + JSON parse; None on any network/HTTP/JSON failure."""
+    txt = fetch(url)
     try:
-        return get_json(url)
-    except (urllib.error.HTTPError, urllib.error.URLError, json.JSONDecodeError):
+        return json.loads(txt) if txt is not None else None
+    except json.JSONDecodeError:
         return None
 
 
 def try_text(url):
     """GET returning text (HTML), tolerant of network/HTTP errors."""
-    try:
-        return http(url)
-    except (urllib.error.HTTPError, urllib.error.URLError):
-        return None
+    return fetch(url)
 
 
 def post_json(url, body):
     """POST a form body and parse the JSON response; None on failure."""
+    txt = fetch(url, data=body, ctype="application/x-www-form-urlencoded")
     try:
-        return json.loads(http(url, data=body, ctype="application/x-www-form-urlencoded"))
-    except (urllib.error.HTTPError, urllib.error.URLError, json.JSONDecodeError):
+        return json.loads(txt) if txt is not None else None
+    except json.JSONDecodeError:
         return None
 
 
@@ -409,6 +425,14 @@ def ibabs_result(status):
     return s or None
 
 
+def ibabs_status_from_bijlage(html):
+    """Reports without a Status field (Amendementen) encode the outcome in the attachment
+    filename, e.g. "A8-2026 AANGENOMEN Volt PvdD …". Return the matched keyword, or ""."""
+    bij = ibabs_field(html, "Bijlage") or ""
+    m = re.search(r"\b(AANGENOMEN|VERWORPEN|INGETROKKEN|AANGEHOUDEN|VERVALLEN|VERDAAGD)\b", bij, re.I)
+    return m.group(1).capitalize() if m else ""
+
+
 def ibabs_title(r):
     title = (r.get("title") or "").strip()
     num = (r.get("motienummer") or "").strip()
@@ -418,41 +442,49 @@ def ibabs_title(r):
 
 
 def collect_ibabs(p):
-    """Return {parties, moties} for an iBabs province, or None if the report is unreachable."""
+    """Return {parties, moties} for an iBabs province, or None if no report is reachable.
+    A province may expose several vote-bearing reports (Moties, Amendementen, …); each entry in
+    p["reports"] is {"guid", "type"} and gets a distinct id_base so ids stay unique across them."""
     base = p["base"].rstrip("/")
-    guid = p["report"]
+    reports = p.get("reports") or [{"guid": p["report"], "type": "motie"}]
     term_start = date(*p["term_start"])
 
-    listing = post_json(f"{base}/Reports/GetReportData/{guid}", "draw=1&start=0&length=2000")
-    rows = listing.get("data") if isinstance(listing, dict) else None
-    if not rows:
-        return None
-
-    # Pre-filter by indiening year to avoid fetching hundreds of pre-term detail pages; the real
-    # term cut is applied on each motie's "Datum PS" below (a 1-year margin covers late-indiened votes).
-    cand = []
-    for r in rows:
-        try:
-            yr = int(str(r.get("ingediendindatum", ""))[-4:])
-        except ValueError:
-            yr = 0
-        if yr >= term_start.year - 1:
-            cand.append(r)
-    print(f"  report rows: {len(rows)}; candidates (ingediend >= {term_start.year - 1}): {len(cand)}")
-
-    # Fetch each candidate's detail page, parse its Stemverhouding, keep the in-term ones.
-    parsed = []
+    # Fetch each report's list + detail pages; parse the in-term Stemverhoudingen. We carry the
+    # item type and a per-report id_base (the same identity counter restarts per report).
+    parsed = []   # (row, date, spec, rtype, id_base)
     skipped = 0
-    for r in cand:
-        html = try_text(f"{base}/Reports/Item/{r['DT_RowId']}")
-        time.sleep(SLEEP)
-        if not html:
-            skipped += 1
+    for ri, rep in enumerate(reports):
+        id_base = ri * 10_000_000
+        listing = post_json(f"{base}/Reports/GetReportData/{rep['guid']}", "draw=1&start=0&length=2000")
+        rows = listing.get("data") if isinstance(listing, dict) else None
+        if not rows:
+            print(f"  {rep['type']}: report {rep['guid']} unreachable — skipped")
             continue
-        d = ibabs_date(ibabs_field(html, "Datum PS") or r.get("ingediendindatum"))
-        if not d or d < term_start:
-            continue
-        parsed.append((r, d, ibabs_parse(ibabs_field(html, "Stemverhouding"))))
+        # Pre-filter by indiening year to avoid fetching pre-term detail pages; the real term cut
+        # is applied on each item's "Datum PS" below (a 1-year margin covers late-indiened votes).
+        cand = [r for r in rows
+                if (str(r.get("ingediendindatum", ""))[-4:].isdigit()
+                    and int(str(r["ingediendindatum"])[-4:]) >= term_start.year - 1)]
+        kept = 0
+        for r in cand:
+            html = try_text(f"{base}/Reports/Item/{r['DT_RowId']}")
+            time.sleep(SLEEP)
+            if not html:
+                skipped += 1
+                continue
+            d = ibabs_date(ibabs_field(html, "Datum PS") or r.get("ingediendindatum"))
+            if not d or d < term_start:
+                continue
+            # Some reports (Amendementen) carry no list "status" and no Status field on the detail
+            # page — the outcome is only in the attachment filename ("A8-2026 AANGENOMEN …").
+            # (Deriving it from the tally is unreliable: we count fracties, not zetels.)
+            if not (r.get("status") or "").strip():
+                r["status"] = ibabs_field(html, "Status") or ibabs_status_from_bijlage(html)
+            parsed.append((r, d, ibabs_parse(ibabs_field(html, "Stemverhouding")), rep["type"], id_base))
+            kept += 1
+        print(f"  {rep['type']}: {len(rows)} rows, {len(cand)} candidates, {kept} in-term")
+    if not parsed:
+        return None
     if skipped:
         print(f"  WARN: {skipped} detail page(s) failed to fetch")
 
@@ -469,7 +501,7 @@ def collect_ibabs(p):
         if party and (party not in first_seen or d < first_seen[party]):
             first_seen[party] = d
 
-    for r, d, spec in parsed:
+    for r, d, spec, rtype, id_base in parsed:
         if not spec:
             continue
         voor_spec, tegen_spec, afwezig, split = spec
@@ -481,10 +513,10 @@ def collect_ibabs(p):
         for party in explicit | set(ibabs_parties(r.get("fracties", ""))):
             mark(party, d)
 
-    # Pass 2: resolve each motie's votes against the fracties that already existed on its date.
-    moties, appear, name_by_slug = [], {}, {}
+    # Pass 2: resolve each item's votes against the fracties that already existed on its date.
+    items, appear, name_by_slug = [], {}, {}
     no_votes = 0
-    for r, d, spec in parsed:
+    for r, d, spec, rtype, id_base in parsed:
         if not spec:
             no_votes += 1
             continue
@@ -502,18 +534,22 @@ def collect_ibabs(p):
             votes[slug] = {"agree": agree, "disagree": disagree, "abstain": 0}
             appear[slug] = appear.get(slug, 0) + 1
         status = (r.get("status") or "").strip()
-        moties.append({
-            "id": ibabs_id(r),
+        items.append({
+            "id": ibabs_id(r) + id_base,
             "date": d.isoformat(),
             "title": ibabs_title(r),
-            "type": "motie",   # the report is "Moties"; classify() would just return "overig"
+            "type": rtype,
             "result": ibabs_result(status),
             "resultLabel": status or None,
             "source": f"{base}/Reports/Item/{r['DT_RowId']}",
             "votes": votes,
         })
-    print(f"  in-term moties with votes: {len(moties)} (no parseable vote: {no_votes}); "
+    by_type = {}
+    for m in items:
+        by_type[m["type"]] = by_type.get(m["type"], 0) + 1
+    print(f"  in-term items with votes: {len(items)} {by_type} (no parseable vote: {no_votes}); "
           f"universe: {len(appear)} fracties")
+    moties = items
 
     moties.sort(key=lambda m: (m["date"], m["title"]), reverse=True)
     for m in moties:

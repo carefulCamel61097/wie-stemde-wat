@@ -211,8 +211,20 @@ What the live build surfaced beyond the recipe above:
 - **Date**: the detail page has a `Datum PS` field (dd-mm-yyyy) = the plenary vote date — use it
   for term-scoping (`>= 2023-03-29`), not the list's `ingediendindatum`. Pre-fetch only rows
   with `ingediendindatum` year `>= term-1` to avoid pulling all ~800 detail pages.
-- **Scope**: NH's report is the *motie-volgsysteem* → **only `Aangenomen` moties** (147 in-term,
-  no verworpen). Disclosed to users via `meta.note`. (Zeeland's "Stemming" report may differ.)
+- **Multiple reports**: `GET /Reports` lists several (Moties, **Amendementen**, Ingekomen stukken,
+  Toezeggingen, Schriftelijke/Technische vragen, …). Only **Moties** + **Amendementen** carry a
+  Stemverhouding. The adapter takes a `reports: [{guid, type}]` list and unions them (each report
+  gets its own `id_base` since the `identity` counter restarts per report). NH ships moties +
+  amendementen (141 + 40 in-term).
+- **Scope — only adopted items**: both registers are *afdoening*-trackers → **only `Aangenomen`
+  moties/amendementen** (every in-term row, no verworpen). So the **niet-aangenomen** moties/
+  amendementen are NOT published per-fractie anywhere on the portal — they'd only be in the
+  besluitenlijst/notulen PDFs. Disclosed to users via `meta.note`. (Zeeland's dedicated "Stemming"
+  report may include rejected too — check when adding it.)
+- **Result source differs per report**: the Moties list row has a `status` field; the Amendementen
+  list/detail has **none** — the outcome sits in the *attachment filename* ("A8-2026 **AANGENOMEN** …").
+  Parse that keyword. **Do NOT derive the result from the vote tally** — we count *fracties*, not
+  *zetels*, so a close vote (e.g. 8 small parties tegen vs 7 large voor) flips the wrong way.
 - **UA**: the collector's plain UA works against iBabs (HTTP 200) — no browser spoofing needed
   in GitHub Actions; POST `GetReportData` needs `Content-Type: application/x-www-form-urlencoded`.
 - **Free-text quirks the parser must handle** (all real, in-term):
