@@ -26,8 +26,17 @@ endpoint. A token lets us group votes per party.
 > Het gaat om de provincies die op jullie platform draaien: Fryslân, Groningen, Gelderland,
 > Zuid-Holland en Overijssel.
 >
+> Het project is open en non-commercieel; u kunt het hier bekijken:
+> – Website: https://carefulcamel61097.github.io/wie-stemde-wat/
+> – Broncode: https://github.com/carefulCamel61097/wie-stemde-wat
+> (Provincie Utrecht, Noord-Holland en Limburg zijn er al in opgenomen.)
+>
 > Alvast hartelijk dank,
 > [naam]
+
+> **Tip:** de twee links (website + repo) zijn het overtuigendst — ze laten zien dat het een echt,
+> open, non-commercieel project is. Dat helpt meer dan alleen het technische endpoint. Vul je eigen
+> naam in bij `[naam]`.
 
 ---
 
