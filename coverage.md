@@ -10,13 +10,14 @@ the "things we DO have" companion to [provinces.md](provinces.md) (feasibility f
 
 ## Coverage table
 
-| Province | Vendor | Method | Granularity | Item types | Items | Scope | Reliability |
-|---|---|---|---|---|---|---|---|
-| **Utrecht** | GO | clean JSON API | per **member** (counts) | motie, amendement, besluit, ordevoorstel | 566 | all (aangenomen + verworpen) | **A — exact** |
-| **Limburg** | iBabs | HTML structured parse | per **member** (counts) | motie, amendement | 321 | **aangenomen + verworpen** | **A — exact** |
-| **Noord-Holland** | iBabs | HTML free-text parse | per **fractie** (V/T only) | motie, amendement | 181 | **aangenomen only** | **B — parsed/inferred** |
+| Scope | Category | Vendor | Method | Granularity | Item types | Items | Scope of items | Reliability |
+|---|---|---|---|---|---|---|---|---|
+| **Tweede Kamer** | Tweede Kamer | TK OData | clean OData v4 API | per **fractie** (zetels) | motie, amendement, wetsvoorstel | 2945 | **aangenomen + verworpen** | **A — exact** |
+| **Utrecht** | Prov. Staten | GO | clean JSON API | per **member** (counts) | motie, amendement, besluit, ordevoorstel | 566 | all (aangenomen + verworpen) | **A — exact** |
+| **Limburg** | Prov. Staten | iBabs | HTML structured parse | per **member** (counts) | motie, amendement | 321 | **aangenomen + verworpen** | **A — exact** |
+| **Noord-Holland** | Prov. Staten | iBabs | HTML free-text parse | per **fractie** (V/T only) | motie, amendement | 181 | **aangenomen only** | **B — parsed/inferred** |
 
-(Counts as of the last refresh; the weekly Action keeps them current.)
+(Counts as of the last refresh; the weekly Action keeps them current. TK = current term, 2025–heden.)
 
 > Note: vendor ≠ reliability. Both Limburg and Noord-Holland run iBabs, but Limburg's portal
 > publishes structured per-member vote counts (tier A) while NH publishes only free-text faction
@@ -28,6 +29,7 @@ How directly the published data maps to what we display, and how much we infer.
 
 - **A — exact (structured source).** The source gives the vote itself as structured data; we
   normalize, we don't interpret. Exact counts and real split votes; minimal inference.
+  *Tweede Kamer* (OData `Stemming` — per-fractie `Soort` + `FractieGrootte` seat counts),
   *Utrecht* (GO JSON, per-member tallies) and *Limburg* (iBabs "Stemmen" field — per-fractie member
   counts for the voor/tegen sides; a fractie on both sides is a real split).
 - **B — parsed / inferred (semi-structured source).** The outcome is published, but as text we must
@@ -37,7 +39,21 @@ How directly the published data maps to what we display, and how much we infer.
   besluitenlijsten) or behind an auth-gated map (Notubiz `role_id → fractie`). Either needs new work
   (PDF parsing / a token) and would be lower fidelity. Nothing in the dataset is tier C yet.
 
-## Per-province caveats (what could be wrong, and why)
+## Per-scope caveats (what could be wrong, and why)
+
+### Tweede Kamer — tier A
+- Votes come straight from the OData `Stemming` entity: per fractie a `Soort` (Voor/Tegen/Niet
+  deelgenomen) and `FractieGrootte` (seat count). Exact tallies, self-contained per besluit — nothing
+  inferred (unlike NH). Includes **verworpen**. We keep only besluiten with an actual roll-call
+  (`Stemming/any()`), so items decided *zonder stemming* / aangehouden / ingetrokken drop out.
+- **Term scope:** current Kamer only (votes on/after 2025-11-13, the first stemming after the Oct 2025
+  election). Old-composition votes cast before installation are excluded so fractie sizes stay consistent.
+- **Mid-term composition:** `ActorFractie` is the name *at vote time*. We merge the pure rename
+  GroenLinks-PvdA → "Progressief Nederland" into one column; splinters (Groep Markuszower, Keijzer)
+  are their own columns — accurate, if visually busier. `Persoon_Id`-level (hoofdelijke) votes aren't
+  split out; we aggregate to the fractie.
+- **Volume:** ~2,945 stemmingen → the data file is ~3 MB (written minified) and the table renders
+  ~3k rows × ~18 columns. Watch frontend performance; revisit pagination/virtualization if it drags.
 
 ### Utrecht — tier A
 - The dataset mirrors the GO stemgedrag module. The main residual risk is upstream: if a vote was

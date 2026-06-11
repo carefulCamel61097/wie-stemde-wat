@@ -2,12 +2,15 @@
 """
 Collector — Provinciale Staten voting overview.
 
-Pulls per-party voting records per province, unions them into one motie list, and writes a
-normalized data/<province>.json that the static site reads, plus a data/provinces.json index.
+Pulls per-party voting records per scope, unions them into one motie list, and writes a
+normalized data/<scope>.json that the static site reads, plus a data/catalog.json index that
+groups scopes by category (Tweede Kamer / Provinciale Staten) for the "pick category -> scope" UX.
 
-Multi-province / multi-vendor: each province in PROVINCES names a `vendor`, dispatched to an
-adapter in ADAPTERS. Currently only the GemeenteOplossingen ("go") adapter is implemented
-(Utrecht). iBabs / Notubiz adapters are TODO — see ../provinces.md.
+Multi-vendor / multi-category: each entry in SOURCES names a `vendor`, dispatched to an adapter
+in ADAPTERS (go = GemeenteOplossingen, ibabs, tk = Tweede Kamer OData). Each entry also names a
+`category` (legislative body): "provinciale-staten" (the provinces) or "tweede-kamer". The site is
+organized as categories -> scopes; main() writes one data/<key>.json per scope plus a
+data/catalog.json index grouping scopes by category. See ../provinces.md and ../data-sources.md.
 
 Zero dependencies (stdlib only) so GitHub Actions needs no install step.
 See ../data-sources.md for the reverse-engineered GO endpoints.
@@ -19,15 +22,17 @@ import sys
 import time
 import urllib.request
 import urllib.error
+import urllib.parse
 from datetime import datetime, date, timezone
 from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
-# --- Province registry --------------------------------------------------------
-# Each entry: key, name, vendor, base, term_start (y,m,d), term_label, style, license.
-# Add a province here once its vendor adapter exists (see ../provinces.md for the map).
-PROVINCES = [
+# --- Source registry ----------------------------------------------------------
+# Each entry: key, name, vendor, category, base, term_start (y,m,d), term_label, style, license.
+# `category` defaults to "provinciale-staten"; the Tweede Kamer entry sets "tweede-kamer".
+# Add a source here once its vendor adapter exists (see ../provinces.md + ../data-sources.md).
+SOURCES = [
     {
         "key": "utrecht",
         "name": "Utrecht",
@@ -77,7 +82,38 @@ PROVINCES = [
         "note": "Stemmen zijn per fractie met aantallen geregistreerd (aangenomen én verworpen). "
                 "Moties/amendementen zonder hoofdelijke stemming zijn niet opgenomen.",
     },
+    {
+        # A second *category* (not a province): the national parliament. Clean OData v4 API with
+        # per-fractie votes incl. seat counts -> tier A. See data-sources.md §8.
+        "key": "tweede-kamer",
+        "name": "Tweede Kamer",
+        "vendor": "tk",
+        "category": "tweede-kamer",
+        "body": "Tweede Kamer",
+        "base": "https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0",
+        "public": "https://www.tweedekamer.nl",   # human-facing site (per-item: /zoeken?qry={nummer})
+        # Current term = Kamer installed after the 29 Oct 2025 election (constituerende verg. 12 Nov;
+        # first stemming 13 Nov). Date-gating here drops old-composition votes cast before installation.
+        "term_start": (2025, 11, 13),
+        "term_label": "2025-heden",
+        "style": {"accent": "#154273", "headerBg": "#0c1d33"},   # Rijkshuisstijl blue
+        "license": "Open data - Tweede Kamer der Staten-Generaal (opendata.tweedekamer.nl)",
+        "compact": True,   # ~3k stemmingen -> write minified JSON to keep the file ~3 MB
+        "note": "Stemmen zijn per fractie met zetelaantallen geregistreerd (aangenomen én verworpen). "
+                "Alleen stemmingen met een hoofdelijke of fractiegewijze telling; zaken die zonder "
+                "stemming zijn afgedaan, aangehouden of ingetrokken zijn niet opgenomen.",
+    },
 ]
+
+# Categories (legislative bodies) -> how the frontend labels the "pick category -> pick scope" UX.
+# scope_noun is the word for one scope ("provincie"); None when the category is a single body (TK).
+CATEGORY_META = {
+    "provinciale-staten": {"name": "Provinciale Staten", "scope_noun": "provincie",
+                           "blurb": "Stemgedrag in de 12 provinciale staten — kies een provincie."},
+    "tweede-kamer": {"name": "Tweede Kamer", "scope_noun": None,
+                     "blurb": "Het landelijke parlement — moties, amendementen en wetsvoorstellen."},
+}
+CATEGORY_ORDER = ["provinciale-staten", "tweede-kamer"]
 
 # Bodies that are type "Fractie" in the GO API but are not voting parties.
 NOT_A_PARTY = {"Gedeputeerde Staten"}
@@ -648,6 +684,145 @@ def ibabs_stemmen_items(text):
     return out
 
 
+# --- Tweede Kamer (OData) adapter ---------------------------------------------
+# The Tweede Kamer publishes an OData v4 API (gegevensmagazijn.tweedekamer.nl). The vote chain is
+# Stemming -> Besluit -> Zaak (the motie/amendement/wetsvoorstel) + Agendapunt -> Activiteit (date).
+# $expand inlines the children and nested navigation is filterable, so one paged query (250/page,
+# follow @odata.nextLink) pulls everything. Votes are per fractie WITH seat counts (FractieGrootte)
+# -> exact tallies, tier A. See data-sources.md §8 for the full reverse-engineering notes.
+
+# Stemming.ActorFractie is the fractie name AT vote time, so a mid-term rename yields two names for
+# one group. Merge a pure rename into a single column (GroenLinks-PvdA was renamed "Progressief
+# Nederland" on 2026-06-09; most of the term it was GL-PvdA, so keep that as the display name).
+TK_ALIASES = {"Progressief Nederland": "GroenLinks-PvdA"}
+TK_TYPE = {"Motie": "motie", "Amendement": "amendement", "Wetgeving": "wetsvoorstel"}
+
+
+def tk_result(besluitsoort):
+    """Map BesluitSoort -> (result, label). Check 'niet aangenomen'/'verworpen' before 'aangenomen'
+    (the former contains the latter as a substring)."""
+    s = (besluitsoort or "").lower()
+    if "niet aangenomen" in s or "verworpen" in s:
+        return "rejected", "Verworpen"
+    if "gestaakt" in s:
+        return "tie", "Staken van stemmen"
+    if "aangenomen" in s or "goedgekeurd" in s or "vastgesteld" in s:
+        return "accepted", "Aangenomen"
+    return None, (besluitsoort or None)
+
+
+def tk_pick_zaak(zaken):
+    """A besluit can link to several Zaken; pick the most table-worthy one (motie > amendement >
+    wetsvoorstel) and ignore the rest (covering documents, etc.)."""
+    ranked = [(("Motie", "Amendement", "Wetgeving").index(z["Soort"]), z)
+              for z in zaken if z.get("Soort") in TK_TYPE]
+    if not ranked:
+        return None
+    return min(ranked, key=lambda x: x[0])[1]
+
+
+def tk_item(public, b, name_by_slug, seats):
+    """Build one normalized stemming dict from a Besluit (with expanded Stemming/Zaak/Agendapunt),
+    or None if it isn't a usable per-fractie vote on a motie/amendement/wetsvoorstel."""
+    z = tk_pick_zaak(b.get("Zaak") or [])
+    if not z:
+        return None
+    rtype = TK_TYPE.get(z.get("Soort"))
+    if not rtype:
+        return None
+    act = (b.get("Agendapunt") or {}).get("Activiteit") or {}
+    dt = (act.get("Datum") or "")[:10]
+    if not re.match(r"\d{4}-\d{2}-\d{2}$", dt):
+        return None
+    votes = {}
+    for s in b.get("Stemming") or []:
+        fr = TK_ALIASES.get((s.get("ActorFractie") or s.get("ActorNaam") or "").strip(), None) \
+             or (s.get("ActorFractie") or s.get("ActorNaam") or "").strip()
+        if not fr:
+            continue
+        slug = slugify(fr)
+        name_by_slug.setdefault(slug, fr)
+        g = s.get("FractieGrootte") or 0
+        seats[slug] = max(seats.get(slug, 0), g)
+        v = votes.setdefault(slug, {"agree": 0, "disagree": 0, "abstain": 0})
+        soort = s.get("Soort")
+        if soort == "Voor":
+            v["agree"] += g
+        elif soort == "Tegen":
+            v["disagree"] += g
+        else:                       # "Niet deelgenomen" / null
+            v["abstain"] += g
+    if not any(v["agree"] or v["disagree"] for v in votes.values()):
+        return None   # roll-call with no actual voor/tegen (shouldn't happen, but guard)
+    result, label = tk_result(b.get("BesluitSoort"))
+    nummer = (z.get("Nummer") or "").strip()
+    title = (z.get("Onderwerp") or z.get("Titel") or "").strip()
+    return {
+        "id": int(b["Id"].replace("-", "")[:12], 16),   # GUID -> stable int (frontend coerces +id)
+        "date": dt,
+        "title": title,
+        "type": rtype,
+        "result": result,
+        "resultLabel": label,
+        "source": (public.rstrip("/") + "/zoeken?qry=" + urllib.parse.quote(nummer)) if nummer else public,
+        "votes": votes,
+    }
+
+
+def collect_tk(p):
+    """Tweede Kamer. One paged OData query (with $expand) pulls every in-term roll-call besluit on a
+    motie/amendement/wetsvoorstel, votes inlined. Self-contained per besluit (exact seat counts)."""
+    base = p["base"].rstrip("/")
+    public = p.get("public", base)
+    term_start = date(*p["term_start"])
+    term_iso = term_start.isoformat() + "T00:00:00Z"
+    filt = ("startswith(BesluitSoort,'Stemmen') "
+            "and Agendapunt/Activiteit/Datum ge " + term_iso + " "
+            "and Stemming/any() "
+            "and Zaak/any(z: z/Soort eq 'Motie' or z/Soort eq 'Amendement' or z/Soort eq 'Wetgeving')")
+    expand = ("Stemming($select=ActorFractie,ActorNaam,Soort,FractieGrootte),"
+              "Zaak($select=Nummer,Soort,Onderwerp,Titel),"
+              "Agendapunt($expand=Activiteit($select=Datum))")
+    qs = urllib.parse.urlencode(
+        {"$filter": filt, "$expand": expand, "$select": "Id,BesluitSoort,BesluitTekst",
+         "$orderby": "GewijzigdOp desc", "$format": "json"},
+        quote_via=urllib.parse.quote)
+    url = base + "/Besluit?" + qs
+
+    items, appear, name_by_slug, seats, seen = [], {}, {}, {}, set()
+    pages = 0
+    while url:
+        data = try_json(url)
+        if not data:
+            break
+        for b in data.get("value", []):
+            it = tk_item(public, b, name_by_slug, seats)
+            if not it or it["id"] in seen:
+                continue
+            seen.add(it["id"])
+            items.append(it)
+            for slug in it["votes"]:
+                appear[slug] = appear.get(slug, 0) + 1
+        pages += 1
+        url = data.get("@odata.nextLink")
+        time.sleep(SLEEP)
+    print(f"  fetched {pages} page(s); {len(items)} stemmingen; {len(appear)} fracties")
+    if not items:
+        return None
+
+    items.sort(key=lambda m: (m["date"], m["title"]), reverse=True)
+    for m in items:
+        m["totals"] = {"agree": sum(v["agree"] for v in m["votes"].values()),
+                       "disagree": sum(v["disagree"] for v in m["votes"].values())}
+    # Columns ordered by current fractie size (biggest first), then activity, then name.
+    order = sorted(appear, key=lambda s: (-seats.get(s, 0), -appear[s], name_by_slug[s].lower()))
+    by_type = {}
+    for m in items:
+        by_type[m["type"]] = by_type.get(m["type"], 0) + 1
+    print(f"  types: {by_type}")
+    return {"parties": [{"slug": s, "name": name_by_slug[s]} for s in order], "moties": items}
+
+
 def province_granularity(p):
     """Vote detail level, for the frontend: "member" = real per-fractie counts (GO, Limburg
     "stemmen") so "ruwe getallen" are meaningful; "fractie" = faction-level V/T only
@@ -657,13 +832,14 @@ def province_granularity(p):
     return "member"
 
 
-ADAPTERS = {"go": collect_go, "ibabs": collect_ibabs}
+ADAPTERS = {"go": collect_go, "ibabs": collect_ibabs, "tk": collect_tk}
 
 
 def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    index = []
-    for p in PROVINCES:
+    scopes_by_cat = {}   # category key -> list of {key, name, available}
+    default = None
+    for p in SOURCES:
         print(f"== {p['name']} ({p['vendor']}) ==")
         adapter = ADAPTERS.get(p["vendor"])
         res = None
@@ -677,10 +853,10 @@ def main():
             out = {
                 "meta": {
                     "province": p["name"],
-                    "body": "Provinciale Staten",
+                    "body": p.get("body", "Provinciale Staten"),
                     "term": p["term_label"],
                     "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                    "source": p["base"],
+                    "source": p.get("public", p["base"]),
                     "license": p.get("license", ""),
                     "style": p.get("style", {}),
                     "note": p.get("note", ""),
@@ -690,23 +866,38 @@ def main():
                 "parties": res["parties"],
                 "moties": res["moties"],
             }
-            (DATA_DIR / f"{p['key']}.json").write_text(
-                json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+            # Large datasets (TK) write minified to keep the static file small.
+            dump = (json.dumps(out, ensure_ascii=False, separators=(",", ":")) if p.get("compact")
+                    else json.dumps(out, ensure_ascii=False, indent=2))
+            (DATA_DIR / f"{p['key']}.json").write_text(dump, encoding="utf-8")
             by_type = {}
             for m in res["moties"]:
                 by_type[m["type"]] = by_type.get(m["type"], 0) + 1
-            print(f"  wrote {p['key']}.json: {len(res['moties'])} moties, "
-                  f"{len(res['parties'])} parties, {by_type}")
+            print(f"  wrote {p['key']}.json: {len(res['moties'])} stemmingen, "
+                  f"{len(res['parties'])} fracties, {by_type}")
         else:
             print("  (no data — marked unavailable)")
-        index.append({"key": p["key"], "name": p["name"], "available": available})
+        catkey = p.get("category", "provinciale-staten")
+        scopes_by_cat.setdefault(catkey, []).append(
+            {"key": p["key"], "name": p["name"], "available": available})
+        if available and default is None:
+            default = {"category": catkey, "scope": p["key"]}
 
-    (DATA_DIR / "provinces.json").write_text(json.dumps(
+    # catalog.json — the frontend's "pick category -> pick scope" index.
+    categories = []
+    for catkey in CATEGORY_ORDER:
+        scopes = scopes_by_cat.get(catkey)
+        if not scopes:
+            continue
+        meta = CATEGORY_META[catkey]
+        categories.append({"key": catkey, "name": meta["name"], "scopeNoun": meta["scope_noun"],
+                           "blurb": meta["blurb"], "scopes": scopes})
+    (DATA_DIR / "catalog.json").write_text(json.dumps(
         {"generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-         "default": next((i["key"] for i in index if i["available"]), None),
-         "provinces": index},
+         "default": default, "categories": categories},
         ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\nWrote provinces.json: available = {[i['key'] for i in index if i['available']]}")
+    avail = [s["key"] for c in categories for s in c["scopes"] if s["available"]]
+    print(f"\nWrote catalog.json: categories = {[c['key'] for c in categories]}; available = {avail}")
 
 
 if __name__ == "__main__":

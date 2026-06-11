@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-06-11T10:18:48+00:00",
+  "default": {
+    "category": "provinciale-staten",
+    "scope": "utrecht"
+  },
+  "categories": [
+    {
+      "key": "provinciale-staten",
+      "name": "Provinciale Staten",
+      "scopeNoun": "provincie",
+      "blurb": "Stemgedrag in de 12 provinciale staten — kies een provincie.",
+      "scopes": [
+        {
+          "key": "utrecht",
+          "name": "Utrecht",
+          "available": true
+        },
+        {
+          "key": "noord-holland",
+          "name": "Noord-Holland",
+          "available": true
+        },
+        {
+          "key": "limburg",
+          "name": "Limburg",
+          "available": true
+        }
+      ]
+    },
+    {
+      "key": "tweede-kamer",
+      "name": "Tweede Kamer",
+      "scopeNoun": null,
+      "blurb": "Het landelijke parlement — moties, amendementen en wetsvoorstellen.",
+      "scopes": [
+        {
+          "key": "tweede-kamer",
+          "name": "Tweede Kamer",
+          "available": true
+        }
+      ]
+    }
+  ]
+}

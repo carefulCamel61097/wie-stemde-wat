@@ -1,31 +1,28 @@
 # Roadmap — "Wie heeft wat gestemd?" (multi-province voting overview)
 
 > ## ▶ NEXT (resume here)
-> **ACTIVE PICK: build the Tweede Kamer as a new *category*** (decided 2026-06-11). It's the best
-> ROI on the board: one clean open-data API *with* per-fractie votes, a much bigger audience, and
-> it fits the existing normalized schema. See the **"Tweede Kamer + category split" plan** below
-> (Phase 4) for the concrete steps. Sequence: (1) probe the OData API + measure data size →
-> (2) IA refactor (catalog + home view + category/scope selector + hash routing) →
-> (3) TK adapter → `data/tweede-kamer.json` + Actions cron.
+> **JUST DONE (2026-06-11): Tweede Kamer shipped as a 2nd *category*** + the category→scope IA
+> refactor (Phase 4 below). Live: TK (~2,945 stemmingen, OData, per-fractie seat counts incl.
+> verworpen) alongside the 3 provinces; a landing page (pick niveau → scope), `data/catalog.json`,
+> and URL-hash routing (`#tweede-kamer`, `#provinciale-staten/utrecht`). Verified via headless render.
 >
-> Other work, by payoff:
+> Remaining work, by payoff:
 > 1. **Notubiz adapter** (vendor #3) — **token e-mail SENT 2026-06-10, NO reply yet (as of 2026-06-11)**
 >    ([outreach.md](outreach.md) §1). Blocked on the token. When it arrives:
 >    `api.notubiz.nl/agenda_items/votings` gives outcomes + roll-call; the token unlocks the
 >    `role_id → fractie` map (`/roles?field_id=105`). Unlocks up to 5 provinces (Fryslân, Groningen,
 >    Zuid-Holland, Overijssel; Gelderland's module is off → outcome only). Biggest single coverage unlock.
 > 2. **GO Flevoland/Drenthe** — votes only in besluitenlijst PDFs. **Decision: lobby, don't parse.**
->    PDF parsing is fragile, per-griffie bespoke, and only 2 provinces → low ROI. Instead the griffie
->    mails ([outreach.md](outreach.md) §2, links added) are **ready to send 2026-06-11**; if they
->    enable the GO stemgedrag module those provinces become config-only.
+>    Griffie mails ([outreach.md](outreach.md) §2) **being sent 2026-06-11** — correct addresses are
+>    `griffie@flevoland.nl` + `Statengriffie@drentsparlement.nl` (the `statengriffie@…nl` guesses bounce).
 > 3. **Product polish** — print stylesheet / printable report (PDF), grey low-n matrix cells, a
->    coverage/gaps view on the site. (Shareable filter-state URL is now folded into the Phase 4 hash
->    routing.) All small, none blocking.
+>    coverage/gaps view, and **TK table performance** (~3k rows — watch render/virtualization). The
+>    Eerste Kamer is an easy next category (same OData API). All small, none blocking.
 > 4. **Strategy** (optional) — the cross-government dataset + B2B "political intelligence" angle
 >    (discussed): real category, money is B2B not consumer. Run `/analyze` to pressure-test.
 >
-> Frontend already shipped beyond v1: province selector, CSV export (atomic columns), matrix
-> minimum-vote filter, per-province `granularity` (hides "ruwe getallen" for faction-level NH).
+> Frontend shipped beyond v1: category→scope landing + hash routing (deep-linkable/shareable),
+> province selector, CSV export (atomic columns), matrix minimum-vote filter, per-scope `granularity`.
 
 > **DONE (Phase 3d):** iBabs adapter (`collect_ibabs`) built; **Noord-Holland** (181 items, faction-
 > level, aangenomen only) and **Limburg** (321 items, **per-member counts incl. verworpen**) live as
@@ -160,10 +157,14 @@ Notubiz 5, iBabs 4. iBabs + Notubiz are JS SPAs → votes need backend reverse-e
   open data like Utrecht. If they do, those provinces become config-only (free). Same ask could
   apply to Notubiz provinces with the module off (e.g. Gelderland). Contact the province, not GO.
 
-### Phase 4 — Tweede Kamer + category split (PLANNED, active pick 2026-06-11)
-The first **second category** (legislative body) beyond Provinciale Staten. This realizes the
+### Phase 4 — Tweede Kamer + category split  ✅ DONE (2026-06-11)
+The first **second category** (legislative body) beyond Provinciale Staten. Realizes the
 "pick **category** → pick **scope** → see the table" UX from [context.md](context.md). TK is not a
-province, so the frontend's province-only model is generalized into a category→scope **catalog**.
+province, so the frontend's province-only model was generalized into a category→scope **catalog**.
+**Shipped:** `collect_tk` adapter → `data/tweede-kamer.json` (~2,945 stemmingen, minified ~3 MB);
+`main()` now writes `data/catalog.json` (categories→scopes, replacing `provinces.json`); the
+frontend has a home/landing view, a category→scope picker, and URL-hash routing. The 4a/4b/4c notes
+below are the as-built record.
 
 **Why TK over the remaining provinces:** clean documented open-data API *with* per-fractie votes
 (no scraping), national audience, same normalized schema. Beats PDF-parsing 2 GO provinces and isn't

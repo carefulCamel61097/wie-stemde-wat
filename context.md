@@ -59,8 +59,13 @@ view is already possible by deselecting parties.)
   **Noord-Holland** (181 items, faction-level, aangenomen only) and **Limburg** (321 items,
   per-member counts **incl. verworpen**) as provinces 2 & 3. Zeeland (empty) and Noord-Brabant
   (no per-fractie breakdown) are dead ends. Coverage + reliability: [coverage.md](coverage.md).
+- [x] **Phase 4** — added the **Tweede Kamer** as a second *category* (not a province): clean OData
+  API, per-fractie seat counts incl. verworpen, ~2,945 stemmingen (moties/amendementen/wetsvoorstellen,
+  term 2025–heden). Generalized the frontend to **categories → scopes**: a landing page (pick niveau →
+  scope), `data/catalog.json` index, and URL-hash routing (`#tweede-kamer`, `#provinciale-staten/utrecht`)
+  → deep-linkable + decluttered table header. The "pick category → scope" vision is now real.
 - [ ] **NEXT** — Notubiz (5 provinces, needs a token — see [outreach.md](outreach.md)); GO
-  Flevoland/Drenthe via PDF/lobby. See the **NEXT** pointer at the top of [roadmap.md](roadmap.md).
+  Flevoland/Drenthe via the griffie lobby. See the **NEXT** pointer at the top of [roadmap.md](roadmap.md).
 
 Repo: https://github.com/carefulCamel61097/wie-stemde-wat ·
 Live: https://carefulcamel61097.github.io/wie-stemde-wat/

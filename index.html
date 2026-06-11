@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wie stemde wat? — stemgedrag in de Provinciale Staten</title>
-<meta name="description" content="Zie per partij hoe er gestemd is in de Provinciale Staten — per motie Voor of Tegen, op basis van open data. Nu: Utrecht, Noord-Holland en Limburg.">
-<meta name="keywords" content="stemgedrag, provinciale staten, moties, amendementen, stemmingen, open data, transparantie, politiek, Utrecht, Noord-Holland, Limburg">
+<title>Wie stemde wat? — stemgedrag in de Tweede Kamer en Provinciale Staten</title>
+<meta name="description" content="Zie per partij hoe er gestemd is in de Tweede Kamer en de Provinciale Staten — per motie Voor of Tegen, op basis van open data. Nu: Tweede Kamer, Utrecht, Noord-Holland en Limburg.">
+<meta name="keywords" content="stemgedrag, tweede kamer, provinciale staten, moties, amendementen, wetsvoorstellen, stemmingen, open data, transparantie, politiek, Utrecht, Noord-Holland, Limburg">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://carefulcamel61097.github.io/wie-stemde-wat/">
 <meta name="theme-color" content="#1b1b1b">
@@ -13,12 +13,12 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Wie stemde wat?">
-<meta property="og:title" content="Wie stemde wat? — stemgedrag in de Provinciale Staten">
-<meta property="og:description" content="Zie per partij hoe er gestemd is in de Provinciale Staten — per motie Voor of Tegen, op basis van open data. Nu: Utrecht, Noord-Holland en Limburg.">
+<meta property="og:title" content="Wie stemde wat? — stemgedrag in de Tweede Kamer en Provinciale Staten">
+<meta property="og:description" content="Zie per partij hoe er gestemd is in de Tweede Kamer en de Provinciale Staten — per motie Voor of Tegen, op basis van open data.">
 <meta property="og:url" content="https://carefulcamel61097.github.io/wie-stemde-wat/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wie stemde wat? — stemgedrag in de Provinciale Staten">
-<meta name="twitter:description" content="Zie per partij hoe er gestemd is in de Provinciale Staten — per motie Voor of Tegen, op basis van open data.">
+<meta name="twitter:title" content="Wie stemde wat? — stemgedrag in de Tweede Kamer en Provinciale Staten">
+<meta name="twitter:description" content="Zie per partij hoe er gestemd is in de Tweede Kamer en de Provinciale Staten — per motie Voor of Tegen, op basis van open data.">
 
 <style>
   :root{
@@ -211,21 +211,59 @@
   .iconbtn:hover{border-color:var(--accent);color:var(--accent)}
   .csvbtn{cursor:pointer;border:1.5px solid var(--control-line);background:#fff;color:var(--ink);border-radius:8px;padding:5px 11px;font:inherit;font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:5px;transition:.12s;white-space:nowrap}
   .csvbtn:hover{border-color:var(--accent);color:var(--accent)}
+  .t-wetsvoorstel{background:#e0f2f1;color:#00695c}
+
+  /* category -> scope landing ("pick a niveau -> pick a scope") */
+  #home{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:48px 20px;
+    background:radial-gradient(120% 90% at 50% 0%, #f6f3ee 0%, var(--bg) 70%)}
+  #home[hidden]{display:none}   /* id+attr specificity must beat the #home display:flex above */
+  .home-inner{max-width:780px;width:100%;text-align:center}
+  #home h1{font-size:clamp(30px,6vw,44px);margin:0 0 12px;letter-spacing:-.02em}
+  #home h1 .q{color:var(--accent)}
+  #home .home-lead{font-size:16px;color:var(--muted);margin:0 auto 30px;max-width:54ch;line-height:1.5}
+  .home-step-label{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 14px}
+  .home-back{display:inline-flex;align-items:center;gap:5px;margin:0 0 16px;cursor:pointer;background:none;border:none;color:var(--accent);font:inherit;font-size:14px;font-weight:600}
+  .home-back:hover{text-decoration:underline}
+  .cards{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  .card{flex:1 1 240px;max-width:320px;cursor:pointer;border:1.5px solid var(--control-line);
+    background:var(--surface);border-radius:14px;padding:22px 22px;text-align:left;font:inherit;
+    box-shadow:0 1px 3px rgba(0,0,0,.05);transition:transform .14s,box-shadow .14s,border-color .14s}
+  .card:hover:not(.disabled){border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+  .card .card-name{font-size:19px;font-weight:700;color:var(--ink)}
+  .card .card-desc{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.45}
+  .card.disabled{opacity:.55;cursor:default}
+  .card .soon{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;color:var(--muted);background:var(--chip);border-radius:999px;padding:2px 10px}
+  .home-foot{margin-top:30px;font-size:12.5px;color:var(--muted)}
+  .home-foot a{color:var(--muted)}
+
+  /* breadcrumb in the app header (back to the landing) */
+  .crumb{display:inline-flex;align-items:center;gap:6px;margin:0 0 7px;color:#cfcfd6;
+    text-decoration:none;font-size:12.5px;background:none;border:none;cursor:pointer;font:inherit}
+  .crumb:hover{color:#fff;text-decoration:underline}
+  .crumb b{color:#fff;font-weight:600}
 </style>
 </head>
 <body>
+<section id="home" hidden>
+  <div class="home-inner">
+    <h1>Wie stemde wat<span class="q">?</span></h1>
+    <p class="home-lead">Bekijk per partij hoe er gestemd is — per motie <b>Voor</b> of <b>Tegen</b>, op basis van open data.</p>
+    <div id="homeStep"></div>
+    <p class="home-foot">Open data · gratis · <a href="https://github.com/carefulCamel61097/wie-stemde-wat" target="_blank" rel="noopener">broncode op GitHub</a></p>
+  </div>
+</section>
+
+<div id="app" hidden>
 <header class="top">
   <button id="helpBtn" class="helpbtn">&#9432; Uitleg</button>
+  <button id="homeLink" class="crumb" title="Terug naar de startpagina">&#8592; Andere keuze</button>
   <h1>Wie stemde wat<span class="q">?</span></h1>
-  <p class="lead">Stemgedrag per partij in de Provinciale Staten — <b>Voor</b> of <b>Tegen</b> per stemming.</p>
+  <p class="lead" id="appLead">Stemgedrag per partij — <b>Voor</b> of <b>Tegen</b> per stemming.</p>
   <p class="src" id="src"></p>
 </header>
 
 <div class="controls">
   <div class="controls-row">
-    <label class="field">Provincie
-      <select id="province"><option value="utrecht">Utrecht</option></select>
-    </label>
     <label class="field">Zoek
       <input type="search" id="search" placeholder="Zoek op onderwerp of indiener…">
     </label>
@@ -279,6 +317,7 @@
   <div id="pinnedBlock"></div>
   <div id="mainBlock"></div>
 </div>
+</div><!-- /#app -->
 
 <div class="modal" id="matrixModal" hidden>
   <div class="modal-card">
@@ -326,7 +365,7 @@
       <button class="modal-close" data-close="helpModal" title="Sluiten">&times;</button></div>
     <div class="help">
       <h3 class="section">Wat is dit?</h3>
-      <p>Per stemming &mdash; een motie, amendement of besluit in de Provinciale Staten &mdash;
+      <p id="helpBody1">Per stemming &mdash; een motie, amendement of besluit in de Provinciale Staten &mdash;
         zie je hoe elke fractie stemde.</p>
 
       <h3 class="section">De tabel</h3>
@@ -358,7 +397,7 @@
       <h3 class="section">Bron &amp; methode</h3>
       <p id="helpSource"></p>
       <p>V of T is de meerderheid van de fractie; afwezige fracties tellen niet mee in de
-        percentages. Dit is geen offici&euml;le uitgave van de provincie.</p>
+        percentages. Dit is geen offici&euml;le uitgave van de overheid.</p>
     </div>
   </div>
 </div>
@@ -385,35 +424,85 @@ const ABBR = {bbb:"BBB",groenlinks:"GL",vvd:"VVD",d66:"D66",utrechtnu:"U!",cda:"
   // Noord-Holland (iBabs): short labels where the canonical name is long
   pvdd:"PvdD",fvd:"FvD","fractie-de-weerdt":"Weerdt",
   // Limburg (iBabs): local fracties
-  "lokaal-limburg":"LL","oos-limburg":"oos",horizon:"Horizon",svl:"SVL"};
-const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel"};
+  "lokaal-limburg":"LL","oos-limburg":"oos",horizon:"Horizon",svl:"SVL",
+  // Tweede Kamer fracties
+  "groenlinks-pvda":"GL-PvdA","progressief-nederland":"PRO",denk:"DENK",
+  "groep-markuszower":"Grp-Mark.",keijzer:"Keijzer",nsc:"NSC"};
+const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel",wetsvoorstel:"Wetsvoorstel"};
 // Min. stemmingen a party must have voted on to appear in the Overeenkomst matrix — below this an
 // agreement % is noise (a party that voted once is "100% gelijk" with everyone).
 const MATRIX_MIN = 5;
 
+let CATALOG, CAT, SCOPE;
 let DATA, state, AG = null, ORDER = null, ALLTYPES = null, MTYPES = null, PTYPES = null, CTYPES = null;
 const $ = s => document.querySelector(s);
 const esc = s => (s||"").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const srcLink = m => m.source ? ` <a class="ext" href="${m.source}" target="_blank" rel="noopener" title="Bekijk op stateninformatie">&#8599;</a>` : "";
+const srcLink = m => m.source ? ` <a class="ext" href="${m.source}" target="_blank" rel="noopener" title="Bekijk de bron">&#8599;</a>` : "";
 
 async function init(){
-  // Build the province selector from the index, then load the default province.
-  const idx = await (await fetch("data/provinces.json")).json();
-  const sel = $("#province");
-  sel.innerHTML = idx.provinces.map(p =>
-    `<option value="${p.key}"${p.available ? "" : " disabled"}>${esc(p.name)}${p.available ? "" : " (binnenkort)"}</option>`).join("");
-  sel.value = idx.default || (idx.provinces.find(p => p.available) || {}).key;
-  sel.onchange = () => loadProvince(sel.value);
-
+  CATALOG = await (await fetch("data/catalog.json")).json();
   setupGlobalHandlers();
-  await loadProvince(sel.value);
+  $("#homeLink").onclick = () => { location.hash = ""; };
+  window.addEventListener("hashchange", route);
+  route();
 }
 
-async function loadProvince(key){
-  DATA = await (await fetch(`data/${key}.json`)).json();
+// The URL hash drives the view, so every scope is deep-linkable (shareable + SEO):
+//   ""            -> landing (pick a category)
+//   "<cat>"       -> single-scope category opens its table directly; multi-scope shows scope picker
+//   "<cat>/<scope>" -> that scope's table
+function route(){
+  const h = decodeURIComponent(location.hash.replace(/^#\/?/, "")).trim();
+  if(!h){ showHome(null); return; }
+  const [catKey, scopeKey] = h.split("/");
+  const cat = CATALOG.categories.find(c => c.key === catKey);
+  if(!cat){ showHome(null); return; }
+  if(!scopeKey){
+    if(cat.scopes.length === 1 && cat.scopes[0].available){ openScope(cat, cat.scopes[0]); return; }
+    showHome(cat); return;
+  }
+  const scope = cat.scopes.find(s => s.key === scopeKey);
+  if(!scope || !scope.available){ showHome(cat); return; }
+  openScope(cat, scope);
+}
+
+function showHome(cat){
+  $("#app").hidden = true;
+  $("#home").hidden = false;
+  document.title = "Wie stemde wat? — stemgedrag in de politiek (open data)";
+  document.documentElement.style.setProperty("--accent", "#EC0000");
+  document.documentElement.style.setProperty("--header-bg", "#1b1b1b");
+  const step = $("#homeStep");
+  if(!cat){   // step 1: pick a category (legislative body)
+    step.innerHTML = `<p class="home-step-label">Kies een niveau</p><div class="cards">${
+      CATALOG.categories.map(c => {
+        const any = c.scopes.some(s => s.available);
+        return `<button class="card${any?"":" disabled"}" data-cat="${esc(c.key)}"${any?"":" disabled"}>
+          <div class="card-name">${esc(c.name)}</div>
+          <div class="card-desc">${esc(c.blurb||"")}</div>
+          ${any?"":`<span class="soon">binnenkort</span>`}</button>`;
+      }).join("")}</div>`;
+    step.querySelectorAll(".card[data-cat]:not([disabled])").forEach(b =>
+      b.onclick = () => { location.hash = b.dataset.cat; });
+  } else {    // step 2: pick a scope within the chosen category
+    step.innerHTML = `<button class="home-back">&#8592; terug</button>
+      <p class="home-step-label">Kies een ${esc(cat.scopeNoun||"onderdeel")}</p><div class="cards">${
+      cat.scopes.map(s => `<button class="card${s.available?"":" disabled"}" data-scope="${esc(s.key)}"${s.available?"":" disabled"}>
+        <div class="card-name">${esc(s.name)}</div>${s.available?"":`<span class="soon">binnenkort</span>`}</button>`).join("")}</div>`;
+    step.querySelector(".home-back").onclick = () => { location.hash = ""; };
+    step.querySelectorAll(".card[data-scope]:not([disabled])").forEach(b =>
+      b.onclick = () => { location.hash = `${cat.key}/${b.dataset.scope}`; });
+  }
+}
+
+async function openScope(cat, scope){
+  CAT = cat; SCOPE = scope;
+  $("#home").hidden = true;
+  $("#app").hidden = false;
+  DATA = await (await fetch(`data/${scope.key}.json`)).json();
   ALLTYPES = [...new Set(DATA.moties.map(m => m.type))];
-  AG = ORDER = MTYPES = PTYPES = CTYPES = null;   // reset per-province popup caches
-  PIN_KEY = `wsw_pinned_${key}`;
+  AG = ORDER = MTYPES = PTYPES = CTYPES = null;   // reset per-scope popup caches
+  PIN_KEY = `wsw_pinned_${scope.key}`;
   state = {
     types: new Set(ALLTYPES),
     parties: new Set(DATA.parties.map(p => p.slug)),
@@ -421,17 +510,29 @@ async function loadProvince(key){
     sort: "date-desc",
     pinned: new Set(JSON.parse(localStorage.getItem(PIN_KEY) || "[]")),
   };
-  // Province house style drives the theme (see data.meta.style).
+  // House style drives the theme (see data.meta.style).
   const st = DATA.meta.style || {};
   document.documentElement.style.setProperty("--accent", st.accent || "#EC0000");
   document.documentElement.style.setProperty("--header-bg", st.headerBg || "#1b1b1b");
 
-  $("#src").innerHTML = `Bron: <a href="${DATA.meta.source}" target="_blank" rel="noopener">${DATA.meta.body}, provincie ${DATA.meta.province}</a> · open data · periode ${DATA.meta.term} · bijgewerkt ${DATA.meta.generated_at.slice(0,10)}`;
-  $("#helpSource").innerHTML = `Open data van de <a href="${DATA.meta.source}" target="_blank" rel="noopener">${esc(DATA.meta.body)} van ${esc(DATA.meta.province)}</a>, periode ${esc(DATA.meta.term)}, wekelijks bijgewerkt.`
+  // Source label: a multi-scope category (provinces) reads "Provinciale Staten, provincie X";
+  // a single-body category (Tweede Kamer) just its own name (scopeNoun is null there).
+  const multi = cat.scopes.length > 1;
+  const srcName = (multi && cat.scopeNoun)
+    ? `${esc(DATA.meta.body)}, ${esc(cat.scopeNoun)} ${esc(DATA.meta.province)}` : esc(DATA.meta.body);
+  $("#homeLink").innerHTML = multi ? `&#8592; Andere ${esc(cat.scopeNoun||"keuze")}` : `&#8592; Andere keuze`;
+  $("#appLead").innerHTML = multi
+    ? `Stemgedrag per partij in de <b>${esc(DATA.meta.body)} van ${esc(DATA.meta.province)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`
+    : `Stemgedrag per fractie in de <b>${esc(DATA.meta.body)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`;
+  document.title = multi
+    ? `Wie stemde wat? — ${DATA.meta.body} ${DATA.meta.province}`
+    : `Wie stemde wat? — stemgedrag in de ${DATA.meta.body}`;
+  $("#src").innerHTML = `Bron: <a href="${DATA.meta.source}" target="_blank" rel="noopener">${srcName}</a> · open data · periode ${DATA.meta.term} · bijgewerkt ${DATA.meta.generated_at.slice(0,10)}`;
+  $("#helpSource").innerHTML = `Open data van de <a href="${DATA.meta.source}" target="_blank" rel="noopener">${srcName}</a>, periode ${esc(DATA.meta.term)}, wekelijks bijgewerkt.`
     + (DATA.meta.note ? ` ${esc(DATA.meta.note)}` : "");
+  $("#helpBody1").textContent = `Per stemming — een motie, amendement of besluit in de ${DATA.meta.body} — zie je hoe elke fractie stemde.`;
 
-  // Faction-level provinces (e.g. NH) store votes as 1/0, so "ruwe getallen" would show a
-  // meaningless "1-0". Hide the toggle and keep it off there.
+  // Faction-level data stores votes as 1/0, so "ruwe getallen" would show a meaningless "1-0".
   const faction = DATA.meta.granularity === "fractie";
   $("#rawToggle").style.display = faction ? "none" : "";
   if(faction) state.raw = false;
@@ -722,7 +823,7 @@ function cellHTML(m, slug, name){
 }
 function rowHTML(m, vps){
   const pinned = state.pinned.has(m.id);
-  const ext = m.source ? `<a class="ext" href="${m.source}" target="_blank" rel="noopener" title="Bekijk op stateninformatie">&#8599;</a>` : "";
+  const ext = m.source ? `<a class="ext" href="${m.source}" target="_blank" rel="noopener" title="Bekijk de bron">&#8599;</a>` : "";
   const res = m.resultLabel ? `<span class="res r-${m.result}">${esc(m.resultLabel)}</span>` : "";
   const first = `<td class="onderwerp"><div class="ond-row">
       <button class="pin${pinned?" on":""}" data-id="${m.id}" title="${pinned?"Losmaken":"Vastpinnen"}">&#128204;</button>
