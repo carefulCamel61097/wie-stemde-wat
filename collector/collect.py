@@ -113,7 +113,8 @@ CATEGORY_META = {
     "tweede-kamer": {"name": "Tweede Kamer", "scope_noun": None,
                      "blurb": "Het landelijke parlement — moties, amendementen en wetsvoorstellen."},
 }
-CATEGORY_ORDER = ["provinciale-staten", "tweede-kamer"]
+# Tweede Kamer first on the landing page (the higher-level body), then the provinces.
+CATEGORY_ORDER = ["tweede-kamer", "provinciale-staten"]
 
 # Bodies that are type "Fractie" in the GO API but are not voting parties.
 NOT_A_PARTY = {"Gedeputeerde Staten"}
@@ -879,7 +880,9 @@ def main():
             print("  (no data — marked unavailable)")
         catkey = p.get("category", "provinciale-staten")
         scopes_by_cat.setdefault(catkey, []).append(
-            {"key": p["key"], "name": p["name"], "available": available})
+            # style travels in the index so the frontend can theme the header *before* the (large)
+            # data file finishes loading — avoids a flash of the previous/default colour.
+            {"key": p["key"], "name": p["name"], "available": available, "style": p.get("style", {})})
         if available and default is None:
             default = {"category": catkey, "scope": p["key"]}
 

@@ -1,33 +1,10 @@
 {
-  "generated_at": "2026-06-11T10:18:48+00:00",
+  "generated_at": "2026-06-11T10:54:26+00:00",
   "default": {
     "category": "provinciale-staten",
     "scope": "utrecht"
   },
   "categories": [
-    {
-      "key": "provinciale-staten",
-      "name": "Provinciale Staten",
-      "scopeNoun": "provincie",
-      "blurb": "Stemgedrag in de 12 provinciale staten — kies een provincie.",
-      "scopes": [
-        {
-          "key": "utrecht",
-          "name": "Utrecht",
-          "available": true
-        },
-        {
-          "key": "noord-holland",
-          "name": "Noord-Holland",
-          "available": true
-        },
-        {
-          "key": "limburg",
-          "name": "Limburg",
-          "available": true
-        }
-      ]
-    },
     {
       "key": "tweede-kamer",
       "name": "Tweede Kamer",
@@ -37,7 +14,46 @@
         {
           "key": "tweede-kamer",
           "name": "Tweede Kamer",
-          "available": true
+          "available": true,
+          "style": {
+            "accent": "#154273",
+            "headerBg": "#0c1d33"
+          }
+        }
+      ]
+    },
+    {
+      "key": "provinciale-staten",
+      "name": "Provinciale Staten",
+      "scopeNoun": "provincie",
+      "blurb": "Stemgedrag in de 12 provinciale staten — kies een provincie.",
+      "scopes": [
+        {
+          "key": "utrecht",
+          "name": "Utrecht",
+          "available": true,
+          "style": {
+            "accent": "#EC0000",
+            "headerBg": "#1b1b1b"
+          }
+        },
+        {
+          "key": "noord-holland",
+          "name": "Noord-Holland",
+          "available": true,
+          "style": {
+            "accent": "#2891e0",
+            "headerBg": "#0e2438"
+          }
+        },
+        {
+          "key": "limburg",
+          "name": "Limburg",
+          "available": true,
+          "style": {
+            "accent": "#0059a2",
+            "headerBg": "#0a2540"
+          }
         }
       ]
     }

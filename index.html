@@ -256,7 +256,7 @@
 <div id="app" hidden>
 <header class="top">
   <button id="helpBtn" class="helpbtn">&#9432; Uitleg</button>
-  <button id="homeLink" class="crumb" title="Terug naar de startpagina">&#8592; Andere keuze</button>
+  <button id="homeLink" class="crumb" title="Terug naar de startpagina">&#8592; Startpagina</button>
   <h1>Wie stemde wat<span class="q">?</span></h1>
   <p class="lead" id="appLead">Stemgedrag per partij — <b>Voor</b> of <b>Tegen</b> per stemming.</p>
   <p class="src" id="src"></p>
@@ -466,12 +466,16 @@ function route(){
   openScope(cat, scope);
 }
 
+function applyTheme(style){
+  document.documentElement.style.setProperty("--accent", style.accent || "#EC0000");
+  document.documentElement.style.setProperty("--header-bg", style.headerBg || "#1b1b1b");
+}
+
 function showHome(cat){
   $("#app").hidden = true;
   $("#home").hidden = false;
   document.title = "Wie stemde wat? — stemgedrag in de politiek (open data)";
-  document.documentElement.style.setProperty("--accent", "#EC0000");
-  document.documentElement.style.setProperty("--header-bg", "#1b1b1b");
+  applyTheme({});
   const step = $("#homeStep");
   if(!cat){   // step 1: pick a category (legislative body)
     step.innerHTML = `<p class="home-step-label">Kies een niveau</p><div class="cards">${
@@ -499,6 +503,7 @@ async function openScope(cat, scope){
   CAT = cat; SCOPE = scope;
   $("#home").hidden = true;
   $("#app").hidden = false;
+  applyTheme(scope.style || {});   // theme now (before the large data fetch) so there's no colour flash
   DATA = await (await fetch(`data/${scope.key}.json`)).json();
   ALLTYPES = [...new Set(DATA.moties.map(m => m.type))];
   AG = ORDER = MTYPES = PTYPES = CTYPES = null;   // reset per-scope popup caches
@@ -510,17 +515,13 @@ async function openScope(cat, scope){
     sort: "date-desc",
     pinned: new Set(JSON.parse(localStorage.getItem(PIN_KEY) || "[]")),
   };
-  // House style drives the theme (see data.meta.style).
-  const st = DATA.meta.style || {};
-  document.documentElement.style.setProperty("--accent", st.accent || "#EC0000");
-  document.documentElement.style.setProperty("--header-bg", st.headerBg || "#1b1b1b");
+  applyTheme(DATA.meta.style || {});   // reaffirm from the data (matches the catalog style)
 
   // Source label: a multi-scope category (provinces) reads "Provinciale Staten, provincie X";
   // a single-body category (Tweede Kamer) just its own name (scopeNoun is null there).
   const multi = cat.scopes.length > 1;
   const srcName = (multi && cat.scopeNoun)
     ? `${esc(DATA.meta.body)}, ${esc(cat.scopeNoun)} ${esc(DATA.meta.province)}` : esc(DATA.meta.body);
-  $("#homeLink").innerHTML = multi ? `&#8592; Andere ${esc(cat.scopeNoun||"keuze")}` : `&#8592; Andere keuze`;
   $("#appLead").innerHTML = multi
     ? `Stemgedrag per partij in de <b>${esc(DATA.meta.body)} van ${esc(DATA.meta.province)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`
     : `Stemgedrag per fractie in de <b>${esc(DATA.meta.body)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`;

@@ -43,7 +43,8 @@ endpoint. A token lets us group votes per party.
 ---
 
 ## 2. Statengriffie Flevoland & Drenthe — enable the GO stemgedrag module
-> **▶ Ready to send 2026-06-11.** Links added (see below). Update this line once sent.
+> **✅ Sent 2026-06-11** to `griffie@flevoland.nl` and `Statengriffie@drentsparlement.nl`
+> (after the `statengriffie@…nl` guesses bounced). Awaiting reply.
 
 **Unlocks (if done):** Flevoland, Drenthe (becomes config-only — zero extra code for us).
 **Why:** Both run GemeenteOplossingen and expose the GO `/api/v2` (structure), but the optional
