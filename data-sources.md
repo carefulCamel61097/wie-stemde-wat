@@ -265,3 +265,72 @@ faction-level, inference) vs `"stemmen"` (Limburg structured, per-member counts,
 The per-motie `voteResultHtml` is rendered HTML (per-member rows). A quick parse already
 mis-read the proposer's row. **Prefer the structured `/Samenstelling/{party}/votings`
 JSON** (clean per-party counts) over scraping the popup HTML.
+
+## 8. Tweede Kamer — OData API (CRACKED, verified 2026-06-11)
+The Tweede Kamer publishes a first-class **OData v4** open-data API. No auth, no token, JSON,
+and it carries **per-fractie votes with exact seat counts** → tier A (like Utrecht/Limburg),
+*incl. verworpen*. Far cleaner than any provincial portal. This is a **new category**, not a
+province (see roadmap Phase 4).
+
+- **Base:** `https://gegevensmagazijn.tweedekamer.nl/OData/v4/2.0/`
+  (service doc lists entity sets; `$metadata` has the full schema). Append `&$format=json`.
+- **UA:** plain works (no browser spoof needed) — fine for GitHub Actions.
+
+### The vote chain
+```
+Stemming ──Besluit_Id──▶ Besluit ──Agendapunt──▶ Agendapunt ──Activiteit_Id──▶ Activiteit
+   │                        │                                                      └─ Datum (vote date)
+   │                        └──Zaak[] (the motie/amendement/wetsvoorstel)
+   └─ per-fractie vote row
+```
+- **`Stemming`** (one row per fractie per besluit): `Soort` (`Voor` | `Tegen` | `Niet deelgenomen` |
+  null), **`FractieGrootte`** (seat count → exact tallies), `ActorFractie` (display name AT vote
+  time), `Fractie_Id`, `Besluit_Id`. `Persoon_Id` is set only for the rare hoofdelijke (per-person)
+  votes — for fractie votes it's null.
+- **`Besluit`**: `BesluitSoort` (outcome, see below), `BesluitTekst` ("Aangenomen."), `Agendapunt_Id`.
+- **`Zaak`** (besluit→Zaak is a *collection* nav): `Soort` (`Motie` | `Amendement` | `Wetgeving` | …),
+  `Nummer` ("2024Z15642"), `Onderwerp` (readable title "Motie van het lid X over Y"), `Vergaderjaar`.
+- **`Activiteit`** (via `Agendapunt`): `Soort` "Stemmingen", **`Datum`** = the plenary vote date.
+
+### Efficient fetch (≈12 requests, not 3k)
+OData `$expand` inlines children, and nested navigation is **filterable**. One paged query pulls
+everything:
+```
+GET /Besluit
+  ?$filter=startswith(BesluitSoort,'Stemmen')
+           and Agendapunt/Activiteit/Datum ge 2025-11-13T00:00:00Z
+           and Stemming/any()
+           and Zaak/any(z: z/Soort eq 'Motie' or z/Soort eq 'Amendement' or z/Soort eq 'Wetgeving')
+  &$expand=Stemming($select=ActorFractie,Soort,FractieGrootte),
+           Zaak($select=Nummer,Soort,Onderwerp),
+           Agendapunt($expand=Activiteit($select=Datum))
+  &$select=Id,BesluitSoort,BesluitTekst
+  &$format=json
+```
+Server **page cap = 250 rows**; follow `@odata.nextLink` until absent. (`@odata.count` via
+`$count=true` for totals.)
+
+### Scope, outcomes, mapping (decisions)
+- **Current term = on/after `2025-11-13`** (first stemming of the Kamer installed after the
+  29 Oct 2025 election; constituerende vergadering 12 Nov 2025). The *old* Kamer kept voting between
+  election day and installation — date-gating at 11-13 excludes those old-composition votes and keeps
+  fractie sizes consistent. Consistent with the locked "current term only" decision.
+- **Volume (verified 2026-06-11):** 3,450 `Stemmen*` besluiten since term start; of those **3,009 have
+  a real roll-call** (`Stemming/any()`), **2,945** of which link to a Motie/Amendement/Wetgeving — that
+  is our keepable set. (Moties 2,884 · amendementen 418 · wetgeving 64 across the term.) ~6 MB pretty
+  → **write `tweede-kamer.json` compact (~3 MB)**. Frontend perf with ~3k rows × ~18 cols is a watch
+  item (provinces are 181–566 rows); revisit virtualization/pagination if sluggish.
+- **Keep only roll-call besluiten** (`Stemming/any()`). The many non-vote `BesluitSoort` values
+  (`aangehouden`, `ingetrokken`, `uitstellen`, `vervallen`, **`zonder stemming aannemen`**) have no
+  `Stemming` rows and drop out naturally — don't rely on the label, rely on the presence of votes.
+- **Outcome** from `BesluitSoort`: `Stemmen - aangenomen|goedgekeurd|vastgesteld` → accepted;
+  `Stemmen - verworpen|niet aangenomen` → rejected; `Stemmen - gestaakt` → tie (staking van stemmen).
+- **Vote → counts:** `Voor` → `agree += FractieGrootte`, `Tegen` → `disagree += FractieGrootte`,
+  `Niet deelgenomen`/null → abstain/absent. A fractie with both Voor and Tegen rows = a real split.
+  Self-contained per besluit (no "overige fracties" inference) → granularity `member`, tier A.
+- **Mid-term composition quirks** (handle/note, not blocking): `ActorFractie` is the name *at vote
+  time*, so renames create separate columns — e.g. **GroenLinks-PvdA → "Progressief Nederland" (PRO)
+  on 2026-06-09**; splinters **Groep Markuszower** (PVV, 2026-01-20) and **Keijzer**/"Lid Keijzer"
+  (BBB, 2026-02-24). A small alias map can merge a pure rename (GL-PvdA ↔ PRO) into one column.
+  `Fractie.AantalZetels` reflects *current* seats (post-splinter), so prefer the per-vote
+  `FractieGrootte`, never the Fractie table, for tallies.

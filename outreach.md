@@ -50,7 +50,10 @@ endpoint. A token lets us group votes per party.
 **stemgedrag** module isn't enabled, so per-party votes aren't published as open data (404 on
 `/Samenstelling/{fractie}/votings`). Utrecht has it enabled — clear precedent.
 
-**To:** statengriffie@flevoland.nl  /  statengriffie@drenthe.nl (verify addresses)
+**To:** Flevoland → `griffie@flevoland.nl` · Drenthe → `Statengriffie@drentsparlement.nl`
+(✔ verified 2026-06-11. NB: the obvious guesses `statengriffie@flevoland.nl` and
+`statengriffie@drenthe.nl` both **bounce** — Flevoland's griffie mailbox is `griffie@…` and
+Drenthe brands its PS as the *Drents Parlement*, so its griffie lives on `@drentsparlement.nl`.)
 **Onderwerp:** Verzoek: stemgedrag per fractie als open data publiceren (zoals provincie Utrecht)
 
 > Geachte Statengriffie,
@@ -73,10 +76,11 @@ endpoint. A token lets us group votes per party.
 > Met vriendelijke groet,
 > [naam]
 
-> **Tip:** stuur aparte mails (Flevoland → statengriffie@flevoland.nl, Drenthe →
-> statengriffie@drenthe.nl) en **verifieer de adressen** op de provinciewebsite vóór verzending.
-> Vul je eigen naam in bij `[naam]`. De live links + de drie reeds opgenomen provincies zijn het
-> overtuigendst — ze laten zien dat het een echt, werkend project is.
+> **Tip:** stuur aparte mails (Flevoland → `griffie@flevoland.nl`, Drenthe →
+> `Statengriffie@drentsparlement.nl` — beide geverifieerd 2026-06-11). Vul je eigen naam in bij
+> `[naam]`. De live links + de drie reeds opgenomen provincies zijn het overtuigendst — ze laten
+> zien dat het een echt, werkend project is. (Voor Drenthe kun je "Provinciale Staten" in de mail
+> eventueel vervangen door "het Drents Parlement".)
 
 ---
 
