@@ -1,20 +1,27 @@
 # Roadmap — "Wie heeft wat gestemd?" (multi-province voting overview)
 
 > ## ▶ NEXT (resume here)
-> Out of low-hanging fruit (iBabs done: 2 live, 2 dead). Remaining work, by payoff:
-> 1. **Notubiz adapter** (vendor #3) — **token e-mail SENT 2026-06-10, awaiting reply**
->    ([outreach.md](outreach.md) §1). When it arrives: `api.notubiz.nl/agenda_items/votings` gives
->    outcomes + roll-call; the token unlocks the `role_id → fractie` map (`/roles?field_id=105`).
->    Unlocks up to 5 provinces (Fryslân, Groningen, Zuid-Holland, Overijssel; Gelderland's module
->    is off → outcome only). Biggest single coverage unlock.
-> 2. **Tweede Kamer** — a *new category*, not a province. Has its **own clean open-data API with
->    votes** (much easier than provincial scraping) + a far bigger audience. The "pick category →
->    pick scope" UX is already in the vision ([context.md](context.md)). Arguably the best ROI now.
-> 3. **GO Flevoland/Drenthe** — votes only in besluitenlijst PDFs → PDF parsing, or lobby the griffie
->    ([outreach.md](outreach.md) §2) to enable the GO stemgedrag module (then config-only).
-> 4. **Product polish** — print stylesheet / printable report (PDF), shareable filter-state URL,
->    grey low-n matrix cells, a coverage/gaps view on the site. All small, none blocking.
-> 5. **Strategy** (optional) — the cross-government dataset + B2B "political intelligence" angle
+> **ACTIVE PICK: build the Tweede Kamer as a new *category*** (decided 2026-06-11). It's the best
+> ROI on the board: one clean open-data API *with* per-fractie votes, a much bigger audience, and
+> it fits the existing normalized schema. See the **"Tweede Kamer + category split" plan** below
+> (Phase 4) for the concrete steps. Sequence: (1) probe the OData API + measure data size →
+> (2) IA refactor (catalog + home view + category/scope selector + hash routing) →
+> (3) TK adapter → `data/tweede-kamer.json` + Actions cron.
+>
+> Other work, by payoff:
+> 1. **Notubiz adapter** (vendor #3) — **token e-mail SENT 2026-06-10, NO reply yet (as of 2026-06-11)**
+>    ([outreach.md](outreach.md) §1). Blocked on the token. When it arrives:
+>    `api.notubiz.nl/agenda_items/votings` gives outcomes + roll-call; the token unlocks the
+>    `role_id → fractie` map (`/roles?field_id=105`). Unlocks up to 5 provinces (Fryslân, Groningen,
+>    Zuid-Holland, Overijssel; Gelderland's module is off → outcome only). Biggest single coverage unlock.
+> 2. **GO Flevoland/Drenthe** — votes only in besluitenlijst PDFs. **Decision: lobby, don't parse.**
+>    PDF parsing is fragile, per-griffie bespoke, and only 2 provinces → low ROI. Instead the griffie
+>    mails ([outreach.md](outreach.md) §2, links added) are **ready to send 2026-06-11**; if they
+>    enable the GO stemgedrag module those provinces become config-only.
+> 3. **Product polish** — print stylesheet / printable report (PDF), grey low-n matrix cells, a
+>    coverage/gaps view on the site. (Shareable filter-state URL is now folded into the Phase 4 hash
+>    routing.) All small, none blocking.
+> 4. **Strategy** (optional) — the cross-government dataset + B2B "political intelligence" angle
 >    (discussed): real category, money is B2B not consumer. Run `/analyze` to pressure-test.
 >
 > Frontend already shipped beyond v1: province selector, CSV export (atomic columns), matrix
@@ -153,6 +160,46 @@ Notubiz 5, iBabs 4. iBabs + Notubiz are JS SPAs → votes need backend reverse-e
   open data like Utrecht. If they do, those provinces become config-only (free). Same ask could
   apply to Notubiz provinces with the module off (e.g. Gelderland). Contact the province, not GO.
 
+### Phase 4 — Tweede Kamer + category split (PLANNED, active pick 2026-06-11)
+The first **second category** (legislative body) beyond Provinciale Staten. This realizes the
+"pick **category** → pick **scope** → see the table" UX from [context.md](context.md). TK is not a
+province, so the frontend's province-only model is generalized into a category→scope **catalog**.
+
+**Why TK over the remaining provinces:** clean documented open-data API *with* per-fractie votes
+(no scraping), national audience, same normalized schema. Beats PDF-parsing 2 GO provinces and isn't
+blocked like Notubiz.
+
+**4a — Probe the API (do FIRST, before any code).**
+- Source: **`https://opendata.tweedekamer.nl`** — the official OData v4 / SyncFeed API (no auth, no
+  formal token). Vote chain to verify: `Besluit` → `Stemming` (per-fractie) → `Fractie`
+  (`ActorFractie` + `FractieZetelAantal` for seat counts), linked to `Zaak`/`Document` (motie /
+  amendement / wetsvoorstel) and the `Activiteit`/`Vergadering` for the date.
+- Confirm: per-fractie **seat counts** are present (→ granularity `member`, tier A like Utrecht),
+  how to scope to the **current term** (post-2025 election), item-type classification, and the
+  outcome field (aangenomen/verworpen).
+- **Measure data size.** TK volume ≫ a province. The page loads one whole JSON; if `tweede-kamer.json`
+  is multi-MB, term-scope hard and/or trim fields (and only then consider per-year splits). Decide
+  after measuring — don't pre-optimize.
+
+**4b — IA refactor (independent of the API; can land first).**
+- **Catalog data model:** generalize `data/provinces.json` into a catalog of **categories →
+  scopes**. Each category = a body (`tweede-kamer`, `provinciale-staten`); each scope flags
+  `available` + its data file. TK is a category with a **single** scope.
+- **Home view (NOT a separate page):** one `index.html`, with a landing/home *view state* shown when
+  no scope is selected. The table + all popups (matrix, partijprofiel, vergelijken) are byte-for-byte
+  shared between TK and PS — do **not** fork into two pages.
+- **Two-level selector:** category → scope. Scope picker only appears for categories with >1 scope;
+  a single-scope category (TK) goes **straight to the table** (no dead-end second click). Moving
+  scope selection up to the home view declutters the table header.
+- **Hash routing:** selection lives in the URL (`#tk`, `#ps/utrecht`). Delivers three things at once:
+  the declutter, **shareable/deep-linkable URLs** (the parked v1.1 feature — now delivered here), and
+  **SEO** (distinct URLs per body/scope, compounding the meta/OG work already shipped).
+
+**4c — TK adapter.**
+- New adapter (e.g. `collect_tk`) in `collector/collect.py`, writing `data/tweede-kamer.json` in the
+  **same normalized schema** (parties = fracties, votes per fractie with seat counts). Register TK in
+  the catalog and add it to the weekly GitHub Actions cron.
+
 ## Decisions
 **Locked**
 - Period: current term (2023–2027) only.
@@ -177,5 +224,6 @@ Notubiz 5, iBabs 4. iBabs + Notubiz are JS SPAs → votes need backend reverse-e
 domain costs money (optional, later).
 
 ## Future categories (same architecture)
-Tweede Kamer (own open-data API w/ votes), Eerste Kamer, gemeenteraden, Europees
-Parlement, waterschappen — each = a new adapter feeding the same frontend.
+Tweede Kamer (own open-data API w/ votes) — **now the active pick, see Phase 4 above**.
+Then Eerste Kamer, gemeenteraden, Europees Parlement, waterschappen — each = a new adapter
+feeding the same frontend (and a new scope/category in the catalog).

@@ -43,6 +43,8 @@ endpoint. A token lets us group votes per party.
 ---
 
 ## 2. Statengriffie Flevoland & Drenthe — enable the GO stemgedrag module
+> **▶ Ready to send 2026-06-11.** Links added (see below). Update this line once sent.
+
 **Unlocks (if done):** Flevoland, Drenthe (becomes config-only — zero extra code for us).
 **Why:** Both run GemeenteOplossingen and expose the GO `/api/v2` (structure), but the optional
 **stemgedrag** module isn't enabled, so per-party votes aren't published as open data (404 on
@@ -63,8 +65,18 @@ endpoint. A token lets us group votes per party.
 > data willen publiceren? Ik bouw een open, non-commercieel overzicht van het stemgedrag in de
 > Provinciale Staten en zou uw provincie daar graag aan toevoegen.
 >
+> Het project is open en non-commercieel; u kunt het hier bekijken:
+> – Website: https://carefulcamel61097.github.io/wie-stemde-wat/
+> – Broncode: https://github.com/carefulCamel61097/wie-stemde-wat
+> (Provincie Utrecht, Noord-Holland en Limburg zijn er al in opgenomen — zo ziet het resultaat eruit.)
+>
 > Met vriendelijke groet,
 > [naam]
+
+> **Tip:** stuur aparte mails (Flevoland → statengriffie@flevoland.nl, Drenthe →
+> statengriffie@drenthe.nl) en **verifieer de adressen** op de provinciewebsite vóór verzending.
+> Vul je eigen naam in bij `[naam]`. De live links + de drie reeds opgenomen provincies zijn het
+> overtuigendst — ze laten zien dat het een echt, werkend project is.
 
 ---
 
