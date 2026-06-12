@@ -387,3 +387,53 @@ votes per fractie `agree/disagree = 1/0`, `granularity: "fractie"`), category `e
 scope. Parser caveats to handle: leading "de/het" inside fractie names, separator variants
 (`,` / ` en `), splinter `first_seen` gating, hoofdelijke (per-member) rare case. Tier B → set
 `meta.note` like NH; document in [coverage.md](coverage.md).
+
+## 10. Europees Parlement — HowTheyVote.eu API (CRACKED, verified 2026-06-13, feasibility = GO, tier A)
+The EP publishes per-MEP **roll-call votes** (RCV) as open data, but the official EP Open Data Portal
+(`data.europarl.europa.eu/api/v2/`) serves them per-sitting in cumbersome RDF/XML. **HowTheyVote.eu**
+compiles the same official data into a clean JSON API *and* weekly bulk CSV, **with per-group tallies
+already aggregated** — far easier. We use HowTheyVote as the source and attribute both it and the EP.
+- **License:** Open Database License (**ODbL 1.0**) + Database Contents License (DbCL 1.0) — free to
+  use with **attribution + share-alike**. Our derived `data/europees-parlement.json` is published openly
+  under the same; `meta.license` credits HowTheyVote.eu + the European Parliament.
+- **UA:** browser UA works (plain may 000 on the apex `api.` host; use `https://howtheyvote.eu/api/...`).
+- **Unit = European political group** (not individual MEPs, not Dutch-only): EPP, S&D, Renew,
+  Greens/EFA (`GREEN_EFA`), ECR, PfE (`PFE`), The Left (`GUE_NGL`), ESN, NI. The schema's "parties" = groups.
+
+### Endpoints
+- **List:** `GET /api/votes?page_size=100&page=N` — paged, **newest first**, `is_main` votes only
+  (the final vote per file; amendment/procedural sub-votes are excluded from this list). Envelope:
+  `{total, page, page_size, has_next, results:[…]}`. Each result: `id, is_main, timestamp,
+  display_title, reference, result, description, …`. Spans the **9th + 10th terms (2019→present)** →
+  must date-filter (see scope). `is_main` query param is **not** honoured — rely on the list default.
+- **Detail:** `GET /api/votes/{id}` — adds `stats` and `member_votes`:
+  - `stats.by_group[]` = `{group:{code,short_label}, stats:{FOR,AGAINST,ABSTENTION,DID_NOT_VOTE}}` —
+    **exact MEP counts per group** → maps to our `{agree=FOR, disagree=AGAINST, abstain=ABSTENTION}`.
+    A group split across FOR/AGAINST is a real split (counts present → tier A, like TK seat counts).
+  - `member_votes[]` = `{member:{full_name, country{code}, group{code}}, position}` — per-MEP, with
+    **country** → enables an optional **Dutch-delegation breakout** later (v2; not needed for v1).
+  - `procedure` → procedure type (COD/RSP/INI/NLE/BUD/DEC/…) for item-type classification.
+- **Bulk (alternative):** GitHub releases `HowTheyVote/data` (weekly tag), `votes.csv.gz` (~750 KB,
+  all 24k roll-calls incl. `is_main`, `count_*` totals, `procedure_type`, `result`), plus
+  `member_votes.csv.gz` (~64 MB), `members`, `groups`, `group_memberships`. The CSVs have **no
+  pre-aggregated per-group tallies** (that's API-only), so for group counts the API `stats.by_group`
+  is the path of least resistance; the bulk file is a fallback for the vote list/metadata.
+
+### Scope, volume, outcomes
+- **Current term = 10th EP, votes on/after `2024-07-16`** (first sitting after the June 2024 election).
+  Date-filter the list (it includes the 9th term back to 2019).
+- **Volume (verified 2026-06-13):** **545 `is_main` votes this term** (498 ADOPTED, 47 REJECTED) — about
+  Utrecht scale; small data (~9 group columns). (5,036 total roll-calls incl. amendments — we keep only
+  `is_main`.) `result`: `ADOPTED` → accepted, `REJECTED` → rejected.
+- **Caveats:** only **roll-call** votes are recorded per-MEP (show-of-hands aren't published — inherent,
+  like every source here). Group membership shifts mid-term, but `stats.by_group` already reflects the
+  group **at vote time**, so no first_seen gating is needed. HowTheyVote covers the 9th term onward only
+  (irrelevant — we want the 10th).
+
+### Recommended build (collect_ep)
+Page `/api/votes?page_size=100` until `timestamp < 2024-07-16` (~6 pages → 545 votes); for each, GET
+`/api/votes/{id}` and read `stats.by_group` → per-group `{agree,disagree,abstain}` (+ `procedure` →
+item type). ~550 requests total (polite, weekly). Write `data/europees-parlement.json` (same schema,
+**parties = groups** with an `EP_GROUPS` abbrev/colour map, exact counts → `granularity: "member"`),
+category `europees-parlement`, single scope; `meta.license` = ODbL/HowTheyVote+EP. Tier A. Optional
+later: a Dutch-delegation sub-view from `member_votes` (country `NLD`).

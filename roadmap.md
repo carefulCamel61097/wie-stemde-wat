@@ -10,9 +10,10 @@
 >    aggregated to fractie. Recipe: data-sources.md §9.
 > 3. **Provinciale Staten** — ◑ category LIVE, 3/12 provinces (Utrecht, Noord-Holland, Limburg).
 >    Growing it to more provinces is the outreach track below (Notubiz token + griffie lobby).
-> 4. **Europees Parlement** — ⏳ NEXT. Phase 6 below. **Feasibility probe FIRST.** EP publishes
->    **roll-call votes for ALL MEPs** (open data) → present by **European political group** (not only
->    Dutch MEPs), Dutch delegation optional. Confirm source + model before building.
+> 4. **Europees Parlement** — ⏳ probe ✅ DONE (2026-06-13) = **GO, tier A**; **build `collect_ep` next** (Phase 6b).
+>    Source = **HowTheyVote.eu** JSON API (compiles EP roll-call open data): `stats.by_group` gives exact
+>    per-group MEP counts → present by **European political group**. ~545 main votes, term `>= 2024-07-16`,
+>    ODbL license. Recipe: data-sources.md §10.
 >
 > The architecture is ready: catalog (categories→scopes) + frontend landing/routing already support new
 > categories, so EK/EP = "feasibility probe → new adapter → catalog entry" (no IA refactor). Each new
@@ -240,20 +241,29 @@ the full `collect.py` run. Frontend: generic (no IA change) — added a `.t-over
 EK SEO meta. `collect.py` gained an `ONLY=<keys>` env switch for fast single-scope re-runs. Recipe +
 parser caveats: [data-sources.md](data-sources.md) §9; reliability: [coverage.md](coverage.md).
 
-### Phase 6 — Europees Parlement (PLANNED — feasibility probe FIRST)
+### Phase 6 — Europees Parlement (probe DONE 2026-06-13 = GO; build next)
 The EU's elected chamber (the EU's democratic-vote layer; the Council = governments, not in scope).
 Single-scope category. **Present votes by European political group** (EPP, S&D, Renew, Greens/EFA,
 ECR, The Left, PfE, ESN, NI), with the Dutch delegation as an optional breakout — **not Dutch MEPs only**.
 
-**6a — Feasibility probe (first).**
-- **Sources to check:** the EP Open Data Portal (`data.europarl.europa.eu`, has roll-call vote / RCV
-  data) and/or the well-known `HowTheyVote.eu` datasets. Confirm: per-MEP RCV results, mapping MEP →
-  political group (and → national party for the NL breakout), titles/dates, and outcome.
-- **Caveats to confirm:** only **roll-call** votes are recorded per-MEP (show-of-hands aren't); volume
-  is large (scope to the current term, write compact like TK); the unit is **political group**, so the
-  schema's "parties" = groups (new ABBR/colour set). Member-level → aggregate to group (privacy: RCVs
-  are public record, same as TK).
-- If viable: `collect_ep` adapter → `data/europees-parlement.json`, category `europees-parlement`.
+**6a — Feasibility probe ✅ DONE (2026-06-13) — verdict: GO, tier A.** Full findings in
+[data-sources.md](data-sources.md) §10. Summary:
+- **Source = HowTheyVote.eu** (`https://howtheyvote.eu/api/votes`), which compiles the EP's official
+  roll-call open data (the EP Open Data Portal serves the same data but in cumbersome RDF/XML). JSON API
+  + weekly bulk CSV. License **ODbL 1.0** (attribution + share-alike).
+- **`/api/votes/{id}` → `stats.by_group`** gives **exact per-group MEP counts** (FOR/AGAINST/ABSTENTION/
+  DID_NOT_VOTE) → maps straight to `{agree,disagree,abstain}` at **group** level → **tier A (exact
+  counts)**, granularity `member`. `member_votes` (per-MEP, with country) enables an optional NL breakout.
+- **Scope = 10th term, votes `>= 2024-07-16`; 545 `is_main` votes** (498 adopted, 47 rejected) — ~Utrecht
+  scale (amendment sub-votes excluded). Only roll-call votes are per-MEP (inherent). Groups change mid-
+  term but `stats.by_group` reflects the group at vote time (no first_seen gating needed).
+
+**6b — Build `collect_ep` (next).** Page `/api/votes?page_size=100` until `timestamp < 2024-07-16`
+(~6 pages), then GET each `/api/votes/{id}` for `stats.by_group` (+ `procedure` → item type); ~550
+polite requests. Write `data/europees-parlement.json` (same schema, **parties = groups** via an
+`EP_GROUPS` abbrev/colour map, exact counts, `granularity: "member"`), category `europees-parlement`,
+single scope; `meta.license` credits HowTheyVote.eu + the European Parliament (ODbL). Add to the weekly
+Action; document the row in [coverage.md](coverage.md). Recipe + caveats: [data-sources.md](data-sources.md) §10.
 
 ## Decisions
 **Locked**
