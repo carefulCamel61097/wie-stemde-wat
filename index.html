@@ -571,6 +571,16 @@ function setupGlobalHandlers(){
   $("#csvBtn").onclick = exportCSV;
   document.querySelectorAll(".modal").forEach(mo => mo.addEventListener("click", e => { if(e.target === mo) mo.hidden = true; }));
   document.querySelectorAll("[data-close]").forEach(btn => btn.onclick = () => { document.getElementById(btn.dataset.close).hidden = true; });
+  // Pin toggle via event delegation — one listener on the table container, instead of re-binding
+  // a handler to every pin button on each render (matters for the ~3k-row Tweede Kamer table).
+  $(".wrap").addEventListener("click", e => {
+    const b = e.target.closest("button.pin");
+    if(!b) return;
+    const id = +b.dataset.id;
+    state.pinned.has(id) ? state.pinned.delete(id) : state.pinned.add(id);
+    localStorage.setItem(PIN_KEY, JSON.stringify([...state.pinned]));
+    render();
+  });
 }
 
 // Shared type-filter chips for the popups.
@@ -764,7 +774,13 @@ function buildControls(types){
   $("#pAll").onclick = ()=>{ DATA.parties.forEach(p=>state.parties.add(p.slug)); $("#pList").querySelectorAll("input").forEach(i=>i.checked=true); updatePartySummary(); render(); };
   $("#pNone").onclick = ()=>{ state.parties.clear(); $("#pList").querySelectorAll("input").forEach(i=>i.checked=false); updatePartySummary(); render(); };
 
-  $("#search").oninput = e => { state.search = e.target.value.toLowerCase().trim(); render(); };
+  // Debounce search: avoid re-rendering the whole (up to ~3k-row) table on every keystroke.
+  let searchTimer;
+  $("#search").oninput = e => {
+    state.search = e.target.value.toLowerCase().trim();
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(render, 150);
+  };
   $("#result").onchange = e => { state.result = e.target.value; render(); };
   $("#sort").onchange = e => { state.sort = e.target.value; render(); };
   $("#controversial").onchange = e => { state.controversial = e.target.checked; render(); };
@@ -855,15 +871,6 @@ function render(){
 
   const shown = (state.onlyPinned?pinnedRows.length:mainRows.length+pinnedRows.length);
   $("#count").textContent = `${shown} van ${DATA.moties.length} stemmingen · ${vps.length} partijen`;
-
-  document.querySelectorAll("button.pin").forEach(b=>{
-    b.onclick = ()=>{
-      const id = +b.dataset.id;
-      state.pinned.has(id) ? state.pinned.delete(id) : state.pinned.add(id);
-      localStorage.setItem(PIN_KEY, JSON.stringify([...state.pinned]));
-      render();
-    };
-  });
 }
 
 // Split a title into its code (e.g. "A26"), number ("19") and the rest. Formats vary per province:
