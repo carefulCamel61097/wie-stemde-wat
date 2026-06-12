@@ -16,7 +16,9 @@ Zero dependencies (stdlib only) so GitHub Actions needs no install step.
 See ../data-sources.md for the reverse-engineered GO endpoints.
 """
 
+import hashlib
 import json
+import os
 import re
 import sys
 import time
@@ -103,6 +105,27 @@ SOURCES = [
                 "Alleen stemmingen met een hoofdelijke of fractiegewijze telling; zaken die zonder "
                 "stemming zijn afgedaan, aangehouden of ingetrokken zijn niet opgenomen.",
     },
+    {
+        # The Senate (revising chamber). Separate body, separate system — no machine API; the
+        # per-fractie voor/tegen lists are parsed from the HTML "stemmingen per vergaderdag" pages.
+        # Faction-level V/T, no seat counts -> tier B, but BOTH sides are named (nothing inferred).
+        # See data-sources.md §9.
+        "key": "eerste-kamer",
+        "name": "Eerste Kamer",
+        "vendor": "ek",
+        "category": "eerste-kamer",
+        "body": "Eerste Kamer",
+        "base": "https://www.eerstekamer.nl",
+        # Current EK installed 13 June 2023 (elected by the March 2023 Provinciale Staten). Note: the
+        # EK term (2023-2027) differs from the TK term (2025-heden) — different election cycles.
+        "term_start": (2023, 6, 13),
+        "term_label": "2023-2027",
+        "style": {"accent": "#00669a", "headerBg": "#0a2e44"},   # EK huisstijl blue
+        "license": "Open data - Eerste Kamer der Staten-Generaal (eerstekamer.nl)",
+        "note": "Stemmen zijn op fractieniveau geregistreerd (voor/tegen, zonder zetelaantallen): de "
+                "Eerste Kamer stemt meestal bij zitten en opstaan. Beide zijden worden expliciet "
+                "vermeld (niets afgeleid). Hamerstukken (zonder stemming aangenomen) zijn niet opgenomen.",
+    },
 ]
 
 # Categories (legislative bodies) -> how the frontend labels the "pick category -> pick scope" UX.
@@ -112,9 +135,11 @@ CATEGORY_META = {
                            "blurb": "Stemgedrag in de 12 provinciale staten — kies een provincie."},
     "tweede-kamer": {"name": "Tweede Kamer", "scope_noun": None,
                      "blurb": "Het landelijke parlement — moties, amendementen en wetsvoorstellen."},
+    "eerste-kamer": {"name": "Eerste Kamer", "scope_noun": None,
+                     "blurb": "De senaat — stemmingen over wetsvoorstellen en moties (op fractieniveau)."},
 }
-# Tweede Kamer first on the landing page (the higher-level body), then the provinces.
-CATEGORY_ORDER = ["tweede-kamer", "provinciale-staten"]
+# Landing order: national (TK, EK) -> regional (provinces). EU (Europees Parlement) will slot in last.
+CATEGORY_ORDER = ["tweede-kamer", "eerste-kamer", "provinciale-staten"]
 
 # Bodies that are type "Fractie" in the GO API but are not voting parties.
 NOT_A_PARTY = {"Gedeputeerde Staten"}
@@ -836,23 +861,268 @@ def collect_tk(p):
     return {"parties": [{"slug": s, "name": name_by_slug[s]} for s in order], "moties": items}
 
 
+# --- Eerste Kamer (HTML) adapter ----------------------------------------------
+# The Eerste Kamer has NO machine API (no OData/opendata host) — see data-sources.md §9. But the
+# "stemmingen per vergaderdag" pages embed, per stemming, the structured per-fractie breakdown:
+#   <strong>voor:</strong> A, B en C<br /><strong>tegen:</strong> D en E<br />
+# Both sides are named (no "overige fracties" inference, unlike NH), but there are no seat counts
+# (the EK votes bij zitten en opstaan) -> faction-level V/T, tier B. Pages are 25 stemmingen each;
+# we follow the "eerdere stemmingen" link back to term start. Hamerstukken (passed without a vote;
+# only an optional "aantekening gevraagd") carry no voor/tegen and are skipped.
+EK_MONTHS = {"januari": 1, "februari": 2, "maart": 3, "april": 4, "mei": 5, "juni": 6,
+             "juli": 7, "augustus": 8, "september": 9, "oktober": 10, "november": 11, "december": 12}
+
+
+def ek_date(s):
+    m = re.search(r"(\d{1,2})\s+([a-z]+)\s+(\d{4})", (s or "").lower())
+    if not m:
+        return None
+    mon = EK_MONTHS.get(m.group(2))
+    if not mon:
+        return None
+    try:
+        return date(int(m.group(3)), mon, int(m.group(1)))
+    except ValueError:
+        return None
+
+
+def ek_parties(text):
+    """Split a 'A, B, C en D' fractie list into display names. Names are already canonical on the
+    EK site (e.g. 'GroenLinks-PvdA', 'Fractie-Van de Sanden', '50PLUS') — no alias map needed."""
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text or "")).strip(" .")
+    if not text:
+        return []
+    text = re.sub(r"\s+en\s+", ", ", text)   # the last separator is " en " -> normalize to comma
+    return [c.strip(" .") for c in text.split(",") if c.strip(" .")]
+
+
+def ek_side(block, label):
+    """Fracties listed after a <strong>{label}:</strong> tag, up to the next <br>/<strong>."""
+    m = re.search(r"<strong>\s*" + label + r"\s*:\s*</strong>(.*?)(?:<br|<strong|$)", block, re.I | re.S)
+    return ek_parties(m.group(1)) if m else []
+
+
+def ek_type(title, dossier_href):
+    low = (title or "").lower()
+    if "/wetsvoorstel/" in (dossier_href or ""):
+        return "wetsvoorstel"
+    if "motie" in low:
+        return "motie"
+    return "overig"
+
+
+def ek_result(type_result):
+    tr = (type_result or "").lower()
+    if "verworpen" in tr:
+        return "rejected", "Verworpen"
+    if "gestaakt" in tr or "staken" in tr:
+        return "tie", "Staken van stemmen"
+    if "aangenomen" in tr or "aanvaard" in tr:
+        return "accepted", "Aangenomen"
+    return None, (type_result or None)
+
+
+def ek_normkey(fr):
+    """Normalize a fractie name for matching: drop a leading 'Fractie-' and all spaces/hyphens.
+    So the fractie-level 'Fractie-Van de Sanden' and the member-paren form 'Van de Sanden' map to
+    one key ('vandesanden'); 'GroenLinks-PvdA' -> 'groenlinkspvda'; 'PVV' -> 'pvv'."""
+    return re.sub(r"[\s\-]", "", re.sub(r"^fractie[-\s]+", "", fr.strip().lower()))
+
+
+def ek_member_fractie(tok):
+    """Map a member/person reference to its fractie name, or None for a plain fractie token.
+    Two member forms occur: a *hoofdelijke* stemming lists 'Mei Li Vos (GroenLinks-PvdA)' (the
+    fractie is in parentheses), and a one-member fractie is sometimes written 'het lid Eric
+    Kemperman' (drop the first name -> the surname, which matches 'Fractie-Kemperman')."""
+    m = re.match(r"^.*\S\s*\(([^()]+)\)\s*$", tok)
+    if m:
+        return m.group(1).strip()
+    m = re.match(r"^(?:het lid|de leden|de heer|mevrouw|mevr\.?|dhr\.?)\s+(.+)$", tok, re.I)
+    if m:
+        parts = m.group(1).split()
+        return " ".join(parts[1:]) if len(parts) > 1 else parts[0]   # drop the first name
+    return None
+
+
+def ek_parse_item(chunk, d, base):
+    """One stemming <li> -> a raw dict (votes resolved later), or None for hamerstukken / no
+    breakdown. Keeps the voor/tegen token lists verbatim (they may be fracties OR members)."""
+    if d is None:
+        return None
+    mt = re.search(r'<div class="opsomtekst">(.*?)(?:<br|<ul)', chunk, re.S)
+    dossier = re.search(r'href="(/(?:wetsvoorstel|kamerstukdossier)/[^"]+)"', chunk)
+    title = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", mt.group(1) if mt else "")).strip()
+    title = re.sub(r"\(\s+", "(", re.sub(r"\s+\)", ")", title))
+    mr = re.search(r'js-expandmore.*?<a href="([^"]+)">\s*(.*?)\s*</a>', chunk, re.S)
+    mb = re.search(r'js-to_expand[^>]*>(.*?)</div>', chunk, re.S)
+    block = mb.group(1) if mb else ""
+    voor, tegen = ek_side(block, "voor"), ek_side(block, "tegen")
+    if not voor and not tegen:
+        return None   # hamerstuk / aantekening-only / no recorded vote -> skip
+    return {
+        "date": d.isoformat(),
+        "title": title,
+        "dossier_href": dossier.group(1) if dossier else None,
+        "type_result": re.sub(r"\s+", " ", mr.group(2)).strip() if mr else "",
+        "verslag_href": mr.group(1) if mr else None,
+        "voor": voor,
+        "tegen": tegen,
+    }
+
+
+def ek_parse_page(html, base):
+    """Parse one 'per vergaderdag' page into raw items: walk day-headers and stemming <li>s in
+    document order, carrying the current date forward."""
+    body = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", html, flags=re.S)
+    token = re.compile(
+        r'<h2>\s*<a id="p\d+"></a>(.*?)</h2>'
+        r'|<li class="opsomitem met_image image_breed">(.*?)'
+        r'(?=<li class="opsomitem met_image image_breed">|</ul>)', re.S)
+    cur_date, items = None, []
+    for m in token.finditer(body):
+        if m.group(1) is not None:
+            cur_date = ek_date(re.sub(r"<[^>]+>", " ", m.group(1)))
+        else:
+            it = ek_parse_item(m.group(2), cur_date, base)
+            if it:
+                items.append(it)
+    return items
+
+
+def ek_next_url(base, html):
+    """The site's own 'eerdere stemmingen' (older) pagination link. Pick it by anchor TEXT — a
+    'recentere stemmingen' (newer) link with the same start_006 param appears from page 2 on, and
+    grabbing the wrong one makes the walk oscillate."""
+    for href, txt in re.findall(
+            r'<a[^>]+href="(/stemmingen_per_vergaderdag\?filter=alles[^"]*start_006[^"]*)"[^>]*>(.*?)</a>',
+            html, re.S):
+        if "eerdere" in re.sub(r"<[^>]+>", "", txt).lower():
+            return base + href.replace("&#38;", "&").replace("&amp;", "&")
+    return None
+
+
+def collect_ek(p):
+    """Eerste Kamer. Page through /stemmingen_per_vergaderdag (25/page, following the site's own
+    'eerdere stemmingen' link) back to term start, then resolve members to fracties and assemble the
+    faction-level matrix. Hoofdelijke (per-member) stemmingen are aggregated to the fractie."""
+    base = p["base"].rstrip("/")
+    term_start = date(*p["term_start"])
+    url = base + "/stemmingen_per_vergaderdag?filter=alles"
+    raw, seen_urls, pages = [], set(), 0
+    while url and url not in seen_urls and pages < 120:
+        seen_urls.add(url)
+        html = try_text(url)
+        if not html:
+            break
+        pages += 1
+        oldest = None
+        for it in ek_parse_page(html, base):
+            dd = date.fromisoformat(it["date"])
+            oldest = dd if oldest is None or dd < oldest else oldest
+            if dd >= term_start:
+                raw.append(it)
+        if oldest and oldest < term_start:   # walked past the term -> stop
+            break
+        url = ek_next_url(base, html)
+        time.sleep(SLEEP)
+    if not raw:
+        return None
+
+    # Build the canonical fractie registry from fractie-level (non-member) tokens, then resolve
+    # every token — member tokens via their parenthetical fractie — to one canonical display name.
+    canon = {}
+    for it in raw:
+        for tok in it["voor"] + it["tegen"]:
+            if ek_member_fractie(tok):
+                continue
+            k = ek_normkey(tok)
+            if k not in canon or len(tok) > len(canon[k]):
+                canon[k] = tok
+
+    def resolve(tok):
+        fr = ek_member_fractie(tok) or tok
+        return canon.get(ek_normkey(fr), fr)
+
+    by_id, name_by_slug, appear = {}, {}, {}
+    for it in raw:
+        sides = {}
+        for tok in it["voor"]:
+            sides.setdefault(resolve(tok), set()).add("voor")
+        for tok in it["tegen"]:
+            sides.setdefault(resolve(tok), set()).add("tegen")
+        if not sides:
+            continue
+        votes = {}
+        for disp, s in sides.items():
+            slug = slugify(disp)
+            name_by_slug.setdefault(slug, disp)
+            # A fractie whose members split on a hoofdelijke vote lands on both sides -> real split.
+            votes[slug] = {"agree": int("voor" in s), "disagree": int("tegen" in s), "abstain": 0}
+        result, label = ek_result(it["type_result"])
+        vk = lambda side: ",".join(sorted(slugify(d) for d, s in sides.items() if side in s))
+        key = f'{it["date"]}|{it["title"]}|{vk("voor")}|{vk("tegen")}'
+        iid = int(hashlib.sha1(key.encode("utf-8")).hexdigest()[:12], 16)
+        if iid in by_id:
+            continue
+        by_id[iid] = {
+            "id": iid,
+            "date": it["date"],
+            "title": it["title"],
+            "type": ek_type(it["title"], it["dossier_href"]),
+            "result": result,
+            "resultLabel": label,
+            "source": base + it["verslag_href"] if it["verslag_href"] else base,
+            "votes": votes,
+        }
+
+    items = list(by_id.values())
+    for it in items:
+        for slug in it["votes"]:
+            appear[slug] = appear.get(slug, 0) + 1
+    items.sort(key=lambda m: (m["date"], m["title"]), reverse=True)
+    for m in items:
+        m["totals"] = {"agree": sum(1 for v in m["votes"].values() if v["agree"] > v["disagree"]),
+                       "disagree": sum(1 for v in m["votes"].values() if v["disagree"] > v["agree"])}
+    order = sorted(appear, key=lambda s: (-appear[s], name_by_slug[s].lower()))
+    by_type = {}
+    for m in items:
+        by_type[m["type"]] = by_type.get(m["type"], 0) + 1
+    print(f"  fetched {pages} page(s); {len(items)} stemmingen; {len(appear)} fracties; {by_type}")
+    return {"parties": [{"slug": s, "name": name_by_slug[s]} for s in order], "moties": items}
+
+
 def province_granularity(p):
     """Vote detail level, for the frontend: "member" = real per-fractie counts (GO, Limburg
     "stemmen") so "ruwe getallen" are meaningful; "fractie" = faction-level V/T only
     (NH "stemverhouding"), where counts are just 1/0 and must not be shown as tallies."""
+    if p["vendor"] == "ek":   # faction-level voor/tegen, no seat counts
+        return "fractie"
     if p["vendor"] == "ibabs" and p.get("votes", "stemverhouding") == "stemverhouding":
         return "fractie"
     return "member"
 
 
-ADAPTERS = {"go": collect_go, "ibabs": collect_ibabs, "tk": collect_tk}
+ADAPTERS = {"go": collect_go, "ibabs": collect_ibabs, "tk": collect_tk, "ek": collect_ek}
 
 
 def main():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
+    # ONLY=key1,key2 re-collects just those scopes and reuses the existing data file (availability +
+    # style) for the rest — fast iteration without re-fetching/overwriting the other scopes. The
+    # weekly Action runs with no ONLY, so it does the full refresh.
+    only = {k.strip() for k in os.environ.get("ONLY", "").split(",") if k.strip()}
     scopes_by_cat = {}   # category key -> list of {key, name, available}
     default = None
     for p in SOURCES:
+        catkey = p.get("category", "provinciale-staten")
+        if only and p["key"] not in only:
+            available = (DATA_DIR / f"{p['key']}.json").exists()
+            print(f"== {p['name']} == (skipped; reuse existing data: {available})")
+            scopes_by_cat.setdefault(catkey, []).append(
+                {"key": p["key"], "name": p["name"], "available": available, "style": p.get("style", {})})
+            if available and default is None:
+                default = {"category": catkey, "scope": p["key"]}
+            continue
         print(f"== {p['name']} ({p['vendor']}) ==")
         adapter = ADAPTERS.get(p["vendor"])
         res = None
@@ -890,7 +1160,6 @@ def main():
                   f"{len(res['parties'])} fracties, {by_type}")
         else:
             print("  (no data — marked unavailable)")
-        catkey = p.get("category", "provinciale-staten")
         scopes_by_cat.setdefault(catkey, []).append(
             # style travels in the index so the frontend can theme the header *before* the (large)
             # data file finishes loading — avoids a flash of the previous/default colour.

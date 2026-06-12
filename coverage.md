@@ -13,6 +13,7 @@ the "things we DO have" companion to [provinces.md](provinces.md) (feasibility f
 | Scope | Category | Vendor | Method | Granularity | Item types | Items | Scope of items | Reliability |
 |---|---|---|---|---|---|---|---|---|
 | **Tweede Kamer** | Tweede Kamer | TK OData | clean OData v4 API | per **fractie** (zetels) | motie, amendement, wetsvoorstel | 2945 | **aangenomen + verworpen** | **A — exact** |
+| **Eerste Kamer** | Eerste Kamer | eerstekamer.nl | HTML structured parse | per **fractie** (V/T only) | wetsvoorstel, motie, overig | 449 | **aangenomen + verworpen** | **B — parsed (beide zijden vermeld)** |
 | **Utrecht** | Prov. Staten | GO | clean JSON API | per **member** (counts) | motie, amendement, besluit, ordevoorstel | 566 | all (aangenomen + verworpen) | **A — exact** |
 | **Limburg** | Prov. Staten | iBabs | HTML structured parse | per **member** (counts) | motie, amendement | 321 | **aangenomen + verworpen** | **A — exact** |
 | **Noord-Holland** | Prov. Staten | iBabs | HTML free-text parse | per **fractie** (V/T only) | motie, amendement | 181 | **aangenomen only** | **B — parsed/inferred** |
@@ -32,9 +33,11 @@ How directly the published data maps to what we display, and how much we infer.
   *Tweede Kamer* (OData `Stemming` — per-fractie `Soort` + `FractieGrootte` seat counts),
   *Utrecht* (GO JSON, per-member tallies) and *Limburg* (iBabs "Stemmen" field — per-fractie member
   counts for the voor/tegen sides; a fractie on both sides is a real split).
-- **B — parsed / inferred (semi-structured source).** The outcome is published, but as text we must
-  parse, and part of the result is *computed* rather than stated. Correct for "which fractie voted
-  voor/tegen" on the items present, with the caveats below. *Noord-Holland* (iBabs "Stemverhouding").
+- **B — parsed / inferred (semi-structured source).** The outcome is published, but as text/HTML we
+  must parse, and (for NH) part of the result is *computed* rather than stated. Correct for "which
+  fractie voted voor/tegen" on the items present, with the caveats below. *Noord-Holland* (iBabs
+  "Stemverhouding" — one side named + "overige fracties" inferred) and *Eerste Kamer* (eerstekamer.nl
+  HTML — **both** sides named, so nothing inferred, but no seat counts). Both are faction-level V/T.
 - **C — derived / unavailable (not implemented).** Votes exist only in PDFs (GO Flevoland/Drenthe
   besluitenlijsten) or behind an auth-gated map (Notubiz `role_id → fractie`). Either needs new work
   (PDF parsing / a token) and would be lower fidelity. Nothing in the dataset is tier C yet.
@@ -64,6 +67,26 @@ How directly the published data maps to what we display, and how much we infer.
   split out; we aggregate to the fractie.
 - **Volume:** ~2,945 stemmingen → the data file is ~3 MB (written minified) and the table renders
   ~3k rows × ~18 columns. Watch frontend performance; revisit pagination/virtualization if it drags.
+
+### Eerste Kamer — tier B (faction-level, but both sides stated)
+The Senate has **no machine API** (see [data-sources.md](data-sources.md) §9); we parse the per-fractie
+voor/tegen lists embedded in the "stemmingen per vergaderdag" HTML pages. More reliable than NH (both
+sides are named, so nothing is inferred), but less than the tier-A sources (no seat counts).
+1. **No exact counts.** The EK votes *bij zitten en opstaan* — only a per-fractie voor/tegen, no
+   tallies. Stored `1–0`; the UI reads `granularity: "fractie"` and hides "ruwe getallen". Agreement %s
+   weight every fractie equally (not by zetels).
+2. **Both sides named — no "overige fracties" inference** (unlike NH). The voor and tegen fractie lists
+   are published in full, so the matrix is read directly, not computed.
+3. **Hamerstukken are excluded.** Items passed *zonder stemming* (hamerstuk) carry no voor/tegen
+   breakdown (only an optional "aantekening gevraagd") and are skipped — consistent with keeping only
+   real roll-calls (as for the TK). So the dataset is the **contested** votes, incl. **verworpen**.
+4. **Hoofdelijke (per-member) votes are aggregated to the fractie.** Those rare votes list individual
+   senators (`Naam (Fractie)`); we roll them up to the fractie (a fractie split across members → O +
+   split). Member-level counts are not retained (faction-level by design).
+5. **Splinter fracties** (Fractie-Beukering, -Van de Sanden, -Visseren-Hamakers, -Walenkamp, -Kemperman,
+   -Van Gasteren) appear as their own columns when named; one-member references ("het lid X") are merged
+   into the matching fractie. **Term:** current EK (installed 13 June 2023) — note this differs from the
+   TK term (2025–heden).
 
 ### Utrecht — tier A
 - The dataset mirrors the GO stemgedrag module. The main residual risk is upstream: if a vote was

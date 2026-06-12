@@ -4,9 +4,10 @@
 > **TARGET — LOCKED (2026-06-12): four categories.** The site's scope is now four legislative bodies
 > (landing order: national → regional → EU):
 > 1. **Tweede Kamer** — ✅ LIVE (Phase 4). ~2,974 stemmingen, OData, per-fractie seat counts incl. verworpen.
-> 2. **Eerste Kamer** — ⏳ probe ✅ DONE (2026-06-12) = **GO, tier B**; **build `collect_ek` next** (Phase 5b).
->    No EK API — HTML only on `www.eerstekamer.nl`; per-fractie V/T from the verslag "Ik constateer …"
->    sentence (both sides named, no counts). ~600–700 stemmingen, term `>= 2023-06-13`. Recipe: data-sources.md §9.
+> 2. **Eerste Kamer** — ✅ LIVE (Phase 5, 2026-06-12). `collect_ek` → `data/eerste-kamer.json`, 449
+>    stemmingen (term 2023–2027). No EK API — per-fractie V/T parsed from the "stemmingen per
+>    vergaderdag" HTML (both sides named, no seat counts → tier B); hamerstukken excluded, hoofdelijke
+>    aggregated to fractie. Recipe: data-sources.md §9.
 > 3. **Provinciale Staten** — ◑ category LIVE, 3/12 provinces (Utrecht, Noord-Holland, Limburg).
 >    Growing it to more provinces is the outreach track below (Notubiz token + griffie lobby).
 > 4. **Europees Parlement** — ⏳ NEXT. Phase 6 below. **Feasibility probe FIRST.** EP publishes
@@ -208,7 +209,7 @@ blocked like Notubiz.
   **same normalized schema** (parties = fracties, votes per fractie with seat counts). Register TK in
   the catalog and add it to the weekly GitHub Actions cron.
 
-### Phase 5 — Eerste Kamer (probe DONE 2026-06-12 = GO; build next)
+### Phase 5 — Eerste Kamer  ✅ DONE (2026-06-12)
 The revising chamber (Senate, 75 seats, indirectly elected by the Provinciale Staten). Completes the
 national parliament (Staten-Generaal). A single-scope category like TK.
 
@@ -226,12 +227,18 @@ national parliament (Staten-Generaal). A single-scope category like TK.
   tallies). Hamerstukken = uncontested; hoofdelijke (per-member) rare. Volume ≈ **600–700 stemmingen**
   over the term. **Term = current EK, installed 13 June 2023** (scope `>= 2023-06-13`; note EK term ≠ TK term).
 
-**5b — Build `collect_ek` (next).** Stemming-first: walk `/stemmingen_per_vergaderdag?filter=alles`
-(25/page) back to 2023-06-13 for the stemming index (date/title/dossier/type/result); for contested
-rows fetch the verslag and parse the `Ik constateer …` sentence → per-fractie V/T. Write
-`data/eerste-kamer.json` (same schema, `agree/disagree = 1/0`, `granularity: "fractie"`), category
-`eerste-kamer`, single scope; `meta.note` for the tier-B caveat; add to the weekly Action. Build recipe
-+ parser caveats: [data-sources.md](data-sources.md) §9. Document the new row in [coverage.md](coverage.md).
+**5b — Built `collect_ek` (as-built).** Even cleaner than the probe plan: the
+`/stemmingen_per_vergaderdag?filter=alles` pages **embed the structured per-fractie voor/tegen lists
+inline** (`<strong>voor:</strong> A, B en C<br><strong>tegen:</strong> …`), so no verslag fetch / free-
+text parsing is needed. The adapter pages back to 2023-06-13 (following the site's own "eerdere
+stemmingen" link), parses each stemming's voor/tegen, **aggregates hoofdelijke per-member rows to the
+fractie**, merges one-member "het lid X" references into their fractie, and **skips hamerstukken** (no
+breakdown). Result: `data/eerste-kamer.json` — **449 stemmingen, 21 fracties** (15 landelijke + 6
+splinters), types {wetsvoorstel 171, motie 263, overig 15}, incl. verworpen, `granularity: "fractie"`,
+tier B. Category `eerste-kamer` (single scope) added to the catalog; the weekly Action picks it up via
+the full `collect.py` run. Frontend: generic (no IA change) — added a `.t-overig`/`Overig` type label,
+EK SEO meta. `collect.py` gained an `ONLY=<keys>` env switch for fast single-scope re-runs. Recipe +
+parser caveats: [data-sources.md](data-sources.md) §9; reliability: [coverage.md](coverage.md).
 
 ### Phase 6 — Europees Parlement (PLANNED — feasibility probe FIRST)
 The EU's elected chamber (the EU's democratic-vote layer; the Council = governments, not in scope).

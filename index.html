@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wie stemde wat? — stemgedrag in de Tweede Kamer en Provinciale Staten</title>
-<meta name="description" content="Zie per partij hoe er gestemd is in de Tweede Kamer en de Provinciale Staten — per motie Voor of Tegen, op basis van open data. Nu: Tweede Kamer, Utrecht, Noord-Holland en Limburg.">
-<meta name="keywords" content="stemgedrag, tweede kamer, provinciale staten, moties, amendementen, wetsvoorstellen, stemmingen, open data, transparantie, politiek, Utrecht, Noord-Holland, Limburg">
+<title>Wie stemde wat? — stemgedrag in de Tweede Kamer, Eerste Kamer en Provinciale Staten</title>
+<meta name="description" content="Zie per partij hoe er gestemd is in de Tweede Kamer, de Eerste Kamer en de Provinciale Staten — per motie Voor of Tegen, op basis van open data. Nu: Tweede Kamer, Eerste Kamer, Utrecht, Noord-Holland en Limburg.">
+<meta name="keywords" content="stemgedrag, tweede kamer, eerste kamer, senaat, provinciale staten, moties, amendementen, wetsvoorstellen, stemmingen, open data, transparantie, politiek, Utrecht, Noord-Holland, Limburg">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://carefulcamel61097.github.io/wie-stemde-wat/">
 <meta name="theme-color" content="#1b1b1b">
@@ -13,12 +13,12 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Wie stemde wat?">
-<meta property="og:title" content="Wie stemde wat? — stemgedrag in de Tweede Kamer en Provinciale Staten">
-<meta property="og:description" content="Zie per partij hoe er gestemd is in de Tweede Kamer en de Provinciale Staten — per motie Voor of Tegen, op basis van open data.">
+<meta property="og:title" content="Wie stemde wat? — stemgedrag in de Tweede Kamer, Eerste Kamer en Provinciale Staten">
+<meta property="og:description" content="Zie per partij hoe er gestemd is in de Tweede Kamer, de Eerste Kamer en de Provinciale Staten — per motie Voor of Tegen, op basis van open data.">
 <meta property="og:url" content="https://carefulcamel61097.github.io/wie-stemde-wat/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wie stemde wat? — stemgedrag in de Tweede Kamer en Provinciale Staten">
-<meta name="twitter:description" content="Zie per partij hoe er gestemd is in de Tweede Kamer en de Provinciale Staten — per motie Voor of Tegen, op basis van open data.">
+<meta name="twitter:title" content="Wie stemde wat? — stemgedrag in de Tweede Kamer, Eerste Kamer en Provinciale Staten">
+<meta name="twitter:description" content="Zie per partij hoe er gestemd is in de Tweede Kamer, de Eerste Kamer en de Provinciale Staten — per motie Voor of Tegen, op basis van open data.">
 
 <style>
   :root{
@@ -109,6 +109,7 @@
   .t-amendement{background:#fdeede;color:#9a4d00}
   .t-besluit{background:#e8e6fb;color:#4c3fb5}
   .t-ordevoorstel{background:#eef0f4;color:#555}
+  .t-overig{background:#eef0f4;color:#555}
   .res{font-weight:600}
   .r-accepted{color:#15803d}.r-rejected{color:#b91c1c}
 
@@ -430,7 +431,7 @@ const ABBR = {bbb:"BBB",groenlinks:"GL",vvd:"VVD",d66:"D66",utrechtnu:"U!",cda:"
   // Tweede Kamer fracties
   "groenlinks-pvda":"GL-PvdA","progressief-nederland":"PRO",denk:"DENK",
   "groep-markuszower":"Grp-Mark.",keijzer:"Keijzer",nsc:"NSC"};
-const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel",wetsvoorstel:"Wetsvoorstel"};
+const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel",wetsvoorstel:"Wetsvoorstel",overig:"Overig"};
 // Min. stemmingen a party must have voted on to appear in the Overeenkomst matrix — below this an
 // agreement % is noise (a party that voted once is "100% gelijk" with everyone).
 const MATRIX_MIN = 5;

@@ -47,9 +47,9 @@ view is already possible by deselecting parties.)
 - [x] **What to include**: moties + amendementen + besluiten + ordevoorstellen, with a type filter.
 - [x] **Body**: Provinciale Staten plenair only (not commissies — those don't hold the votes).
 - [x] **Categories (LOCKED 2026-06-12)**: four legislative bodies — **Tweede Kamer** (live),
-  **Eerste Kamer** (planned, Phase 5), **Provinciale Staten** (live, 3/12 provinces), **Europees
-  Parlement** (planned, Phase 6). Gemeenteraden + waterschappen parked. EK/EP gated on a feasibility
-  probe each (their vote data may be faction-level or thin). See [roadmap.md](roadmap.md) Phases 5–6.
+  **Eerste Kamer** (live, Phase 5), **Provinciale Staten** (live, 3/12 provinces), **Europees
+  Parlement** (planned, Phase 6). Gemeenteraden + waterschappen parked. EP still gated on a feasibility
+  probe (its vote data may be faction-level or thin). See [roadmap.md](roadmap.md) Phases 5–6.
 
 ## Status (June 2026)
 - [x] **v1 LIVE** — Utrecht: collector (GO adapter) → `data/utrecht.json` → static site, themed
@@ -68,7 +68,12 @@ view is already possible by deselecting parties.)
   term 2025–heden). Generalized the frontend to **categories → scopes**: a landing page (pick niveau →
   scope), `data/catalog.json` index, and URL-hash routing (`#tweede-kamer`, `#provinciale-staten/utrecht`)
   → deep-linkable + decluttered table header. The "pick category → scope" vision is now real.
-- [ ] **NEXT** — Notubiz (5 provinces, needs a token — see [outreach.md](outreach.md)); GO
+- [x] **Phase 5** — added the **Eerste Kamer** (`collect_ek` → `data/eerste-kamer.json`): no machine
+  API, so the per-fractie voor/tegen lists are parsed from the HTML "stemmingen per vergaderdag" pages
+  (449 stemmingen, term 2023–2027). Faction-level V/T, both sides named (nothing inferred), tier B;
+  hoofdelijke (per-member) votes aggregated to the fractie. Third category live.
+- [ ] **NEXT** — Europees Parlement (Phase 6, feasibility probe first); Notubiz (5 provinces, needs a
+  token — see [outreach.md](outreach.md)); GO
   Flevoland/Drenthe via the griffie lobby. See the **NEXT** pointer at the top of [roadmap.md](roadmap.md).
 
 Repo: https://github.com/carefulCamel61097/wie-stemde-wat ·
