@@ -1,30 +1,35 @@
 # Roadmap — "Wie heeft wat gestemd?" (multi-province voting overview)
 
 > ## ▶ NEXT (resume here)
-> **JUST DONE (2026-06-11): Tweede Kamer shipped as a 2nd *category*** + the category→scope IA
-> refactor (Phase 4 below). Live: TK (~2,945 stemmingen, OData, per-fractie seat counts incl.
-> verworpen) alongside the 3 provinces; a landing page (pick niveau → scope), `data/catalog.json`,
-> and URL-hash routing (`#tweede-kamer`, `#provinciale-staten/utrecht`). Verified via headless render.
+> **TARGET — LOCKED (2026-06-12): four categories.** The site's scope is now four legislative bodies
+> (landing order: national → regional → EU):
+> 1. **Tweede Kamer** — ✅ LIVE (Phase 4). ~2,974 stemmingen, OData, per-fractie seat counts incl. verworpen.
+> 2. **Eerste Kamer** — ⏳ NEXT. Phase 5 below. **Do a feasibility probe FIRST** (own system, separate
+>    from the TK API; much voting is *bij zitten en opstaan* / zonder stemming → likely faction-level
+>    tier B, possibly no breakdown on some votes). Confirm data before building.
+> 3. **Provinciale Staten** — ◑ category LIVE, 3/12 provinces (Utrecht, Noord-Holland, Limburg).
+>    Growing it to more provinces is the outreach track below (Notubiz token + griffie lobby).
+> 4. **Europees Parlement** — ⏳ NEXT. Phase 6 below. **Feasibility probe FIRST.** EP publishes
+>    **roll-call votes for ALL MEPs** (open data) → present by **European political group** (not only
+>    Dutch MEPs), Dutch delegation optional. Confirm source + model before building.
 >
-> Remaining work, by payoff:
-> 1. **Notubiz adapter** (vendor #3) — **token e-mail SENT 2026-06-10, NO reply yet (as of 2026-06-11)**
->    ([outreach.md](outreach.md) §1). Blocked on the token. When it arrives:
->    `api.notubiz.nl/agenda_items/votings` gives outcomes + roll-call; the token unlocks the
->    `role_id → fractie` map (`/roles?field_id=105`). Unlocks up to 5 provinces (Fryslân, Groningen,
->    Zuid-Holland, Overijssel; Gelderland's module is off → outcome only). Biggest single coverage unlock.
-> 2. **GO Flevoland/Drenthe** — votes only in besluitenlijst PDFs. **Decision: lobby, don't parse.**
->    Griffie mails ([outreach.md](outreach.md) §2) **being sent 2026-06-11** — correct addresses are
->    `griffie@flevoland.nl` + `Statengriffie@drentsparlement.nl` (the `statengriffie@…nl` guesses bounce).
-> 3. **Product polish** — ✅ grey low-n matrix cells (done), ✅ TK table perf (delegated pins +
->    debounced search). Remaining: print stylesheet / printable report (PDF), a coverage/gaps view
->    on the site. Next *categories* (by audience): **Eerste Kamer** (separate system from the TK API
->    — needs a feasibility check), big-city **gemeenteraden** (same GO/iBabs/Notubiz vendors),
->    **Europees Parlement** (Dutch MEPs, EP roll-call open data), then waterschappen.
-> 4. **Strategy** (optional) — the cross-government dataset + B2B "political intelligence" angle
->    (discussed): real category, money is B2B not consumer. Run `/analyze` to pressure-test.
+> The architecture is ready: catalog (categories→scopes) + frontend landing/routing already support new
+> categories, so EK/EP = "feasibility probe → new adapter → catalog entry" (no IA refactor). Each new
+> category is single-scope (like TK), so it opens straight to its table.
 >
-> Frontend shipped beyond v1: category→scope landing + hash routing (deep-linkable/shareable),
-> province selector, CSV export (atomic columns), matrix minimum-vote filter, per-scope `granularity`.
+> **In parallel — Provinciale Staten growth (blocked on replies, both SENT, awaiting):**
+> - **Notubiz token** ([outreach.md](outreach.md) §1, sent 2026-06-10) → up to 5 provinces (Fryslân,
+>   Groningen, Zuid-Holland, Overijssel; Gelderland outcome-only). `api.notubiz.nl/agenda_items/votings`
+>   + token unlocks the `role_id → fractie` map (`/roles?field_id=105`).
+> - **Griffie mails** ([outreach.md](outreach.md) §2, sent 2026-06-12 to `griffie@flevoland.nl` +
+>   `Statengriffie@drentsparlement.nl`) → if they enable the GO stemgedrag module, Flevoland/Drenthe
+>   become config-only. (PDF-parsing rejected: fragile, per-griffie, low ROI.)
+>
+> **Parked categories (decided NOT to pursue):** gemeenteraden (~340 — fragmented, local, not national
+> news, low per-unit salience) and waterschappen (elected but niche/low-profile). Reconsider only on demand.
+>
+> Frontend shipped beyond v1: category→scope landing + hash routing (deep-linkable/shareable), CSV export
+> (atomic columns), matrix min-vote filter + greyed low-n cells, per-scope `granularity`, delegated pins.
 
 > **DONE (Phase 3d):** iBabs adapter (`collect_ibabs`) built; **Noord-Holland** (181 items, faction-
 > level, aangenomen only) and **Limburg** (321 items, **per-member counts incl. verworpen**) live as
@@ -203,6 +208,37 @@ blocked like Notubiz.
   **same normalized schema** (parties = fracties, votes per fractie with seat counts). Register TK in
   the catalog and add it to the weekly GitHub Actions cron.
 
+### Phase 5 — Eerste Kamer (PLANNED — feasibility probe FIRST)
+The revising chamber (Senate, 75 seats, indirectly elected by the Provinciale Staten). Completes the
+national parliament (Staten-Generaal). A single-scope category like TK.
+
+**5a — Feasibility probe (do before any code; gate the whole phase on it).**
+- **Source unknown/to confirm:** the Eerste Kamer is a *separate* system from the TK OData
+  (`gegevensmagazijn.tweedekamer.nl` is TK-only). Candidates to check: an EK open-data API on
+  `eerstekamer.nl`, the joint `officielebekendmakingen.nl`/SGD, or an EK gegevensmagazijn. Find where
+  per-stemming, per-fractie data lives (if anywhere).
+- **Expect tier B or thinner.** The EK votes a lot **bij zitten en opstaan** or **zonder stemming**
+  (chair declares the result, only the *tegen* fracties noted — no counts); exact per-member numbers
+  only on a requested **hoofdelijke stemming**. So realistic best case = faction-level V/T (like NH),
+  and some votes may have **no per-fractie breakdown at all**. Decide go/no-go from what the probe finds.
+- If viable: `collect_ek` adapter → `data/eerste-kamer.json`, category `eerste-kamer`, single scope.
+  Set `granularity` honestly (likely "fractie"). Document the caveats in [coverage.md](coverage.md).
+
+### Phase 6 — Europees Parlement (PLANNED — feasibility probe FIRST)
+The EU's elected chamber (the EU's democratic-vote layer; the Council = governments, not in scope).
+Single-scope category. **Present votes by European political group** (EPP, S&D, Renew, Greens/EFA,
+ECR, The Left, PfE, ESN, NI), with the Dutch delegation as an optional breakout — **not Dutch MEPs only**.
+
+**6a — Feasibility probe (first).**
+- **Sources to check:** the EP Open Data Portal (`data.europarl.europa.eu`, has roll-call vote / RCV
+  data) and/or the well-known `HowTheyVote.eu` datasets. Confirm: per-MEP RCV results, mapping MEP →
+  political group (and → national party for the NL breakout), titles/dates, and outcome.
+- **Caveats to confirm:** only **roll-call** votes are recorded per-MEP (show-of-hands aren't); volume
+  is large (scope to the current term, write compact like TK); the unit is **political group**, so the
+  schema's "parties" = groups (new ABBR/colour set). Member-level → aggregate to group (privacy: RCVs
+  are public record, same as TK).
+- If viable: `collect_ep` adapter → `data/europees-parlement.json`, category `europees-parlement`.
+
 ## Decisions
 **Locked**
 - Period: current term (2023–2027) only.
@@ -221,12 +257,17 @@ blocked like Notubiz.
 - **Domain**: SETTLED — free `*.github.io`, no custom domain (can revisit later, not planned).
 - **Transpose view**: SETTLED — will NOT add; deselecting all-but-one party already gives a
   single-party view, so it's unnecessary (see dropped note above).
+- **Category scope**: LOCKED (2026-06-12) to **four** bodies — Tweede Kamer, Eerste Kamer,
+  Provinciale Staten, Europees Parlement. Gemeenteraden + waterschappen explicitly **parked** (see
+  the NEXT block). EK + EP are each gated on a feasibility probe (Phases 5–6).
 
 ## Cost
 €0 with GitHub (repo + Pages + Actions) and a free `*.github.io` domain. Only a custom
 domain costs money (optional, later).
 
 ## Future categories (same architecture)
-Tweede Kamer (own open-data API w/ votes) — **now the active pick, see Phase 4 above**.
-Then Eerste Kamer, gemeenteraden, Europees Parlement, waterschappen — each = a new adapter
-feeding the same frontend (and a new scope/category in the catalog).
+Target set (LOCKED, 2026-06-12): **Tweede Kamer** ✅, **Eerste Kamer** (Phase 5), **Provinciale
+Staten** ◑, **Europees Parlement** (Phase 6). Each = a new adapter feeding the same frontend (a new
+category/scope in the catalog; the IA already supports it). **Parked** (not pursuing now): gemeenteraden
+(fragmented/local/low-profile) and waterschappen (niche). The Council of the EU is out of scope (it's
+governments negotiating, not an elected chamber).

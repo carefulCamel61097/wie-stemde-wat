@@ -46,6 +46,10 @@ view is already possible by deselecting parties.)
   Utrecht, Noord-Holland and Limburg** (v2 — province selector active).
 - [x] **What to include**: moties + amendementen + besluiten + ordevoorstellen, with a type filter.
 - [x] **Body**: Provinciale Staten plenair only (not commissies — those don't hold the votes).
+- [x] **Categories (LOCKED 2026-06-12)**: four legislative bodies — **Tweede Kamer** (live),
+  **Eerste Kamer** (planned, Phase 5), **Provinciale Staten** (live, 3/12 provinces), **Europees
+  Parlement** (planned, Phase 6). Gemeenteraden + waterschappen parked. EK/EP gated on a feasibility
+  probe each (their vote data may be faction-level or thin). See [roadmap.md](roadmap.md) Phases 5–6.
 
 ## Status (June 2026)
 - [x] **v1 LIVE** — Utrecht: collector (GO adapter) → `data/utrecht.json` → static site, themed
