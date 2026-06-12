@@ -334,3 +334,56 @@ Server **page cap = 250 rows**; follow `@odata.nextLink` until absent. (`@odata.
   (BBB, 2026-02-24). A small alias map can merge a pure rename (GL-PvdA ↔ PRO) into one column.
   `Fractie.AantalZetels` reflects *current* seats (post-splinter), so prefer the per-vote
   `FractieGrootte`, never the Fractie table, for tallies.
+
+## 9. Eerste Kamer — HTML only (PROBED 2026-06-12, feasibility = GO, tier B)
+The Eerste Kamer is a **separate system** from the TK OData and has **no machine API**: no
+`gegevensmagazijn.eerstekamer.nl` / `opendata.eerstekamer.nl` host (DNS fails), no `/api`, no
+OData, no SPARQL on the site. Everything is **server-rendered HTML on `www.eerstekamer.nl`** (the
+PARLIS CMS). Per-fractie positions ARE published though — verified live. Granularity = **faction-
+level V/T, NO seat counts** (EK votes *bij zitten en opstaan* — the chair declares the result, no
+tallies; exact numbers only on a rare *hoofdelijke* stemming) → **tier B** (like Noord-Holland, but
+see below: both sides are named explicitly, so NO "overige fracties" inference → more reliable than NH).
+- **UA:** browser User-Agent works; plain may be throttled — send a browser UA (GitHub Actions OK).
+- **Fracties (current EK term, 2023–2027): 20** — the 13 landelijke (VVD, GroenLinks-PvdA, BBB, D66,
+  PVV, CDA, SP, ChristenUnie, PvdD, JA21, SGP, Volt, FVD, OPNL, 50PLUS) plus EK splinter fracties
+  (Fractie-Beukering, -Van Gasteren, -Van de Sanden, -Visseren-Hamakers, -Walenkamp). Display name =
+  `<X>-fractie`; slug at `/fractie/<slug>` (e.g. `/fractie/volt`, `/fractie/partij_voor_de_vrijheid`).
+
+### Two HTML surfaces carry the per-fractie vote
+1. **`/stemmingen_fractiegewijs`** — *structured, no NLP.* One collapsible section **per fractie**;
+   a summary votebox (all-time `Voor / Tegen / Verdeeld` totals) + a `<ul class="stemlijst">` listing
+   **every item that fractie voted on**, each `<li>` carrying: a thumb img `alt="Voor"|"Tegen"` (the
+   fractie's position), the date (link), the type+result in parens (`(Hamerstuk)`,
+   `(Stemming bij zitten en opstaan, aangenomen|verworpen)`), the title, and the dossier link
+   (`/wetsvoorstel/36264_…` or `/kamerstukdossier/…`). **Paginated ~500 items/section.** Pro: no
+   free-text parsing. Con: the link is the day's verslagdeel, **not unique per stemming** — two
+   stemmingen under the same dossier/day/result (e.g. an amendement + the wetsvoorstel) are hard to
+   tell apart → join-key ambiguity.
+2. **The verslag page** (`/verslagdeel/{yyyymmdd}/{slug}` or `/id/{vid}/verslagdeel/…`) — *free-text,
+   but both sides named.* Contains one chair sentence **per stemming**:
+   `"Ik constateer dat de leden van de fracties van <VOOR-lijst> voor … hebben gestemd en de leden van
+   de fracties van <TEGEN-lijst> ertegen, zodat het is <aangenomen|verworpen>."` Both sides enumerated
+   (no "overige fracties" guess). A prototype parser mapped all sides to the 20-fractie universe
+   cleanly (only fix needed: don't strip "de/het" inside names like *Fractie-Van de Sanden*).
+
+### Vote types & volume
+- **Hamerstuk** = passed without a vote (no objection) → uncontested, all fracties effectively voor.
+- **Stemming bij zitten en opstaan** = the real (contested) votes; per-fractie split recorded (no counts).
+- **Hoofdelijke stemming** = rare, per-member by name (aggregate to fractie; best-effort).
+- **Index page:** `/stemmingen_per_vergaderdag?filter=alles` lists each stemming as a row (date, title,
+  type, result, link), **paginated 25/page** via `start_006=` + `dlastinprev=YYYY-MM-DD`. Recent sample:
+  ~25 stemmingen / 6 weeks (16 zitten-en-opstaan + 5 hamerstuk per page) → est. **~600–700 stemmingen
+  over the 2023–2027 term** (between NH's 181 and Utrecht's 566 in scale — fine for the frontend).
+- **Term boundary:** current EK installed **13 June 2023** (elected by the March 2023 PS). Scope votes
+  `>= 2023-06-13`. (Note: EK term ≠ TK term — TK is 2025–heden, EK is 2023–2027.)
+- **Item types:** wetsvoorstellen, moties, amendementen (+ brieven/overig — classify from the dossier link).
+
+### Recommended build (collect_ek)
+**Stemming-first** (preserves unique identity + metadata): walk `/stemmingen_per_vergaderdag?filter=alles`
+pages back to 2023-06-13 → per row get date/title/dossier/type/result; for **zitten-en-opstaan** rows
+fetch the verslag and parse the matching `Ik constateer …` sentence (both sides → per-fractie V/T);
+**hamerstuk** rows = unanimous voor (or mark uncontested). Write `data/eerste-kamer.json` (same schema,
+votes per fractie `agree/disagree = 1/0`, `granularity: "fractie"`), category `eerste-kamer`, single
+scope. Parser caveats to handle: leading "de/het" inside fractie names, separator variants
+(`,` / ` en `), splinter `first_seen` gating, hoofdelijke (per-member) rare case. Tier B → set
+`meta.note` like NH; document in [coverage.md](coverage.md).

@@ -4,9 +4,9 @@
 > **TARGET — LOCKED (2026-06-12): four categories.** The site's scope is now four legislative bodies
 > (landing order: national → regional → EU):
 > 1. **Tweede Kamer** — ✅ LIVE (Phase 4). ~2,974 stemmingen, OData, per-fractie seat counts incl. verworpen.
-> 2. **Eerste Kamer** — ⏳ NEXT. Phase 5 below. **Do a feasibility probe FIRST** (own system, separate
->    from the TK API; much voting is *bij zitten en opstaan* / zonder stemming → likely faction-level
->    tier B, possibly no breakdown on some votes). Confirm data before building.
+> 2. **Eerste Kamer** — ⏳ probe ✅ DONE (2026-06-12) = **GO, tier B**; **build `collect_ek` next** (Phase 5b).
+>    No EK API — HTML only on `www.eerstekamer.nl`; per-fractie V/T from the verslag "Ik constateer …"
+>    sentence (both sides named, no counts). ~600–700 stemmingen, term `>= 2023-06-13`. Recipe: data-sources.md §9.
 > 3. **Provinciale Staten** — ◑ category LIVE, 3/12 provinces (Utrecht, Noord-Holland, Limburg).
 >    Growing it to more provinces is the outreach track below (Notubiz token + griffie lobby).
 > 4. **Europees Parlement** — ⏳ NEXT. Phase 6 below. **Feasibility probe FIRST.** EP publishes
@@ -208,21 +208,30 @@ blocked like Notubiz.
   **same normalized schema** (parties = fracties, votes per fractie with seat counts). Register TK in
   the catalog and add it to the weekly GitHub Actions cron.
 
-### Phase 5 — Eerste Kamer (PLANNED — feasibility probe FIRST)
+### Phase 5 — Eerste Kamer (probe DONE 2026-06-12 = GO; build next)
 The revising chamber (Senate, 75 seats, indirectly elected by the Provinciale Staten). Completes the
 national parliament (Staten-Generaal). A single-scope category like TK.
 
-**5a — Feasibility probe (do before any code; gate the whole phase on it).**
-- **Source unknown/to confirm:** the Eerste Kamer is a *separate* system from the TK OData
-  (`gegevensmagazijn.tweedekamer.nl` is TK-only). Candidates to check: an EK open-data API on
-  `eerstekamer.nl`, the joint `officielebekendmakingen.nl`/SGD, or an EK gegevensmagazijn. Find where
-  per-stemming, per-fractie data lives (if anywhere).
-- **Expect tier B or thinner.** The EK votes a lot **bij zitten en opstaan** or **zonder stemming**
-  (chair declares the result, only the *tegen* fracties noted — no counts); exact per-member numbers
-  only on a requested **hoofdelijke stemming**. So realistic best case = faction-level V/T (like NH),
-  and some votes may have **no per-fractie breakdown at all**. Decide go/no-go from what the probe finds.
-- If viable: `collect_ek` adapter → `data/eerste-kamer.json`, category `eerste-kamer`, single scope.
-  Set `granularity` honestly (likely "fractie"). Document the caveats in [coverage.md](coverage.md).
+**5a — Feasibility probe ✅ DONE (2026-06-12) — verdict: GO, tier B.** Full findings in
+[data-sources.md](data-sources.md) §9. Summary:
+- **No machine API.** The EK has no OData / opendata host / `/api` / SPARQL — it's a *separate* system
+  from the TK gegevensmagazijn. Everything is **server-rendered HTML on `www.eerstekamer.nl`** (PARLIS).
+- **Per-fractie positions ARE published**, two ways: (1) `/stemmingen_fractiegewijs` — structured per
+  fractie (Voor/Tegen thumb + date + type + result + dossier), no NLP, but the link isn't unique per
+  stemming (join ambiguity); (2) the **verslag** chair sentence `"Ik constateer dat de leden van de
+  fracties van <VOOR> voor … en … van <TEGEN> ertegen, zodat het is <aangenomen|verworpen>"` — free
+  text but **both sides named** (no "overige fracties" inference → more reliable than NH). A prototype
+  parse mapped both sides to the 20-fractie universe cleanly.
+- **Granularity = faction-level V/T, no seat counts → tier B** (EK votes *bij zitten en opstaan*; no
+  tallies). Hamerstukken = uncontested; hoofdelijke (per-member) rare. Volume ≈ **600–700 stemmingen**
+  over the term. **Term = current EK, installed 13 June 2023** (scope `>= 2023-06-13`; note EK term ≠ TK term).
+
+**5b — Build `collect_ek` (next).** Stemming-first: walk `/stemmingen_per_vergaderdag?filter=alles`
+(25/page) back to 2023-06-13 for the stemming index (date/title/dossier/type/result); for contested
+rows fetch the verslag and parse the `Ik constateer …` sentence → per-fractie V/T. Write
+`data/eerste-kamer.json` (same schema, `agree/disagree = 1/0`, `granularity: "fractie"`), category
+`eerste-kamer`, single scope; `meta.note` for the tier-B caveat; add to the weekly Action. Build recipe
++ parser caveats: [data-sources.md](data-sources.md) §9. Document the new row in [coverage.md](coverage.md).
 
 ### Phase 6 — Europees Parlement (PLANNED — feasibility probe FIRST)
 The EU's elected chamber (the EU's democratic-vote layer; the Council = governments, not in scope).
