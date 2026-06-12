@@ -15,9 +15,11 @@
 > 2. **GO Flevoland/Drenthe** — votes only in besluitenlijst PDFs. **Decision: lobby, don't parse.**
 >    Griffie mails ([outreach.md](outreach.md) §2) **being sent 2026-06-11** — correct addresses are
 >    `griffie@flevoland.nl` + `Statengriffie@drentsparlement.nl` (the `statengriffie@…nl` guesses bounce).
-> 3. **Product polish** — print stylesheet / printable report (PDF), grey low-n matrix cells, a
->    coverage/gaps view, and **TK table performance** (~3k rows — watch render/virtualization). The
->    Eerste Kamer is an easy next category (same OData API). All small, none blocking.
+> 3. **Product polish** — ✅ grey low-n matrix cells (done), ✅ TK table perf (delegated pins +
+>    debounced search). Remaining: print stylesheet / printable report (PDF), a coverage/gaps view
+>    on the site. Next *categories* (by audience): **Eerste Kamer** (separate system from the TK API
+>    — needs a feasibility check), big-city **gemeenteraden** (same GO/iBabs/Notubiz vendors),
+>    **Europees Parlement** (Dutch MEPs, EP roll-call open data), then waterschappen.
 > 4. **Strategy** (optional) — the cross-government dataset + B2B "political intelligence" angle
 >    (discussed): real category, money is B2B not consumer. Run `/analyze` to pressure-test.
 >

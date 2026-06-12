@@ -162,6 +162,7 @@
   table.matrix td{width:34px;height:28px;text-align:center;font-weight:600;color:#222;border:1px solid var(--surface)}
   table.matrix td.diag{background:#e3e1da;color:#b3b0a8}
   table.matrix td.na{color:#bbb}
+  table.matrix td.lown{background:#ecebe6;color:#a8a59d;font-style:italic}
   .matrix-controls{display:flex;align-items:center;gap:8px;margin:2px 0 14px;flex-wrap:wrap}
   .matrix-controls .mc-label{font-size:11.5px;color:var(--muted);font-weight:600}
   .matrix-legend{display:flex;align-items:center;gap:9px;margin-top:14px;font-size:12px;color:var(--muted)}
@@ -328,7 +329,8 @@
       vaak hetzelfde stemmen staan bij elkaar.</p>
     <div class="matrix-controls"><span class="mc-label">Tel mee:</span><span class="chips" id="matrixTypes"></span></div>
     <div id="matrixBody"></div>
-    <div class="matrix-legend"><span>weinig overeenkomst</span><span class="bar"></span><span>veel overeenkomst</span></div>
+    <div class="matrix-legend"><span>weinig overeenkomst</span><span class="bar"></span><span>veel overeenkomst</span>
+      <span style="margin-left:14px"><span class="vbadge" style="background:#ecebe6;color:#a8a59d;font-style:italic">%</span> te weinig gezamenlijke stemmingen</span></div>
   </div>
 </div>
 
@@ -432,6 +434,9 @@ const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",orde
 // Min. stemmingen a party must have voted on to appear in the Overeenkomst matrix — below this an
 // agreement % is noise (a party that voted once is "100% gelijk" with everyone).
 const MATRIX_MIN = 5;
+// Below this many *shared* stemmingen a pair's agreement % is too noisy to colour confidently
+// (e.g. a small/newer fractie that overlapped little with another) — show it greyed instead.
+const MATRIX_PAIR_MIN = 10;
 
 let CATALOG, CAT, SCOPE;
 let DATA, state, AG = null, ORDER = null, ALLTYPES = null, MTYPES = null, PTYPES = null, CTYPES = null;
@@ -653,6 +658,7 @@ function renderMatrix(){
       const c = AG[a][b];
       if(c === null) return `<td class="diag">&ndash;</td>`;
       if(!c) return `<td class="na" title="geen gezamenlijke stemmingen">&middot;</td>`;
+      if(c.n < MATRIX_PAIR_MIN) return `<td class="lown" title="${esc(name(a))} &amp; ${esc(name(b))}: ${c.pct}% gelijk — slechts ${c.n} gezamenlijke stemming${c.n===1?"":"en"}, te weinig voor een betrouwbaar percentage">${c.pct}</td>`;
       return `<td style="background:hsl(${Math.round(c.pct*1.35)},70%,72%)" title="${esc(name(a))} &amp; ${esc(name(b))}: ${c.pct}% gelijk (${c.n} stemmingen)">${c.pct}</td>`;
     }).join("")}</tr>`).join("");
   const excluded = DATA.parties.filter(p => !(p.slug in AG));
