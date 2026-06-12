@@ -695,7 +695,9 @@ def ibabs_stemmen_items(text):
 # Stemming.ActorFractie is the fractie name AT vote time, so a mid-term rename yields two names for
 # one group. Merge a pure rename into a single column (GroenLinks-PvdA was renamed "Progressief
 # Nederland" on 2026-06-09; most of the term it was GL-PvdA, so keep that as the display name).
-TK_ALIASES = {"Progressief Nederland": "GroenLinks-PvdA"}
+# GroenLinks-PvdA was renamed "Progressief Nederland" (afkorting "PRO") on 2026-06-09; most of the
+# term it voted as GroenLinks-PvdA, so merge both spellings into one column under that name.
+TK_ALIASES = {"Progressief Nederland": "GroenLinks-PvdA", "PRO": "GroenLinks-PvdA"}
 TK_TYPE = {"Motie": "motie", "Amendement": "amendement", "Wetgeving": "wetsvoorstel"}
 
 
@@ -735,24 +737,34 @@ def tk_item(public, b, name_by_slug, seats):
     dt = (act.get("Datum") or "")[:10]
     if not re.match(r"\d{4}-\d{2}-\d{2}$", dt):
         return None
-    votes = {}
+    # Group this besluit's Stemming rows per fractie. Three shapes occur:
+    #   - block vote: one row, Persoon_Id null, FractieGrootte = full fractie size.
+    #   - hoofdelijke stemming: one row PER MEMBER (Persoon_Id set), each carrying the fractie size.
+    #   - block + aantekening: a block row plus a few per-member rows for members who deviated.
+    # One rule covers all three: each per-member row counts as 1 seat for that member's vote; a block
+    # row contributes its FractieGrootte MINUS the fractie's individually-recorded members (so a
+    # deviator isn't counted in both the block and their own row). Sums to seats present, never inflated.
+    KEY = {"Voor": "agree", "Tegen": "disagree"}
+    by_fr = {}
     for s in b.get("Stemming") or []:
-        fr = TK_ALIASES.get((s.get("ActorFractie") or s.get("ActorNaam") or "").strip(), None) \
-             or (s.get("ActorFractie") or s.get("ActorNaam") or "").strip()
-        if not fr:
-            continue
+        fr = (s.get("ActorFractie") or s.get("ActorNaam") or "").strip()
+        fr = TK_ALIASES.get(fr, fr)
+        if fr:
+            by_fr.setdefault(fr, []).append(s)
+    votes = {}
+    for fr, rows in by_fr.items():
         slug = slugify(fr)
         name_by_slug.setdefault(slug, fr)
-        g = s.get("FractieGrootte") or 0
-        seats[slug] = max(seats.get(slug, 0), g)
+        size = max((r.get("FractieGrootte") or 0) for r in rows)
+        seats[slug] = max(seats.get(slug, 0), size)
         v = votes.setdefault(slug, {"agree": 0, "disagree": 0, "abstain": 0})
-        soort = s.get("Soort")
-        if soort == "Voor":
-            v["agree"] += g
-        elif soort == "Tegen":
-            v["disagree"] += g
-        else:                       # "Niet deelgenomen" / null
-            v["abstain"] += g
+        members = [r for r in rows if r.get("Persoon_Id")]
+        for r in members:                                   # individual (deviating/hoofdelijke) votes
+            v[KEY.get(r.get("Soort"), "abstain")] += 1
+        for r in rows:                                      # block rows, minus the members already counted
+            if r.get("Persoon_Id"):
+                continue
+            v[KEY.get(r.get("Soort"), "abstain")] += max((r.get("FractieGrootte") or 0) - len(members), 0)
     if not any(v["agree"] or v["disagree"] for v in votes.values()):
         return None   # roll-call with no actual voor/tegen (shouldn't happen, but guard)
     result, label = tk_result(b.get("BesluitSoort"))
@@ -781,7 +793,7 @@ def collect_tk(p):
             "and Agendapunt/Activiteit/Datum ge " + term_iso + " "
             "and Stemming/any() "
             "and Zaak/any(z: z/Soort eq 'Motie' or z/Soort eq 'Amendement' or z/Soort eq 'Wetgeving')")
-    expand = ("Stemming($select=ActorFractie,ActorNaam,Soort,FractieGrootte),"
+    expand = ("Stemming($select=ActorFractie,ActorNaam,Soort,FractieGrootte,Persoon_Id),"
               "Zaak($select=Nummer,Soort,Onderwerp,Titel),"
               "Agendapunt($expand=Activiteit($select=Datum))")
     qs = urllib.parse.urlencode(

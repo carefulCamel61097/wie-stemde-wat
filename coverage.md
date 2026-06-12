@@ -46,6 +46,16 @@ How directly the published data maps to what we display, and how much we infer.
   deelgenomen) and `FractieGrootte` (seat count). Exact tallies, self-contained per besluit — nothing
   inferred (unlike NH). Includes **verworpen**. We keep only besluiten with an actual roll-call
   (`Stemming/any()`), so items decided *zonder stemming* / aangehouden / ingetrokken drop out.
+- **Three vote shapes, one counting rule** (verified — each besluit's seats sum to ≤150):
+  a *block* vote = one row per fractie (use `FractieGrootte`); a *hoofdelijke* stemming = one row
+  **per member** (each carries the full fractie size — count 1 per row, not the size); *block +
+  aantekening* = a block row plus per-member rows for deviating members (count the members as 1 and
+  subtract them from the block, so they aren't double-counted). A fractie whose members split on a
+  hoofdelijke vote correctly shows a real split (V + dot, or O).
+- **Rare upstream inconsistencies.** The official `BesluitSoort` is the source of truth for the
+  outcome and we mirror it; on ~1 item in ~3,000 it disagrees with the seat tally (e.g. a motie
+  marked *aangenomen* that tallies 71–79). We don't "correct" the source — the per-fractie positions
+  are still shown verbatim. 75–75 ties recorded as *verworpen* are genuine, not errors.
 - **Term scope:** current Kamer only (votes on/after 2025-11-13, the first stemming after the Oct 2025
   election). Old-composition votes cast before installation are excluded so fractie sizes stay consistent.
 - **Mid-term composition:** `ActorFractie` is the name *at vote time*. We merge the pure rename
