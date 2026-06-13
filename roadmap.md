@@ -27,9 +27,11 @@
 > - **Notubiz token** ([outreach.md](outreach.md) §1, sent 2026-06-10) → up to 5 provinces (Fryslân,
 >   Groningen, Zuid-Holland, Overijssel; Gelderland outcome-only). `api.notubiz.nl/agenda_items/votings`
 >   + token unlocks the `role_id → fractie` map (`/roles?field_id=105`).
-> - **Griffie mails** ([outreach.md](outreach.md) §2, sent 2026-06-12 to `griffie@flevoland.nl` +
+> - **Griffie mails** ([outreach.md](outreach.md) §2, sent 2026-06-11 to `griffie@flevoland.nl` +
 >   `Statengriffie@drentsparlement.nl`) → if they enable the GO stemgedrag module, Flevoland/Drenthe
 >   become config-only. (PDF-parsing rejected: fragile, per-griffie, low ROI.)
+> - **Follow-up timing** (drafts ready in [outreach.md](outreach.md)): Notubiz ~17 Jun (1 wk), griffies
+>   ~24–25 Jun (2 wk) — and before the provincial **zomerreces (~mid-July)**, else replies slip to Sept.
 >
 > **Parked categories (decided NOT to pursue):** gemeenteraden (~340 — fragmented, local, not national
 > news, low per-unit salience) and waterschappen (elected but niche/low-profile). Reconsider only on demand.

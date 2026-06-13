@@ -7,6 +7,17 @@ for why. Both are about **open data**, so there's good precedent (Utrecht alread
 
 ## 1. Notubiz — request an open-data API token
 > **✅ Sent 2026-06-10.** Awaiting reply. If granted, build the Notubiz adapter (see roadmap NEXT).
+> **Follow-up:** if silent by **~17 June** (≈1 week), send the nudge below. A company support inbox
+> usually moves within days, so a short reminder mostly serves to surface a filtered/missed mail.
+>
+> _Reminder draft (reply on the original thread, keeping the first mail quoted below):_
+> > Beste Notubiz,
+> >
+> > Vorige week (10 juni) stuurde ik onderstaand verzoek om een open-data API-token voor de stemdata
+> > van de Provinciale Staten. Ik begrijp dat het druk kan zijn — zou u kunnen laten weten of dit
+> > mogelijk is, of mij naar de juiste persoon kunnen verwijzen? Alvast dank!
+> >
+> > Met vriendelijke groet, [naam]
 
 **Unlocks (if granted):** Fryslân, Groningen, Gelderland, Zuid-Holland, Overijssel (5 provinces).
 **Why:** `api.notubiz.nl/agenda_items/votings` already gives outcomes + roll-call publicly, but
@@ -45,6 +56,21 @@ endpoint. A token lets us group votes per party.
 ## 2. Statengriffie Flevoland & Drenthe — enable the GO stemgedrag module
 > **✅ Sent 2026-06-11** to `griffie@flevoland.nl` and `Statengriffie@drentsparlement.nl`
 > (after the `statengriffie@…nl` guesses bounced). Awaiting reply.
+> **Follow-up:** griffies are slower (often routed to a data/ICT colleague), so give them ~2 weeks —
+> if silent by **~24–25 June**, send the nudge below. Crucially, get it out **before the provincial
+> zomerreces (~mid-July)**; after that, expect no reply until late Aug/Sept. Separate mails per griffie.
+>
+> _Reminder draft (reply on each original thread):_
+> > Geachte Statengriffie,
+> >
+> > Op 11 juni stuurde ik onderstaand verzoek over het publiceren van het stemgedrag per fractie als
+> > open data (zoals provincie Utrecht dat doet). Zou u kunnen aangeven of dit haalbaar is, of mij
+> > naar de juiste collega kunnen verwijzen? Met het oog op het naderende zomerreces hoor ik het
+> > graag. Bij voorbaat dank.
+> >
+> > Met vriendelijke groet, [naam]
+> >
+> > _(Drenthe: "Provinciale Staten" eventueel vervangen door "het Drents Parlement".)_
 
 **Unlocks (if done):** Flevoland, Drenthe (becomes config-only — zero extra code for us).
 **Why:** Both run GemeenteOplossingen and expose the GO `/api/v2` (structure), but the optional
