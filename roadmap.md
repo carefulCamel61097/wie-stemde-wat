@@ -1,23 +1,27 @@
 # Roadmap — "Wie heeft wat gestemd?" (multi-province voting overview)
 
 > ## ▶ NEXT (resume here)
-> **TARGET — LOCKED (2026-06-12): four categories.** The site's scope is now four legislative bodies
-> (landing order: national → regional → EU):
-> 1. **Tweede Kamer** — ✅ LIVE (Phase 4). ~2,974 stemmingen, OData, per-fractie seat counts incl. verworpen.
-> 2. **Eerste Kamer** — ✅ LIVE (Phase 5, 2026-06-12). `collect_ek` → `data/eerste-kamer.json`, 449
->    stemmingen (term 2023–2027). No EK API — per-fractie V/T parsed from the "stemmingen per
->    vergaderdag" HTML (both sides named, no seat counts → tier B); hamerstukken excluded, hoofdelijke
->    aggregated to fractie. Recipe: data-sources.md §9.
-> 3. **Provinciale Staten** — ◑ category LIVE, 3/12 provinces (Utrecht, Noord-Holland, Limburg).
->    Growing it to more provinces is the outreach track below (Notubiz token + griffie lobby).
-> 4. **Europees Parlement** — ⏳ probe ✅ DONE (2026-06-13) = **GO, tier A**; **build `collect_ep` next** (Phase 6b).
->    Source = **HowTheyVote.eu** JSON API (compiles EP roll-call open data): `stats.by_group` gives exact
->    per-group MEP counts → present by **European political group**. ~545 main votes, term `>= 2024-07-16`,
->    ODbL license. Recipe: data-sources.md §10.
+> **TARGET — LOCKED (2026-06-12): four categories — ✅ ALL FOUR NOW LIVE (2026-06-13).** The site covers
+> four legislative bodies (landing order: national → regional → EU):
+> 1. **Tweede Kamer** — ✅ LIVE (Phase 4). ~2,974 stemmingen, OData, per-fractie seat counts incl. verworpen. Tier A.
+> 2. **Eerste Kamer** — ✅ LIVE (Phase 5). `data/eerste-kamer.json`, 449 stemmingen (2023–2027). No EK API —
+>    per-fractie V/T parsed from the "stemmingen per vergaderdag" HTML (both sides named, no counts → tier B);
+>    hamerstukken excluded, hoofdelijke aggregated to fractie. Recipe: data-sources.md §9.
+> 3. **Provinciale Staten** — ◑ category LIVE, 3/12 provinces (Utrecht, Noord-Holland, Limburg). Growing it
+>    to more provinces is the outreach track below (Notubiz token + griffie lobby).
+> 4. **Europees Parlement** — ✅ LIVE (Phase 6). `data/europees-parlement.json`, 545 votes (2024–2029), by
+>    **European political group**. Source = HowTheyVote.eu API (`stats.by_group`, exact per-group MEP counts
+>    → tier A), concurrent detail fetch, ODbL. Recipe: data-sources.md §10.
 >
-> The architecture is ready: catalog (categories→scopes) + frontend landing/routing already support new
-> categories, so EK/EP = "feasibility probe → new adapter → catalog entry" (no IA refactor). Each new
-> category is single-scope (like TK), so it opens straight to its table.
+> **▶ The locked target is complete.** Remaining work is depth, not new categories:
+> - **Grow Provinciale Staten** (the outreach track below) — Notubiz token → up to 5 provinces; griffie
+>   lobby → Flevoland/Drenthe. Both blocked on replies.
+> - **Optional polish:** an EP **Dutch-delegation breakout** (from `member_votes.country`); frontend perf
+>   watch on the larger scopes (TK ~3k rows). Pick up gemeenteraden/waterschappen only on demand (parked).
+>
+> The architecture is proven: catalog (categories→scopes) + frontend landing/routing absorb a new category
+> as "feasibility probe → new adapter → catalog entry" (no IA refactor); each is single-scope, opening
+> straight to its table.
 >
 > **In parallel — Provinciale Staten growth (blocked on replies, both SENT, awaiting):**
 > - **Notubiz token** ([outreach.md](outreach.md) §1, sent 2026-06-10) → up to 5 provinces (Fryslân,
@@ -241,7 +245,7 @@ the full `collect.py` run. Frontend: generic (no IA change) — added a `.t-over
 EK SEO meta. `collect.py` gained an `ONLY=<keys>` env switch for fast single-scope re-runs. Recipe +
 parser caveats: [data-sources.md](data-sources.md) §9; reliability: [coverage.md](coverage.md).
 
-### Phase 6 — Europees Parlement (probe DONE 2026-06-13 = GO; build next)
+### Phase 6 — Europees Parlement  ✅ DONE (2026-06-13)
 The EU's elected chamber (the EU's democratic-vote layer; the Council = governments, not in scope).
 Single-scope category. **Present votes by European political group** (EPP, S&D, Renew, Greens/EFA,
 ECR, The Left, PfE, ESN, NI), with the Dutch delegation as an optional breakout — **not Dutch MEPs only**.
@@ -258,12 +262,17 @@ ECR, The Left, PfE, ESN, NI), with the Dutch delegation as an optional breakout 
   scale (amendment sub-votes excluded). Only roll-call votes are per-MEP (inherent). Groups change mid-
   term but `stats.by_group` reflects the group at vote time (no first_seen gating needed).
 
-**6b — Build `collect_ep` (next).** Page `/api/votes?page_size=100` until `timestamp < 2024-07-16`
-(~6 pages), then GET each `/api/votes/{id}` for `stats.by_group` (+ `procedure` → item type); ~550
-polite requests. Write `data/europees-parlement.json` (same schema, **parties = groups** via an
-`EP_GROUPS` abbrev/colour map, exact counts, `granularity: "member"`), category `europees-parlement`,
-single scope; `meta.license` credits HowTheyVote.eu + the European Parliament (ODbL). Add to the weekly
-Action; document the row in [coverage.md](coverage.md). Recipe + caveats: [data-sources.md](data-sources.md) §10.
+**6b — Built `collect_ep` (as-built).** Pages `/api/votes?page_size=100` to the term boundary, then
+fetches each `/api/votes/{id}` for `stats.by_group` → exact per-group `{agree,disagree,abstain}`
+(+ `procedure` → item type). The API is ~1.5s/request, so the 545 detail calls run through a stdlib
+**`ThreadPoolExecutor` (8 workers)** to keep wall-time ~2 min (sequential would be ~15). Result:
+`data/europees-parlement.json` — **545 votes, 9 groups** (EPP, S&D, PfE, ECR, Renew, Greens/EFA, The
+Left, ESN, NI), types {wetgeving 183, resolutie 127, initiatiefverslag 118, begroting 30, overig 87},
+498 adopted / 47 rejected, `granularity: "member"` (exact counts → tier A). Validated: the Ukraine-
+accountability vote shows the coherent mainstream-V / far-left+far-right-T split. Category
+`europees-parlement` (single scope) added; weekly Action picks it up via the full run. Frontend
+(generic): EP procedure-type labels/badges + the "het Parlement" article fix + EP SEO meta. Recipe +
+caveats: [data-sources.md](data-sources.md) §10; reliability: [coverage.md](coverage.md).
 
 ## Decisions
 **Locked**

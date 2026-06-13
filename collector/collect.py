@@ -16,6 +16,7 @@ Zero dependencies (stdlib only) so GitHub Actions needs no install step.
 See ../data-sources.md for the reverse-engineered GO endpoints.
 """
 
+import concurrent.futures
 import hashlib
 import json
 import os
@@ -126,6 +127,27 @@ SOURCES = [
                 "Eerste Kamer stemt meestal bij zitten en opstaan. Beide zijden worden expliciet "
                 "vermeld (niets afgeleid). Hamerstukken (zonder stemming aangenomen) zijn niet opgenomen.",
     },
+    {
+        # The EU's elected chamber. Votes presented by EUROPEAN POLITICAL GROUP (not Dutch MEPs only).
+        # Source: HowTheyVote.eu compiles the EP's roll-call open data and exposes per-group MEP counts
+        # (stats.by_group) -> exact tallies, tier A. See data-sources.md §10. ODbL license.
+        "key": "europees-parlement",
+        "name": "Europees Parlement",
+        "vendor": "ep",
+        "category": "europees-parlement",
+        "body": "Europees Parlement",
+        "base": "https://howtheyvote.eu",
+        # Current (10th) term: first sitting after the June 2024 election. (Differs again from TK/EK.)
+        "term_start": (2024, 7, 16),
+        "term_label": "2024-2029",
+        "style": {"accent": "#003399", "headerBg": "#041f4a"},   # EU flag blue
+        "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen "
+                   "(roll-call) van het Europees Parlement",
+        "note": "Stemmen per Europese fractie met exacte aantallen (voor/tegen/onthouding), op basis "
+                "van hoofdelijke stemmingen (roll-call). Alleen eindstemmingen; stemmingen bij "
+                "handopsteken worden niet hoofdelijk geregistreerd. Bron: HowTheyVote.eu (ODbL), "
+                "Europees Parlement.",
+    },
 ]
 
 # Categories (legislative bodies) -> how the frontend labels the "pick category -> pick scope" UX.
@@ -137,9 +159,11 @@ CATEGORY_META = {
                      "blurb": "Het landelijke parlement — moties, amendementen en wetsvoorstellen."},
     "eerste-kamer": {"name": "Eerste Kamer", "scope_noun": None,
                      "blurb": "De senaat — stemmingen over wetsvoorstellen en moties (op fractieniveau)."},
+    "europees-parlement": {"name": "Europees Parlement", "scope_noun": None,
+                           "blurb": "Het EU-parlement — stemmingen per Europese fractie (EPP, S&D, Renew, …)."},
 }
-# Landing order: national (TK, EK) -> regional (provinces). EU (Europees Parlement) will slot in last.
-CATEGORY_ORDER = ["tweede-kamer", "eerste-kamer", "provinciale-staten"]
+# Landing order: national (TK, EK) -> regional (provinces) -> EU (Europees Parlement).
+CATEGORY_ORDER = ["tweede-kamer", "eerste-kamer", "provinciale-staten", "europees-parlement"]
 
 # Bodies that are type "Fractie" in the GO API but are not voting parties.
 NOT_A_PARTY = {"Gedeputeerde Staten"}
@@ -1091,6 +1115,116 @@ def collect_ek(p):
     return {"parties": [{"slug": s, "name": name_by_slug[s]} for s in order], "moties": items}
 
 
+# --- Europees Parlement (HowTheyVote.eu API) adapter --------------------------
+# HowTheyVote.eu compiles the EP's roll-call open data into a clean JSON API. The unit is the
+# EUROPEAN POLITICAL GROUP: GET /api/votes/{id} -> stats.by_group gives exact per-group MEP counts
+# (FOR/AGAINST/ABSTENTION/DID_NOT_VOTE) -> our {agree,disagree,abstain}, tier A. The /api/votes list
+# is is_main (final) votes only, newest first, across the 9th+10th terms -> date-filter to the current
+# term. See data-sources.md §10. License: ODbL (attribution + share-alike).
+#
+# Display names + stable slugs per group code (the API `label` is occasionally mojibaked, so we map
+# explicitly). Slug = code lowercased with '_' -> '-' (independent of the display name).
+EP_GROUPS = {
+    "EPP": "EPP", "SD": "S&D", "RENEW": "Renew", "GREEN_EFA": "Greens/EFA", "ECR": "ECR",
+    "PFE": "PfE", "GUE_NGL": "The Left", "ESN": "ESN", "NI": "Niet-fractiegebonden",
+}
+EP_TYPE = {"COD": "wetgeving", "NLE": "wetgeving", "APP": "wetgeving", "SYN": "wetgeving",
+           "INI": "initiatiefverslag", "INL": "initiatiefverslag",
+           "RSP": "resolutie", "BUD": "begroting", "BUI": "begroting"}
+
+
+def ep_group(code, label):
+    name = EP_GROUPS.get(code) or label or code
+    slug = (code or slugify(name)).lower().replace("_", "-")
+    return slug, name
+
+
+def collect_ep(p):
+    """Europees Parlement. Page the is_main vote list back to term start, then read each vote's
+    stats.by_group (exact per-group MEP counts). Self-contained per vote (no inference) -> tier A."""
+    base = p["base"].rstrip("/")
+    term_start = date(*p["term_start"])
+
+    # 1) Stemming index: page /api/votes (100/page, newest first) until we cross the term boundary.
+    metas, page = [], 1
+    while page <= 60:
+        data = try_json(f"{base}/api/votes?page_size=100&page={page}")
+        results = data.get("results") if isinstance(data, dict) else None
+        if not results:
+            break
+        stop = False
+        for r in results:
+            try:
+                d = date.fromisoformat((r.get("timestamp") or "")[:10])
+            except ValueError:
+                continue
+            if d < term_start:
+                stop = True
+                continue
+            metas.append(r)
+        if stop or not data.get("has_next"):
+            break
+        page += 1
+        time.sleep(SLEEP)
+    if not metas:
+        return None
+
+    # 2) Per vote: fetch stats.by_group (exact counts) + procedure (item type). The API is ~1.5s per
+    #    request, so 545 sequential calls would take ~15 min; a small thread pool keeps wall-time and
+    #    load reasonable (~8 concurrent against a CDN-backed API). ex.map preserves input order.
+    def _detail(r):
+        return r, try_json(f"{base}/api/votes/{r['id']}")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
+        details = list(ex.map(_detail, metas))
+
+    items, appear, name_by_slug, seats = [], {}, {}, {}
+    for r, det in details:
+        if not det:
+            continue
+        votes = {}
+        for gb in ((det.get("stats") or {}).get("by_group") or []):
+            g, st = gb.get("group") or {}, gb.get("stats") or {}
+            agree, disagree = st.get("FOR", 0), st.get("AGAINST", 0)
+            abstain, dnv = st.get("ABSTENTION", 0), st.get("DID_NOT_VOTE", 0)
+            if not (agree or disagree or abstain or dnv):
+                continue
+            slug, name = ep_group(g.get("code"), g.get("short_label") or g.get("label"))
+            name_by_slug[slug] = name
+            votes[slug] = {"agree": agree, "disagree": disagree, "abstain": abstain}
+            seats[slug] = max(seats.get(slug, 0), agree + disagree + abstain + dnv)
+        if not votes:
+            continue
+        proc = det.get("procedure") or {}
+        res = (r.get("result") or "").upper()
+        result = "accepted" if res == "ADOPTED" else "rejected" if res == "REJECTED" else None
+        items.append({
+            "id": int(r["id"]),
+            "date": (r.get("timestamp") or "")[:10],
+            "title": r.get("display_title") or proc.get("title") or "",
+            "type": EP_TYPE.get((proc.get("type") or "").upper(), "overig"),
+            "result": result,
+            "resultLabel": "Aangenomen" if result == "accepted" else "Verworpen" if result == "rejected" else (r.get("result") or None),
+            "source": f"{base}/votes/{r['id']}",
+            "votes": votes,
+        })
+        for slug in votes:
+            appear[slug] = appear.get(slug, 0) + 1
+
+    if not items:
+        return None
+    items.sort(key=lambda m: (m["date"], m["title"]), reverse=True)
+    for m in items:
+        m["totals"] = {"agree": sum(v["agree"] for v in m["votes"].values()),
+                       "disagree": sum(v["disagree"] for v in m["votes"].values())}
+    # Columns ordered by group size (biggest first), then activity, then name.
+    order = sorted(appear, key=lambda s: (-seats.get(s, 0), -appear[s], name_by_slug[s].lower()))
+    by_type = {}
+    for m in items:
+        by_type[m["type"]] = by_type.get(m["type"], 0) + 1
+    print(f"  fetched {len(metas)} votes; kept {len(items)}; {len(appear)} fracties; {by_type}")
+    return {"parties": [{"slug": s, "name": name_by_slug[s]} for s in order], "moties": items}
+
+
 def province_granularity(p):
     """Vote detail level, for the frontend: "member" = real per-fractie counts (GO, Limburg
     "stemmen") so "ruwe getallen" are meaningful; "fractie" = faction-level V/T only
@@ -1102,7 +1236,8 @@ def province_granularity(p):
     return "member"
 
 
-ADAPTERS = {"go": collect_go, "ibabs": collect_ibabs, "tk": collect_tk, "ek": collect_ek}
+ADAPTERS = {"go": collect_go, "ibabs": collect_ibabs, "tk": collect_tk, "ek": collect_ek,
+            "ep": collect_ep}
 
 
 def main():

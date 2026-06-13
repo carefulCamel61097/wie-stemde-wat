@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wie stemde wat? — stemgedrag in de Tweede Kamer, Eerste Kamer en Provinciale Staten</title>
-<meta name="description" content="Zie per partij hoe er gestemd is in de Tweede Kamer, de Eerste Kamer en de Provinciale Staten — per motie Voor of Tegen, op basis van open data. Nu: Tweede Kamer, Eerste Kamer, Utrecht, Noord-Holland en Limburg.">
-<meta name="keywords" content="stemgedrag, tweede kamer, eerste kamer, senaat, provinciale staten, moties, amendementen, wetsvoorstellen, stemmingen, open data, transparantie, politiek, Utrecht, Noord-Holland, Limburg">
+<meta name="description" content="Zie per partij hoe er gestemd is in de Tweede Kamer, de Eerste Kamer, de Provinciale Staten en het Europees Parlement — per motie Voor of Tegen, op basis van open data. Nu: Tweede Kamer, Eerste Kamer, Europees Parlement, Utrecht, Noord-Holland en Limburg.">
+<meta name="keywords" content="stemgedrag, tweede kamer, eerste kamer, senaat, provinciale staten, europees parlement, EU, moties, amendementen, wetsvoorstellen, stemmingen, open data, transparantie, politiek, Utrecht, Noord-Holland, Limburg">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://carefulcamel61097.github.io/wie-stemde-wat/">
 <meta name="theme-color" content="#1b1b1b">
@@ -110,6 +110,10 @@
   .t-besluit{background:#e8e6fb;color:#4c3fb5}
   .t-ordevoorstel{background:#eef0f4;color:#555}
   .t-overig{background:#eef0f4;color:#555}
+  .t-wetgeving{background:#e0f2f1;color:#00695c}
+  .t-resolutie{background:#ede7f6;color:#5e35b1}
+  .t-initiatiefverslag{background:#fff3e0;color:#9a4d00}
+  .t-begroting{background:#e8f5e9;color:#2e7d32}
   .res{font-weight:600}
   .r-accepted{color:#15803d}.r-rejected{color:#b91c1c}
 
@@ -431,7 +435,7 @@ const ABBR = {bbb:"BBB",groenlinks:"GL",vvd:"VVD",d66:"D66",utrechtnu:"U!",cda:"
   // Tweede Kamer fracties
   "groenlinks-pvda":"GL-PvdA","progressief-nederland":"PRO",denk:"DENK",
   "groep-markuszower":"Grp-Mark.",keijzer:"Keijzer",nsc:"NSC"};
-const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel",wetsvoorstel:"Wetsvoorstel",overig:"Overig"};
+const TYPE_LABEL = {motie:"Motie",amendement:"Amendement",besluit:"Besluit",ordevoorstel:"Ordevoorstel",wetsvoorstel:"Wetsvoorstel",overig:"Overig",wetgeving:"Wetgeving",resolutie:"Resolutie",initiatiefverslag:"Initiatiefverslag",begroting:"Begroting"};
 // Min. stemmingen a party must have voted on to appear in the Overeenkomst matrix — below this an
 // agreement % is noise (a party that voted once is "100% gelijk" with everyone).
 const MATRIX_MIN = 5;
@@ -526,11 +530,12 @@ async function openScope(cat, scope){
   // Source label: a multi-scope category (provinces) reads "Provinciale Staten, provincie X";
   // a single-body category (Tweede Kamer) just its own name (scopeNoun is null there).
   const multi = cat.scopes.length > 1;
+  const art = /parlement/i.test(DATA.meta.body) ? "het" : "de";   // "het Europees Parlement" vs "de … Kamer"
   const srcName = (multi && cat.scopeNoun)
     ? `${esc(DATA.meta.body)}, ${esc(cat.scopeNoun)} ${esc(DATA.meta.province)}` : esc(DATA.meta.body);
   $("#appLead").innerHTML = multi
     ? `Stemgedrag per partij in de <b>${esc(DATA.meta.body)} van ${esc(DATA.meta.province)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`
-    : `Stemgedrag per fractie in de <b>${esc(DATA.meta.body)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`;
+    : `Stemgedrag per fractie in ${art} <b>${esc(DATA.meta.body)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`;
   document.title = multi
     ? `Wie stemde wat? — ${DATA.meta.body} ${DATA.meta.province}`
     : `Wie stemde wat? — stemgedrag in de ${DATA.meta.body}`;

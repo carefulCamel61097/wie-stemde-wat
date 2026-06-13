@@ -14,6 +14,7 @@ the "things we DO have" companion to [provinces.md](provinces.md) (feasibility f
 |---|---|---|---|---|---|---|---|---|
 | **Tweede Kamer** | Tweede Kamer | TK OData | clean OData v4 API | per **fractie** (zetels) | motie, amendement, wetsvoorstel | 2945 | **aangenomen + verworpen** | **A — exact** |
 | **Eerste Kamer** | Eerste Kamer | eerstekamer.nl | HTML structured parse | per **fractie** (V/T only) | wetsvoorstel, motie, overig | 449 | **aangenomen + verworpen** | **B — parsed (beide zijden vermeld)** |
+| **Europees Parlement** | Europees Parlement | HowTheyVote.eu API | clean JSON API | per **fractie** (MEP-aantallen) | wetgeving, resolutie, initiatiefverslag, begroting | 545 | **aangenomen + verworpen** | **A — exact** |
 | **Utrecht** | Prov. Staten | GO | clean JSON API | per **member** (counts) | motie, amendement, besluit, ordevoorstel | 566 | all (aangenomen + verworpen) | **A — exact** |
 | **Limburg** | Prov. Staten | iBabs | HTML structured parse | per **member** (counts) | motie, amendement | 321 | **aangenomen + verworpen** | **A — exact** |
 | **Noord-Holland** | Prov. Staten | iBabs | HTML free-text parse | per **fractie** (V/T only) | motie, amendement | 181 | **aangenomen only** | **B — parsed/inferred** |
@@ -31,8 +32,9 @@ How directly the published data maps to what we display, and how much we infer.
 - **A — exact (structured source).** The source gives the vote itself as structured data; we
   normalize, we don't interpret. Exact counts and real split votes; minimal inference.
   *Tweede Kamer* (OData `Stemming` — per-fractie `Soort` + `FractieGrootte` seat counts),
-  *Utrecht* (GO JSON, per-member tallies) and *Limburg* (iBabs "Stemmen" field — per-fractie member
-  counts for the voor/tegen sides; a fractie on both sides is a real split).
+  *Europees Parlement* (HowTheyVote.eu `stats.by_group` — exact per-group MEP counts FOR/AGAINST/
+  ABSTENTION; a group split across FOR/AGAINST is a real split), *Utrecht* (GO JSON, per-member
+  tallies) and *Limburg* (iBabs "Stemmen" field — per-fractie member counts for the voor/tegen sides).
 - **B — parsed / inferred (semi-structured source).** The outcome is published, but as text/HTML we
   must parse, and (for NH) part of the result is *computed* rather than stated. Correct for "which
   fractie voted voor/tegen" on the items present, with the caveats below. *Noord-Holland* (iBabs
@@ -67,6 +69,22 @@ How directly the published data maps to what we display, and how much we infer.
   split out; we aggregate to the fractie.
 - **Volume:** ~2,945 stemmingen → the data file is ~3 MB (written minified) and the table renders
   ~3k rows × ~18 columns. Watch frontend performance; revisit pagination/virtualization if it drags.
+
+### Europees Parlement — tier A (exact per-group counts)
+The unit is the **European political group** (EPP, S&D, PfE, ECR, Renew, Greens/EFA, The Left, ESN,
+NI), not individual MEPs or Dutch MEPs only. Source: HowTheyVote.eu `stats.by_group` (see
+[data-sources.md](data-sources.md) §10), which compiles the EP's official roll-call open data.
+1. **Exact counts.** Each group's FOR/AGAINST/ABSTENTION MEP counts are given verbatim, so tallies and
+   intra-group splits (a group voting partly FOR, partly AGAINST) are real — `granularity: "member"`.
+2. **Roll-call votes only.** Only votes taken by roll call are recorded per-MEP; show-of-hands votes
+   aren't published per group anywhere (inherent to the EP, like every source here). We keep only the
+   **`is_main`** (final) votes per file — amendment/procedural sub-votes are excluded.
+3. **Group at vote time.** `stats.by_group` reflects each MEP's group on the vote date, so a mid-term
+   group switch is handled upstream — no inference on our side.
+4. **Term:** current (10th) EP, votes on/after 2024-07-16. (Differs from the TK and EK terms.) Includes
+   **verworpen** (47 of 545).
+5. **Licence/attribution:** HowTheyVote.eu data is ODbL; `meta.license` credits HowTheyVote.eu + the
+   European Parliament. A Dutch-delegation breakout (from `member_votes.country`) is possible later.
 
 ### Eerste Kamer — tier B (faction-level, but both sides stated)
 The Senate has **no machine API** (see [data-sources.md](data-sources.md) §9); we parse the per-fractie

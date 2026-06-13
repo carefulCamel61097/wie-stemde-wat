@@ -48,8 +48,8 @@ view is already possible by deselecting parties.)
 - [x] **Body**: Provinciale Staten plenair only (not commissies — those don't hold the votes).
 - [x] **Categories (LOCKED 2026-06-12)**: four legislative bodies — **Tweede Kamer** (live),
   **Eerste Kamer** (live, Phase 5), **Provinciale Staten** (live, 3/12 provinces), **Europees
-  Parlement** (planned, Phase 6). Gemeenteraden + waterschappen parked. EP still gated on a feasibility
-  probe (its vote data may be faction-level or thin). See [roadmap.md](roadmap.md) Phases 5–6.
+  Parlement** (live, Phase 6). **All four target categories now live.** Gemeenteraden + waterschappen
+  parked. See [roadmap.md](roadmap.md).
 
 ## Status (June 2026)
 - [x] **v1 LIVE** — Utrecht: collector (GO adapter) → `data/utrecht.json` → static site, themed
@@ -72,8 +72,12 @@ view is already possible by deselecting parties.)
   API, so the per-fractie voor/tegen lists are parsed from the HTML "stemmingen per vergaderdag" pages
   (449 stemmingen, term 2023–2027). Faction-level V/T, both sides named (nothing inferred), tier B;
   hoofdelijke (per-member) votes aggregated to the fractie. Third category live.
-- [ ] **NEXT** — Europees Parlement (Phase 6, feasibility probe first); Notubiz (5 provinces, needs a
-  token — see [outreach.md](outreach.md)); GO
+- [x] **Phase 6** — added the **Europees Parlement** (`collect_ep` → `data/europees-parlement.json`):
+  HowTheyVote.eu JSON API (`stats.by_group`) → **exact per-group MEP counts**, presented by European
+  political group (545 votes, term 2024–2029, tier A). Concurrent detail fetch (the API is ~1.5s/call).
+  **Fourth and final target category live** — the locked 4-category target is complete.
+- [ ] **NEXT** — grow Provinciale Staten: Notubiz (5 provinces, needs a token — see
+  [outreach.md](outreach.md)); GO
   Flevoland/Drenthe via the griffie lobby. See the **NEXT** pointer at the top of [roadmap.md](roadmap.md).
 
 Repo: https://github.com/carefulCamel61097/wie-stemde-wat ·
