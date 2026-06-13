@@ -1,10 +1,11 @@
 {
   "meta": {
-    "province": "Europees Parlement",
+    "province": "Europese fracties",
     "body": "Europees Parlement",
     "term": "2024-2029",
-    "generated_at": "2026-06-13T00:19:30+00:00",
+    "generated_at": "2026-06-13T01:47:31+00:00",
     "source": "https://howtheyvote.eu",
+    "sourceName": "HowTheyVote.eu",
     "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen (roll-call) van het Europees Parlement",
     "style": {
       "accent": "#003399",
@@ -15,8 +16,7 @@
     "counts": {
       "moties": 545,
       "parties": 9
-    },
-    "sourceName": "HowTheyVote.eu"
+    }
   },
   "parties": [
     {

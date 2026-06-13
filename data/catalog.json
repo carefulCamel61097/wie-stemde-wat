@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T00:19:30+00:00",
+  "generated_at": "2026-06-13T01:52:38+00:00",
   "default": {
     "category": "provinciale-staten",
     "scope": "utrecht"
@@ -77,12 +77,21 @@
     {
       "key": "europees-parlement",
       "name": "Europees Parlement",
-      "scopeNoun": null,
-      "blurb": "Het EU-parlement — stemmingen per Europese fractie (EPP, S&D, Renew, …).",
+      "scopeNoun": "weergave",
+      "blurb": "Het EU-parlement — per Europese fractie, of de Nederlandse afvaardiging.",
       "scopes": [
         {
           "key": "europees-parlement",
-          "name": "Europees Parlement",
+          "name": "Europese fracties",
+          "available": true,
+          "style": {
+            "accent": "#003399",
+            "headerBg": "#041f4a"
+          }
+        },
+        {
+          "key": "europees-parlement-nl",
+          "name": "Nederlandse afvaardiging",
           "available": true,
           "style": {
             "accent": "#003399",

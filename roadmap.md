@@ -16,8 +16,9 @@
 > **▶ The locked target is complete.** Remaining work is depth, not new categories:
 > - **Grow Provinciale Staten** (the outreach track below) — Notubiz token → up to 5 provinces; griffie
 >   lobby → Flevoland/Drenthe. Both blocked on replies.
-> - **Optional polish:** an EP **Dutch-delegation breakout** (from `member_votes.country`); frontend perf
->   watch on the larger scopes (TK ~3k rows). Pick up gemeenteraden/waterschappen only on demand (parked).
+> - **Optional polish:** ✅ EP **Dutch-delegation breakout** shipped (second EP scope, by national party,
+>   with MEP rosters). ✅ EP source attribution → HowTheyVote.eu. TK perf checked = fine (slightly slower
+>   first load, no sluggishness after). Pick up gemeenteraden/waterschappen only on demand (parked).
 >
 > The architecture is proven: catalog (categories→scopes) + frontend landing/routing absorb a new category
 > as "feasibility probe → new adapter → catalog entry" (no IA refactor); each is single-scope, opening
@@ -272,9 +273,18 @@ fetches each `/api/votes/{id}` for `stats.by_group` → exact per-group `{agree,
 Left, ESN, NI), types {wetgeving 183, resolutie 127, initiatiefverslag 118, begroting 30, overig 87},
 498 adopted / 47 rejected, `granularity: "member"` (exact counts → tier A). Validated: the Ukraine-
 accountability vote shows the coherent mainstream-V / far-left+far-right-T split. Category
-`europees-parlement` (single scope) added; weekly Action picks it up via the full run. Frontend
-(generic): EP procedure-type labels/badges + the "het Parlement" article fix + EP SEO meta. Recipe +
-caveats: [data-sources.md](data-sources.md) §10; reliability: [coverage.md](coverage.md).
+`europees-parlement` category; weekly Action picks it up via the full run. Frontend (generic): EP
+procedure-type labels/badges + the "het Parlement" article fix + EP SEO meta. Recipe + caveats:
+[data-sources.md](data-sources.md) §10; reliability: [coverage.md](coverage.md).
+
+**6c — Dutch-delegation breakout (polish, 2026-06-13).** A **second EP scope** "Nederlandse
+afvaardiging": the 31 NL MEPs grouped by **national party** (PVV, GL-PvdA, VVD, …) with exact MEP
+counts + an MEP roster per party (column tooltip). Built on the same cached vote details (no extra
+fetch) via `ep_assemble_nl` (filters `member_votes` country `NLD`). The NL→party map (`EP_NL_PARTY`)
+is resolved once from the **EP Open Data Portal** (`NATIONAL_POLITICAL_GROUP` membership; HowTheyVote
+lacks it) and WARNs on unmapped ids. EP is now multi-scope (a "Kies een weergave" picker); the
+frontend's province-centric copy was generalized via `scopeNoun`. Surfaces Dutch-vs-Euro-group
+divergence (e.g. PVV abstaining where PfE carried a vote).
 
 ## Decisions
 **Locked**

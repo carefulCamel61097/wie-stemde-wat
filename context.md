@@ -75,7 +75,9 @@ view is already possible by deselecting parties.)
 - [x] **Phase 6** — added the **Europees Parlement** (`collect_ep` → `data/europees-parlement.json`):
   HowTheyVote.eu JSON API (`stats.by_group`) → **exact per-group MEP counts**, presented by European
   political group (545 votes, term 2024–2029, tier A). Concurrent detail fetch (the API is ~1.5s/call).
-  **Fourth and final target category live** — the locked 4-category target is complete.
+  **Fourth and final target category live** — the locked 4-category target is complete. Plus a **second
+  EP view** ("Nederlandse afvaardiging"): the 31 NL MEPs by national party, with MEP rosters (NL→party
+  map from the EP Open Data Portal). Source attribution credits HowTheyVote.eu (ODbL).
 - [ ] **NEXT** — grow Provinciale Staten: Notubiz (5 provinces, needs a token — see
   [outreach.md](outreach.md)); GO
   Flevoland/Drenthe via the griffie lobby. See the **NEXT** pointer at the top of [roadmap.md](roadmap.md).

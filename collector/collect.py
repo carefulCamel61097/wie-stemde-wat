@@ -132,7 +132,7 @@ SOURCES = [
         # Source: HowTheyVote.eu compiles the EP's roll-call open data and exposes per-group MEP counts
         # (stats.by_group) -> exact tallies, tier A. See data-sources.md §10. ODbL license.
         "key": "europees-parlement",
-        "name": "Europees Parlement",
+        "name": "Europese fracties",
         "vendor": "ep",
         "category": "europees-parlement",
         "body": "Europees Parlement",
@@ -149,6 +149,27 @@ SOURCES = [
                 "handopsteken worden niet hoofdelijk geregistreerd. Bron: HowTheyVote.eu (ODbL), "
                 "Europees Parlement.",
     },
+    {
+        # Second view of the same EP votes: the Dutch delegation, grouped by NATIONAL party (PVV,
+        # GL-PvdA, VVD, …) instead of by European group. Shares ep_load's cached details (no extra
+        # fetch). Columns carry a `members` roster (the MEP names) for the frontend.
+        "key": "europees-parlement-nl",
+        "name": "Nederlandse afvaardiging",
+        "vendor": "ep",
+        "breakout": "nl",
+        "category": "europees-parlement",
+        "body": "Europees Parlement",
+        "base": "https://howtheyvote.eu",
+        "term_start": (2024, 7, 16),
+        "term_label": "2024-2029",
+        "style": {"accent": "#003399", "headerBg": "#041f4a"},
+        "sourceName": "HowTheyVote.eu",
+        "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen "
+                   "(roll-call) van het Europees Parlement",
+        "note": "De 31 Nederlandse Europarlementariërs, gegroepeerd per Nederlandse partij, met "
+                "exacte aantallen (voor/tegen/onthouding). Alleen hoofdelijke eindstemmingen. "
+                "Bron: HowTheyVote.eu (ODbL) + Europees Parlement Open Data (fractie-indeling).",
+    },
 ]
 
 # Categories (legislative bodies) -> how the frontend labels the "pick category -> pick scope" UX.
@@ -160,8 +181,8 @@ CATEGORY_META = {
                      "blurb": "Het landelijke parlement — moties, amendementen en wetsvoorstellen."},
     "eerste-kamer": {"name": "Eerste Kamer", "scope_noun": None,
                      "blurb": "De senaat — stemmingen over wetsvoorstellen en moties (op fractieniveau)."},
-    "europees-parlement": {"name": "Europees Parlement", "scope_noun": None,
-                           "blurb": "Het EU-parlement — stemmingen per Europese fractie (EPP, S&D, Renew, …)."},
+    "europees-parlement": {"name": "Europees Parlement", "scope_noun": "weergave",
+                           "blurb": "Het EU-parlement — per Europese fractie, of de Nederlandse afvaardiging."},
 }
 # Landing order: national (TK, EK) -> regional (provinces) -> EU (Europees Parlement).
 CATEGORY_ORDER = ["tweede-kamer", "eerste-kamer", "provinciale-staten", "europees-parlement"]
@@ -1140,15 +1161,36 @@ def ep_group(code, label):
     return slug, name
 
 
-def collect_ep(p):
-    """Europees Parlement. Page the is_main vote list back to term start, then read each vote's
-    stats.by_group (exact per-group MEP counts). Self-contained per vote (no inference) -> tier A."""
-    base = p["base"].rstrip("/")
-    term_start = date(*p["term_start"])
+# Dutch MEP (HowTheyVote/EP id) -> national party, for the "Nederlandse afvaardiging" breakout.
+# Resolved once from the EP Open Data Portal (each MEP's NATIONAL_POLITICAL_GROUP membership ->
+# corporate-body label); the 10th-term NL delegation is 31 MEPs. The collector WARNS on any NL MEP
+# id not in this map (e.g. a mid-term replacement) so it can be topped up. See data-sources.md §10.
+EP_NL_PARTY = {
+    "125023": "PvdD", "256990": "Volt", "257438": "VVD", "103246": "PVV", "197780": "VVD",
+    "96725": "GL-PvdA", "197773": "SGP", "256976": "D66", "257437": "GL-PvdA", "97399": "NSC",
+    "96940": "D66", "256968": "CDA", "257003": "VVD", "95074": "CDA", "256983": "BBB",
+    "197870": "GL-PvdA", "5392": "GL-PvdA", "197781": "VVD", "192254": "PVV", "91636": "GL-PvdA",
+    "130881": "PVV", "197782": "GL-PvdA", "256998": "PVV", "256970": "D66", "256978": "Volt",
+    "125325": "BBB", "256996": "PVV", "218347": "GL-PvdA", "197772": "GL-PvdA", "256981": "PVV",
+    "276060": "CDA",
+    # Former MEPs who voted earlier this term before being replaced (not in the current-MEP list):
+    "197778": "CDA",   # Tom Berendsen
+    "256991": "PVV",   # Sebastiaan Stöteler
+}
+# Column order for the NL breakout: by 2024 EP-election seats (the adapter falls back to activity).
+EP_NL_ORDER = ["GL-PvdA", "PVV", "VVD", "D66", "CDA", "BBB", "Volt", "PvdD", "SGP", "NSC"]
 
-    # 1) Stemming index: page /api/votes (100/page, newest first) until we cross the term boundary.
+_EP_CACHE = {}   # base -> {"metas": [...], "details": {id: detail}} — shared across the two EP scopes
+
+
+def ep_load(base, term_start):
+    """Fetch (and cache) the term's is_main votes + their details once. Both EP scopes (Europese
+    fracties / Nederlandse afvaardiging) run in the same process, so the second reuses the cache
+    instead of re-fetching ~545 details."""
+    if base in _EP_CACHE:
+        return _EP_CACHE[base]["metas"], _EP_CACHE[base]["details"]
     metas, page = [], 1
-    while page <= 60:
+    while page <= 60:   # 1) stemming index: page newest-first until we cross the term boundary
         data = try_json(f"{base}/api/votes?page_size=100&page={page}")
         results = data.get("results") if isinstance(data, dict) else None
         if not results:
@@ -1167,63 +1209,141 @@ def collect_ep(p):
             break
         page += 1
         time.sleep(SLEEP)
-    if not metas:
-        return None
-
-    # 2) Per vote: fetch stats.by_group (exact counts) + procedure (item type). The API is ~1.5s per
-    #    request, so 545 sequential calls would take ~15 min; a small thread pool keeps wall-time and
-    #    load reasonable (~8 concurrent against a CDN-backed API). ex.map preserves input order.
+    # 2) details: the API is ~1.5s/request, so 545 sequential calls take ~15 min; a small thread pool
+    #    keeps wall-time and load reasonable (~8 concurrent against a CDN-backed API).
     def _detail(r):
-        return r, try_json(f"{base}/api/votes/{r['id']}")
+        return r["id"], try_json(f"{base}/api/votes/{r['id']}")
+    details = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
-        details = list(ex.map(_detail, metas))
+        for vid, det in ex.map(_detail, metas):
+            details[vid] = det
+    _EP_CACHE[base] = {"metas": metas, "details": details}
+    return metas, details
 
-    items, appear, name_by_slug, seats = [], {}, {}, {}
-    for r, det in details:
-        if not det:
-            continue
-        votes = {}
-        for gb in ((det.get("stats") or {}).get("by_group") or []):
-            g, st = gb.get("group") or {}, gb.get("stats") or {}
-            agree, disagree = st.get("FOR", 0), st.get("AGAINST", 0)
-            abstain, dnv = st.get("ABSTENTION", 0), st.get("DID_NOT_VOTE", 0)
-            if not (agree or disagree or abstain or dnv):
-                continue
-            slug, name = ep_group(g.get("code"), g.get("short_label") or g.get("label"))
-            name_by_slug[slug] = name
-            votes[slug] = {"agree": agree, "disagree": disagree, "abstain": abstain}
-            seats[slug] = max(seats.get(slug, 0), agree + disagree + abstain + dnv)
-        if not votes:
-            continue
-        proc = det.get("procedure") or {}
-        res = (r.get("result") or "").upper()
-        result = "accepted" if res == "ADOPTED" else "rejected" if res == "REJECTED" else None
-        items.append({
-            "id": int(r["id"]),
-            "date": (r.get("timestamp") or "")[:10],
-            "title": r.get("display_title") or proc.get("title") or "",
-            "type": EP_TYPE.get((proc.get("type") or "").upper(), "overig"),
-            "result": result,
-            "resultLabel": "Aangenomen" if result == "accepted" else "Verworpen" if result == "rejected" else (r.get("result") or None),
-            "source": f"{base}/votes/{r['id']}",
-            "votes": votes,
-        })
-        for slug in votes:
-            appear[slug] = appear.get(slug, 0) + 1
 
+def ep_item(r, det, votes):
+    """One normalized stemming dict, shared by both EP breakdowns (same vote metadata)."""
+    proc = det.get("procedure") or {}
+    res = (r.get("result") or "").upper()
+    result = "accepted" if res == "ADOPTED" else "rejected" if res == "REJECTED" else None
+    return {
+        "id": int(r["id"]),
+        "date": (r.get("timestamp") or "")[:10],
+        "title": r.get("display_title") or proc.get("title") or "",
+        "type": EP_TYPE.get((proc.get("type") or "").upper(), "overig"),
+        "result": result,
+        "resultLabel": "Aangenomen" if result == "accepted" else "Verworpen" if result == "rejected" else (r.get("result") or None),
+        "source": f"https://howtheyvote.eu/votes/{r['id']}",
+        "votes": votes,
+    }
+
+
+def ep_finalize(items, appear, name_by_slug, seats, order_hint=None, members=None):
+    """Shared tail: per-item totals, newest-first sort, column order, optional MEP rosters."""
     if not items:
         return None
     items.sort(key=lambda m: (m["date"], m["title"]), reverse=True)
     for m in items:
         m["totals"] = {"agree": sum(v["agree"] for v in m["votes"].values()),
                        "disagree": sum(v["disagree"] for v in m["votes"].values())}
-    # Columns ordered by group size (biggest first), then activity, then name.
-    order = sorted(appear, key=lambda s: (-seats.get(s, 0), -appear[s], name_by_slug[s].lower()))
+
+    def rank(s):
+        hint = order_hint.index(name_by_slug[s]) if order_hint and name_by_slug[s] in order_hint else 99
+        return (hint, -seats.get(s, 0), -appear.get(s, 0), name_by_slug[s].lower())
+    parties = []
+    for s in sorted(appear, key=rank):
+        party = {"slug": s, "name": name_by_slug[s]}
+        if members and members.get(s):
+            party["members"] = sorted(members[s])
+        parties.append(party)
     by_type = {}
     for m in items:
         by_type[m["type"]] = by_type.get(m["type"], 0) + 1
-    print(f"  fetched {len(metas)} votes; kept {len(items)}; {len(appear)} fracties; {by_type}")
-    return {"parties": [{"slug": s, "name": name_by_slug[s]} for s in order], "moties": items}
+    print(f"  kept {len(items)} stemmingen; {len(appear)} fracties; {by_type}")
+    return {"parties": parties, "moties": items}
+
+
+def ep_assemble_groups(metas, details):
+    """Default view: per European political group, from stats.by_group (exact MEP counts)."""
+    items, appear, name_by_slug, seats = [], {}, {}, {}
+    for r in metas:
+        det = details.get(r["id"])
+        if not det:
+            continue
+        votes = {}
+        for gb in ((det.get("stats") or {}).get("by_group") or []):
+            g, st = gb.get("group") or {}, gb.get("stats") or {}
+            agree, disagree, abstain = st.get("FOR", 0), st.get("AGAINST", 0), st.get("ABSTENTION", 0)
+            if not (agree or disagree or abstain):   # whole group did not vote -> afwezig (blank)
+                continue
+            slug, name = ep_group(g.get("code"), g.get("short_label") or g.get("label"))
+            name_by_slug[slug] = name
+            votes[slug] = {"agree": agree, "disagree": disagree, "abstain": abstain}
+            seats[slug] = max(seats.get(slug, 0), agree + disagree + abstain + st.get("DID_NOT_VOTE", 0))
+        if not votes:
+            continue
+        items.append(ep_item(r, det, votes))
+        for slug in votes:
+            appear[slug] = appear.get(slug, 0) + 1
+    return ep_finalize(items, appear, name_by_slug, seats)
+
+
+def ep_assemble_nl(metas, details):
+    """Dutch-delegation view: group the NL MEPs (member_votes, country NLD) by national party
+    (EP_NL_PARTY) -> exact per-party MEP counts. Same vote set as the group view; carries MEP rosters."""
+    items, appear, name_by_slug, seats, members = [], {}, {}, {}, {}
+    unknown = {}
+    for r in metas:
+        det = details.get(r["id"])
+        if not det:
+            continue
+        tally, roster = {}, {}
+        for mv in (det.get("member_votes") or []):
+            m = mv.get("member") or {}
+            if (m.get("country") or {}).get("code") != "NLD":
+                continue
+            party = EP_NL_PARTY.get(str(m.get("id")))
+            if not party:
+                unknown[str(m.get("id"))] = m.get("full_name") or ""
+                continue
+            t = tally.setdefault(party, {"agree": 0, "disagree": 0, "abstain": 0, "n": 0})
+            pos = mv.get("position")
+            if pos == "FOR":
+                t["agree"] += 1
+            elif pos == "AGAINST":
+                t["disagree"] += 1
+            elif pos == "ABSTENTION":
+                t["abstain"] += 1
+            t["n"] += 1   # all NL members of the party (incl. did-not-vote) -> party size for ordering
+            roster.setdefault(party, set()).add(m.get("full_name") or "")
+        votes = {}
+        for party, t in tally.items():
+            if not (t["agree"] or t["disagree"] or t["abstain"]):
+                continue   # party present but all did-not-vote -> afwezig (blank)
+            slug = slugify(party)
+            name_by_slug[slug] = party
+            votes[slug] = {"agree": t["agree"], "disagree": t["disagree"], "abstain": t["abstain"]}
+            seats[slug] = max(seats.get(slug, 0), t["n"])
+            members.setdefault(slug, set()).update(roster.get(party, ()))
+        if not votes:
+            continue
+        items.append(ep_item(r, det, votes))
+        for slug in votes:
+            appear[slug] = appear.get(slug, 0) + 1
+    if unknown:
+        print(f"  WARN: {len(unknown)} NL MEP(s) not in EP_NL_PARTY (update the map): "
+              + ", ".join(f"{k} {v}" for k, v in list(unknown.items())[:8]))
+    return ep_finalize(items, appear, name_by_slug, seats, order_hint=EP_NL_ORDER, members=members)
+
+
+def collect_ep(p):
+    """Europees Parlement. Two breakdowns of the same roll-call votes (term >= term_start): by
+    European political group (default) or by Dutch national party (breakout='nl'). The fetched vote
+    details are cached and shared between the two scopes, so the second adds no extra requests."""
+    metas, details = ep_load(p["base"].rstrip("/"), date(*p["term_start"]))
+    if not metas:
+        return None
+    return ep_assemble_nl(metas, details) if p.get("breakout") == "nl" else ep_assemble_groups(metas, details)
 
 
 def province_granularity(p):

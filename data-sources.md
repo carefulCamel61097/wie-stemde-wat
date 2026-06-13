@@ -430,10 +430,27 @@ already aggregated** — far easier. We use HowTheyVote as the source and attrib
   group **at vote time**, so no first_seen gating is needed. HowTheyVote covers the 9th term onward only
   (irrelevant — we want the 10th).
 
-### Recommended build (collect_ep)
-Page `/api/votes?page_size=100` until `timestamp < 2024-07-16` (~6 pages → 545 votes); for each, GET
-`/api/votes/{id}` and read `stats.by_group` → per-group `{agree,disagree,abstain}` (+ `procedure` →
-item type). ~550 requests total (polite, weekly). Write `data/europees-parlement.json` (same schema,
-**parties = groups** with an `EP_GROUPS` abbrev/colour map, exact counts → `granularity: "member"`),
-category `europees-parlement`, single scope; `meta.license` = ODbL/HowTheyVote+EP. Tier A. Optional
-later: a Dutch-delegation sub-view from `member_votes` (country `NLD`).
+### Build (collect_ep) — AS BUILT
+`ep_load(base, term_start)` pages `/api/votes?page_size=100` until `timestamp < 2024-07-16` (~6 pages →
+545 votes), then fetches each `/api/votes/{id}` via a **`ThreadPoolExecutor` (8 workers)** (the API is
+~1.5s/request; sequential would be ~15 min). The fetched details are **cached per `base`** so both EP
+scopes reuse one fetch. Two assemblers over the same details:
+- **`ep_assemble_groups`** → `stats.by_group` → per-group `{agree,disagree,abstain}` (exact MEP counts),
+  parties = `EP_GROUPS`. Writes `data/europees-parlement.json`. `granularity: "member"`, tier A.
+- **`ep_assemble_nl`** → filters `member_votes` to `country.code == "NLD"`, groups by **national party**
+  (`EP_NL_PARTY`), exact per-party counts, and attaches a **`members` roster** (MEP names) per party.
+  Writes `data/europees-parlement-nl.json`. Column order = `EP_NL_ORDER` (2024 seats).
+
+Both are scopes of the `europees-parlement` category (so the frontend shows a "Kies een weergave"
+picker: *Europese fracties* / *Nederlandse afvaardiging*). `meta.sourceName = "HowTheyVote.eu"` +
+`meta.license` = ODbL/HowTheyVote+EP.
+
+#### NL MEP → national party map (`EP_NL_PARTY`)
+HowTheyVote's member object has the **Euro-group + country but not the national party**, so the map is
+resolved **once** from the **EP Open Data Portal** (IDs match HowTheyVote's):
+`GET /api/v2/meps/show-current?limit=900` (filter `api:country-of-representation == "NL"` → the 31 MEP
+ids) → for each, `GET /api/v2/meps/{id}` → the `hasMembership` entry whose `membershipClassification`
+ends `NATIONAL_POLITICAL_GROUP` and has no `endDate` → its `organization` (`org/NNNN`) →
+`GET /api/v2/corporate-bodies/{NNNN}` whose `label` is the party **abbreviation** (e.g. `VVD`).
+Add former MEPs (who voted earlier in the term) the same way. The collector **WARNs** on any NL MEP id
+not in the map, so by-election replacements are easy to spot and top up.

@@ -14,7 +14,8 @@ the "things we DO have" companion to [provinces.md](provinces.md) (feasibility f
 |---|---|---|---|---|---|---|---|---|
 | **Tweede Kamer** | Tweede Kamer | TK OData | clean OData v4 API | per **fractie** (zetels) | motie, amendement, wetsvoorstel | 2945 | **aangenomen + verworpen** | **A — exact** |
 | **Eerste Kamer** | Eerste Kamer | eerstekamer.nl | HTML structured parse | per **fractie** (V/T only) | wetsvoorstel, motie, overig | 449 | **aangenomen + verworpen** | **B — parsed (beide zijden vermeld)** |
-| **Europees Parlement** | Europees Parlement | HowTheyVote.eu API | clean JSON API | per **fractie** (MEP-aantallen) | wetgeving, resolutie, initiatiefverslag, begroting | 545 | **aangenomen + verworpen** | **A — exact** |
+| **Europees Parlement — Europese fracties** | Europees Parlement | HowTheyVote.eu API | clean JSON API | per **fractie** (MEP-aantallen) | wetgeving, resolutie, initiatiefverslag, begroting | 545 | **aangenomen + verworpen** | **A — exact** |
+| **Europees Parlement — Nederlandse afvaardiging** | Europees Parlement | HowTheyVote API + EP Open Data | JSON API + portal map | per **NL-partij** (MEP-aantallen) | idem | 545 | **aangenomen + verworpen** | **A — exact** |
 | **Utrecht** | Prov. Staten | GO | clean JSON API | per **member** (counts) | motie, amendement, besluit, ordevoorstel | 566 | all (aangenomen + verworpen) | **A — exact** |
 | **Limburg** | Prov. Staten | iBabs | HTML structured parse | per **member** (counts) | motie, amendement | 321 | **aangenomen + verworpen** | **A — exact** |
 | **Noord-Holland** | Prov. Staten | iBabs | HTML free-text parse | per **fractie** (V/T only) | motie, amendement | 181 | **aangenomen only** | **B — parsed/inferred** |
@@ -84,7 +85,13 @@ NI), not individual MEPs or Dutch MEPs only. Source: HowTheyVote.eu `stats.by_gr
 4. **Term:** current (10th) EP, votes on/after 2024-07-16. (Differs from the TK and EK terms.) Includes
    **verworpen** (47 of 545).
 5. **Licence/attribution:** HowTheyVote.eu data is ODbL; `meta.license` credits HowTheyVote.eu + the
-   European Parliament. A Dutch-delegation breakout (from `member_votes.country`) is possible later.
+   European Parliament.
+6. **Two views (scopes).** *Europese fracties* (by Euro-group) and *Nederlandse afvaardiging* (the 31
+   NL MEPs grouped by **national party** — PVV, GL-PvdA, VVD, …, with exact MEP counts + an MEP roster
+   per party in the column tooltip). The NL party mapping comes from the **EP Open Data Portal**
+   (`NATIONAL_POLITICAL_GROUP` membership; HowTheyVote lacks it) — a static map topped up on a WARN.
+   This surfaces where a Dutch party diverges from its Euro-group (e.g. PVV abstaining on a vote PfE
+   carried). Same vote set and tier (A) as the group view.
 
 ### Eerste Kamer — tier B (faction-level, but both sides stated)
 The Senate has **no machine API** (see [data-sources.md](data-sources.md) §9); we parse the per-fractie

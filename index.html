@@ -534,12 +534,18 @@ async function openScope(cat, scope){
   const srcName = DATA.meta.sourceName ? esc(DATA.meta.sourceName)   // explicit attribution (EP: HowTheyVote.eu)
     : (multi && cat.scopeNoun)
     ? `${esc(DATA.meta.body)}, ${esc(cat.scopeNoun)} ${esc(DATA.meta.province)}` : esc(DATA.meta.body);
-  $("#appLead").innerHTML = multi
+  // Multi-scope copy: provinces read "… van Noord-Holland" (a place); other multi categories (EP:
+  // "Europese fracties" / "Nederlandse afvaardiging") read "… het Europees Parlement · <weergave>".
+  const isProv = cat.scopeNoun === "provincie";
+  $("#appLead").innerHTML = !multi
+    ? `Stemgedrag per fractie in ${art} <b>${esc(DATA.meta.body)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`
+    : isProv
     ? `Stemgedrag per partij in de <b>${esc(DATA.meta.body)} van ${esc(DATA.meta.province)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`
-    : `Stemgedrag per fractie in ${art} <b>${esc(DATA.meta.body)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`;
-  document.title = multi
-    ? `Wie stemde wat? — ${DATA.meta.body} ${DATA.meta.province}`
-    : `Wie stemde wat? — stemgedrag in de ${DATA.meta.body}`;
+    : `Stemgedrag in ${art} <b>${esc(DATA.meta.body)}</b> · <b>${esc(DATA.meta.province)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`;
+  document.title = !multi
+    ? `Wie stemde wat? — stemgedrag in de ${DATA.meta.body}`
+    : isProv ? `Wie stemde wat? — ${DATA.meta.body} ${DATA.meta.province}`
+    : `Wie stemde wat? — ${DATA.meta.body}: ${DATA.meta.province}`;
   $("#src").innerHTML = `Bron: <a href="${DATA.meta.source}" target="_blank" rel="noopener">${srcName}</a> · open data · periode ${DATA.meta.term} · bijgewerkt ${DATA.meta.generated_at.slice(0,10)}`;
   $("#helpSource").innerHTML = `Open data van de <a href="${DATA.meta.source}" target="_blank" rel="noopener">${srcName}</a>, periode ${esc(DATA.meta.term)}, wekelijks bijgewerkt.`
     + (DATA.meta.note ? ` ${esc(DATA.meta.note)}` : "");
@@ -865,7 +871,7 @@ function rowHTML(m, vps){
 function tableHTML(rows, vps){
   if(!rows.length) return `<div class="empty">Geen stemmingen voor deze selectie.</div>`;
   const head = `<thead><tr><th class="onderwerp-h">Onderwerp</th>${
-    vps.map(p=>`<th title="${esc(p.name)}">${ABBR[p.slug]||p.name}</th>`).join("")}</tr></thead>`;
+    vps.map(p=>`<th title="${esc(p.members&&p.members.length ? `${p.name} — ${p.members.length} leden:\n${p.members.join("\n")}` : p.name)}">${ABBR[p.slug]||p.name}</th>`).join("")}</tr></thead>`;
   return `<div class="table-scroll"><table>${head}<tbody>${rows.map(m=>rowHTML(m,vps)).join("")}</tbody></table></div>`;
 }
 
