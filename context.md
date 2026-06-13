@@ -6,10 +6,10 @@ A website that answers **"Ik wil zien wie wat gestemd heeft in …"**.
 - Landing page: a headline "Ik wil zien wie wat gestemd heeft in de provinciale staten",
   then the user **picks a province**, then sees a table of how each party voted on each
   motie in that province.
-- Later: more categories ("… in de Tweede Kamer", gemeenteraden, etc.). So the UX is:
-  pick a **category** (which legislative body) → pick the **scope** (e.g. province) →
-  see the table. Other plausible categories: Tweede Kamer, Eerste Kamer, gemeenteraden,
-  Europees Parlement, waterschappen — each is "an adapter → same frontend".
+- Realized: the UX is **pick a category** (which legislative body) → **pick the scope** (e.g. a
+  province, or an EP view) → see the table. **Four categories are now live**: Tweede Kamer, Eerste
+  Kamer, Provinciale Staten (3/12 provinces) and Europees Parlement — each "an adapter → same
+  frontend". Gemeenteraden + waterschappen were considered and **parked** (fragmented/niche).
 
 ## What the table shows
 Rows = moties, columns = parties (fracties). Each cell: **V** (green, *Voor*) or
@@ -40,7 +40,8 @@ view is already possible by deselecting parties.)
   no personal-data concerns).
 
 ## v1 scope decisions (locked / pending)
-- [x] **Period**: current term only (2023–2027).
+- [x] **Period**: current term only, **per body** (PS & Eerste Kamer 2023–2027, Europees Parlement
+  2024–2029, Tweede Kamer 2025–heden).
 - [x] **Stack**: Python (collector).
 - [x] **Provinces**: v1 shipped **Utrecht only** with a multi-province-ready UI; **now live with
   Utrecht, Noord-Holland and Limburg** (v2 — province selector active).

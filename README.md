@@ -2,22 +2,28 @@
 
 **▶ Live: https://carefulcamel61097.github.io/wie-stemde-wat/**
 
-> Ik wil zien wie wat gestemd heeft in de Tweede Kamer en de provinciale staten.
+> Ik wil zien wie wat gestemd heeft in de Tweede Kamer, de Eerste Kamer, de provinciale staten en het Europees Parlement.
 
 Een overzicht van het **stemgedrag per partij** op moties, amendementen, wetsvoorstellen en
 besluiten. Per stemming zie je in één tabel of elke fractie **Voor (V, groen)** of
 **Tegen (T, rood)** was — gebaseerd op open data van het orgaan zelf. Je kiest eerst een **niveau**
-(Tweede Kamer of Provinciale Staten) en daarna de **scope** (bij de provincies: welke provincie).
+(Tweede Kamer, Eerste Kamer, Provinciale Staten of Europees Parlement) en daarna de **scope** (bij de
+provincies: welke provincie; bij het Europees Parlement: per Europese fractie of de Nederlandse afvaardiging).
 
-**Nu live:**
+**Nu live (vier categorieën):**
 - **Tweede Kamer** (OData open data, periode 2025–heden) — exacte zetelaantallen per fractie,
-  inclusief *verworpen*; moties, amendementen én wetsvoorstellen.
-- **Utrecht** (GemeenteOplossingen) — exacte aantallen per lid.
-- **Limburg** (iBabs) — exacte aantallen per lid, inclusief *verworpen* moties/amendementen.
-- **Noord-Holland** (iBabs) — alleen op fractieniveau (V/T), alleen aangenomen.
+  inclusief *verworpen*; moties, amendementen én wetsvoorstellen. Tier A.
+- **Eerste Kamer** (eerstekamer.nl, 2023–2027) — op fractieniveau (V/T, beide zijden vermeld),
+  inclusief *verworpen*; hamerstukken niet opgenomen. Tier B.
+- **Provinciale Staten** (3/12): **Utrecht** (GemeenteOplossingen, exacte aantallen per lid),
+  **Limburg** (iBabs, exacte aantallen per lid, incl. *verworpen*), **Noord-Holland** (iBabs,
+  fractieniveau, alleen aangenomen).
+- **Europees Parlement** (HowTheyVote.eu, 2024–2029) — exacte aantallen per Europese fractie, incl.
+  *verworpen*. Twee weergaven: **Europese fracties** en de **Nederlandse afvaardiging** (de 31 NL-leden
+  per Nederlandse partij). Tier A.
 
 De collector is multi-vendor / multi-categorie (een adapter per platform: GO / iBabs / Tweede Kamer
-OData). Hoe betrouwbaar elke bron is, staat in [coverage.md](coverage.md).
+OData / Eerste Kamer HTML / HowTheyVote). Hoe betrouwbaar elke bron is, staat in [coverage.md](coverage.md).
 
 Naast de tabel: filters (type, partij, zoeken, uitslag, "alleen omstreden"), vastpinnen,
 **CSV-download** van de selectie, en drie analyses (popups): **Overeenkomst** (overeenkomstmatrix
@@ -33,10 +39,12 @@ collector (Python)  ->  data/<scope>.json  ->  statische site  ->  GitHub Pages
 
 - **Geen server, geen database.** De data is een gegenereerd JSON-bestand dat de site inleest.
 - De `collector/` heeft een **adapter per platform** (GemeenteOplossingen / iBabs / Tweede Kamer
-  OData; Notubiz volgt). Hij normaliseert alles naar één schema, schrijft een dataset per scope en
-  een `data/catalog.json` die de scopes per categorie (Tweede Kamer / Provinciale Staten) indexeert.
+  OData / Eerste Kamer HTML / HowTheyVote; Notubiz volgt). Hij normaliseert alles naar één schema,
+  schrijft een dataset per scope en een `data/catalog.json` die de scopes per categorie (Tweede Kamer
+  / Eerste Kamer / Provinciale Staten / Europees Parlement) indexeert.
 - De frontend leest `catalog.json` en bouwt daarmee de startpagina (kies categorie → scope). De
-  gekozen scope staat in de URL-hash (`#tweede-kamer`, `#provinciale-staten/utrecht`) → deelbaar.
+  gekozen scope staat in de URL-hash (`#tweede-kamer`, `#provinciale-staten/utrecht`,
+  `#europees-parlement/europees-parlement-nl`) → deelbaar.
 - De aantallen (`voor` / `tegen` / `onthouden`) staan in de data; V/T wordt in de browser
   afgeleid (`voor > tegen`). Zo blijven afsplitsingen en uitzonderingen zichtbaar.
 
@@ -60,7 +68,11 @@ python -m http.server 8000       # bekijk de site op http://localhost:8000
 - [outreach.md](outreach.md) — concept-mails (Notubiz-token, griffies) om meer provincies te ontsluiten
 
 ## Bron & licentie
-**Open data** van het orgaan zelf: de **Tweede Kamer der Staten-Generaal**
-(opendata.tweedekamer.nl, OData), en de provincies (Provinciale Staten / Statengriffie): Utrecht
-(GemeenteOplossingen), Noord-Holland en Limburg (iBabs publieksportaal). Dit project hergebruikt
-die data en is geen officiële uitgave van de overheid.
+**Open data** van het orgaan zelf:
+- **Tweede Kamer der Staten-Generaal** (opendata.tweedekamer.nl, OData).
+- **Eerste Kamer der Staten-Generaal** (eerstekamer.nl).
+- **Provinciale Staten** (Statengriffie): Utrecht (GemeenteOplossingen), Noord-Holland en Limburg (iBabs).
+- **Europees Parlement**: hoofdelijke stemmingen via **HowTheyVote.eu** (Open Database License, ODbL),
+  met fractie-indeling uit het **EP Open Data Portal**.
+
+Dit project hergebruikt die data (met bronvermelding) en is geen officiële uitgave van de overheid.

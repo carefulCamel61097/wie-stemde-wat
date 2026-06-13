@@ -3,7 +3,7 @@
 > ## ▶ NEXT (resume here)
 > **TARGET — LOCKED (2026-06-12): four categories — ✅ ALL FOUR NOW LIVE (2026-06-13).** The site covers
 > four legislative bodies (landing order: national → regional → EU):
-> 1. **Tweede Kamer** — ✅ LIVE (Phase 4). ~2,974 stemmingen, OData, per-fractie seat counts incl. verworpen. Tier A.
+> 1. **Tweede Kamer** — ✅ LIVE (Phase 4). ~2,945 stemmingen (groeit wekelijks), OData, per-fractie seat counts incl. verworpen. Tier A.
 > 2. **Eerste Kamer** — ✅ LIVE (Phase 5). `data/eerste-kamer.json`, 449 stemmingen (2023–2027). No EK API —
 >    per-fractie V/T parsed from the "stemmingen per vergaderdag" HTML (both sides named, no counts → tier B);
 >    hamerstukken excluded, hoofdelijke aggregated to fractie. Recipe: data-sources.md §9.
@@ -147,7 +147,8 @@ Extra views (data already supports these):
   and the lone-dissenter list. Party picker + type chips. DONE.
 - ✅ **Compare two parties** (popup) — % agreement + list of stemmingen where they differ,
   with V/T/O badges. Two pickers + type chips. DONE.
-- ⏳ (optional) link matrix cell click → open Compare for that pair, pre-filled.
+- ❌ link matrix cell click → open Compare for that pair — **DECIDED AGAINST** (2026-06-13): users may
+  click a cell to copy/read the number and would be surprised to be navigated away.
 
 Parked (v1.1 / v2):
 - Shareable URL encoding filter state. Member-level detail (privacy: later).
@@ -273,7 +274,7 @@ fetches each `/api/votes/{id}` for `stats.by_group` → exact per-group `{agree,
 Left, ESN, NI), types {wetgeving 183, resolutie 127, initiatiefverslag 118, begroting 30, overig 87},
 498 adopted / 47 rejected, `granularity: "member"` (exact counts → tier A). Validated: the Ukraine-
 accountability vote shows the coherent mainstream-V / far-left+far-right-T split. Category
-`europees-parlement` category; weekly Action picks it up via the full run. Frontend (generic): EP
+`europees-parlement`; weekly Action picks it up via the full run. Frontend (generic): EP
 procedure-type labels/badges + the "het Parlement" article fix + EP SEO meta. Recipe + caveats:
 [data-sources.md](data-sources.md) §10; reliability: [coverage.md](coverage.md).
 
@@ -288,7 +289,8 @@ divergence (e.g. PVV abstaining where PfE carried a vote).
 
 ## Decisions
 **Locked**
-- Period: current term (2023–2027) only.
+- Period: **current term per body** — Provinciale Staten & Eerste Kamer 2023–2027, Europees Parlement
+  2024–2029, Tweede Kamer 2025–heden. (Each body's term boundary is set in its `SOURCES` entry.)
 - Stack: Python (collector). Frontend: dependency-light HTML/JS.
 - Body: Provinciale Staten plenair only (commissies don't hold the votes).
 - Source strategy: per-vendor adapters; OpenBesluitvorming only as cross-check/fallback.
@@ -305,16 +307,17 @@ divergence (e.g. PVV abstaining where PfE carried a vote).
 - **Transpose view**: SETTLED — will NOT add; deselecting all-but-one party already gives a
   single-party view, so it's unnecessary (see dropped note above).
 - **Category scope**: LOCKED (2026-06-12) to **four** bodies — Tweede Kamer, Eerste Kamer,
-  Provinciale Staten, Europees Parlement. Gemeenteraden + waterschappen explicitly **parked** (see
-  the NEXT block). EK + EP are each gated on a feasibility probe (Phases 5–6).
+  Provinciale Staten, Europees Parlement — **all four now LIVE (2026-06-13)**. Gemeenteraden +
+  waterschappen explicitly **parked** (see the NEXT block).
 
 ## Cost
 €0 with GitHub (repo + Pages + Actions) and a free `*.github.io` domain. Only a custom
 domain costs money (optional, later).
 
-## Future categories (same architecture)
-Target set (LOCKED, 2026-06-12): **Tweede Kamer** ✅, **Eerste Kamer** (Phase 5), **Provinciale
-Staten** ◑, **Europees Parlement** (Phase 6). Each = a new adapter feeding the same frontend (a new
-category/scope in the catalog; the IA already supports it). **Parked** (not pursuing now): gemeenteraden
-(fragmented/local/low-profile) and waterschappen (niche). The Council of the EU is out of scope (it's
-governments negotiating, not an elected chamber).
+## Categories (same architecture) — target set COMPLETE
+Target set (LOCKED 2026-06-12, all LIVE 2026-06-13): **Tweede Kamer** ✅, **Eerste Kamer** ✅,
+**Provinciale Staten** ◑ (3/12 provinces — growth is the outreach track), **Europees Parlement** ✅
+(two views: Europese fracties + Nederlandse afvaardiging). Each = a new adapter feeding the same
+frontend (a category/scope in the catalog; the IA absorbed all four with no refactor). **Parked** (not
+pursuing now): gemeenteraden (fragmented/local/low-profile) and waterschappen (niche). The Council of
+the EU is out of scope (it's governments negotiating, not an elected chamber).
