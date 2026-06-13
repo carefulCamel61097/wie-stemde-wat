@@ -141,6 +141,7 @@ SOURCES = [
         "term_start": (2024, 7, 16),
         "term_label": "2024-2029",
         "style": {"accent": "#003399", "headerBg": "#041f4a"},   # EU flag blue
+        "sourceName": "HowTheyVote.eu",   # ODbL attribution — the "Bron:" link points here, not the EP
         "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen "
                    "(roll-call) van het Europees Parlement",
         "note": "Stemmen per Europese fractie met exacte aantallen (voor/tegen/onthouding), op basis "
@@ -1275,6 +1276,7 @@ def main():
                     "term": p["term_label"],
                     "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                     "source": p.get("public", p["base"]),
+                    "sourceName": p.get("sourceName", ""),   # overrides the "Bron:" label (e.g. EP via HowTheyVote)
                     "license": p.get("license", ""),
                     "style": p.get("style", {}),
                     "note": p.get("note", ""),

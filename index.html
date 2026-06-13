@@ -531,7 +531,8 @@ async function openScope(cat, scope){
   // a single-body category (Tweede Kamer) just its own name (scopeNoun is null there).
   const multi = cat.scopes.length > 1;
   const art = /parlement/i.test(DATA.meta.body) ? "het" : "de";   // "het Europees Parlement" vs "de … Kamer"
-  const srcName = (multi && cat.scopeNoun)
+  const srcName = DATA.meta.sourceName ? esc(DATA.meta.sourceName)   // explicit attribution (EP: HowTheyVote.eu)
+    : (multi && cat.scopeNoun)
     ? `${esc(DATA.meta.body)}, ${esc(cat.scopeNoun)} ${esc(DATA.meta.province)}` : esc(DATA.meta.body);
   $("#appLead").innerHTML = multi
     ? `Stemgedrag per partij in de <b>${esc(DATA.meta.body)} van ${esc(DATA.meta.province)}</b> — <b>Voor</b> of <b>Tegen</b> per stemming.`
