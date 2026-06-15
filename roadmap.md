@@ -7,19 +7,21 @@
 > 2. **Eerste Kamer** — ✅ LIVE (Phase 5). `data/eerste-kamer.json`, 449 stemmingen (2023–2027). No EK API —
 >    per-fractie V/T parsed from the "stemmingen per vergaderdag" HTML (both sides named, no counts → tier B);
 >    hamerstukken excluded, hoofdelijke aggregated to fractie. Recipe: data-sources.md §9.
-> 3. **Provinciale Staten** — ◑ category LIVE, 3/12 provinces (Utrecht, Noord-Holland, Limburg). Growing it
->    to more provinces is the outreach track below (Notubiz token + griffie lobby).
+> 3. **Provinciale Staten** — ◑ category LIVE, **7/12 provinces** (Utrecht, Noord-Holland, Limburg,
+>    Zuid-Holland, Fryslân, Gelderland, Overijssel). The 4 Notubiz provinces shipped in Phase 7 (tier A);
+>    remaining growth (Flevoland/Drenthe) is the griffie lobby below.
 > 4. **Europees Parlement** — ✅ LIVE (Phase 6). `data/europees-parlement.json`, 545 votes (2024–2029), by
 >    **European political group**. Source = HowTheyVote.eu API (`stats.by_group`, exact per-group MEP counts
 >    → tier A), concurrent detail fetch, ODbL. Recipe: data-sources.md §10.
 >
 > **▶ The locked target is complete.** Remaining work is depth, not new categories:
-> - **▶▶ NEXT BUILD — Phase 7: `collect_notubiz` adapter (NO TOKEN NEEDED).** Feasibility probe done
->   (2026-06-15, verified on Zuid-Holland): the 5 Notubiz PS provinces are reachable from **public**
->   data alone — Notubiz declined a token (2026-06-15) but it turns out not to matter. Recipe in
->   data-sources.md §11. Build EK-style, Zuid-Holland first, then fan out (Fryslân, Groningen,
->   Gelderland, Overijssel). Tier A (exact per-fractie counts). Takes PS from **3/12 → up to 8/12**.
-> - **Then griffie lobby → Flevoland/Drenthe** (GO stemgedrag module) — still blocked on replies.
+> - **✅ DONE — Phase 7: `collect_notubiz` adapter (NO TOKEN NEEDED).** Shipped 2026-06-15: events +
+>   votings API (`version=1.21`) + portal `vergadering` HTML → **4 provinces, tier A** (exact per-member
+>   counts, incl. verworpen): **Zuid-Holland** 1062, **Fryslân** 807, **Gelderland** 429, **Overijssel**
+>   549 stemmingen. **Groningen turned out a dead end** (0 votings across all 38 plenary meetings) → 4,
+>   not 5. PS now **3/12 → 7/12**. As-built recipe: data-sources.md §11; reliability: coverage.md.
+> - **Then griffie lobby → Flevoland/Drenthe** (GO stemgedrag module) — still blocked on replies. After
+>   those two, PS would be 9/12 (Groningen + the iBabs dead-ends Noord-Brabant/Zeeland are the rest).
 > - **Optional polish:** ✅ EP **Dutch-delegation breakout** shipped (second EP scope, by national party,
 >   with MEP rosters). ✅ EP source attribution → HowTheyVote.eu. TK perf checked = fine (slightly slower
 >   first load, no sluggishness after). Pick up gemeenteraden/waterschappen only on demand (parked).
@@ -29,11 +31,11 @@
 > straight to its table.
 >
 > **Provinciale Staten growth — status:**
-> - **Notubiz token track: CLOSED (no longer needed).** Notubiz replied 2026-06-15 declining a token
->   (a token alone is insufficient; would also need a rights-bearing account they can't provide). The
->   2026-06-15 probe then proved the data is fully public anyway (events + votings API at `version=1.21`
->   + portal `vergadering` HTML for the per-fractie breakdown) → see Phase 7 above. No follow-up to send;
->   an optional thank-you only.
+> - **Notubiz: DONE (no token needed).** Notubiz declined a token 2026-06-15 (a token alone is
+>   insufficient; would also need a rights-bearing account) — but it didn't matter: the data is fully
+>   public (events + votings API at `version=1.21` + portal `vergadering` HTML). `collect_notubiz` shipped
+>   the same day → 4 provinces live (ZH, Fryslân, Gelderland, Overijssel; Groningen = dead end). No
+>   follow-up to send; an optional thank-you only.
 > - **Griffie mails** ([outreach.md](outreach.md) §2, sent 2026-06-11 to `griffie@flevoland.nl` +
 >   `Statengriffie@drentsparlement.nl`) → if they enable the GO stemgedrag module, Flevoland/Drenthe
 >   become config-only. (PDF-parsing rejected: fragile, per-griffie, low ROI.) **STILL the only live
@@ -291,6 +293,28 @@ is resolved once from the **EP Open Data Portal** (`NATIONAL_POLITICAL_GROUP` me
 lacks it) and WARNs on unmapped ids. EP is now multi-scope (a "Kies een weergave" picker); the
 frontend's province-centric copy was generalized via `scopeNoun`. Surfaces Dutch-vs-Euro-group
 divergence (e.g. PVV abstaining where PfE carried a vote).
+
+### Phase 7 — Notubiz provinces  ✅ DONE (2026-06-15)
+Four more **Provinciale Staten** via one new vendor adapter (`collect_notubiz`) — **no API token needed**.
+Not a new category; PS grows **3/12 → 7/12**. Feasibility + as-built recipe: [data-sources.md](data-sources.md) §11.
+
+**7a — Feasibility probe ✅ (2026-06-15) — verdict: public, tier A.** Notubiz declined a token, but the
+PS vote data is fully reachable from public surfaces: the events + votings API (`version=1.21`) and the
+portal `vergadering` HTML (per-fractie breakdown with exact member counts). The auth-walled
+`role_id → fractie` map isn't needed — the portal already names the fractie + members.
+
+**7b — Built `collect_notubiz` (as-built).** Hybrid: the API discovers meetings (filter the plenary
+`gremium_id`, `agenda_item_count>0`) and gives each stemming's title/result/`voting_type`; the portal
+page gives the per-fractie counts (count the member `<li class="in_favor|against">` rows; `chart_<id>` ==
+votings API `id`). Every parsed total is cross-checked against the API's per-member votes (no mismatches).
+Result: **Zuid-Holland** 1062, **Fryslân** 807, **Gelderland** 429, **Overijssel** 549 stemmingen — all
+tier A (`granularity: "member"`, incl. verworpen + the odd *staken* tie). Item type from `voting_type`
+(null for Gelderland / much of ZH → title-code fallback, incl. Frisian "Moasje"/"Amendemint"). Spelling
+variants merged (`NOTUBIZ_ALIASES`); non-fractie labels dropped (`NOTUBIZ_SKIP` "Geen partij"); member
+names parsed but not stored (party-level, privacy). **Groningen** (also Notubiz) is a **dead end** — 0
+votings across all 38 plenary meetings. Frontend: generic (no IA change — four new scopes in the catalog,
+each with its own huisstijl). The weekly Action picks them up via the full `collect.py` run. Reliability:
+[coverage.md](coverage.md).
 
 ## Decisions
 **Locked**

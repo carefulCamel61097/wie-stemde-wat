@@ -19,8 +19,18 @@ the "things we DO have" companion to [provinces.md](provinces.md) (feasibility f
 | **Utrecht** | Prov. Staten | GO | clean JSON API | per **member** (counts) | motie, amendement, besluit, ordevoorstel | 566 | all (aangenomen + verworpen) | **A — exact** |
 | **Limburg** | Prov. Staten | iBabs | HTML structured parse | per **member** (counts) | motie, amendement | 321 | **aangenomen + verworpen** | **A — exact** |
 | **Noord-Holland** | Prov. Staten | iBabs | HTML free-text parse | per **fractie** (V/T only) | motie, amendement | 181 | **aangenomen only** | **B — parsed/inferred** |
+| **Zuid-Holland** | Prov. Staten | Notubiz | API + portal HTML parse | per **member** (counts) | motie, amendement, besluit, ordevoorstel | 1062 | **aangenomen + verworpen** | **A — exact** |
+| **Fryslân** | Prov. Staten | Notubiz | API + portal HTML parse | per **member** (counts) | motie, amendement, besluit | 807 | **aangenomen + verworpen** | **A — exact** |
+| **Gelderland** | Prov. Staten | Notubiz | API + portal HTML parse | per **member** (counts) | motie, amendement, besluit, ordevoorstel | 429 | **aangenomen + verworpen** | **A — exact** |
+| **Overijssel** | Prov. Staten | Notubiz | API + portal HTML parse | per **member** (counts) | motie, amendement, besluit | 549 | **aangenomen + verworpen** | **A — exact** |
 
 (Counts as of the last refresh; the weekly Action keeps them current. TK = current term, 2025–heden.)
+
+> **Provinciale Staten: 7/12 live** (Utrecht, Noord-Holland, Limburg, Zuid-Holland, Fryslân,
+> Gelderland, Overijssel). The 4 Notubiz provinces above are **tier A** — the portal records each vote
+> hoofdelijk (per member), so we aggregate exact per-fractie counts. **Groningen** is also on Notubiz
+> but publishes **no** per-stemming data (0 votings across all 38 plenary meetings in the term) → a
+> dead end, like Noord-Brabant on iBabs. Flevoland/Drenthe (GO) remain blocked on the griffie lobby.
 
 > Note: vendor ≠ reliability. Both Limburg and Noord-Holland run iBabs, but Limburg's portal
 > publishes structured per-member vote counts (tier A) while NH publishes only free-text faction
@@ -35,15 +45,18 @@ How directly the published data maps to what we display, and how much we infer.
   *Tweede Kamer* (OData `Stemming` — per-fractie `Soort` + `FractieGrootte` seat counts),
   *Europees Parlement* (HowTheyVote.eu `stats.by_group` — exact per-group MEP counts FOR/AGAINST/
   ABSTENTION; a group split across FOR/AGAINST is a real split), *Utrecht* (GO JSON, per-member
-  tallies) and *Limburg* (iBabs "Stemmen" field — per-fractie member counts for the voor/tegen sides).
+  tallies), *Limburg* (iBabs "Stemmen" field — per-fractie member counts for the voor/tegen sides) and
+  the **four Notubiz provinces** (*Zuid-Holland, Fryslân, Gelderland, Overijssel* — the portal lists
+  every member's own voor/tegen vote, so counts and intra-fractie splits are exact).
 - **B — parsed / inferred (semi-structured source).** The outcome is published, but as text/HTML we
   must parse, and (for NH) part of the result is *computed* rather than stated. Correct for "which
   fractie voted voor/tegen" on the items present, with the caveats below. *Noord-Holland* (iBabs
   "Stemverhouding" — one side named + "overige fracties" inferred) and *Eerste Kamer* (eerstekamer.nl
   HTML — **both** sides named, so nothing inferred, but no seat counts). Both are faction-level V/T.
 - **C — derived / unavailable (not implemented).** Votes exist only in PDFs (GO Flevoland/Drenthe
-  besluitenlijsten) or behind an auth-gated map (Notubiz `role_id → fractie`). Either needs new work
-  (PDF parsing / a token) and would be lower fidelity. Nothing in the dataset is tier C yet.
+  besluitenlijsten). The Notubiz `role_id → fractie` API map *is* auth-gated, but it turned out we don't
+  need it — the public portal already names the fractie + members (tier A; §11). Nothing in the dataset
+  is tier C yet.
 
 ## Per-scope caveats (what could be wrong, and why)
 
@@ -127,6 +140,34 @@ sides are named, so nothing is inferred), but less than the tier-A sources (no s
   ingetrokken/aangehouden items; essentially all *decided* moties have a recorded breakdown.
 - Local fracties (LOKAAL-LIMBURG, Horizon, oos limburg, SVL) pass through un-aliased.
 
+### Zuid-Holland, Fryslân, Gelderland, Overijssel (Notubiz) — tier A
+The four Notubiz provinces share one adapter (`collect_notubiz`); see [data-sources.md](data-sources.md)
+§11. No API token is needed: the public events + votings API (`version=1.21`) discovers the plenary
+meetings and gives each stemming's title/result, and the public **portal** vergadering page carries the
+per-fractie breakdown with exact member counts.
+1. **Exact per-member counts.** The portal lists each fractie with its members tagged voor/against; we
+   count them, so tallies and intra-fractie splits are real — `granularity: "member"`. The `chart_<id>`
+   div joins 1:1 to the votings API `id`, and we **cross-check** every parsed total against the API's
+   own per-member votes (the collector WARNs on any mismatch; none in the current data).
+2. **Includes verworpen** (and the occasional *staken van stemmen* → tie). The dataset is the items
+   that went to a **hoofdelijke stemming**.
+3. **Items without a roll-call are skipped.** Agenda votings decided *bij acclamatie* / without a
+   recorded hoofdelijke stemming carry no per-fractie breakdown (the API returns them with no votes and
+   no result) and drop out — consistent with Limburg/EK. Members who didn't take part in a stemming
+   aren't in its tally.
+4. **Item type** comes from the API's `voting_type` (motion/amendment/council_proposal) where present,
+   else from the title's code prefix — which differs per province ("M 1567"/"A 873"/"SV …" ZH,
+   "26M45" Gelderland, "PS26-M52"/"PS26-MV9" Overijssel) or Frisian on Fryslân ("Moasje"/"Amendemint").
+5. **Mid-term composition.** Spelling variants / pure renames are merged into one column (ZH:
+   GroenLinks-PvdA ↔ "PRO"; "Partij voor de Dieren" ↔ "PvdD"); fracties that genuinely existed
+   separately before a merger are kept separate. One-person afsplitsingen are their own named columns
+   (Fryslân "Steatelid Van Dijk"/"Jonker", Gelderland "Groep Roerdink"/"Claassen"); a non-fractie label
+   ("Geen partij" — a member mid-afsplitsing with no fractie yet) is dropped, not shown as a party.
+6. **Coverage starts when the portal does.** Gelderland's published votings begin 2024-01-31 (no
+   per-fractie charts for its 2023 plenary meetings); the others reach back to term start (April 2023).
+7. **Personal data.** Votes are recorded per member, but the dataset is kept **party-level** (member
+   names are not stored) — consistent with the v1 privacy stance.
+
 ### Noord-Holland — tier B
 Reliable for the headline question ("did fractie X vote voor or tegen this adopted motie?"), but
 know these limits before trusting an exact figure:
@@ -151,6 +192,10 @@ know these limits before trusting an exact figure:
   does not** (its registers are adopted-only — rejected ones live only in besluitenlijst/notulen PDFs).
   So the gap is portal-specific, not vendor-wide. (Zeeland's "Stemming" report turned out **empty**;
   Noord-Brabant publishes outcomes but no per-fractie breakdown — neither is usable yet.)
-- **Faction-level provinces lose "ruwe getallen" / exact splits** — inherent to iBabs/Notubiz.
+- **Faction-level provinces lose "ruwe getallen" / exact splits** — inherent to iBabs *free-text*
+  provinces (NH). The Notubiz provinces are the opposite: per-member counts, so tier A.
+- **Notubiz dead end: Groningen** publishes no per-stemming votings via the portal (0 across the term);
+  revisit only if the province starts recording hoofdelijke stemmingen there. The remaining Notubiz
+  province, **Flevoland**, sits under the GO griffie lobby (it's on GO, not Notubiz).
 - **Spot-checking.** Tier-B data isn't self-verifying; eyeball a few moties against the portal after
   big parser changes. Method per source is in [data-sources.md](data-sources.md).

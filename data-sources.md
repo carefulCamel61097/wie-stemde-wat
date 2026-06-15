@@ -156,20 +156,27 @@ Known so far (to be completed for all 12):
 
 | Province | Vendor | Portal (example) |
 |----------|--------|------------------|
-| Utrecht | **GemeenteOplossingen (GO)** | stateninformatie.provincie-utrecht.nl |
-| Flevoland | **GO** (co-creation project) | (GO — reuse our adapter) |
-| Noord-Holland | **iBabs** | noordholland.bestuurlijkeinformatie.nl |
-| Overijssel | **Notubiz** | overijssel.notubiz.nl |
-| Gelderland | ? (gelderland.stateninformatie.nl) | to verify |
-| Drenthe, Fryslân, Groningen, Limburg, Noord-Brabant, Zeeland, Zuid-Holland | ? | TODO |
+| Utrecht | **GO** ✅ | stateninformatie.provincie-utrecht.nl |
+| Flevoland | **GO** (votes 404 — griffie lobby) | (GO — reuse our adapter) |
+| Noord-Holland | **iBabs** ✅ | noordholland.bestuurlijkeinformatie.nl |
+| Limburg | **iBabs** ✅ | limburg.bestuurlijkeinformatie.nl |
+| Noord-Brabant, Zeeland | **iBabs** (dead ends) | (no per-fractie breakdown / empty) |
+| Zuid-Holland | **Notubiz** ✅ | pzh.notubiz.nl |
+| Fryslân | **Notubiz** ✅ | fryslan.notubiz.nl |
+| Gelderland | **Notubiz** ✅ | gelderland.notubiz.nl |
+| Overijssel | **Notubiz** ✅ | overijssel.notubiz.nl |
+| Groningen | **Notubiz** (dead end — 0 votings) | groningen.notubiz.nl |
+| Drenthe | **GO** (votes 404 — griffie lobby) | (GO) |
 
 ⇒ Architecture: **one adapter per vendor** (GO / iBabs / Notubiz), each normalizing to a
 common schema. Our Utrecht reverse-engineering = the **GO adapter** (works for Flevoland
 too, same software).
 
 - **iBabs**: has an API + open data (data.overheid.nl "ibabs-online"). Adapter TODO.
-- **Notubiz**: public API at `api.notubiz.nl` (no formal public docs). **CRACKED — no token needed**
-  (probe 2026-06-15); recipe in **§11**. Adapter (`collect_notubiz`) is the next build.
+- **Notubiz**: public API at `api.notubiz.nl` (no formal public docs). **BUILT — no token needed**
+  (`collect_notubiz`, 2026-06-15): events + votings API + portal HTML → **Zuid-Holland, Fryslân,
+  Gelderland, Overijssel** (tier A). **Groningen** is a dead end (no per-stemming votings). Recipe + as-
+  built in **§11**.
 
 ### Unified national source (fallback, NOT primary)
 **OpenBesluitvorming / Open Stateninformatie** (Open State Foundation + VNG):
@@ -455,7 +462,7 @@ ends `NATIONAL_POLITICAL_GROUP` and has no `endDate` → its `organization` (`or
 Add former MEPs (who voted earlier in the term) the same way. The collector **WARNs** on any NL MEP id
 not in the map, so by-election replacements are easy to spot and top up.
 
-## 11. Notubiz — public API + portal HTML (CRACKED, verified 2026-06-15, no token, tier A)
+## 11. Notubiz — public API + portal HTML (BUILT 2026-06-15, no token, tier A, 4 provinces)
 **Context:** Notubiz declined an API token (2026-06-15: a token alone is insufficient — it would also
 need a rights-bearing *account* they can't provide). **It doesn't matter** — the live probe proved the
 PS vote data is fully reachable from **public** surfaces. Verified on **Provincie Zuid-Holland**
@@ -489,19 +496,41 @@ per stemming:
   `<vote> <FRACTIE> Leden: <Name> <Name> …` runs (e.g. `tegen BBB Leden: R.A.H. Kaijser H. Looij …` /
   `voor CDA Leden: …`). One vergadering page contains *all* stemmingen of that meeting (17 on 2025-01-29).
 
-### Build plan (collect_notubiz) — NOT YET BUILT
-Recommended: **HTML-primary, EK-style** (like §9) — parse the portal `vergadering` pages directly, since
-they already carry fractie + members + exact counts + result in one place. The API drives discovery
-(which meetings, which portal slug, and a structured cross-check of counts/result via `voting_id`).
-1. New `SOURCES` entries (one per Notubiz province): `vendor: "notubiz"`, `organisation_id`, plenary
-   `gremium_id`, portal `slug`, `term_start`, huisstijl `style`. Category = `provinciale-staten`.
-2. `collect_notubiz(p)`: events (`version=1.21`, term window, filter `gremium_id`, `agenda_item_count>0`)
-   → for each meeting, fetch the portal `vergadering/<mid>` page → parse stemming blocks
-   (`chart_<vid>` → counts/result; following `Leden:` runs → fractie → V/T per fractie). Aggregate
-   hoofdelijke member votes to the fractie (V = voor>tegen), like EK. Cross-check totals against the
-   API votings by `voting_id`.
-3. **Tier A** (exact per-fractie counts → `granularity: "member"`, ruwe-getallen toggle like Limburg).
-   Build **Zuid-Holland first** as the reference, then add the other four as config (re-probe each
-   province's plenary `gremium_id` + portal `slug`; expect minor HTML variations).
-4. Member names are personal data; keep the dataset **party-level** (aggregate to fractie, store names
-   only in tooltips if at all) — consistent with the v1 privacy stance and the EK adapter.
+### Build (collect_notubiz) — AS BUILT (2026-06-15, 4 provinces live, tier A)
+Built as a **hybrid**: the API drives discovery + metadata, the portal HTML gives the per-fractie counts.
+`collect_notubiz(p)` (config per province: `organisation_id`, plenary `gremium_id`, portal `slug`,
+`term_start`):
+1. **Discover** — page the events API (`version=1.21`, term window) and keep events whose `gremium.id`
+   is the plenary gremium **and** `event_type_data.agenda_item_count > 0` (drops recesses). → `(mid, date)`.
+2. **Per meeting** — votings API → each stemming's `id`, `title`, `voting_result`, `voting_type`, and
+   per-member `votes`; portal `vergadering/<mid>` page → `notubiz_parse_meeting` extracts, per stemming,
+   `{fractie: {agree,disagree}}` by counting the member `<li class="in_favor|against">` rows inside each
+   `<li>FRACTIE<ul>…</ul></li>` under the `votes_parties` block. Join HTML↔API by `chart_<id> == votings id`.
+3. **Cross-check** the parsed per-fractie totals against the API's own per-member votes (WARN on mismatch
+   — none in the current data); skip any voting with no portal chart (acclamatie / no roll-call → the API
+   also returns it with 0 votes + null result).
+
+Key facts the build pinned down (vs the recipe above):
+- **`chart_<id>` matches the votings API `id`, NOT `voting_id`** — the join key is `id`.
+- The portal markup is **structured, not free text**: `votes_list against|in_favor|divided` sides, each a
+  `<ul>` of `<li>FRACTIE<ul><li>Leden:</li><li class="in_favor|against">Name</li>…</ul></li>`. Counting
+  the member `<li>` classes gives exact tallies; a fractie under `divided` (or with mixed member classes)
+  is a real split. (No need for the `Leden:` text runs or the chart `[...]` arrays — those only confirm.)
+- **Result** from `voting_result`: `adopted`→accepted, `rejected`→rejected, `equal`→tie (staken).
+- **Item type** from `voting_type` (`motion`/`amendment`/`council_proposal`/`initiative_proposal`) where
+  present, else from the title — codes differ per province ("M 1567"/"A 873"/"SV …" ZH, "26M45" Gelderland,
+  "PS26-M52"/"PS26-MV9" Overijssel) and are **Frisian** on Fryslân ("Moasje"/"Amendemint"). `voting_type`
+  is fully populated for Fryslân/Overijssel, **null for all of Gelderland** and ~⅓ of ZH → the title
+  fallback matters.
+- **UA:** the collector's normal identifying UA works (only an *empty* UA gets 403) — no browser spoof
+  needed in GitHub Actions; the portal serves full HTML even with `Accept: application/json`.
+- **Composition:** merge spelling variants / pure renames into one column (`NOTUBIZ_ALIASES`: ZH
+  GroenLinks-PvdA↔PRO, "Partij voor de Dieren"↔PvdD); drop non-fractie labels (`NOTUBIZ_SKIP`: "Geen
+  partij" = a member mid-afsplitsing). One-person afsplitsingen keep their own named column.
+- **Privacy:** member names are parsed but **not stored** — the dataset is party-level (counts only).
+
+**Live (4):** Zuid-Holland (org 3868, gremium 11157, `pzh`) 1062 · Fryslân (822, 430, `fryslan`) 807 ·
+Gelderland (1769, 2437, `gelderland`) 429 · Overijssel (1750, 2229, `overijssel`) 549 — all tier A,
+`granularity: "member"`, incl. verworpen. **Groningen (1396, gremium 887, `groningen`) is a DEAD END**:
+0 votings across all 38 plenary meetings in the term — it doesn't record/publish hoofdelijke stemmingen
+on the portal. So Notubiz yields 4, not 5, taking PS to **7/12**.

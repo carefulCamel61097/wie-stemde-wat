@@ -86,6 +86,78 @@ SOURCES = [
                 "Moties/amendementen zonder hoofdelijke stemming zijn niet opgenomen.",
     },
     {
+        # Notubiz province. No token needed (data-sources.md §11): the public events + votings API
+        # (version=1.21) discovers meetings + per-stemming metadata, and the public portal vergadering
+        # page carries the per-fractie breakdown with EXACT member counts -> tier A. Reference province
+        # for the vendor; the others differ only in organisation_id / gremium_id / slug.
+        "key": "zuid-holland",
+        "name": "Zuid-Holland",
+        "vendor": "notubiz",
+        "organisation_id": 3868,
+        "gremium_id": 11157,           # the plenary "Provinciale Staten" gremium (commissies excluded)
+        "slug": "pzh",                 # portal host: pzh.notubiz.nl
+        "base": "https://api.notubiz.nl",
+        "public": "https://pzh.notubiz.nl",   # the "Bron:" link points to the portal vergadering page
+        "term_start": (2023, 3, 29),   # PS election 15 March 2023, geïnstalleerd 29 March
+        "term_label": "2023-2027",
+        "style": {"accent": "#a07400", "headerBg": "#221900"},   # Zuid-Holland huisstijl goud/geel
+        "license": "Open data - Provincie Zuid-Holland (Notubiz vergaderportaal)",
+        "note": "Stemmen zijn hoofdelijk (per lid) geregistreerd en hier per fractie met exacte "
+                "aantallen samengevat (aangenomen én verworpen). Agendapunten zonder hoofdelijke "
+                "stemming (bijv. bij acclamatie) en leden die niet deelnamen, staan niet in de telling.",
+    },
+    {
+        "key": "fryslan",
+        "name": "Fryslân",
+        "vendor": "notubiz",
+        "organisation_id": 822,
+        "gremium_id": 430,             # "Provinsjale Steaten" (Fries) = the plenary gremium
+        "slug": "fryslan",
+        "base": "https://api.notubiz.nl",
+        "public": "https://fryslan.notubiz.nl",
+        "term_start": (2023, 3, 29),
+        "term_label": "2023-2027",
+        "style": {"accent": "#c8102e", "headerBg": "#2a0a0c"},   # Frysk read (pompeblêd-rood)
+        "license": "Open data - Provincie Fryslân (Notubiz vergaderportaal)",
+        "note": "Stemmen zijn hoofdelijk (per lid) geregistreerd en hier per fractie met exacte "
+                "aantallen samengevat (aangenomen én verworpen). Agendapunten zonder hoofdelijke "
+                "stemming (bijv. bij acclamatie) en leden die niet deelnamen, staan niet in de telling.",
+    },
+    {
+        "key": "gelderland",
+        "name": "Gelderland",
+        "vendor": "notubiz",
+        "organisation_id": 1769,
+        "gremium_id": 2437,
+        "slug": "gelderland",
+        "base": "https://api.notubiz.nl",
+        "public": "https://gelderland.notubiz.nl",
+        "term_start": (2023, 3, 29),
+        "term_label": "2023-2027",
+        "style": {"accent": "#0d5eaf", "headerBg": "#08203d"},   # Gelderland huisstijl blauw
+        "license": "Open data - Provincie Gelderland (Notubiz vergaderportaal)",
+        "note": "Stemmen zijn hoofdelijk (per lid) geregistreerd en hier per fractie met exacte "
+                "aantallen samengevat (aangenomen én verworpen). Agendapunten zonder hoofdelijke "
+                "stemming (bijv. bij acclamatie) en leden die niet deelnamen, staan niet in de telling.",
+    },
+    {
+        "key": "overijssel",
+        "name": "Overijssel",
+        "vendor": "notubiz",
+        "organisation_id": 1750,
+        "gremium_id": 2229,
+        "slug": "overijssel",
+        "base": "https://api.notubiz.nl",
+        "public": "https://overijssel.notubiz.nl",
+        "term_start": (2023, 3, 29),
+        "term_label": "2023-2027",
+        "style": {"accent": "#147ab3", "headerBg": "#0a2a3d"},   # Overijssel huisstijl blauw
+        "license": "Open data - Provincie Overijssel (Notubiz vergaderportaal)",
+        "note": "Stemmen zijn hoofdelijk (per lid) geregistreerd en hier per fractie met exacte "
+                "aantallen samengevat (aangenomen én verworpen). Agendapunten zonder hoofdelijke "
+                "stemming (bijv. bij acclamatie) en leden die niet deelnamen, staan niet in de telling.",
+    },
+    {
         # A second *category* (not a province): the national parliament. Clean OData v4 API with
         # per-fractie votes incl. seat counts -> tier A. See data-sources.md §8.
         "key": "tweede-kamer",
@@ -1346,6 +1418,207 @@ def collect_ep(p):
     return ep_assemble_nl(metas, details) if p.get("breakout") == "nl" else ep_assemble_groups(metas, details)
 
 
+# --- Notubiz adapter ----------------------------------------------------------
+# Notubiz powers 5 PS provinces. No token is needed (data-sources.md §11). Three public surfaces:
+#   1. events API   GET api.notubiz.nl/events?organisation_id=&date_from=&date_to=&page=&version=1.21
+#                   -> meetings; filter gremium.id to the plenary "Provinciale Staten" gremium and
+#                      agenda_item_count>0. (version=1.21 is mandatory; date_* = "YYYY-MM-DD HH:MM:SS".)
+#   2. votings API  GET api.notubiz.nl/agenda_items/votings?meeting_id=&version=1.21
+#                   -> per stemming: id, title, voting_result, and per-MEMBER votes (role_id only).
+#   3. portal HTML  https://<slug>.notubiz.nl/vergadering/<mid>
+#                   -> per stemming a <div id="chart_<id>"> + a votes_parties block listing each fractie
+#                      with its members tagged <li class="in_favor|against">. chart_<id> == the votings
+#                      API `id` (NOT voting_id), so the HTML blocks join to the API votings 1:1.
+# The role_id -> fractie join is auth-walled, but the portal already names the fractie + members, so we
+# don't need it. We use the API for discovery + metadata (title/result) and the portal for the exact
+# per-fractie counts (members aggregated to the fractie) -> granularity "member", tier A.
+NOTUBIZ_API = "https://api.notubiz.nl"
+
+# Merge spelling variants / pure mid-term renames into one column (the portal occasionally writes a
+# fractie's full name where it elsewhere uses the abbreviation, and a renamed fractie keeps voting as
+# the same group). Early-term fracties that genuinely existed separately before a merger (e.g. ZH's
+# GroenLinks + PvdA before they fused into GroenLinks-PvdA) are NOT merged — they cast separate votes.
+NOTUBIZ_ALIASES = {
+    "PRO": "GroenLinks-PvdA",          # Zuid-Holland: GroenLinks-PvdA renamed itself "PRO" mid-term
+    "Partij voor de Dieren": "PvdD",   # Zuid-Holland: full name vs abbreviation -> one column
+}
+# Labels that are not a real fractie (the absence of one) -> not a voting column. "Geen partij" is
+# how the portal tags a member mid-afsplitsing who has no fractie yet (Overijssel, één lid, één dag).
+NOTUBIZ_SKIP = {"Geen partij", "Gedeputeerde Staten"}
+
+
+def notubiz_classify(title, voting_type):
+    """Item type. Prefer the API's explicit `voting_type` (motion/amendment/council_proposal/
+    initiative_proposal); it's reliable for Fryslân/Overijssel but null for Gelderland and many ZH
+    votings, so fall back to the title. Titles embed the type as a code prefix that varies per province
+    — "M 1567"/"A 873"/"SV …" (ZH), "26M45"/"36A12" (Gelderland), "PS26-M52"/"PS26-MV9" (Overijssel) —
+    or in Frisian on Fryslân ("Moasje"/"Amendemint")."""
+    vt = (voting_type or "").lower()
+    if vt == "motion":
+        return "motie"
+    if vt == "amendment":
+        return "amendement"
+    if vt in ("council_proposal", "initiative_proposal"):
+        return "besluit"
+    low = re.sub(r"\s+", " ", title or "").strip().lower()
+    if "ordevoorstel" in low or "oarderfoarstel" in low:
+        return "ordevoorstel"
+    if ("amendement" in low or "amendemint" in low
+            or re.match(r"^(?:ps\s?\d+[-\s])?a\s?\d", low) or re.match(r"^\d{1,3}\s?a\d", low)):
+        return "amendement"
+    if ("motie" in low or "moasje" in low
+            or re.match(r"^(?:ps\s?\d+[-\s])?m\s?v?\s?\d", low) or re.match(r"^\d{1,3}\s?m\s?v?\d", low)):
+        return "motie"
+    if ("statenvoorstel" in low or low.startswith("sv") or "besluit" in low
+            or "voordracht" in low or "voarstel" in low):
+        return "besluit"
+    return "overig"
+
+
+def notubiz_result(s):
+    s = (s or "").lower()
+    if s in ("adopted", "accepted"):
+        return "accepted", "Aangenomen"
+    if s == "rejected":
+        return "rejected", "Verworpen"
+    if s in ("equal", "tie", "tied", "staken"):
+        return "tie", "Staken van stemmen"
+    return None, (s or None)
+
+
+def notubiz_events(org_id, gremium_id, term_start, end):
+    """Page the public events API over the term window; return [(meeting_id, date)] for the plenary
+    gremium's meetings that actually carry agenda items (recesses etc. have agenda_item_count 0)."""
+    meetings, page = [], 1
+    while page <= 60:
+        qs = urllib.parse.urlencode(
+            {"organisation_id": org_id,
+             "date_from": term_start.isoformat() + " 00:00:00",
+             "date_to": end.isoformat() + " 23:59:59",
+             "page": page, "format": "json", "version": "1.21"})
+        data = try_json(f"{NOTUBIZ_API}/events?{qs}")
+        if not data:
+            break
+        for e in data.get("events", []):
+            if (e.get("gremium") or {}).get("id") != gremium_id:
+                continue
+            if not (e.get("event_type_data") or {}).get("agenda_item_count"):
+                continue
+            mid = e.get("id")
+            d = ((e.get("plannings") or [{}])[0].get("start_date") or "")[:10]
+            if mid and re.match(r"\d{4}-\d{2}-\d{2}$", d):
+                meetings.append((mid, d))
+        if not (data.get("pagination") or {}).get("has_more_pages"):
+            break
+        page += 1
+        time.sleep(SLEEP)
+    return meetings
+
+
+def notubiz_parse_meeting(html):
+    """Parse a portal vergadering page into {chart_id: {fractie_name: {agree,disagree,abstain}}}.
+    Each stemming is a <div ... id="chart_<id>"> followed by a votes_parties block; within it each
+    fractie is a <li>NAME<ul> ...member <li class="in_favor|against">... </ul></li>. The member li
+    class is that member's own vote, so counting them gives exact per-fractie tallies and a fractie in
+    the 'verdeeld' (divided) side yields a real split (agree>0 and disagree>0). Member/Leden <li>s
+    carry a class or a <p>, so only the bare <li>NAME<ul> fractie rows match."""
+    out = {}
+    for m in re.finditer(r'id="chart_(\d+)"[^>]*></div>(.*?)'
+                         r'(?=<div class="votes_chart"|id="chart_\d+"|$)', html, re.S):
+        cid, seg, votes = int(m.group(1)), m.group(2), {}
+        for fm in re.finditer(r'<li>\s*([^<]+?)\s*<ul>(.*?)</ul>\s*</li>', seg, re.S):
+            name = re.sub(r"\s+", " ", fm.group(1)).strip()
+            inner = fm.group(2)
+            agree = len(re.findall(r'class="in_favor"', inner))
+            disagree = len(re.findall(r'class="against"', inner))
+            if not name or not (agree or disagree):
+                continue
+            v = votes.setdefault(name, {"agree": 0, "disagree": 0, "abstain": 0})
+            v["agree"] += agree
+            v["disagree"] += disagree
+        if votes:
+            out[cid] = votes
+    return out
+
+
+def collect_notubiz(p):
+    """Notubiz PS province. Discover plenary meetings (events API), then per meeting join the votings
+    API metadata (title/result) to the portal page's per-fractie breakdown (exact member counts)."""
+    org_id, gremium_id, slug = p["organisation_id"], p["gremium_id"], p["slug"]
+    portal = f"https://{slug}.notubiz.nl"
+    term_start = date(*p["term_start"])
+    meetings = notubiz_events(org_id, gremium_id, term_start, date.today())
+    print(f"  {len(meetings)} plenaire vergadering(en) met agendapunten in termijn")
+
+    items, appear, seats, name_by_slug, seen = [], {}, {}, {}, set()
+    mismatch = 0
+    for mid, mdate in meetings:
+        vdata = try_json(f"{NOTUBIZ_API}/agenda_items/votings?meeting_id={mid}&format=json&version=1.21")
+        time.sleep(SLEEP)
+        votings = (vdata or {}).get("votings") or []
+        if not votings:
+            continue
+        breakdown = notubiz_parse_meeting(try_text(f"{portal}/vergadering/{mid}") or "")
+        time.sleep(SLEEP)
+        for v in votings:
+            cid = v.get("id")
+            if cid in seen:
+                continue
+            fr_votes = breakdown.get(cid)
+            if not fr_votes:
+                continue   # no per-fractie breakdown on the portal -> can't attribute the role_ids; skip
+            seen.add(cid)
+            td = v.get("type_data") or {}
+            # Cross-check the parsed per-fractie totals against the API's own per-member votes.
+            api_for = sum(1 for x in (td.get("votes") or []) if x.get("vote") == "in_favor")
+            api_ag = sum(1 for x in (td.get("votes") or []) if x.get("vote") == "against")
+            if (sum(fv["agree"] for fv in fr_votes.values()),
+                    sum(fv["disagree"] for fv in fr_votes.values())) != (api_for, api_ag):
+                mismatch += 1
+            votes = {}
+            for name, fv in fr_votes.items():
+                name = NOTUBIZ_ALIASES.get(name, name)
+                if name in NOTUBIZ_SKIP:
+                    continue
+                s = slugify(name)
+                name_by_slug.setdefault(s, name)
+                cell = votes.setdefault(s, {"agree": 0, "disagree": 0, "abstain": 0})
+                cell["agree"] += fv["agree"]
+                cell["disagree"] += fv["disagree"]
+                cell["abstain"] += fv["abstain"]
+            for s, cell in votes.items():
+                appear[s] = appear.get(s, 0) + 1
+                seats[s] = max(seats.get(s, 0), cell["agree"] + cell["disagree"])
+            title = (td.get("title") or "").strip()
+            result, label = notubiz_result(td.get("voting_result"))
+            items.append({
+                "id": cid,
+                "date": mdate,
+                "title": title,
+                "type": notubiz_classify(title, td.get("voting_type")),
+                "result": result,
+                "resultLabel": label,
+                "source": f"{portal}/vergadering/{mid}",
+                "votes": votes,
+            })
+    if mismatch:
+        print(f"  WARN: {mismatch} stemming(en) waar portal- en API-totalen verschillen")
+    if not items:
+        return None
+
+    items.sort(key=lambda m: (m["date"], m["title"]), reverse=True)
+    for m in items:
+        m["totals"] = {"agree": sum(v["agree"] for v in m["votes"].values()),
+                       "disagree": sum(v["disagree"] for v in m["votes"].values())}
+    # Columns ordered by fractie size (biggest first), then activity, then name.
+    order = sorted(appear, key=lambda s: (-seats.get(s, 0), -appear[s], name_by_slug[s].lower()))
+    by_type = {}
+    for m in items:
+        by_type[m["type"]] = by_type.get(m["type"], 0) + 1
+    print(f"  {len(items)} stemmingen; {len(appear)} fracties; {by_type}")
+    return {"parties": [{"slug": s, "name": name_by_slug[s]} for s in order], "moties": items}
+
+
 def province_granularity(p):
     """Vote detail level, for the frontend: "member" = real per-fractie counts (GO, Limburg
     "stemmen") so "ruwe getallen" are meaningful; "fractie" = faction-level V/T only
@@ -1358,7 +1631,7 @@ def province_granularity(p):
 
 
 ADAPTERS = {"go": collect_go, "ibabs": collect_ibabs, "tk": collect_tk, "ek": collect_ek,
-            "ep": collect_ep}
+            "ep": collect_ep, "notubiz": collect_notubiz}
 
 
 def main():
