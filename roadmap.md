@@ -14,8 +14,12 @@
 >    → tier A), concurrent detail fetch, ODbL. Recipe: data-sources.md §10.
 >
 > **▶ The locked target is complete.** Remaining work is depth, not new categories:
-> - **Grow Provinciale Staten** (the outreach track below) — Notubiz token → up to 5 provinces; griffie
->   lobby → Flevoland/Drenthe. Both blocked on replies.
+> - **▶▶ NEXT BUILD — Phase 7: `collect_notubiz` adapter (NO TOKEN NEEDED).** Feasibility probe done
+>   (2026-06-15, verified on Zuid-Holland): the 5 Notubiz PS provinces are reachable from **public**
+>   data alone — Notubiz declined a token (2026-06-15) but it turns out not to matter. Recipe in
+>   data-sources.md §11. Build EK-style, Zuid-Holland first, then fan out (Fryslân, Groningen,
+>   Gelderland, Overijssel). Tier A (exact per-fractie counts). Takes PS from **3/12 → up to 8/12**.
+> - **Then griffie lobby → Flevoland/Drenthe** (GO stemgedrag module) — still blocked on replies.
 > - **Optional polish:** ✅ EP **Dutch-delegation breakout** shipped (second EP scope, by national party,
 >   with MEP rosters). ✅ EP source attribution → HowTheyVote.eu. TK perf checked = fine (slightly slower
 >   first load, no sluggishness after). Pick up gemeenteraden/waterschappen only on demand (parked).
@@ -24,15 +28,16 @@
 > as "feasibility probe → new adapter → catalog entry" (no IA refactor); each is single-scope, opening
 > straight to its table.
 >
-> **In parallel — Provinciale Staten growth (blocked on replies, both SENT, awaiting):**
-> - **Notubiz token** ([outreach.md](outreach.md) §1, sent 2026-06-10) → up to 5 provinces (Fryslân,
->   Groningen, Zuid-Holland, Overijssel; Gelderland outcome-only). `api.notubiz.nl/agenda_items/votings`
->   + token unlocks the `role_id → fractie` map (`/roles?field_id=105`).
+> **Provinciale Staten growth — status:**
+> - **Notubiz token track: CLOSED (no longer needed).** Notubiz replied 2026-06-15 declining a token
+>   (a token alone is insufficient; would also need a rights-bearing account they can't provide). The
+>   2026-06-15 probe then proved the data is fully public anyway (events + votings API at `version=1.21`
+>   + portal `vergadering` HTML for the per-fractie breakdown) → see Phase 7 above. No follow-up to send;
+>   an optional thank-you only.
 > - **Griffie mails** ([outreach.md](outreach.md) §2, sent 2026-06-11 to `griffie@flevoland.nl` +
 >   `Statengriffie@drentsparlement.nl`) → if they enable the GO stemgedrag module, Flevoland/Drenthe
->   become config-only. (PDF-parsing rejected: fragile, per-griffie, low ROI.)
-> - **Follow-up timing** (drafts ready in [outreach.md](outreach.md)): Notubiz ~17 Jun (1 wk), griffies
->   ~24–25 Jun (2 wk) — and before the provincial **zomerreces (~mid-July)**, else replies slip to Sept.
+>   become config-only. (PDF-parsing rejected: fragile, per-griffie, low ROI.) **STILL the only live
+>   outreach.** Follow-up ~24–25 Jun (2 wk), before the provincial **zomerreces (~mid-July)**.
 >
 > **Parked categories (decided NOT to pursue):** gemeenteraden (~340 — fragmented, local, not national
 > news, low per-unit salience) and waterschappen (elected but niche/low-profile). Reconsider only on demand.
