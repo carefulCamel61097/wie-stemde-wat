@@ -3,7 +3,7 @@
     "province": "Eerste Kamer",
     "body": "Eerste Kamer",
     "term": "2023-2027",
-    "generated_at": "2026-06-18T11:07:09+00:00",
+    "generated_at": "2026-06-25T10:09:26+00:00",
     "source": "https://www.eerstekamer.nl",
     "sourceName": "",
     "license": "Open data - Eerste Kamer der Staten-Generaal (eerstekamer.nl)",
@@ -14,11 +14,15 @@
     "note": "Stemmen zijn op fractieniveau geregistreerd (voor/tegen, zonder zetelaantallen): de Eerste Kamer stemt meestal bij zitten en opstaan. Beide zijden worden expliciet vermeld (niets afgeleid). Hamerstukken (zonder stemming aangenomen) zijn niet opgenomen.",
     "granularity": "fractie",
     "counts": {
-      "moties": 455,
-      "parties": 35
+      "moties": 465,
+      "parties": 21
     }
   },
   "parties": [
+    {
+      "slug": "bbb",
+      "name": "BBB"
+    },
     {
       "slug": "cda",
       "name": "CDA"
@@ -26,10 +30,6 @@
     {
       "slug": "christenunie",
       "name": "ChristenUnie"
-    },
-    {
-      "slug": "groenlinks-pvda",
-      "name": "GroenLinks-PvdA"
     },
     {
       "slug": "pvdd",
@@ -56,10 +56,6 @@
       "name": "VVD"
     },
     {
-      "slug": "bbb",
-      "name": "BBB"
-    },
-    {
       "slug": "d66",
       "name": "D66"
     },
@@ -70,6 +66,10 @@
     {
       "slug": "ja21",
       "name": "JA21"
+    },
+    {
+      "slug": "groenlinks-pvda",
+      "name": "GroenLinks-PvdA"
     },
     {
       "slug": "50plus",
@@ -102,65 +102,1099 @@
     {
       "slug": "fractie-kemperman",
       "name": "Fractie-Kemperman"
-    },
-    {
-      "slug": "samuel-croll",
-      "name": "(Samuel) Croll"
-    },
-    {
-      "slug": "andrea-van-langen-visbeek",
-      "name": "Andrea van Langen-Visbeek"
-    },
-    {
-      "slug": "arie-griffioen",
-      "name": "Arie Griffioen"
-    },
-    {
-      "slug": "elly-van-wijk",
-      "name": "Elly van Wijk"
-    },
-    {
-      "slug": "eric-kemperman",
-      "name": "Eric Kemperman"
-    },
-    {
-      "slug": "eugne-heijnen",
-      "name": "Eugène Heijnen"
-    },
-    {
-      "slug": "frans-van-knapen",
-      "name": "Frans van Knapen"
-    },
-    {
-      "slug": "gert-jan-oplaat",
-      "name": "Gert-Jan Oplaat"
-    },
-    {
-      "slug": "henk-marquart-scholtz",
-      "name": "Henk Marquart Scholtz"
-    },
-    {
-      "slug": "math-goossen",
-      "name": "Math Goossen"
-    },
-    {
-      "slug": "robbert-lievense",
-      "name": "Robbert Lievense"
-    },
-    {
-      "slug": "robert-van-gasteren",
-      "name": "Robert van Gasteren"
-    },
-    {
-      "slug": "tekke-panman",
-      "name": "Tekke Panman"
-    },
-    {
-      "slug": "wim-jaspers",
-      "name": "Wim Jaspers"
     }
   ],
   "moties": [
+    {
+      "id": 115776743678780,
+      "date": "2026-06-23",
+      "title": "Verzamelwet gegevensverwerking VWS II.b (36.621)",
+      "type": "wetsvoorstel",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260623/verzamelwet_gegevensverwerking_vws",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 16,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 106951337888467,
+      "date": "2026-06-23",
+      "title": "Verbetering aansluiting beroepsonderwijs-arbeidsmarkt (36.670)",
+      "type": "wetsvoorstel",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260623/verbetering_aansluiting",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 16,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 34539942189619,
+      "date": "2026-06-23",
+      "title": "Motie-Van Langen-Visbeek (BBB) c.s. over versnelling bestrijding woningnood (36.800 XXII, F)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260623/moties_begroting_volkshuisvesting",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 12
+      }
+    },
+    {
+      "id": 29749173420296,
+      "date": "2026-06-23",
+      "title": "Motie-Van Langen-Visbeek (BBB) c.s. over het herstellen van investeringsruimte voor woningcorporaties (36.800 XXII, E)",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260623/moties_begroting_volkshuisvesting",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 7
+      }
+    },
+    {
+      "id": 171978119818026,
+      "date": "2026-06-23",
+      "title": "Het wetsvoorstel novelle Wet versterking regie volkshuisvesting (36881)",
+      "type": "overig",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260623/wet_versterking_regie_2",
+      "votes": {
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 158533458529229,
+      "date": "2026-06-23",
+      "title": "Het wetsvoorstel Wet versterking regie volkshuisvesting (36881)",
+      "type": "overig",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260623/novelle_wet_versterking_regie",
+      "votes": {
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 13,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 200060210381729,
+      "date": "2026-06-23",
+      "title": "Begrotingsstaten Volkshuisvesting en Ruimtelijke Ordening 2026 (36.800 XXII)",
+      "type": "wetsvoorstel",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260623/begroting_volkshuisvesting_en",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 13,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 74592956144358,
+      "date": "2026-06-23",
+      "title": "Begrotingsstaten Volksgezondheid, Welzijn en Sport 2026 (36.800 XVI)",
+      "type": "wetsvoorstel",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260623/begroting_volksgezondheid_welzijn",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 69182223878354,
+      "date": "2026-06-23",
+      "title": "Begrotingsstaat provinciefonds 2026 (36.800 C)",
+      "type": "wetsvoorstel",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260623/begroting_provinciefonds_2026",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 157327556602956,
+      "date": "2026-06-23",
+      "title": "Begrotingsstaat gemeentefonds 2026 (36.800 B)",
+      "type": "wetsvoorstel",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260623/begroting_gemeentefonds_2026",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 16,
+        "disagree": 3
+      }
+    },
     {
       "id": 197324954062360,
       "date": "2026-06-16",
@@ -3328,7 +4362,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -3443,7 +4477,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -3558,7 +4592,7 @@
       "type": "motie",
       "result": "rejected",
       "resultLabel": "Verworpen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "pvv": {
           "agree": 1,
@@ -3673,7 +4707,7 @@
       "type": "motie",
       "result": "rejected",
       "resultLabel": "Verworpen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "bbb": {
           "agree": 1,
@@ -3788,7 +4822,7 @@
       "type": "motie",
       "result": "rejected",
       "resultLabel": "Verworpen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "fvd": {
           "agree": 1,
@@ -3903,7 +4937,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -4018,7 +5052,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -4133,7 +5167,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -4248,7 +5282,7 @@
       "type": "motie",
       "result": "rejected",
       "resultLabel": "Verworpen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "christenunie": {
           "agree": 1,
@@ -4363,7 +5397,7 @@
       "type": "motie",
       "result": "rejected",
       "resultLabel": "Verworpen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "bbb": {
           "agree": 1,
@@ -4478,7 +5512,7 @@
       "type": "motie",
       "result": "rejected",
       "resultLabel": "Verworpen",
-      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/moties_regeringsverklaring",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20260407/over_moties_ingediend_bij_het",
       "votes": {
         "fvd": {
           "agree": 1,
@@ -26837,7 +27871,7 @@
       }
     },
     {
-      "id": 145189978152934,
+      "id": 188051965315134,
       "date": "2024-12-10",
       "title": "Wet gemeentelijke instrumenten warmtetransitie (36.387)",
       "type": "wetsvoorstel",
@@ -26900,72 +27934,7 @@
           "disagree": 0,
           "abstain": 0
         },
-        "samuel-croll": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "robert-van-gasteren": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "math-goossen": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "arie-griffioen": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "eugne-heijnen": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "wim-jaspers": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "eric-kemperman": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "frans-van-knapen": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "andrea-van-langen-visbeek": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "robbert-lievense": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "henk-marquart-scholtz": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "gert-jan-oplaat": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "tekke-panman": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "elly-van-wijk": {
+        "bbb": {
           "agree": 1,
           "disagree": 0,
           "abstain": 0
@@ -26987,7 +27956,7 @@
         }
       },
       "totals": {
-        "agree": 25,
+        "agree": 12,
         "disagree": 3
       }
     },

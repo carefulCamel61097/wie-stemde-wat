@@ -3,7 +3,7 @@
     "province": "Limburg",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-06-18T10:59:16+00:00",
+    "generated_at": "2026-06-25T10:01:16+00:00",
     "source": "https://limburg.bestuurlijkeinformatie.nl",
     "sourceName": "",
     "license": "Open data - Provincie Limburg (iBabs publieksportaal)",
@@ -14,7 +14,7 @@
     "note": "Stemmen zijn per fractie met aantallen geregistreerd (aangenomen én verworpen). Moties/amendementen zonder hoofdelijke stemming zijn niet opgenomen.",
     "granularity": "member",
     "counts": {
-      "moties": 321,
+      "moties": 336,
       "parties": 16
     }
   },
@@ -52,16 +52,16 @@
       "name": "BBB"
     },
     {
-      "slug": "ja21",
-      "name": "JA21"
-    },
-    {
       "slug": "lokaal-limburg",
       "name": "LOKAAL-LIMBURG"
     },
     {
       "slug": "pvdd",
       "name": "PvdD"
+    },
+    {
+      "slug": "ja21",
+      "name": "JA21"
     },
     {
       "slug": "horizon",
@@ -85,6 +85,1186 @@
     }
   ],
   "moties": [
+    {
+      "id": 3309,
+      "date": "2026-06-19",
+      "title": "Motie vreemd 3309 Peters inzake Limburg vraagt om maatwerk bij stikstofbeleid.",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/28618a53-8dda-4a20-adf4-7f483c6165f5",
+      "votes": {
+        "bbb": {
+          "agree": 1,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 3306,
+      "date": "2026-06-19",
+      "title": "Motie 3306 Sol inzake Dashboard Verbonden Partijen.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/4cfb2456-dc43-4d24-bbfc-eb8639ddfb58",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 3308,
+      "date": "2026-06-19",
+      "title": "Gewijzigde Motie vreemd 3308 Zeedzen inzake Samenlevingsfonds Einstein Telescope",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/884522a0-2c2b-4559-9427-9f1eff3205df",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 3305,
+      "date": "2026-06-19",
+      "title": "Gewijzigde Motie 3305 Boven c.s. inzake Uitwerken kostenscenarios Provincie Limburg van Maastricht Aachen Airport.",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/0c57fdd3-f176-4d27-944b-fdc07792f752",
+      "votes": {
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 10000233,
+      "date": "2026-06-19",
+      "title": "Amendement 233 Smeets c.s. inzake Limburgs instituut voor vrede veiligheid en herinneringscultuur",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/333a9a22-8185-4a2a-bb20-8dd90669ff95",
+      "votes": {
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 8
+      }
+    },
+    {
+      "id": 3303,
+      "date": "2026-06-18",
+      "title": "Motie 3303 Smeets inzake Onderzoek inzet Omgevingsfonds Chemelot voor direct omwonenden MMC.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/58385472-54a0-4d7d-a9ec-310d1018b147",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 7
+      }
+    },
+    {
+      "id": 3301,
+      "date": "2026-06-18",
+      "title": "Motie 3301 Wolters Gregório inzake Stedelijk Woontoekomst.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/3bd5ea44-99ef-4990-be3f-b63b178c0be8",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 10,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 3304,
+      "date": "2026-06-18",
+      "title": "Gewijzigde Motie 3304 Huizing c.s. inzake Eerlijke verdeling van kosten MMC.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/4a3695b9-ba3a-4e3e-8131-719a2006f80c",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 11,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 3302,
+      "date": "2026-06-18",
+      "title": "Gewijzigde Motie 3302 Absil c.s. inzake Prioriteit voor vrijwilligersorganisaties bij verduurzaming van maatschappelijk vastgoed.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/8e8b9271-e366-473b-9dbc-38f7899c0db0",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 11,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 10000231,
+      "date": "2026-06-18",
+      "title": "Gewijzigd Amendement 231 Smeets inzake Integrale jaarlijkse rapportage samenwerkingsverbanden SIS 4.0",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b5f8514c-16cc-44cd-9b8d-50f7db95f368",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 10000230,
+      "date": "2026-06-18",
+      "title": "Amendement 230 Jiménez Hastenrath inzake Waar macht word gegeven moet verantwoording worden gevraagd",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/55307c4e-6780-4426-97d2-3f16601a94c1",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 10000229,
+      "date": "2026-06-18",
+      "title": "Amendement 229 Jiménes Hastenrath inzake Eerst resultaat dan verlenging",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/c0dd36ef-5d7a-4d21-8342-6db7755819d0",
+      "votes": {
+        "bbb": {
+          "agree": 1,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 10
+      }
+    },
+    {
+      "id": 10000232,
+      "date": "2026-06-18",
+      "title": "3e Gewijzigd amendement 232 Smeets c.s. inzake procedure wensen en bedenkingen V2 2",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/4f18c00a-8e8a-449a-b500-f1e7af974fd7",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 10,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 10000228,
+      "date": "2026-06-18",
+      "title": "2e Gewijzigd Amendement 228 Megens inzake Verlagen motorrijtuigenbelasting voor iedereen",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/71ad6a3c-a456-4d49-a86d-bf76cbb906c9",
+      "votes": {
+        "bbb": {
+          "agree": 1,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 1,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 10000227,
+      "date": "2026-06-18",
+      "title": "2e Gewijzigd Amendement 227 Smeets c.s. inzake Transparantie en verantwoording Einstein Telescope",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f5be7e2e-cfdd-4b96-b98a-76c0d1e264ff",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 13,
+        "disagree": 1
+      }
+    },
     {
       "id": 3297,
       "date": "2026-05-08",
@@ -7967,7 +9147,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/e6be08d6-29a4-4149-a9eb-93ebf95fe798",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/246f8a59-5d0c-4e7a-9709-8aee62939bd6",
       "votes": {
         "50plus": {
           "agree": 1,

@@ -3,7 +3,7 @@
     "province": "Nederlandse afvaardiging",
     "body": "Europees Parlement",
     "term": "2024-2029",
-    "generated_at": "2026-06-18T11:08:30+00:00",
+    "generated_at": "2026-06-25T10:11:16+00:00",
     "source": "https://howtheyvote.eu",
     "sourceName": "HowTheyVote.eu",
     "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen (roll-call) van het Europees Parlement",
@@ -14,7 +14,7 @@
     "note": "De 31 Nederlandse Europarlementariërs, gegroepeerd per Nederlandse partij, met exacte aantallen (voor/tegen/onthouding). Alleen hoofdelijke eindstemmingen. Bron: HowTheyVote.eu (ODbL) + Europees Parlement Open Data (fractie-indeling).",
     "granularity": "member",
     "counts": {
-      "moties": 571,
+      "moties": 580,
       "parties": 10
     }
   },
@@ -115,78 +115,13 @@
   ],
   "moties": [
     {
-      "id": 193518,
-      "date": "2026-06-17",
-      "title": "Termination of the Voluntary Partnership Agreement between the European Union and the Republic of Liberia on Forest Law Enforcement Governance and Trade in timber products to the European Union",
+      "id": 194546,
+      "date": "2026-06-18",
+      "title": "Shipments of waste: export of mixed municipal waste for recovery to Switzerland",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/193518",
-      "votes": {
-        "pvv": {
-          "agree": 4,
-          "disagree": 1,
-          "abstain": 0
-        },
-        "vvd": {
-          "agree": 4,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "gl-pvda": {
-          "agree": 7,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "d66": {
-          "agree": 3,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "nsc": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
-        "cda": {
-          "agree": 3,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "sgp": {
-          "agree": 0,
-          "disagree": 0,
-          "abstain": 1
-        },
-        "bbb": {
-          "agree": 0,
-          "disagree": 0,
-          "abstain": 2
-        },
-        "volt": {
-          "agree": 2,
-          "disagree": 0,
-          "abstain": 0
-        }
-      },
-      "totals": {
-        "agree": 24,
-        "disagree": 2
-      }
-    },
-    {
-      "id": 193517,
-      "date": "2026-06-17",
-      "title": "Termination of the EU–Liberia Voluntary Partnership Agreement on forest law enforcement, governance and trade in timber products",
-      "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/193517",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/194546",
       "votes": {
         "pvv": {
           "agree": 6,
@@ -214,6 +149,136 @@
           "abstain": 0
         },
         "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 30,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 194611,
+      "date": "2026-06-18",
+      "title": "Russia’s unacceptable provocative actions and drone incursions into Romania, the Baltic states and Finland",
+      "type": "resolutie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/194611",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 6
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 23,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 194562,
+      "date": "2026-06-18",
+      "title": "Political repression and humanitarian situation in Cuba",
+      "type": "resolutie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/194562",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 6
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
           "agree": 0,
           "disagree": 1,
           "abstain": 0
@@ -234,14 +299,339 @@
           "abstain": 0
         },
         "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 14,
+        "disagree": 10
+      }
+    },
+    {
+      "id": 194461,
+      "date": "2026-06-18",
+      "title": "Implementation of the Urban Wastewater Treatment Directive (UWWTD) and risks to the security of supply of medicines",
+      "type": "resolutie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/194461",
+      "votes": {
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
           "agree": 1,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 11,
+        "disagree": 17
+      }
+    },
+    {
+      "id": 194644,
+      "date": "2026-06-18",
+      "title": "Deteriorating situation of political prisoners in Belarus, in particular the case of Aliaksandra Pulinovich",
+      "type": "resolutie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/194644",
+      "votes": {
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         }
       },
       "totals": {
-        "agree": 28,
-        "disagree": 1
+        "agree": 30,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 194636,
+      "date": "2026-06-18",
+      "title": "Continued crackdown on civic space and fundamental freedoms in Burkina Faso",
+      "type": "resolutie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/194636",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 6
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 193648,
+      "date": "2026-06-18",
+      "title": "Circularity requirements for vehicle design and management of end-of-life vehicles",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/193648",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 194417,
+      "date": "2026-06-18",
+      "title": "Circularity requirements for vehicle design and management of end-of-life vehicles",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/194417",
+      "votes": {
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 6,
+        "disagree": 24
       }
     },
     {
@@ -249,8 +639,8 @@
       "date": "2026-06-17",
       "title": "Structure and rates of excise duty applied to tobacco and tobacco related products (recast)",
       "type": "overig",
-      "result": null,
-      "resultLabel": null,
+      "result": "rejected",
+      "resultLabel": "Verworpen",
       "source": "https://howtheyvote.eu/votes/193822",
       "votes": {
         "pvv": {
@@ -312,10 +702,10 @@
     {
       "id": 193551,
       "date": "2026-06-17",
-      "title": "Recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy on promoting transnational governance on water in the interests of conflict prevention and peace",
+      "title": "Recommendation on promoting transnational governance on water in the interests of conflict prevention and peace",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193551",
       "votes": {
         "pvv": {
@@ -375,12 +765,77 @@
       }
     },
     {
+      "id": 194424,
+      "date": "2026-06-17",
+      "title": "Plants obtained by certain new genomic techniques and their food and feed",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/194424",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 3,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 26
+      }
+    },
+    {
       "id": 193557,
       "date": "2026-06-17",
       "title": "General arrangements for excise duty applied to tobacco and tobacco related products",
       "type": "overig",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193557",
       "votes": {
         "pvv": {
@@ -442,10 +897,10 @@
     {
       "id": 193587,
       "date": "2026-06-17",
-      "title": "European Public Prosecutor’s Office (EPPO) and European Anti-Fraud Office (OLAF): access to value added tax information at Union level",
+      "title": "European Public Prosecutor’s Office (EPPO) and European Anti-Fraud Office (OLAF): access to VAT information at Union level",
       "type": "overig",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193587",
       "votes": {
         "pvv": {
@@ -505,12 +960,142 @@
       }
     },
     {
+      "id": 193518,
+      "date": "2026-06-17",
+      "title": "EU–Liberia Voluntary Partnership Agreement on forest law enforcement, governance and trade in timber products: termination (Resolution)",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/193518",
+      "votes": {
+        "pvv": {
+          "agree": 4,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 193517,
+      "date": "2026-06-17",
+      "title": "EU–Liberia Voluntary Partnership Agreement on forest law enforcement, governance and trade in timber products: termination",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/193517",
+      "votes": {
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 28,
+        "disagree": 1
+      }
+    },
+    {
       "id": 193573,
       "date": "2026-06-17",
-      "title": "EU–Pakistan Agreement: modification of concessions on all the tariff rate quotas included in the EU Schedule CLXXV as a consequence of the United Kingdom's withdrawal from the European Union",
+      "title": "EU-Pakistan Agreement: modification of concessions on all the tariff rate quotas included in the EU Schedule CLXXV",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193573",
       "votes": {
         "pvv": {
@@ -549,8 +1134,8 @@
       "date": "2026-06-17",
       "title": "Common system for the return of third-country nationals staying illegally in the Union (Return Regulation)",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/194134",
       "votes": {
         "pvv": {
@@ -614,8 +1199,8 @@
       "date": "2026-06-17",
       "title": "Common system for the return of third-country nationals staying illegally in the Union (Return Regulation)",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
+      "result": "rejected",
+      "resultLabel": "Verworpen",
       "source": "https://howtheyvote.eu/votes/194442",
       "votes": {
         "pvv": {
@@ -679,8 +1264,8 @@
       "date": "2026-06-17",
       "title": "2025 Commission report on Türkiye",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193644",
       "votes": {
         "pvv": {
@@ -744,8 +1329,8 @@
       "date": "2026-06-17",
       "title": "2025 Commission report on North Macedonia",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193952",
       "votes": {
         "pvv": {
@@ -809,8 +1394,8 @@
       "date": "2026-06-17",
       "title": "2025 Commission report on Montenegro",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193527",
       "votes": {
         "pvv": {
@@ -874,8 +1459,8 @@
       "date": "2026-06-17",
       "title": "2025 Commission report on Kosovo",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193892",
       "votes": {
         "pvv": {
@@ -939,8 +1524,8 @@
       "date": "2026-06-17",
       "title": "2025 Commission report on Georgia",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193572",
       "votes": {
         "pvv": {
@@ -1004,8 +1589,8 @@
       "date": "2026-06-17",
       "title": "2025 Commission report on Bosnia and Herzegovina",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193857",
       "votes": {
         "pvv": {
@@ -1069,8 +1654,8 @@
       "date": "2026-06-17",
       "title": "2025 Commission report on Albania",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/193511",
       "votes": {
         "pvv": {
