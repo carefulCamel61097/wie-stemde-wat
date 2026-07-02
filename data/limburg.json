@@ -3,7 +3,7 @@
     "province": "Limburg",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-06-25T10:01:16+00:00",
+    "generated_at": "2026-07-02T09:47:04+00:00",
     "source": "https://limburg.bestuurlijkeinformatie.nl",
     "sourceName": "",
     "license": "Open data - Provincie Limburg (iBabs publieksportaal)",
@@ -14,7 +14,7 @@
     "note": "Stemmen zijn per fractie met aantallen geregistreerd (aangenomen én verworpen). Moties/amendementen zonder hoofdelijke stemming zijn niet opgenomen.",
     "granularity": "member",
     "counts": {
-      "moties": 336,
+      "moties": 356,
       "parties": 16
     }
   },
@@ -56,16 +56,16 @@
       "name": "LOKAAL-LIMBURG"
     },
     {
-      "slug": "pvdd",
-      "name": "PvdD"
-    },
-    {
       "slug": "ja21",
       "name": "JA21"
     },
     {
       "slug": "horizon",
       "name": "Horizon"
+    },
+    {
+      "slug": "pvdd",
+      "name": "PvdD"
     },
     {
       "slug": "fvd",
@@ -85,6 +85,1506 @@
     }
   ],
   "moties": [
+    {
+      "id": 3330,
+      "date": "2026-06-26",
+      "title": "Motie 3330 Smeets inzake Bouwen aan een sociaal en veerkrachtig Limburg.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/320488ff-6246-4cd0-99c4-b86dba53cca1",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 3321,
+      "date": "2026-06-26",
+      "title": "Motie 3321 Megens inzake Niet de burger dimmen.",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/c2a2ed86-39ba-458a-b902-b0f51083e1ea",
+      "votes": {
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 3320,
+      "date": "2026-06-26",
+      "title": "Motie 3320 Hoks inzake Onderzoek naar de oprichting van een provinciaal openbaarvervoerbedrijf Limburg.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f9e2b5d7-bd4f-4731-a469-53deec4d352e",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 8,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 3318,
+      "date": "2026-06-26",
+      "title": "Motie 3318 Van Bijnen inzake Truck parking Maastricht-Airport - Aviation Valley.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/042c8f08-9863-4268-bb3a-223517ede4a3",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 3329,
+      "date": "2026-06-26",
+      "title": "Gewijzigde Motie 3329 Berghorst c.s. inzake Structureel financieren wat je structureel doet.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/d8a197fa-aa36-4367-89a3-6c890e20bd83",
+      "votes": {
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 10,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 3328,
+      "date": "2026-06-26",
+      "title": "Gewijzigde Motie 3328 Berghorst c.s. inzake Drempelloos OV voor iedereen.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a1309844-d852-4833-b178-199f3134f03e",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 11,
+        "disagree": 1
+      }
+    },
+    {
+      "id": 3325,
+      "date": "2026-06-26",
+      "title": "Gewijzigde Motie 3325 Bloi c.s. inzake Waar een (politieke) wil is, is een (Rand)weg naar leefbaarheid",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/aa1dedcb-c479-4e92-8e4d-7782b9b6b32a",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 8,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 3323,
+      "date": "2026-06-26",
+      "title": "Gewijzigde Motie 3323 Depondt c.s. inzake Continuïteit in beleid 2",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/6eeec5b1-1603-4d00-8d16-31f99cca085e",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 10000234,
+      "date": "2026-06-26",
+      "title": "Gewijzigd Amendement 234 Megens c.s. inzake MRB bevriezen",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/7852cf50-4d8c-4a46-8a73-a95b699d04aa",
+      "votes": {
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 3326,
+      "date": "2026-06-26",
+      "title": "3e Gewijzigde Motie 3326 Wesseling c.s. inzake zichtbaar Limburg, laat projecten spreken",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a75c2dda-d696-4c45-892c-9b263d059d86",
+      "votes": {
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 3310,
+      "date": "2026-06-26",
+      "title": "2e gewijzigde Motie 3310 Stocks inzake afkeuring onjuiste aanwending onderhoudsgelden MAA.",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/88c8d677-23f5-4243-aa1a-4f243057ba87",
+      "votes": {
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 8
+      }
+    },
+    {
+      "id": 3327,
+      "date": "2026-06-26",
+      "title": "2e Gewijzigde Motie 3327 Wesseling c.s. inzake Veilig over straat",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a83ccb2d-ddee-4811-bf28-551d32f52556",
+      "votes": {
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 3324,
+      "date": "2026-06-26",
+      "title": "2e Gewijzigde Motie 3324 Maillé c.s. inzake regie op onze digitale autonomie.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/4e5d9520-83d5-4402-85c2-a26d9a7a5eb7",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 11,
+        "disagree": 1
+      }
+    },
+    {
+      "id": 3322,
+      "date": "2026-06-26",
+      "title": "2e Gewijzigde Motie 3322 Jetten c.s. inzake Samen herdenken samen verbinden  75 jaar Molukse gemeenschap in Limburg.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/7f3c43a4-1867-4006-a845-29c2927eb9e6",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 11,
+        "disagree": 1
+      }
+    },
+    {
+      "id": 3316,
+      "date": "2026-06-26",
+      "title": "2e Gewijzigde Motie 3316 Goossen c.s. inzake Mijnbouwschadeherstel bewoners eerst, bureaucratie laatst",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/22ab4097-4387-4342-bc6b-b4fcc6df5d5e",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 3315,
+      "date": "2026-06-26",
+      "title": "2e Gewijzigde Motie 3315 Schoolmeesters c.s. inzake Van sociale stedelijke ontwikkeling naar sociale stedelijke én plattelandsontwikkeling.",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/ade7a1bb-4a95-40a6-9471-f4561d32b4fa",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 7
+      }
+    },
+    {
+      "id": 3314,
+      "date": "2026-06-26",
+      "title": "2e Gewijzigde Motie 3314 Nijenhuis c.s. inzake Evenredig doelmatig en brongericht waterkwaliteitsbeleid.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/6300ecaf-81c1-4056-94e7-ad99760a8578",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 3313,
+      "date": "2026-06-26",
+      "title": "2e Gewijzigde Motie 3313 Nijenhuis c.s. inzake Leefbaarheid ook in 2027.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1d8ab672-151a-4795-8f20-f2836a344066",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 3312,
+      "date": "2026-06-26",
+      "title": "2e Gewijzigde Motie 3312 Wolters c.s. inzake Limburg digitaal onafhankelijk een Maatschappelijke Digitaliseringsstrategie voor Limburg",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/925063d9-657f-4537-b2e5-910328672dfb",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 10,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 3311,
+      "date": "2026-06-26",
+      "title": "2e Gewijzigde Motie 3311 Van der Pol c.s. inzake Alleen ga je sneller samen kom je verder.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/7c3f5286-f78b-4b30-b0ab-541114ec61f2",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-limburg": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 8,
+        "disagree": 4
+      }
+    },
     {
       "id": 3309,
       "date": "2026-06-19",
@@ -6092,7 +7592,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/e92d761f-9f97-492b-a66a-145ca360e86b",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/85d3e884-8347-4d70-8044-2e2d94970922",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -6542,7 +8042,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/cd2e4edd-6d63-4712-91f4-92e3e285e5c2",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1d69b111-494c-4aa9-a843-3a8230072b40",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -6902,7 +8402,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/df5161c0-d4ba-4f16-bac8-2d3c249e2843",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f4bf019f-34d9-40ec-ac20-669aa497f361",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -7352,7 +8852,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/ec4f98c1-0f75-4d01-ad07-f647786685fe",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/4868dc9f-3a6c-4ae7-b3b5-3c4ea099ed01",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -8702,7 +10202,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/7d3d0e9d-7eb3-4fda-b02e-dbd87eff6887",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1b22ba52-55ae-409b-a888-67e15d844cc6",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -10347,7 +11847,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/4f2fc433-8ee7-4cfe-bdf8-807199e23bb1",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/bb493476-84fa-4940-946a-378c26ed16ee",
       "votes": {
         "cda": {
           "agree": 5,
@@ -10432,7 +11932,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/2c0ac492-725a-4ae0-9e7b-7f76b5b711e4",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/4f64e38f-7cb7-4485-aeaf-ab0963efab5e",
       "votes": {
         "cda": {
           "agree": 5,
