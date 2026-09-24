@@ -3,7 +3,7 @@
     "province": "Limburg",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-09-17T11:56:51+00:00",
+    "generated_at": "2026-09-24T11:54:39+00:00",
     "source": "https://limburg.bestuurlijkeinformatie.nl",
     "sourceName": "",
     "license": "Open data - Provincie Limburg (iBabs publieksportaal)",
@@ -1371,7 +1371,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/e7c84b84-27cf-410f-aaf5-6e02bb423bed",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/9fbd30d2-2666-4e24-b5a1-fa396a241c23",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -9666,7 +9666,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/fd015234-5d97-4f2f-be05-afb1354245a7",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1f251b6c-f5d2-4ecb-854d-e676456b17eb",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -10566,7 +10566,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/46468fe2-a572-48d8-891c-1f1c7d3eb7af",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/3f51ad4b-6e9a-46fe-a6e2-a849e2586bdc",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -10736,7 +10736,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/55647cc2-b79c-4693-ae20-9e5d92376811",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b80a99c7-337f-4938-b52b-5e7fe350962f",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -12106,7 +12106,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/633bcc3d-0a14-4465-bc68-569b9371c643",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/08b91658-0d01-4c67-a20a-bbf461034497",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -13386,7 +13386,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/c1675acd-2a8f-4a09-b4da-064c5794c639",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f33c9b62-fd61-41e9-b9d3-7833aa671179",
       "votes": {
         "bbb": {
           "agree": 8,

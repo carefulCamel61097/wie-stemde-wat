@@ -3,7 +3,7 @@
     "province": "2019–2023",
     "body": "Eerste Kamer",
     "term": "2019–2023",
-    "generated_at": "2026-09-17T13:21:59+00:00",
+    "generated_at": "2026-09-24T13:17:52+00:00",
     "source": "https://www.eerstekamer.nl",
     "sourceName": "",
     "license": "Open data - Eerste Kamer der Staten-Generaal (eerstekamer.nl)",
@@ -15,7 +15,7 @@
     "granularity": "fractie",
     "counts": {
       "moties": 638,
-      "parties": 19
+      "parties": 20
     },
     "types": [
       "motie",
@@ -35,10 +35,6 @@
     {
       "slug": "d66",
       "name": "D66"
-    },
-    {
-      "slug": "groenlinks",
-      "name": "GroenLinks"
     },
     {
       "slug": "pvda",
@@ -63,6 +59,10 @@
     {
       "slug": "fractie-otten",
       "name": "Fractie-Otten"
+    },
+    {
+      "slug": "groenlinks",
+      "name": "GroenLinks"
     },
     {
       "slug": "pvdd",
@@ -99,6 +99,10 @@
     {
       "slug": "groenlinks-met-uitzondering-van-het-lid-farah-karimi",
       "name": "GroenLinks met uitzondering van het lid Farah Karimi"
+    },
+    {
+      "slug": "karimi",
+      "name": "Karimi"
     }
   ],
   "moties": [
@@ -41078,7 +41082,7 @@
       }
     },
     {
-      "id": 275209493845477,
+      "id": 273499874876636,
       "date": "2021-01-26",
       "title": "Initiatiefvoorstel-Van Raak Opneming in de Grondwet van bepalingen inzake het correctief referendum (35.129)",
       "type": "wetsvoorstel",
@@ -41136,7 +41140,7 @@
           "disagree": 0,
           "abstain": 0
         },
-        "groenlinks": {
+        "karimi": {
           "agree": 1,
           "disagree": 0,
           "abstain": 0
