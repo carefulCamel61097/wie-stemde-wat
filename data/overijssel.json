@@ -3,7 +3,7 @@
     "province": "Overijssel",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-09-24T08:08:56+00:00",
+    "generated_at": "2026-10-01T08:09:59+00:00",
     "source": "https://overijssel.notubiz.nl",
     "sourceName": "",
     "license": "Open data - Provincie Overijssel (Notubiz vergaderportaal)",
@@ -14,7 +14,7 @@
     "note": "Stemmen zijn hoofdelijk (per lid) geregistreerd en hier per fractie met exacte aantallen samengevat (aangenomen én verworpen). Agendapunten zonder hoofdelijke stemming (bijv. bij acclamatie) en leden die niet deelnamen, staan niet in de telling.",
     "granularity": "member",
     "counts": {
-      "moties": 591,
+      "moties": 605,
       "parties": 16
     },
     "types": [
@@ -91,6 +91,1336 @@
     }
   ],
   "moties": [
+    {
+      "id": 10608723,
+      "date": "2026-09-30",
+      "title": "Statenvoorstel Wijziging Waterschapsreglementen",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 46,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 10608721,
+      "date": "2026-09-30",
+      "title": "Statenvoorstel Ontheffing woonplaatsvereiste gedeputeerde De Groot",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 38,
+        "disagree": 8
+      }
+    },
+    {
+      "id": 10608725,
+      "date": "2026-09-30",
+      "title": "Statenvoorstel Herbestemmen gelden Woonfaciliteit",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 42,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 10609526,
+      "date": "2026-09-30",
+      "title": "Statenvoorstel Beleidsprogramma Nationale Veiligheid en Defensie Overijssel 2026 - 2027",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 43,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 10610266,
+      "date": "2026-09-30",
+      "title": "PS26-MV21 Natuurbeheer in Overijssel op basis van metingen (FVD e.a.)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 38
+      }
+    },
+    {
+      "id": 10610262,
+      "date": "2026-09-30",
+      "title": "PS26-MV19 Groen gas van eigen boer heeft voorrang (OV)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 38
+      }
+    },
+    {
+      "id": 10610261,
+      "date": "2026-09-30",
+      "title": "PS26-M90 Onafhankelijke toets Engbertsdijksvenen en bescherming landbouw (OV)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 38
+      }
+    },
+    {
+      "id": 10610260,
+      "date": "2026-09-30",
+      "title": "PS26-M89 Europese praktijkkennis benutten via TAIEX-EIR Peer 2 Peer (OV)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 42
+      }
+    },
+    {
+      "id": 10610224,
+      "date": "2026-09-30",
+      "title": "PS26-M88 PS actief betrekken m.b.t. keuzes generieke zones rondom N2000 gebieden (PVV e.a.)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 40
+      }
+    },
+    {
+      "id": 10610209,
+      "date": "2026-09-30",
+      "title": "PS26-M87 Geen Uitbreiding stikstofgevoelige Habitats binnen 250 meter buitengrens N2000 gebied (PVV e.a.) versie 2",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 40
+      }
+    },
+    {
+      "id": 10610207,
+      "date": "2026-09-30",
+      "title": "PS26-M86 Geen generieke zone rondom N2000 De Wieden (PVV e.a.) versie 2",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 30
+      }
+    },
+    {
+      "id": 10610206,
+      "date": "2026-09-30",
+      "title": "PS26-M85 Gebiedsprocessen 2.0 (CDA e.a.) versie 2",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 1,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 40,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 10610205,
+      "date": "2026-09-30",
+      "title": "PS26-M84 Doe de kast open (FVD e.a.)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 38
+      }
+    },
+    {
+      "id": 10609500,
+      "date": "2026-09-30",
+      "title": "PS26-A71 Geen blanco cheque (FVD e.a.) versie 2",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394778",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 43,
+        "disagree": 2
+      }
+    },
     {
       "id": 10410531,
       "date": "2026-07-02",

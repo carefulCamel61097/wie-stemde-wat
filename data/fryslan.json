@@ -3,7 +3,7 @@
     "province": "Fryslân",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-09-24T08:05:03+00:00",
+    "generated_at": "2026-10-01T08:05:41+00:00",
     "source": "https://fryslan.notubiz.nl",
     "sourceName": "",
     "license": "Open data - Provincie Fryslân (Notubiz vergaderportaal)",
@@ -14,7 +14,7 @@
     "note": "Stemmen zijn hoofdelijk (per lid) geregistreerd en hier per fractie met exacte aantallen samengevat (aangenomen én verworpen). Agendapunten zonder hoofdelijke stemming (bijv. bij acclamatie) en leden die niet deelnamen, staan niet in de telling.",
     "granularity": "member",
     "counts": {
-      "moties": 836,
+      "moties": 877,
       "parties": 15
     },
     "types": [
@@ -65,12 +65,12 @@
       "name": "Provinciaal Belang Fryslân"
     },
     {
-      "slug": "pvdd",
-      "name": "PvdD"
-    },
-    {
       "slug": "sp",
       "name": "SP"
+    },
+    {
+      "slug": "pvdd",
+      "name": "PvdD"
     },
     {
       "slug": "steatelid-van-dijk",
@@ -86,6 +86,3221 @@
     }
   ],
   "moties": [
+    {
+      "id": 10602633,
+      "date": "2026-06-24",
+      "title": "Ramtnota 2027",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 33,
+        "disagree": 7
+      }
+    },
+    {
+      "id": 10602506,
+      "date": "2026-06-24",
+      "title": "Moasje 9 (GrienLinks, PvdA, D66, PvdD en SP): David tegen Goliath; MiinbouwtaÍel voor bewoners en kleinere bedrijven",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 10,
+        "disagree": 30
+      }
+    },
+    {
+      "id": 10602526,
+      "date": "2026-06-24",
+      "title": "Moasje 8 (VVD): Van A naar Beter",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 26,
+        "disagree": 14
+      }
+    },
+    {
+      "id": 10602593,
+      "date": "2026-06-24",
+      "title": "Moasje 7 (VVD, JA21 en CDA): Actualisatie onderhoudsniveau infrastructuur",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 22
+      }
+    },
+    {
+      "id": 10602607,
+      "date": "2026-06-24",
+      "title": "Moasje 5 (PvdA, GrienLinks, SP, D66 en FNP): Steun onze sportverenigingen",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 34,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 10602621,
+      "date": "2026-06-24",
+      "title": "Moasje 4 (PvdA, FNP, GrienLinks, SP, BBB en D66): Batterij voor mienskipsgebouwen",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 34,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 10602626,
+      "date": "2026-06-24",
+      "title": "Moasje 3 (PvdA, GrienLinks, SP en BBB): Verder met gratis ov voor minima in Fryslân",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 34,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 10602220,
+      "date": "2026-06-24",
+      "title": "Moasje 3 (CDA, PvdA, JA21 en GrienLinks): Specifieke uitkeringen en uitvoeringskracht",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 16
+      }
+    },
+    {
+      "id": 10602306,
+      "date": "2026-06-24",
+      "title": "Moasje 23 (CDA en FNP): Grondaankoopplan",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 16
+      }
+    },
+    {
+      "id": 10602308,
+      "date": "2026-06-24",
+      "title": "Moasje 22 (GrienLinks, JA21 en D66): lntegrale digitale strategie",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 38
+      }
+    },
+    {
+      "id": 10602331,
+      "date": "2026-06-24",
+      "title": "Moasje 21 (PBF, JA21, VVD en CDA): Geen opcentenverhoging",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 28
+      }
+    },
+    {
+      "id": 10602352,
+      "date": "2026-06-24",
+      "title": "Moasje 20 (D66, BBB, PvdA en SP): Vervoersregeling cultuur",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 29,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 10602225,
+      "date": "2026-06-24",
+      "title": "Moasje 2 (CDA, PvdA en GrienLinks): Uitvoeringscapaciteit en uitvoerbaarheidstoets",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 21,
+        "disagree": 19
+      }
+    },
+    {
+      "id": 10602628,
+      "date": "2026-06-24",
+      "title": "Moasje 2 (BBB, CDA en JA21): Fryslân en haar gewassen beschermen",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 28,
+        "disagree": 12
+      }
+    },
+    {
+      "id": 10602387,
+      "date": "2026-06-24",
+      "title": "Moasje 19 (PVV) Verantwoord energiebeleid",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 38
+      }
+    },
+    {
+      "id": 10602429,
+      "date": "2026-06-24",
+      "title": "Moasje 18 (PVV): Regiodeal echt voor de regio",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 35
+      }
+    },
+    {
+      "id": 10602434,
+      "date": "2026-06-24",
+      "title": "Moasje 17 (PVV): Nee tegen ingrijpende Haagse stikstofplannen",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 37
+      }
+    },
+    {
+      "id": 10602440,
+      "date": "2026-06-24",
+      "title": "Moasje 16 (PVV): Afbouw opcenten voor structurele lastenverlichting",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 37
+      }
+    },
+    {
+      "id": 10602448,
+      "date": "2026-06-24",
+      "title": "Moasje 15 (PVV): Maak werk van een kleinere en efficiëntere overheid",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 37
+      }
+    },
+    {
+      "id": 10602477,
+      "date": "2026-06-24",
+      "title": "Moasje 14 (GrienLinks, PvdD en PvdA): Landelijke regie en structurele financiering wildopvang",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 25
+      }
+    },
+    {
+      "id": 10602482,
+      "date": "2026-06-24",
+      "title": "Moasje 13 (GrienLinks, BBB, FNP, PvdA en SP): Stevige basis onder basisvaardigheden",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 33,
+        "disagree": 7
+      }
+    },
+    {
+      "id": 10602494,
+      "date": "2026-06-24",
+      "title": "Moasje 12 (GrienLinks, PvdA, BBB en CDA): Trots op het wereldkampioenschap korfbal yn Fryslân",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 37,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 10602505,
+      "date": "2026-06-24",
+      "title": "Moasje 10 (GrienLinks, PvdA en D66): Achter de 'donkere wolk' schijnt de zon, 2027 is het jaar van de KRW en NNN",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 10,
+        "disagree": 30
+      }
+    },
+    {
+      "id": 10602285,
+      "date": "2026-06-24",
+      "title": "Jierstikken 2025",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 38,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 10602669,
+      "date": "2026-06-24",
+      "title": "Beneaming lid Platfoarm Europa",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 40,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 10602636,
+      "date": "2026-06-24",
+      "title": "Amendemint 2 (D66, GrienLinks en SP): Geen spaarpot naast de VAR",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 22,
+        "disagree": 18
+      }
+    },
+    {
+      "id": 10602645,
+      "date": "2026-06-24",
+      "title": "Amendemint 1 (CDA): Knaken voor kerntaken",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394372",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 11,
+        "disagree": 29
+      }
+    },
+    {
+      "id": 10601011,
+      "date": "2026-06-17",
+      "title": "Yntegrale Havenfyzje Fryslân",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 38,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 10601022,
+      "date": "2026-06-17",
+      "title": "Sjenswize ûntwerpbegrutting FUMO 2027",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 39,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 10601020,
+      "date": "2026-06-17",
+      "title": "Sjenswize konseptbegrutting 2027 Mienskiplike regeling Waadfûns",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 39,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 10601047,
+      "date": "2026-06-17",
+      "title": "Moasje frjemd PvdD, SP en GrienLinks oer 'Geen ganzen vergassen'",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 37
+      }
+    },
+    {
+      "id": 10601042,
+      "date": "2026-06-17",
+      "title": "Moasje frjemd FNP CDA SP oer 'Underhâld Rykswegen'",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 40,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 10600883,
+      "date": "2026-06-17",
+      "title": "Moasje 8 (JA21, VVD en Steatelid Van Dijk): Toekomstbestendige bereikbaarheid Friese  binnenhavens",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 36
+      }
+    },
+    {
+      "id": 10600946,
+      "date": "2026-06-17",
+      "title": "Moasje 7 (SP): Digitale soevereiniteit ook voor havens",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 17
+      }
+    },
+    {
+      "id": 10600953,
+      "date": "2026-06-17",
+      "title": "Moasje 6 (SP): Samen werken aan de haven van de toekomst",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 35,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 10600955,
+      "date": "2026-06-17",
+      "title": "Moasje 5 (SP): Haal het MBO aan boord",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 39,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 10600974,
+      "date": "2026-06-17",
+      "title": "Moasje 4 (GrienLinks): Boontjes",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 13,
+        "disagree": 28
+      }
+    },
+    {
+      "id": 10600990,
+      "date": "2026-06-17",
+      "title": "Moasje 3 (FNP, D66, CDA, PvdA en ChristenUnie): Havenmanagementsysteem",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 38,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 10600998,
+      "date": "2026-06-17",
+      "title": "Moasje 2 (PvdA, VVD, GrienLinks, FNP en CDA): Van asfalt naar water",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 38,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 10601006,
+      "date": "2026-06-17",
+      "title": "Moasje 1 (BBB, PvdA, FNP en SP): Samen op koers",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 39,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 10601039,
+      "date": "2026-06-17",
+      "title": "Konseptbegrutting 2027 en Jierstikken 2025 Noardlike Rekkenkeamer (NRK)",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://fryslan.notubiz.nl/vergadering/1394370",
+      "votes": {
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fnp": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "grienlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "provinciaal-belang-frysln": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-jonker": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "steatelid-van-dijk": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 41,
+        "disagree": 0
+      }
+    },
     {
       "id": 10358815,
       "date": "2026-05-06",
