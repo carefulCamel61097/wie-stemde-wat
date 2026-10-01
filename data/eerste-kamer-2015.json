@@ -3,7 +3,7 @@
     "province": "2015–2019",
     "body": "Eerste Kamer",
     "term": "2015–2019",
-    "generated_at": "2026-09-24T13:17:52+00:00",
+    "generated_at": "2026-10-01T14:04:25+00:00",
     "source": "https://www.eerstekamer.nl",
     "sourceName": "",
     "license": "Open data - Eerste Kamer der Staten-Generaal (eerstekamer.nl)",
@@ -15,7 +15,7 @@
     "granularity": "fractie",
     "counts": {
       "moties": 354,
-      "parties": 19
+      "parties": 20
     },
     "types": [
       "motie",
@@ -31,10 +31,6 @@
     {
       "slug": "christenunie",
       "name": "ChristenUnie"
-    },
-    {
-      "slug": "pvda",
-      "name": "PvdA"
     },
     {
       "slug": "pvv",
@@ -61,6 +57,10 @@
       "name": "SGP"
     },
     {
+      "slug": "pvda",
+      "name": "PvdA"
+    },
+    {
       "slug": "50plus",
       "name": "50PLUS"
     },
@@ -83,6 +83,10 @@
     {
       "slug": "pvda-met-uitzondering-van-het-lid-lambert-verheijen",
       "name": "PvdA met uitzondering van het lid Lambert Verheijen"
+    },
+    {
+      "slug": "verheijen",
+      "name": "Verheijen"
     },
     {
       "slug": "cda-met-uitzondering-van-de-leden-joop-atsma",
@@ -16033,7 +16037,7 @@
       }
     },
     {
-      "id": 25913723848735,
+      "id": 95414279020174,
       "date": "2016-12-20",
       "title": "EU-voorstellen: Pakket vennootschapsbelasting (34.604)",
       "type": "overig",
@@ -16076,7 +16080,7 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
+        "verheijen": {
           "agree": 1,
           "disagree": 0,
           "abstain": 0
@@ -16113,7 +16117,7 @@
       }
     },
     {
-      "id": 182907898041600,
+      "id": 131253792307338,
       "date": "2016-12-20",
       "title": "EU-voorstellen: Pakket vennootschapsbelasting (34.604)",
       "type": "overig",
@@ -16161,7 +16165,7 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
+        "verheijen": {
           "agree": 1,
           "disagree": 0,
           "abstain": 0
