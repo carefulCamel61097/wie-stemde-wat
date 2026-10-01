@@ -3,7 +3,7 @@
     "province": "Limburg",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-09-24T11:54:39+00:00",
+    "generated_at": "2026-10-01T14:47:43+00:00",
     "source": "https://limburg.bestuurlijkeinformatie.nl",
     "sourceName": "",
     "license": "Open data - Provincie Limburg (iBabs publieksportaal)",
@@ -14,8 +14,8 @@
     "note": "Stemmen zijn per fractie met aantallen geregistreerd (aangenomen én verworpen). Moties/amendementen zonder hoofdelijke stemming zijn niet opgenomen.",
     "granularity": "member",
     "counts": {
-      "moties": 356,
-      "parties": 16
+      "moties": 372,
+      "parties": 17
     },
     "types": [
       "amendement",
@@ -40,10 +40,6 @@
       "name": "PvdA"
     },
     {
-      "slug": "pvv",
-      "name": "PVV"
-    },
-    {
       "slug": "sp",
       "name": "SP"
     },
@@ -56,16 +52,20 @@
       "name": "BBB"
     },
     {
+      "slug": "pvv",
+      "name": "PVV"
+    },
+    {
+      "slug": "horizon",
+      "name": "Horizon"
+    },
+    {
       "slug": "lokaal-limburg",
       "name": "LOKAAL-LIMBURG"
     },
     {
       "slug": "ja21",
       "name": "JA21"
-    },
-    {
-      "slug": "horizon",
-      "name": "Horizon"
     },
     {
       "slug": "pvdd",
@@ -84,11 +84,1365 @@
       "name": "oos limburg"
     },
     {
+      "slug": "rvl",
+      "name": "RVL"
+    },
+    {
       "slug": "svl",
       "name": "SVL"
     }
   ],
   "moties": [
+    {
+      "id": 3336,
+      "date": "2026-09-25",
+      "title": "Motie Vreemd 3336 Wetemans inzake zelfverrijking",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/25ca357a-df38-4239-9207-2d050be8e860",
+      "votes": {
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 1,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 3335,
+      "date": "2026-09-25",
+      "title": "Motie Vreemd 3335 Driessen inzake  AI is geen volksvertegenwoordiger",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/fd74b917-dc3b-47e8-a8b1-980c486b6d82",
+      "votes": {
+        "fvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 3332,
+      "date": "2026-09-25",
+      "title": "Motie 3332 Franssen inzake Realistisch beleid stel de stallendeadline uit!",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/50e1738a-293d-4394-83e0-41d18e850489",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 3334,
+      "date": "2026-09-25",
+      "title": "Gewijzigde Motie vreemd 3334 Koopman c.s. inzake Limburg als meest toegankelijke provincie van Nederland.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/da109921-3219-4695-85b5-0f04be7ca89e",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 3333,
+      "date": "2026-09-25",
+      "title": "Gewijzigd Motie vreemd 3333 Hendrikx inzake Verstandig investeren in de warmtetransitie.",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/c5168373-45db-45a7-9208-9a6d2b321eb9",
+      "votes": {
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 1,
+        "disagree": 13
+      }
+    },
+    {
+      "id": 10000245,
+      "date": "2026-09-25",
+      "title": "Gewijzigd Amendement 245 Driessen inzake Werkbare uitzondering voor short-stay huisvesting op bedrijventerreinen 2.",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/3a537934-ddc3-4b66-9b9f-a86b0d90f773",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 10000244,
+      "date": "2026-09-25",
+      "title": "Gewijzigd Amendement 244 Driessen inzake Short-stay huisvesting op bedrijventerreinen ruimte voor professionele locaties.",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/e57c64f3-9fba-4a57-81f3-1f66c497fa31",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 10
+      }
+    },
+    {
+      "id": 10000243,
+      "date": "2026-09-25",
+      "title": "Gewijzigd Amendement 243 Huizing c.s. inzake Lomm en 't Hanik ook Uitsluitingsgebied Windturbines.",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1821d13a-361f-4983-a290-9714d4953150",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 10000242,
+      "date": "2026-09-25",
+      "title": "Gewijzigd Amendement 242 Huizing c.s. inzake Aanpassen Uitsluitingsgebieden Windturbines aan Maximum Bouwhoogtes.",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/ed1fd1a3-115c-4a94-a946-853756bda2ca",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 10000241,
+      "date": "2026-09-25",
+      "title": "Gewijzigd Amendement 241 Wesseling c.s. inzake Positieve bijdrage aan omgeving.",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/3bb564eb-934d-4bf7-b4dd-6a71a4fccb75",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 10000240,
+      "date": "2026-09-25",
+      "title": "Gewijzigd Amendement 240 Van der Pol c.s. inzake Schaderegeling bij herinrichting natuurbeken.",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f4e622f1-d4f6-4065-aac2-9419d52ea891",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 7
+      }
+    },
+    {
+      "id": 10000236,
+      "date": "2026-09-25",
+      "title": "Gewijzigd Amendement 236 Hoks c.s. inzake Minimale afstand windturbines tot woningen.",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/684f5046-154b-41d5-80b9-31cc6c0f9735",
+      "votes": {
+        "fvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 10
+      }
+    },
+    {
+      "id": 10000246,
+      "date": "2026-09-25",
+      "title": "Amendement 246 Franssen inzake Positieve ruimte voor nieuwe veehouders.",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a86589bd-3e8d-44e7-8bff-f690871bf01e",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 10
+      }
+    },
+    {
+      "id": 10000239,
+      "date": "2026-09-25",
+      "title": "Amendement 239 Van der Pol c.s. inzake Eerst beoordelen dan besluiten.",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/4c8fd59c-1b46-4591-b601-0e131278609b",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 10000237,
+      "date": "2026-09-25",
+      "title": "Amendement 237 Boven c.s. inzake Behoud kernkwaliteiten GBL en verwevingsgebied.",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a290bfd1-f279-4a7e-a84b-5f0ce7d96baf",
+      "votes": {
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 10000238,
+      "date": "2026-09-25",
+      "title": "2e Gewijzigd Amendement 238 Boven c.s. inzake Overgangsbepaling grondwater bouwstoffen.",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/91608df2-c90b-4e7a-a52b-e2ef53074e62",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "horizon": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "oos-limburg": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "rvl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 13,
+        "disagree": 1
+      }
+    },
     {
       "id": 3330,
       "date": "2026-06-26",
@@ -96,7 +1450,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/ccb8f623-1792-416b-89f1-40afe7762516",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/eb3d6408-fa38-4d41-a807-6c76fc469c5d",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -246,7 +1600,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/89feadb5-666c-4e38-92d6-85a347bb16b8",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/9b08c190-28bb-402b-83b2-7c1a1c1993a0",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -321,7 +1675,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/c54a2ef8-c4d9-48b2-9b84-ee515304b594",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/ebaebeb4-02f1-456a-bc22-f233184c5732",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -471,7 +1825,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/7f060c75-c20d-4656-bd0a-9f7623aa09c4",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/4f45c6ed-2cf9-4b7e-93ad-ff9e4d970f0f",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -546,7 +1900,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b7df8a7f-8f96-473d-b02b-93ae81f6b870",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/885b817c-50a5-46f9-a294-fb0d8c7b3a52",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -621,7 +1975,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/6c60f04d-0c97-444f-bd62-7c7783120726",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/3c33aa0d-1d35-42fc-ae78-8136854325de",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -921,7 +2275,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1182a60c-f0a3-4f99-95c6-bb04d78759e5",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a29b9ba1-b97f-41be-bd1a-6e13bef8491c",
       "votes": {
         "cda": {
           "agree": 5,
@@ -1146,7 +2500,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a4ba3eb4-24bd-49e7-b0e5-c0cad3adfc3c",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/eb5c0e64-887b-43c2-8afd-282f622568ac",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -1296,7 +2650,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/9af6e3fe-d529-4ed9-bc32-0da7970c9d28",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/fe97fc17-118c-4a4e-b84a-ece0398a9afc",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -1446,7 +2800,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/c40036a6-9e47-45aa-af44-11ed5f9370e4",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/0199bc96-c3d8-433b-ba43-ba18d923f001",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -1666,7 +3020,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/02482cf5-26d1-4204-a7b2-151e58bef7bc",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/34c95b61-af18-44fe-a69a-d5a21123cd7a",
       "votes": {
         "bbb": {
           "agree": 8,
@@ -1741,7 +3095,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/884522a0-2c2b-4559-9427-9f1eff3205df",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/bbb4d832-840b-4f07-a727-888eae08d3c2",
       "votes": {
         "bbb": {
           "agree": 8,
@@ -1966,7 +3320,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/58385472-54a0-4d7d-a9ec-310d1018b147",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/ac7c9651-af46-43a6-8b9d-ffcbd9207d99",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -2136,7 +3490,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/d18060eb-5064-402e-a5a9-8293d943b99b",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/bb1cab2b-5d4c-44c5-b208-e2320471a340",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -2221,7 +3575,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/8e8b9271-e366-473b-9dbc-38f7899c0db0",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/46feea44-a30e-44be-87be-d5d15886b215",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -2866,7 +4220,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/c8360ec7-7a6e-4e41-88a3-7f81512d46b2",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/942ea5d1-e85c-4729-9b91-e289280501b7",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -2956,7 +4310,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/19087ed7-0596-46d5-8e78-29ea702e2287",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b33cabc3-8f49-4a4d-b29f-d929a4b87b4d",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -3046,7 +4400,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1012485e-95be-4b2b-a59a-2287e9887d97",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/69ab9a61-5751-4328-b09c-5b49169e6ebd",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -3136,7 +4490,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a3decbe0-473a-45f6-8fd5-9fab5ea4822f",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/90dfc1ea-35d2-492b-946b-f39d81d7494c",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -4306,7 +5660,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/cff9b775-fe7d-4725-a7fd-0657a227c8f2",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b660d5a2-a848-45ca-b690-0c985eb65ca7",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -5111,7 +6465,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/fbeba4a6-cb1d-4bc3-a431-9bc73c7a78d8",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/c495b3eb-a731-4505-8fd8-2b2329027172",
       "votes": {
         "cda": {
           "agree": 5,
@@ -5276,7 +6630,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f0f1df85-2cec-41d2-b060-369bb5af9c78",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a29f9518-3c96-48e0-9e89-ee741a2a99fc",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -5601,7 +6955,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a395a8b9-bff7-4996-a8c9-972babe81eaf",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/6a3f5502-b9bf-4626-81a3-97e584b09397",
       "votes": {
         "bbb": {
           "agree": 8,
@@ -5766,7 +7120,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f5b542f5-11a7-4cca-9f32-0276524329b3",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/2e0278b6-61e6-4837-ba5b-55f2a47f681f",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -6086,7 +7440,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/60d532ba-0dda-4aa3-9160-69cdec68b56c",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/8fd86860-aece-421d-8b9d-3ea2c0f68f68",
       "votes": {
         "cda": {
           "agree": 4,
@@ -6256,7 +7610,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/bab978ce-2580-4192-9726-0013980ce669",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/57291622-af39-4aeb-8fe5-e7d51cbd6322",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -6516,7 +7870,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/e9cb63cd-86f6-4294-b542-886b01fd1bfe",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/34851fa1-071f-4c33-bfc3-7f3c83daefbd",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -6606,7 +7960,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/ddd7e132-c8db-4dac-a58d-8a8e40e4719f",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/bfeb07fb-c8b7-4720-9547-6fe1d709ef7b",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -7596,7 +8950,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a21b8326-5f4c-4c38-bd55-47e446bca052",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/72b863a7-6a92-4714-82b6-5246a935139c",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -8046,7 +9400,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/e868cb81-a792-48bc-b12d-a8a6a6e49c25",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/7ff95469-0bac-4478-a703-077cfce1d87e",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -8406,7 +9760,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/647ba1a9-f7a2-49b5-9402-0c52c2a80f60",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/df5bb7f1-ad0b-45bd-bebd-5df75f87c80a",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -8586,7 +9940,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b393e682-d9e2-4125-bea7-6428994513fe",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/5781fa80-1a8e-47c9-a67c-b83ebcdbb1d9",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -8856,7 +10210,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/cec28224-bcce-4745-98aa-159d23a9d063",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/6aef3d10-2578-4592-933d-2dd87de8b3ef",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -9126,7 +10480,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/dcd6b917-6584-488d-8ab7-4c50c1871da0",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/ca5d25a4-f8e5-4599-b104-437cead87c35",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -9666,7 +11020,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1f251b6c-f5d2-4ecb-854d-e676456b17eb",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/2bb98b1d-5d09-4575-8f77-726af1219800",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -9756,7 +11110,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/bb3e9213-038d-4563-8ba5-b435d611f0f4",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/cae1e67a-3b2d-4ff8-bb39-840061a33438",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -9846,7 +11200,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/e452c3aa-e71c-4b53-9710-6e462d59e7e1",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/d32ec5c9-67b4-41fb-acc3-c3e87033a0af",
       "votes": {
         "cda": {
           "agree": 5,
@@ -10026,7 +11380,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/5c86af78-7a18-4fd7-8683-baeda43412aa",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/19adb030-4a63-455f-a15f-6910411a8caa",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -10116,7 +11470,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b1280274-052d-41d8-86f6-1b02d9aca5d5",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a059b3ee-a1f2-49cd-a8db-fb24dae77aef",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -10296,7 +11650,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b6e80312-0ba5-4c2f-b098-15dc102ef8e0",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/998d34cb-c4b5-4cf0-b805-70d3c06bf2ce",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -10736,7 +12090,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b80a99c7-337f-4938-b52b-5e7fe350962f",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1c67a933-b39f-46ba-b022-b2b5fe848f96",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -10906,7 +12260,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/e55e1dfa-08e8-4810-bbcc-a25ff2b87b0c",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f44b1951-cccd-4012-9a3e-1f63b6cab817",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -11171,7 +12525,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/ea370263-4f58-4ab7-8c7b-9b3f6ca4d72e",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/4feff218-6806-4828-ac0f-5d3bdb5be8d7",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -11256,7 +12610,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/7476e57b-69a4-41d5-8643-bffa342e7202",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/baa67a93-f0e8-4f0a-b005-a080a0db0aab",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -11426,7 +12780,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b26a226f-58c7-48ef-aad7-568b379cb30c",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1c18cca9-f154-4903-bd77-73d87cf3326f",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -11936,7 +13290,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/a3d8da05-068c-47e3-b23a-0c43b818388e",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b70eb6a6-65fc-47f1-8fb3-dffcb13f91f5",
       "votes": {
         "cda": {
           "agree": 5,
@@ -12191,7 +13545,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/8f72291c-5b43-4bb1-8d3a-ea2097976d99",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/09253126-0436-4650-87e8-56a3ff60215b",
       "votes": {
         "cda": {
           "agree": 5,
@@ -12276,7 +13630,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/6eef6151-4c8d-4688-8bb5-793f140fd22c",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/3ff01c99-c1a0-40de-a709-dc47ff5b088a",
       "votes": {
         "cda": {
           "agree": 5,
@@ -13556,7 +14910,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1bd1655b-626b-4903-80d6-3afe09a8342e",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/fd315eed-096d-44d1-803d-85b008119a1b",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -13641,7 +14995,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f3f6a265-b730-4438-955b-61437dc36714",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/6a91bd3f-928f-4b88-a727-b3e11e416c16",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -13811,7 +15165,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/367b72fa-ee52-4243-b39c-e0d84eb10e43",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/2018ecca-bd39-423d-83fe-63a8b9372db4",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -14401,7 +15755,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/48e72dbd-90c8-417a-bf52-b18aa5d49fb4",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/ce12bd80-3220-4176-9981-1e4dfbff75f4",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -14661,7 +16015,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/48a01814-dd62-44cf-a8d5-e940fc585998",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/9190d939-0f6f-4812-9da4-ff6a1b204e78",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -16411,7 +17765,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/54d2c27c-8e59-4ea4-ab97-116817a52f00",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/70f1f9c6-8c35-41fb-97e5-21875b2b6374",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -18031,7 +19385,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/aea58982-5442-4679-9cda-6525625dd5e6",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f6e62c63-eba2-434d-acdc-c8d035d2b5d3",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -18301,7 +19655,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/213c6848-0f97-40c3-af4c-3414bdb83e42",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/fe100a5b-dbcc-4aa0-83e9-84dd4faaac76",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -18391,7 +19745,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/99567acd-da7a-47f0-89d0-3707496c6a3f",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/44434e69-9745-4cc9-96af-b5588ff62341",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -19101,7 +20455,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/d9552d8a-e29f-4b35-9b8d-09f575a9ee4c",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/785f54a4-672b-4cbf-9f0d-42d741435704",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -21481,7 +22835,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/46db0942-72ec-4dda-a2d2-5698c7f91a84",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/b25b554e-f6b9-4e94-9847-21225a0145a3",
       "votes": {
         "bbb": {
           "agree": 9,
@@ -23431,7 +24785,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/1b1d5242-cc94-483e-aa53-246ad57e20a6",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/9f123179-ab53-430a-8c2d-ffb15ecd4383",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -24536,7 +25890,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/114ed7a7-3414-4ede-b8a1-77901f9b8cc2",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/79b43755-4f58-42c8-b6dc-88bf55088550",
       "votes": {
         "50plus": {
           "agree": 1,
@@ -26816,7 +28170,7 @@
       "type": "motie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
-      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/f8e76bd4-d838-4748-a2d9-cefac50a71f5",
+      "source": "https://limburg.bestuurlijkeinformatie.nl/Reports/Item/732d4296-ec8b-4c54-9cd7-d4c5753383a4",
       "votes": {
         "50plus": {
           "agree": 1,

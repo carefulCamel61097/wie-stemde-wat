@@ -825,6 +825,33 @@ def _list_year(r):
     return 0
 
 
+# iBabs caps a report page at 100 rows. It used to serve any `length` we asked for, and the single
+# length=2000 request we made silently started returning only the newest 100 (2026-10-01: Limburg
+# 1622 -> 100 rows), so three provinces lost two thirds of their stemmingen in one run. The endpoint
+# still honours `start` and reports the real total, so page through it.
+IBABS_PAGE = 100
+
+
+def ibabs_rows(base, guid):
+    """Every row of an iBabs DataTables report, 100 at a time. [] if the report is unreachable."""
+    rows, total = [], None
+    while total is None or len(rows) < total:
+        page = post_json(f"{base}/Reports/GetReportData/{guid}",
+                         f"draw=1&start={len(rows)}&length={IBABS_PAGE}")
+        batch = page.get("data") if isinstance(page, dict) else None
+        if not batch:
+            break
+        rows += batch
+        if total is None:
+            total = page.get("recordsFiltered") or page.get("recordsTotal") or len(batch)
+        if len(batch) < IBABS_PAGE:   # short page = last page, whatever the total claimed
+            break
+        time.sleep(SLEEP)
+    if total and len(rows) < total:
+        print(f"  WARN: report {guid} gave {len(rows)} of {total} rows")
+    return rows
+
+
 def ibabs_fetch(p):
     """Common iBabs fetch: for every report, pull the DataTables list + each in-term detail page.
     Returns [(row, date, html, type, id_base)] with row['status'] resolved (list / detail field /
@@ -835,8 +862,7 @@ def ibabs_fetch(p):
     raw, skipped = [], 0
     for ri, rep in enumerate(reports):
         id_base = ri * 10_000_000
-        listing = post_json(f"{base}/Reports/GetReportData/{rep['guid']}", "draw=1&start=0&length=2000")
-        rows = listing.get("data") if isinstance(listing, dict) else None
+        rows = ibabs_rows(base, rep["guid"])
         if not rows:
             print(f"  {rep['type']}: report {rep['guid']} unreachable/empty — skipped")
             continue

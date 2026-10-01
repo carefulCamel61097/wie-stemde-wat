@@ -3,7 +3,7 @@
     "province": "Noord-Brabant",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-09-24T12:23:52+00:00",
+    "generated_at": "2026-10-01T15:20:30+00:00",
     "source": "https://noordbrabant.bestuurlijkeinformatie.nl",
     "sourceName": "",
     "license": "Open data - Provincie Noord-Brabant (iBabs publieksportaal)",
@@ -9920,9 +9920,9 @@
       "date": "2026-04-10",
       "title": "A14-2026 Aanpassing PPN tekst met eenduidigheid",
       "type": "amendement",
-      "result": "rejected",
-      "resultLabel": "Verworpen",
-      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/5f70e9d7-7ff7-4703-80cc-0152b25ef2e6",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/32e1c40b-0c22-480a-bf4b-ed9c9c5b7816",
       "votes": {
         "50plus": {
           "agree": 1,
