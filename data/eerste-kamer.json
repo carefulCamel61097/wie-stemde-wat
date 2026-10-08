@@ -3,7 +3,7 @@
     "province": "2023–2027",
     "body": "Eerste Kamer",
     "term": "2023–2027",
-    "generated_at": "2026-10-01T13:22:56+00:00",
+    "generated_at": "2026-10-08T14:02:28+00:00",
     "source": "https://www.eerstekamer.nl",
     "sourceName": "",
     "license": "Open data - Eerste Kamer der Staten-Generaal (eerstekamer.nl)",
@@ -14,8 +14,8 @@
     "note": "Stemmen zijn op fractieniveau geregistreerd (voor/tegen, zonder zetelaantallen): de Eerste Kamer stemt meestal bij zitten en opstaan. Beide zijden worden expliciet vermeld (niets afgeleid). Hamerstukken (zonder stemming aangenomen) zijn niet opgenomen.",
     "granularity": "fractie",
     "counts": {
-      "moties": 527,
-      "parties": 47
+      "moties": 536,
+      "parties": 33
     },
     "types": [
       "motie",
@@ -24,6 +24,10 @@
     ]
   },
   "parties": [
+    {
+      "slug": "bbb",
+      "name": "BBB"
+    },
     {
       "slug": "cda",
       "name": "CDA"
@@ -57,10 +61,6 @@
       "name": "VVD"
     },
     {
-      "slug": "bbb",
-      "name": "BBB"
-    },
-    {
       "slug": "d66",
       "name": "D66"
     },
@@ -73,12 +73,12 @@
       "name": "JA21"
     },
     {
-      "slug": "groenlinks-pvda",
-      "name": "GroenLinks-PvdA"
-    },
-    {
       "slug": "50plus",
       "name": "50PLUS"
+    },
+    {
+      "slug": "groenlinks-pvda",
+      "name": "GroenLinks-PvdA"
     },
     {
       "slug": "opnl",
@@ -113,56 +113,16 @@
       "name": "PRO"
     },
     {
-      "slug": "samuel-croll",
-      "name": "(Samuel) Croll"
-    },
-    {
-      "slug": "andrea-van-langen-visbeek",
-      "name": "Andrea van Langen-Visbeek"
-    },
-    {
-      "slug": "arie-griffioen",
-      "name": "Arie Griffioen"
-    },
-    {
       "slug": "artie-ramsodit",
       "name": "Artie Ramsodit"
-    },
-    {
-      "slug": "crone",
-      "name": "Crone"
-    },
-    {
-      "slug": "elly-van-wijk",
-      "name": "Elly van Wijk"
-    },
-    {
-      "slug": "eric-kemperman",
-      "name": "Eric Kemperman"
-    },
-    {
-      "slug": "eugne-heijnen",
-      "name": "Eugène Heijnen"
     },
     {
       "slug": "farah-karimi",
       "name": "Farah Karimi"
     },
     {
-      "slug": "frans-van-knapen",
-      "name": "Frans van Knapen"
-    },
-    {
-      "slug": "gert-jan-oplaat",
-      "name": "Gert-Jan Oplaat"
-    },
-    {
       "slug": "groenlinks-pvda-met-uitzondering-van-de-leden-ferd-crone",
       "name": "GroenLinks-PvdA met uitzondering van de leden Ferd Crone"
-    },
-    {
-      "slug": "henk-marquart-scholtz",
-      "name": "Henk Marquart Scholtz"
     },
     {
       "slug": "jeroen-recourt",
@@ -171,10 +131,6 @@
     {
       "slug": "mary-fiers",
       "name": "Mary Fiers"
-    },
-    {
-      "slug": "math-goossen",
-      "name": "Math Goossen"
     },
     {
       "slug": "mei-li-vos",
@@ -193,27 +149,1005 @@
       "name": "Randy Martens"
     },
     {
-      "slug": "robbert-lievense",
-      "name": "Robbert Lievense"
-    },
-    {
-      "slug": "robert-van-gasteren",
-      "name": "Robert van Gasteren"
-    },
-    {
       "slug": "roel-van-gurp",
       "name": "Roel van Gurp"
     },
     {
-      "slug": "tekke-panman",
-      "name": "Tekke Panman"
-    },
-    {
-      "slug": "wim-jaspers",
-      "name": "Wim Jaspers"
+      "slug": "saskia-kluit",
+      "name": "Saskia Kluit"
     }
   ],
   "moties": [
+    {
+      "id": 139857415435627,
+      "date": "2026-10-06",
+      "title": "Motie-Van Hattem (PVV) c.s. over intrekken van de Spreidingswet (37.020, G)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261007/moties_algemene_politieke",
+      "votes": {
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 6,
+        "disagree": 13
+      }
+    },
+    {
+      "id": 263118520865343,
+      "date": "2026-10-06",
+      "title": "Motie-Van Hattem (PVV) c.s. over hoofddoekjesverbod in de openbare ruimte (37.020, H)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261007/moties_algemene_politieke",
+      "votes": {
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 1,
+        "disagree": 18
+      }
+    },
+    {
+      "id": 209407566740152,
+      "date": "2026-10-06",
+      "title": "Motie-Van Hattem (PVV) c.s. over het opzeggen van het vertrouwen in het kabinet (37.020, E)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261007/moties_algemene_politieke",
+      "votes": {
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 17
+      }
+    },
+    {
+      "id": 155866100957139,
+      "date": "2026-10-06",
+      "title": "Motie-Van Hattem (PVV) c.s. over afzien van voorgenomen maatregelen op het gebied van landbouw, natuur en stikstof (37.020, F)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261007/moties_algemene_politieke",
+      "votes": {
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 6,
+        "disagree": 13
+      }
+    },
+    {
+      "id": 58053992714782,
+      "date": "2026-10-06",
+      "title": "Motie-Lagas (BBB) c.s. over investeringen in bereikbaarheid en infrastructuur Noord-Nederland (37.020, C)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261007/moties_algemene_politieke",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 10,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 143004970653397,
+      "date": "2026-10-06",
+      "title": "Motie-Lagas (BBB) c.s. over beschikbaarheid van voldoende, veilig en betaalbaar voedsel als nationaal belang (37.020, D)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261007/moties_algemene_politieke",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 8,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 247758567924372,
+      "date": "2026-10-06",
+      "title": "Motie-Koffeman (PvdD) c.s. over voorkomen van dubbele belasting bij opslag elektriciteit achter een kleinverbruikersaansluiting (37.020, J)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261007/moties_algemene_politieke",
+      "votes": {
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 12
+      }
+    },
+    {
+      "id": 204904928039646,
+      "date": "2026-10-06",
+      "title": "Motie-Koffeman (PvdD) c.s. over onderzoek naar rapportageplicht van datacenters voor elektriciteits- en watergebruik (37.020, I)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261007/moties_algemene_politieke",
+      "votes": {
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 8,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 77883126784700,
+      "date": "2026-10-06",
+      "title": "Motie-Beukering (Fractie-Beukering) c.s. over versterking Nederlandse infrastructuur (37.020, M)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261007/moties_algemene_politieke",
+      "votes": {
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 6,
+        "disagree": 13
+      }
+    },
     {
       "id": 255684947071158,
       "date": "2026-09-29",
@@ -7680,7 +8614,7 @@
       }
     },
     {
-      "id": 154422867943412,
+      "id": 253501431824396,
       "date": "2026-06-23",
       "title": "Novelle Wet versterking regie volkshuisvesting (36.881)",
       "type": "wetsvoorstel",
@@ -7758,6 +8692,11 @@
           "disagree": 0,
           "abstain": 0
         },
+        "saskia-kluit": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
         "fvd": {
           "agree": 0,
           "disagree": 1,
@@ -7785,7 +8724,7 @@
         }
       },
       "totals": {
-        "agree": 14,
+        "agree": 15,
         "disagree": 5
       }
     },
@@ -35155,7 +36094,7 @@
       }
     },
     {
-      "id": 145189978152934,
+      "id": 188051965315134,
       "date": "2024-12-10",
       "title": "Wet gemeentelijke instrumenten warmtetransitie (36.387)",
       "type": "wetsvoorstel",
@@ -35218,72 +36157,7 @@
           "disagree": 0,
           "abstain": 0
         },
-        "samuel-croll": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "robert-van-gasteren": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "math-goossen": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "arie-griffioen": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "eugne-heijnen": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "wim-jaspers": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "eric-kemperman": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "frans-van-knapen": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "andrea-van-langen-visbeek": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "robbert-lievense": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "henk-marquart-scholtz": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "gert-jan-oplaat": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "tekke-panman": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "elly-van-wijk": {
+        "bbb": {
           "agree": 1,
           "disagree": 0,
           "abstain": 0
@@ -35305,7 +36179,7 @@
         }
       },
       "totals": {
-        "agree": 25,
+        "agree": 12,
         "disagree": 3
       }
     },
@@ -39190,7 +40064,7 @@
       }
     },
     {
-      "id": 45466436784547,
+      "id": 172881017751769,
       "date": "2024-06-18",
       "title": "Wet gegevensverwerking door samenwerkingsverbanden (35.447)",
       "type": "wetsvoorstel",
@@ -39248,9 +40122,9 @@
           "disagree": 0,
           "abstain": 0
         },
-        "crone": {
+        "groenlinks-pvda": {
           "agree": 1,
-          "disagree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "fvd": {
@@ -39272,16 +40146,11 @@
           "agree": 0,
           "disagree": 1,
           "abstain": 0
-        },
-        "groenlinks-pvda": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
         }
       },
       "totals": {
-        "agree": 11,
-        "disagree": 5
+        "agree": 10,
+        "disagree": 4
       }
     },
     {

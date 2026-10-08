@@ -3,7 +3,7 @@
     "province": "Europese fracties",
     "body": "Europees Parlement",
     "term": "2024–2029",
-    "generated_at": "2026-10-01T13:44:43+00:00",
+    "generated_at": "2026-10-08T14:24:33+00:00",
     "source": "https://howtheyvote.eu",
     "sourceName": "HowTheyVote.eu",
     "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen (roll-call) van het Europees Parlement",
@@ -14,7 +14,7 @@
     "note": "Stemmen per Europese fractie met exacte aantallen (voor/tegen/onthouding), op basis van hoofdelijke stemmingen (roll-call). Alleen eindstemmingen; stemmingen bij handopsteken worden niet hoofdelijk geregistreerd. Bron: HowTheyVote.eu (ODbL), Europees Parlement.",
     "granularity": "member",
     "counts": {
-      "moties": 654,
+      "moties": 680,
       "parties": 9
     },
     "types": [
@@ -64,6 +64,1566 @@
     }
   ],
   "moties": [
+    {
+      "id": 198051,
+      "date": "2026-10-08",
+      "title": "The need for an EU strategy to counter Islamist entryism and the influence of the Muslim Brotherhood network",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198051",
+      "votes": {
+        "epp": {
+          "agree": 143,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 2,
+          "disagree": 84,
+          "abstain": 1
+        },
+        "pfe": {
+          "agree": 67,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 72,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 62,
+          "disagree": 3,
+          "abstain": 2
+        },
+        "green-efa": {
+          "agree": 1,
+          "disagree": 40,
+          "abstain": 1
+        },
+        "gue-ngl": {
+          "agree": 1,
+          "disagree": 35,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 8,
+          "disagree": 4,
+          "abstain": 10
+        },
+        "esn": {
+          "agree": 25,
+          "disagree": 0,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 381,
+        "disagree": 167
+      }
+    },
+    {
+      "id": 198252,
+      "date": "2026-10-08",
+      "title": "The cases of Ali Karimli, Anar Mammadli and other political prisoners in Azerbaijan",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198252",
+      "votes": {
+        "epp": {
+          "agree": 149,
+          "disagree": 1,
+          "abstain": 1
+        },
+        "sd": {
+          "agree": 101,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 9
+        },
+        "ecr": {
+          "agree": 37,
+          "disagree": 20,
+          "abstain": 12
+        },
+        "renew": {
+          "agree": 67,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 46,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 36,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 6,
+          "disagree": 2,
+          "abstain": 14
+        },
+        "esn": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 23
+        }
+      },
+      "totals": {
+        "agree": 492,
+        "disagree": 23
+      }
+    },
+    {
+      "id": 198216,
+      "date": "2026-10-08",
+      "title": "The 2026 undemocratic elections to the Russian State Duma and its implications on civil society",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198216",
+      "votes": {
+        "epp": {
+          "agree": 145,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 99,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 39,
+          "disagree": 0,
+          "abstain": 20
+        },
+        "ecr": {
+          "agree": 68,
+          "disagree": 2,
+          "abstain": 1
+        },
+        "renew": {
+          "agree": 69,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 45,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "gue-ngl": {
+          "agree": 13,
+          "disagree": 0,
+          "abstain": 13
+        },
+        "ni": {
+          "agree": 2,
+          "disagree": 16,
+          "abstain": 4
+        },
+        "esn": {
+          "agree": 2,
+          "disagree": 23,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 482,
+        "disagree": 41
+      }
+    },
+    {
+      "id": 198204,
+      "date": "2026-10-08",
+      "title": "Pilot project on European Schools Alliances",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198204",
+      "votes": {
+        "epp": {
+          "agree": 150,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 100,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 54,
+          "abstain": 12
+        },
+        "ecr": {
+          "agree": 41,
+          "disagree": 9,
+          "abstain": 22
+        },
+        "renew": {
+          "agree": 68,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 45,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 35,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 4,
+          "disagree": 6,
+          "abstain": 12
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 26,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 443,
+        "disagree": 98
+      }
+    },
+    {
+      "id": 198261,
+      "date": "2026-10-08",
+      "title": "Human rights situation in Iran, notably the cases of Taraneh Rahimi and Leila Abolhasani",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198261",
+      "votes": {
+        "epp": {
+          "agree": 149,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 100,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 52,
+          "disagree": 0,
+          "abstain": 7
+        },
+        "ecr": {
+          "agree": 72,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 68,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 46,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 34,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 3,
+          "disagree": 8,
+          "abstain": 11
+        },
+        "esn": {
+          "agree": 17,
+          "disagree": 0,
+          "abstain": 7
+        }
+      },
+      "totals": {
+        "agree": 541,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 198176,
+      "date": "2026-10-08",
+      "title": "Commission Regulation amending [Annex III to] Regulation (EC) No 1925/2006 of the European Parliament and of the Council as regards monacolins from red yeast rice",
+      "type": "overig",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198176",
+      "votes": {
+        "epp": {
+          "agree": 121,
+          "disagree": 19,
+          "abstain": 7
+        },
+        "sd": {
+          "agree": 0,
+          "disagree": 98,
+          "abstain": 1
+        },
+        "pfe": {
+          "agree": 63,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 69,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 1,
+          "disagree": 65,
+          "abstain": 3
+        },
+        "green-efa": {
+          "agree": 2,
+          "disagree": 44,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 36,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 11,
+          "disagree": 9,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 24,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 291,
+        "disagree": 276
+      }
+    },
+    {
+      "id": 198193,
+      "date": "2026-10-08",
+      "title": "Commission Regulation amending Annex XVII to Regulation (EC) No 1907/2006 of the European Parliament and of the Council concerning the Registration, Evaluation, Authorisation and Restriction of Chemicals (REACH) as regards lead in gunshot",
+      "type": "overig",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198193",
+      "votes": {
+        "epp": {
+          "agree": 14,
+          "disagree": 115,
+          "abstain": 11
+        },
+        "sd": {
+          "agree": 0,
+          "disagree": 89,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 58,
+          "disagree": 0,
+          "abstain": 4
+        },
+        "ecr": {
+          "agree": 57,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 4,
+          "disagree": 62,
+          "abstain": 2
+        },
+        "green-efa": {
+          "agree": 0,
+          "disagree": 37,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 2,
+          "disagree": 31,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 11,
+          "disagree": 8,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 20,
+          "disagree": 0,
+          "abstain": 2
+        }
+      },
+      "totals": {
+        "agree": 166,
+        "disagree": 346
+      }
+    },
+    {
+      "id": 198194,
+      "date": "2026-10-08",
+      "title": "Commission Regulation amending Annex XVII to Regulation (EC) No 1907/2006 of the European Parliament and of the Council concerning the Registration, Evaluation, Authorisation and Restriction of Chemicals (REACH) as regards lead in gunshot",
+      "type": "overig",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198194",
+      "votes": {
+        "epp": {
+          "agree": 33,
+          "disagree": 97,
+          "abstain": 13
+        },
+        "sd": {
+          "agree": 4,
+          "disagree": 87,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 60,
+          "disagree": 0,
+          "abstain": 3
+        },
+        "ecr": {
+          "agree": 60,
+          "disagree": 3,
+          "abstain": 1
+        },
+        "renew": {
+          "agree": 3,
+          "disagree": 62,
+          "abstain": 2
+        },
+        "green-efa": {
+          "agree": 0,
+          "disagree": 41,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 1,
+          "disagree": 35,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 10,
+          "disagree": 8,
+          "abstain": 2
+        },
+        "esn": {
+          "agree": 22,
+          "disagree": 0,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 193,
+        "disagree": 333
+      }
+    },
+    {
+      "id": 198175,
+      "date": "2026-10-08",
+      "title": "Commission Regulation amending Annex III to Regulation (EC) No 1925/2006 of the European Parliament and of the Council as regards certain botanical species containing hydroxyanthracene derivatives",
+      "type": "overig",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198175",
+      "votes": {
+        "epp": {
+          "agree": 111,
+          "disagree": 24,
+          "abstain": 7
+        },
+        "sd": {
+          "agree": 7,
+          "disagree": 87,
+          "abstain": 1
+        },
+        "pfe": {
+          "agree": 65,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 66,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 1,
+          "disagree": 57,
+          "abstain": 11
+        },
+        "green-efa": {
+          "agree": 0,
+          "disagree": 45,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 36,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 11,
+          "disagree": 8,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 21,
+          "disagree": 0,
+          "abstain": 2
+        }
+      },
+      "totals": {
+        "agree": 282,
+        "disagree": 259
+      }
+    },
+    {
+      "id": 198251,
+      "date": "2026-10-08",
+      "title": "Attempts by the ruling party Georgian Dream to ban opposition parties in Georgia",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198251",
+      "votes": {
+        "epp": {
+          "agree": 151,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 101,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 56
+        },
+        "ecr": {
+          "agree": 45,
+          "disagree": 2,
+          "abstain": 23
+        },
+        "renew": {
+          "agree": 69,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 46,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 27,
+          "disagree": 0,
+          "abstain": 9
+        },
+        "ni": {
+          "agree": 2,
+          "disagree": 12,
+          "abstain": 8
+        },
+        "esn": {
+          "agree": 1,
+          "disagree": 23,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 445,
+        "disagree": 37
+      }
+    },
+    {
+      "id": 197457,
+      "date": "2026-10-07",
+      "title": "Recommendation for the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy on EU-China political relations",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/197457",
+      "votes": {
+        "epp": {
+          "agree": 150,
+          "disagree": 0,
+          "abstain": 9
+        },
+        "sd": {
+          "agree": 58,
+          "disagree": 3,
+          "abstain": 63
+        },
+        "pfe": {
+          "agree": 55,
+          "disagree": 0,
+          "abstain": 17
+        },
+        "ecr": {
+          "agree": 68,
+          "disagree": 5,
+          "abstain": 4
+        },
+        "renew": {
+          "agree": 73,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "green-efa": {
+          "agree": 41,
+          "disagree": 0,
+          "abstain": 8
+        },
+        "gue-ngl": {
+          "agree": 6,
+          "disagree": 33,
+          "abstain": 3
+        },
+        "ni": {
+          "agree": 2,
+          "disagree": 22,
+          "abstain": 3
+        },
+        "esn": {
+          "agree": 1,
+          "disagree": 23,
+          "abstain": 2
+        }
+      },
+      "totals": {
+        "agree": 454,
+        "disagree": 86
+      }
+    },
+    {
+      "id": 197464,
+      "date": "2026-10-07",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Spain – EGF/2026/002 ES/Galicia automotive ancillary",
+      "type": "begroting",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/197464",
+      "votes": {
+        "epp": {
+          "agree": 172,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 124,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 62,
+          "disagree": 10,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 66,
+          "disagree": 12,
+          "abstain": 4
+        },
+        "renew": {
+          "agree": 68,
+          "disagree": 6,
+          "abstain": 1
+        },
+        "green-efa": {
+          "agree": 49,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 41,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 24,
+          "disagree": 2,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 2,
+          "disagree": 23,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 608,
+        "disagree": 55
+      }
+    },
+    {
+      "id": 197501,
+      "date": "2026-10-07",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Finland – EGF/2026/003 FI/Valmet Automotive",
+      "type": "begroting",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/197501",
+      "votes": {
+        "epp": {
+          "agree": 170,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 123,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 61,
+          "disagree": 11,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 67,
+          "disagree": 10,
+          "abstain": 4
+        },
+        "renew": {
+          "agree": 69,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 49,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 42,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 18,
+          "disagree": 5,
+          "abstain": 4
+        },
+        "esn": {
+          "agree": 2,
+          "disagree": 23,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 601,
+        "disagree": 57
+      }
+    },
+    {
+      "id": 197497,
+      "date": "2026-10-07",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Belgium – EGF/2026/001 BE/Cora",
+      "type": "begroting",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/197497",
+      "votes": {
+        "epp": {
+          "agree": 171,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 124,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 60,
+          "disagree": 12,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 65,
+          "disagree": 12,
+          "abstain": 4
+        },
+        "renew": {
+          "agree": 68,
+          "disagree": 6,
+          "abstain": 1
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 42,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 23,
+          "disagree": 3,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 4,
+          "disagree": 21,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 605,
+        "disagree": 56
+      }
+    },
+    {
+      "id": 197509,
+      "date": "2026-10-07",
+      "title": "Measures to facilitate consular protection for unrepresented citizens of the Union in third countries ",
+      "type": "overig",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/197509",
+      "votes": {
+        "epp": {
+          "agree": 172,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "sd": {
+          "agree": 124,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 66,
+          "abstain": 6
+        },
+        "ecr": {
+          "agree": 7,
+          "disagree": 72,
+          "abstain": 3
+        },
+        "renew": {
+          "agree": 75,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 49,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 39,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 4,
+          "disagree": 16,
+          "abstain": 7
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 26,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 470,
+        "disagree": 180
+      }
+    },
+    {
+      "id": 197470,
+      "date": "2026-10-07",
+      "title": "Empowering France to accede to the Inter-American Convention for the Protection and Conservation of Sea Turtles",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/197470",
+      "votes": {
+        "epp": {
+          "agree": 173,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 122,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 71,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 80,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 74,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 42,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 22,
+          "disagree": 0,
+          "abstain": 4
+        },
+        "esn": {
+          "agree": 26,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 658,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 197486,
+      "date": "2026-10-07",
+      "title": "Amending Directive 1999/62/EC, Council Directive 1999/37/EC and Directive (EU) 2019/520 as regards the CO2 emission class of heavy-duty vehicles with trailers",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/197486",
+      "votes": {
+        "epp": {
+          "agree": 165,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 118,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 5,
+          "disagree": 56,
+          "abstain": 8
+        },
+        "ecr": {
+          "agree": 70,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 71,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 15,
+          "disagree": 7,
+          "abstain": 23
+        },
+        "gue-ngl": {
+          "agree": 22,
+          "disagree": 8,
+          "abstain": 8
+        },
+        "ni": {
+          "agree": 7,
+          "disagree": 9,
+          "abstain": 9
+        },
+        "esn": {
+          "agree": 2,
+          "disagree": 2,
+          "abstain": 22
+        }
+      },
+      "totals": {
+        "agree": 475,
+        "disagree": 96
+      }
+    },
+    {
+      "id": 197600,
+      "date": "2026-10-06",
+      "title": "The EU’s approach to corporate tax policy in a changing international environment",
+      "type": "initiatiefverslag",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/197600",
+      "votes": {
+        "epp": {
+          "agree": 147,
+          "disagree": 0,
+          "abstain": 5
+        },
+        "sd": {
+          "agree": 106,
+          "disagree": 0,
+          "abstain": 3
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 18,
+          "abstain": 44
+        },
+        "ecr": {
+          "agree": 0,
+          "disagree": 10,
+          "abstain": 61
+        },
+        "renew": {
+          "agree": 63,
+          "disagree": 0,
+          "abstain": 6
+        },
+        "green-efa": {
+          "agree": 46,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 1,
+          "disagree": 14,
+          "abstain": 27
+        },
+        "ni": {
+          "agree": 1,
+          "disagree": 7,
+          "abstain": 15
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 20,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 364,
+        "disagree": 69
+      }
+    },
+    {
+      "id": 197467,
+      "date": "2026-10-06",
+      "title": "Simplification of certain requirements for spatial information infrastructure in the Union (INSPIRE) (Omnibus VIII on environmental legislation)",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/197467",
+      "votes": {
+        "epp": {
+          "agree": 170,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 124,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 58,
+          "abstain": 15
+        },
+        "ecr": {
+          "agree": 58,
+          "disagree": 19,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 71,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "green-efa": {
+          "agree": 50,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 33,
+          "disagree": 0,
+          "abstain": 10
+        },
+        "ni": {
+          "agree": 9,
+          "disagree": 9,
+          "abstain": 7
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 22,
+          "abstain": 2
+        }
+      },
+      "totals": {
+        "agree": 515,
+        "disagree": 108
+      }
+    },
+    {
+      "id": 197484,
+      "date": "2026-10-06",
+      "title": "Psychosocial risks, stress and mental health at work",
+      "type": "initiatiefverslag",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/197484",
+      "votes": {
+        "epp": {
+          "agree": 130,
+          "disagree": 38,
+          "abstain": 1
+        },
+        "sd": {
+          "agree": 123,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 66,
+          "abstain": 6
+        },
+        "ecr": {
+          "agree": 0,
+          "disagree": 57,
+          "abstain": 19
+        },
+        "renew": {
+          "agree": 55,
+          "disagree": 17,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 49,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 42,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 14,
+          "disagree": 8,
+          "abstain": 2
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 24,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 413,
+        "disagree": 210
+      }
+    },
+    {
+      "id": 197460,
+      "date": "2026-10-06",
+      "title": "Protection of workers from the risks related to exposure to carcinogens, mutagens or reprotoxic substances at work",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/197460",
+      "votes": {
+        "epp": {
+          "agree": 142,
+          "disagree": 23,
+          "abstain": 2
+        },
+        "sd": {
+          "agree": 124,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 49,
+          "disagree": 5,
+          "abstain": 18
+        },
+        "ecr": {
+          "agree": 7,
+          "disagree": 1,
+          "abstain": 70
+        },
+        "renew": {
+          "agree": 61,
+          "disagree": 2,
+          "abstain": 8
+        },
+        "green-efa": {
+          "agree": 49,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 43,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 16,
+          "disagree": 5,
+          "abstain": 4
+        },
+        "esn": {
+          "agree": 8,
+          "disagree": 13,
+          "abstain": 2
+        }
+      },
+      "totals": {
+        "agree": 499,
+        "disagree": 49
+      }
+    },
+    {
+      "id": 197360,
+      "date": "2026-10-06",
+      "title": "Programme for agile and rapid defence innovation (AGILE)",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/197360",
+      "votes": {
+        "epp": {
+          "agree": 168,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "sd": {
+          "agree": 122,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 50,
+          "disagree": 12,
+          "abstain": 10
+        },
+        "ecr": {
+          "agree": 75,
+          "disagree": 2,
+          "abstain": 1
+        },
+        "renew": {
+          "agree": 69,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "green-efa": {
+          "agree": 42,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 5,
+          "disagree": 36,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 3,
+          "disagree": 22,
+          "abstain": 0
+        },
+        "esn": {
+          "agree": 2,
+          "disagree": 21,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 536,
+        "disagree": 101
+      }
+    },
+    {
+      "id": 197601,
+      "date": "2026-10-06",
+      "title": "Programme for agile and rapid defence innovation (AGILE)",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/197601",
+      "votes": {
+        "epp": {
+          "agree": 1,
+          "disagree": 168,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 1,
+          "disagree": 120,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 6,
+          "disagree": 60,
+          "abstain": 6
+        },
+        "ecr": {
+          "agree": 2,
+          "disagree": 73,
+          "abstain": 1
+        },
+        "renew": {
+          "agree": 0,
+          "disagree": 69,
+          "abstain": 2
+        },
+        "green-efa": {
+          "agree": 7,
+          "disagree": 41,
+          "abstain": 1
+        },
+        "gue-ngl": {
+          "agree": 25,
+          "disagree": 5,
+          "abstain": 12
+        },
+        "ni": {
+          "agree": 20,
+          "disagree": 2,
+          "abstain": 2
+        },
+        "esn": {
+          "agree": 21,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 83,
+        "disagree": 540
+      }
+    },
+    {
+      "id": 197472,
+      "date": "2026-10-06",
+      "title": "Funding arrangements and the use of a diversified funding strategy",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/197472",
+      "votes": {
+        "epp": {
+          "agree": 171,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 95,
+          "disagree": 1,
+          "abstain": 28
+        },
+        "pfe": {
+          "agree": 7,
+          "disagree": 65,
+          "abstain": 1
+        },
+        "ecr": {
+          "agree": 60,
+          "disagree": 14,
+          "abstain": 3
+        },
+        "renew": {
+          "agree": 71,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 50,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 35
+        },
+        "ni": {
+          "agree": 8,
+          "disagree": 9,
+          "abstain": 8
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 24,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 462,
+        "disagree": 121
+      }
+    },
+    {
+      "id": 197352,
+      "date": "2026-10-06",
+      "title": "Economic and budgetary surveillance of Member States in the euro area experiencing or threatened with serious difficulties with respect to their financial stability",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/197352",
+      "votes": {
+        "epp": {
+          "agree": 170,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 95,
+          "disagree": 0,
+          "abstain": 30
+        },
+        "pfe": {
+          "agree": 6,
+          "disagree": 64,
+          "abstain": 3
+        },
+        "ecr": {
+          "agree": 64,
+          "disagree": 13,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 72,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 46,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 1,
+          "disagree": 22,
+          "abstain": 20
+        },
+        "ni": {
+          "agree": 4,
+          "disagree": 13,
+          "abstain": 8
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 24,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 458,
+        "disagree": 138
+      }
+    },
+    {
+      "id": 197356,
+      "date": "2026-10-06",
+      "title": "Alignment with the EU economic governance framework and further simplification of that framework",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/197356",
+      "votes": {
+        "epp": {
+          "agree": 156,
+          "disagree": 0,
+          "abstain": 15
+        },
+        "sd": {
+          "agree": 95,
+          "disagree": 0,
+          "abstain": 30
+        },
+        "pfe": {
+          "agree": 7,
+          "disagree": 65,
+          "abstain": 1
+        },
+        "ecr": {
+          "agree": 68,
+          "disagree": 9,
+          "abstain": 1
+        },
+        "renew": {
+          "agree": 72,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 49,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 24,
+          "abstain": 19
+        },
+        "ni": {
+          "agree": 3,
+          "disagree": 14,
+          "abstain": 8
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 23,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 450,
+        "disagree": 135
+      }
+    },
     {
       "id": 196157,
       "date": "2026-09-17",

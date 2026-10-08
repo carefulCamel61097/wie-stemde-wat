@@ -3,7 +3,7 @@
     "province": "Europese fracties",
     "body": "Europees Parlement",
     "term": "2019–2024",
-    "generated_at": "2026-10-01T14:04:25+00:00",
+    "generated_at": "2026-10-08T14:56:29+00:00",
     "source": "https://howtheyvote.eu",
     "sourceName": "HowTheyVote.eu",
     "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen (roll-call) van het Europees Parlement",
@@ -40,7 +40,7 @@
     },
     {
       "slug": "id",
-      "name": "Identity and Democracy"
+      "name": "ID"
     },
     {
       "slug": "green-efa",
@@ -60,7 +60,7 @@
     },
     {
       "slug": "gue-ngl-1995-0",
-      "name": "Confederal Group of the European United Left – Nordic Green Left"
+      "name": "GUE/NGL"
     }
   ],
   "moties": [
