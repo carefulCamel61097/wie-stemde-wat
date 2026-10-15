@@ -3,7 +3,7 @@
     "province": "Utrecht",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-10-08T13:11:08+00:00",
+    "generated_at": "2026-10-15T11:12:52+00:00",
     "source": "https://www.stateninformatie.provincie-utrecht.nl",
     "sourceName": "",
     "license": "Open data - Provincie Utrecht / Statengriffie",
@@ -66,16 +66,12 @@
       "name": "Volt"
     },
     {
-      "slug": "ja21",
-      "name": "JA21"
-    },
-    {
-      "slug": "pvv",
-      "name": "PVV"
-    },
-    {
       "slug": "sgp",
       "name": "SGP"
+    },
+    {
+      "slug": "ja21",
+      "name": "JA21"
     },
     {
       "slug": "sp",
@@ -88,6 +84,10 @@
     {
       "slug": "50plus",
       "name": "50PLUS"
+    },
+    {
+      "slug": "pvv",
+      "name": "PVV"
     }
   ],
   "moties": [

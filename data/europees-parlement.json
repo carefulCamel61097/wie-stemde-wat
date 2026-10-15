@@ -3,7 +3,7 @@
     "province": "Europese fracties",
     "body": "Europees Parlement",
     "term": "2024–2029",
-    "generated_at": "2026-10-08T14:24:33+00:00",
+    "generated_at": "2026-10-15T12:47:35+00:00",
     "source": "https://howtheyvote.eu",
     "sourceName": "HowTheyVote.eu",
     "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen (roll-call) van het Europees Parlement",
@@ -69,8 +69,8 @@
       "date": "2026-10-08",
       "title": "The need for an EU strategy to counter Islamist entryism and the influence of the Muslim Brotherhood network",
       "type": "resolutie",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198051",
       "votes": {
         "epp": {
@@ -129,8 +129,8 @@
       "date": "2026-10-08",
       "title": "The cases of Ali Karimli, Anar Mammadli and other political prisoners in Azerbaijan",
       "type": "resolutie",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198252",
       "votes": {
         "epp": {
@@ -189,8 +189,8 @@
       "date": "2026-10-08",
       "title": "The 2026 undemocratic elections to the Russian State Duma and its implications on civil society",
       "type": "resolutie",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198216",
       "votes": {
         "epp": {
@@ -247,10 +247,10 @@
     {
       "id": 198204,
       "date": "2026-10-08",
-      "title": "Pilot project on European Schools Alliances",
+      "title": "Pilot project on European Schools Alliances and its contribution to citizenship education, democratic competences and European values",
       "type": "resolutie",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198204",
       "votes": {
         "epp": {
@@ -305,72 +305,12 @@
       }
     },
     {
-      "id": 198261,
-      "date": "2026-10-08",
-      "title": "Human rights situation in Iran, notably the cases of Taraneh Rahimi and Leila Abolhasani",
-      "type": "resolutie",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/198261",
-      "votes": {
-        "epp": {
-          "agree": 149,
-          "disagree": 1,
-          "abstain": 0
-        },
-        "sd": {
-          "agree": 100,
-          "disagree": 1,
-          "abstain": 0
-        },
-        "pfe": {
-          "agree": 52,
-          "disagree": 0,
-          "abstain": 7
-        },
-        "ecr": {
-          "agree": 72,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "renew": {
-          "agree": 68,
-          "disagree": 1,
-          "abstain": 0
-        },
-        "green-efa": {
-          "agree": 46,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "gue-ngl": {
-          "agree": 34,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "ni": {
-          "agree": 3,
-          "disagree": 8,
-          "abstain": 11
-        },
-        "esn": {
-          "agree": 17,
-          "disagree": 0,
-          "abstain": 7
-        }
-      },
-      "totals": {
-        "agree": 541,
-        "disagree": 11
-      }
-    },
-    {
       "id": 198176,
       "date": "2026-10-08",
-      "title": "Commission Regulation amending [Annex III to] Regulation (EC) No 1925/2006 of the European Parliament and of the Council as regards monacolins from red yeast rice",
+      "title": "Objection pursuant to Rule 115(2), (3) and (4)(c): Monacolins from red yeast rice",
       "type": "overig",
-      "result": null,
-      "resultLabel": null,
+      "result": "rejected",
+      "resultLabel": "Verworpen",
       "source": "https://howtheyvote.eu/votes/198176",
       "votes": {
         "epp": {
@@ -427,10 +367,10 @@
     {
       "id": 198193,
       "date": "2026-10-08",
-      "title": "Commission Regulation amending Annex XVII to Regulation (EC) No 1907/2006 of the European Parliament and of the Council concerning the Registration, Evaluation, Authorisation and Restriction of Chemicals (REACH) as regards lead in gunshot",
+      "title": "Objection pursuant to Rule 115(2), (3) and (4)(c): Lead in gunshot",
       "type": "overig",
-      "result": null,
-      "resultLabel": null,
+      "result": "rejected",
+      "resultLabel": "Verworpen",
       "source": "https://howtheyvote.eu/votes/198193",
       "votes": {
         "epp": {
@@ -487,10 +427,10 @@
     {
       "id": 198194,
       "date": "2026-10-08",
-      "title": "Commission Regulation amending Annex XVII to Regulation (EC) No 1907/2006 of the European Parliament and of the Council concerning the Registration, Evaluation, Authorisation and Restriction of Chemicals (REACH) as regards lead in gunshot",
+      "title": "Objection pursuant to Rule 115(2), (3) and (4)(c): Lead in gunshot",
       "type": "overig",
-      "result": null,
-      "resultLabel": null,
+      "result": "rejected",
+      "resultLabel": "Verworpen",
       "source": "https://howtheyvote.eu/votes/198194",
       "votes": {
         "epp": {
@@ -547,10 +487,10 @@
     {
       "id": 198175,
       "date": "2026-10-08",
-      "title": "Commission Regulation amending Annex III to Regulation (EC) No 1925/2006 of the European Parliament and of the Council as regards certain botanical species containing hydroxyanthracene derivatives",
+      "title": "Objection pursuant to Rule 115(2), (3) and (4)(c): Certain botanical species containing hydroxyanthracene derivatives",
       "type": "overig",
-      "result": null,
-      "resultLabel": null,
+      "result": "rejected",
+      "resultLabel": "Verworpen",
       "source": "https://howtheyvote.eu/votes/198175",
       "votes": {
         "epp": {
@@ -605,12 +545,72 @@
       }
     },
     {
+      "id": 198261,
+      "date": "2026-10-08",
+      "title": "Human rights situation in Iran, notably the cases of Taraneh Rahimi and Leila Abolhasani",
+      "type": "resolutie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198261",
+      "votes": {
+        "epp": {
+          "agree": 149,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 100,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 52,
+          "disagree": 0,
+          "abstain": 7
+        },
+        "ecr": {
+          "agree": 72,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 68,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 46,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 34,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 3,
+          "disagree": 8,
+          "abstain": 11
+        },
+        "esn": {
+          "agree": 17,
+          "disagree": 0,
+          "abstain": 7
+        }
+      },
+      "totals": {
+        "agree": 541,
+        "disagree": 11
+      }
+    },
+    {
       "id": 198251,
       "date": "2026-10-08",
       "title": "Attempts by the ruling party Georgian Dream to ban opposition parties in Georgia",
       "type": "resolutie",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198251",
       "votes": {
         "epp": {
@@ -667,10 +667,10 @@
     {
       "id": 197457,
       "date": "2026-10-07",
-      "title": "Recommendation for the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy on EU-China political relations",
+      "title": "Recommendation on EU-China political relations",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/197457",
       "votes": {
         "epp": {
@@ -725,72 +725,12 @@
       }
     },
     {
-      "id": 197464,
-      "date": "2026-10-07",
-      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Spain – EGF/2026/002 ES/Galicia automotive ancillary",
-      "type": "begroting",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/197464",
-      "votes": {
-        "epp": {
-          "agree": 172,
-          "disagree": 1,
-          "abstain": 0
-        },
-        "sd": {
-          "agree": 124,
-          "disagree": 1,
-          "abstain": 0
-        },
-        "pfe": {
-          "agree": 62,
-          "disagree": 10,
-          "abstain": 0
-        },
-        "ecr": {
-          "agree": 66,
-          "disagree": 12,
-          "abstain": 4
-        },
-        "renew": {
-          "agree": 68,
-          "disagree": 6,
-          "abstain": 1
-        },
-        "green-efa": {
-          "agree": 49,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "gue-ngl": {
-          "agree": 41,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "ni": {
-          "agree": 24,
-          "disagree": 2,
-          "abstain": 1
-        },
-        "esn": {
-          "agree": 2,
-          "disagree": 23,
-          "abstain": 1
-        }
-      },
-      "totals": {
-        "agree": 608,
-        "disagree": 55
-      }
-    },
-    {
       "id": 197501,
       "date": "2026-10-07",
-      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Finland – EGF/2026/003 FI/Valmet Automotive",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers: application EGF/2026/003 FI/Valmet Automotive – Finland",
       "type": "begroting",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/197501",
       "votes": {
         "epp": {
@@ -845,12 +785,72 @@
       }
     },
     {
+      "id": 197464,
+      "date": "2026-10-07",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers: application EGF/2026/002 ES/Galicia automotive ancillary – Spain",
+      "type": "begroting",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/197464",
+      "votes": {
+        "epp": {
+          "agree": 172,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 124,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 62,
+          "disagree": 10,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 66,
+          "disagree": 12,
+          "abstain": 4
+        },
+        "renew": {
+          "agree": 68,
+          "disagree": 6,
+          "abstain": 1
+        },
+        "green-efa": {
+          "agree": 49,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 41,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 24,
+          "disagree": 2,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 2,
+          "disagree": 23,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 608,
+        "disagree": 55
+      }
+    },
+    {
       "id": 197497,
       "date": "2026-10-07",
-      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers following an application from Belgium – EGF/2026/001 BE/Cora",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers: application EGF/2026/001 BE/Cora – Belgium",
       "type": "begroting",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/197497",
       "votes": {
         "epp": {
@@ -905,72 +905,12 @@
       }
     },
     {
-      "id": 197509,
-      "date": "2026-10-07",
-      "title": "Measures to facilitate consular protection for unrepresented citizens of the Union in third countries ",
-      "type": "overig",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/197509",
-      "votes": {
-        "epp": {
-          "agree": 172,
-          "disagree": 0,
-          "abstain": 1
-        },
-        "sd": {
-          "agree": 124,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "pfe": {
-          "agree": 0,
-          "disagree": 66,
-          "abstain": 6
-        },
-        "ecr": {
-          "agree": 7,
-          "disagree": 72,
-          "abstain": 3
-        },
-        "renew": {
-          "agree": 75,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "green-efa": {
-          "agree": 49,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "gue-ngl": {
-          "agree": 39,
-          "disagree": 0,
-          "abstain": 1
-        },
-        "ni": {
-          "agree": 4,
-          "disagree": 16,
-          "abstain": 7
-        },
-        "esn": {
-          "agree": 0,
-          "disagree": 26,
-          "abstain": 0
-        }
-      },
-      "totals": {
-        "agree": 470,
-        "disagree": 180
-      }
-    },
-    {
       "id": 197470,
       "date": "2026-10-07",
       "title": "Empowering France to accede to the Inter-American Convention for the Protection and Conservation of Sea Turtles",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/197470",
       "votes": {
         "epp": {
@@ -1025,12 +965,72 @@
       }
     },
     {
+      "id": 197509,
+      "date": "2026-10-07",
+      "title": "Consular protection for unrepresented citizens of the Union in third countries",
+      "type": "overig",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/197509",
+      "votes": {
+        "epp": {
+          "agree": 172,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "sd": {
+          "agree": 124,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 66,
+          "abstain": 6
+        },
+        "ecr": {
+          "agree": 7,
+          "disagree": 72,
+          "abstain": 3
+        },
+        "renew": {
+          "agree": 75,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 49,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 39,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 4,
+          "disagree": 16,
+          "abstain": 7
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 26,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 470,
+        "disagree": 180
+      }
+    },
+    {
       "id": 197486,
       "date": "2026-10-07",
-      "title": "Amending Directive 1999/62/EC, Council Directive 1999/37/EC and Directive (EU) 2019/520 as regards the CO2 emission class of heavy-duty vehicles with trailers",
+      "title": "CO2 emission class of heavy-duty vehicles with trailers",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/197486",
       "votes": {
         "epp": {
