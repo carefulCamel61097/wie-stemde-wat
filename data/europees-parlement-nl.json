@@ -3,7 +3,7 @@
     "province": "Nederlandse afvaardiging",
     "body": "Europees Parlement",
     "term": "2024–2029",
-    "generated_at": "2026-10-15T12:47:35+00:00",
+    "generated_at": "2026-10-22T12:53:09+00:00",
     "source": "https://howtheyvote.eu",
     "sourceName": "HowTheyVote.eu",
     "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen (roll-call) van het Europees Parlement",
@@ -14,7 +14,7 @@
     "note": "De 31 Nederlandse Europarlementariërs, gegroepeerd per Nederlandse partij, met exacte aantallen (voor/tegen/onthouding). Alleen hoofdelijke eindstemmingen. Bron: HowTheyVote.eu (ODbL) + Europees Parlement Open Data (fractie-indeling).",
     "granularity": "member",
     "counts": {
-      "moties": 680,
+      "moties": 709,
       "parties": 10
     },
     "types": [
@@ -122,6 +122,1691 @@
     }
   ],
   "moties": [
+    {
+      "id": 199567,
+      "date": "2026-10-22",
+      "title": "Reduction of methane emissions in the energy sector: postponement of certain obligations",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199567",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 3
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 17
+      }
+    },
+    {
+      "id": 199592,
+      "date": "2026-10-22",
+      "title": "Reduction of methane emissions in the energy sector: postponement of certain obligations",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199592",
+      "votes": {
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 13
+      }
+    },
+    {
+      "id": 198405,
+      "date": "2026-10-22",
+      "title": "Establishing the Erasmus+ programme for the period 2028-2034, and repealing Regulations (EU) 2021/817 and (EU) 2021/888",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198405",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 20,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 199517,
+      "date": "2026-10-22",
+      "title": "Escalation of Russian strikes in the EU, particularly on Black Sea shipping, threatening human life, regional stability and food security",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199517",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 4
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 21,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 199470,
+      "date": "2026-10-22",
+      "title": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199470",
+      "votes": {
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 3,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 21,
+        "disagree": 7
+      }
+    },
+    {
+      "id": 199560,
+      "date": "2026-10-22",
+      "title": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199560",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 4,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 20
+      }
+    },
+    {
+      "id": 198292,
+      "date": "2026-10-22",
+      "title": "Cohesion policy in the EU’s eastern border regions: strengthening territorial resilience\nand cross-border cooperation",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198292",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 19,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 198430,
+      "date": "2026-10-22",
+      "title": "Amending Regulations (EC) No 1272/2008, (EC) No 1223/2009 and (EU) 2019/1009 as regards simplification of certain requirements and procedures for chemical products",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198430",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 5
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 22,
+        "disagree": 1
+      }
+    },
+    {
+      "id": 199380,
+      "date": "2026-10-22",
+      "title": "Amending Regulations (EC) No 1272/2008, (EC) No 1223/2009 and (EU) 2019/1009 as regards simplification of certain requirements and procedures for chemical products",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199380",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 4,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 21
+      }
+    },
+    {
+      "id": 198299,
+      "date": "2026-10-21",
+      "title": "Mobilisation of the European Union Solidarity Fund to provide assistance to Malta and Italy regarding storm Harry in January 2026 and to Portugal and Spain following the storms in January and February 2026",
+      "type": "begroting",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198299",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 198409,
+      "date": "2026-10-21",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers: application EGF/2026/004 FI/Etelä-Suomi and Helsinki-Uusimaa paper - Finland",
+      "type": "begroting",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198409",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 198386,
+      "date": "2026-10-21",
+      "title": "Guidelines for the employment policies of the Member States",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198386",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 12
+      }
+    },
+    {
+      "id": 198774,
+      "date": "2026-10-21",
+      "title": "General budget of the European Union for the financial year 2027 - all sections",
+      "type": "begroting",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198774",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 17,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 198325,
+      "date": "2026-10-21",
+      "title": "Establishing the exchange, assistance and training programme for the protection of the euro against counterfeiting for the period 2028-2034 (the 'Pericles V' programme) and repealing Regulation (EU) 2021/840",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198325",
+      "votes": {
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 30,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 198357,
+      "date": "2026-10-21",
+      "title": "Discharge 2024: General budget of the EU - European Council and Council",
+      "type": "overig",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198357",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 22,
+        "disagree": 7
+      }
+    },
+    {
+      "id": 198302,
+      "date": "2026-10-21",
+      "title": "Boosting skills in the Union – opportunities for vocational education and training in times of transition",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/198302",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 21,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 198338,
+      "date": "2026-10-20",
+      "title": "Transport: enforcement of passenger rights in the Union",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198338",
+      "votes": {
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 30,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 198335,
+      "date": "2026-10-20",
+      "title": "Suspending the application of the rules on extended producer responsibility for waste, waste electrical and electronical equipment and single use plastic waste (Omnibus VIII on environmental legislation)",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198335",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 22,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 198423,
+      "date": "2026-10-20",
+      "title": "Suspending the application of the rules on extended producer responsibility for batteries and waste batteries and packaging and packaging waste (Omnibus VIII on environmental legislation)",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198423",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 198311,
+      "date": "2026-10-20",
+      "title": "Public interface connected to the Internal Market Information System for the declaration of posting of workers",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198311",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 25,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 198290,
+      "date": "2026-10-20",
+      "title": "Protection of adults: jurisdiction, applicable law, recognition and enforcement of measures and cooperation",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198290",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 22,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 198885,
+      "date": "2026-10-20",
+      "title": "Objection pursuant to Rule 114(3): Certification methodologies for carbon farming activities",
+      "type": "overig",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/198885",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 11,
+        "disagree": 19
+      }
+    },
+    {
+      "id": 198291,
+      "date": "2026-10-20",
+      "title": "Connecting Europe through high-speed rail",
+      "type": "initiatiefverslag",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198291",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 5
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 20,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 198309,
+      "date": "2026-10-20",
+      "title": "Combating VAT fraud – the effectiveness of cross-border cooperation when it comes to VAT fraud and its impact on the EU budget",
+      "type": "initiatiefverslag",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198309",
+      "votes": {
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 14,
+        "disagree": 14
+      }
+    },
+    {
+      "id": 198350,
+      "date": "2026-10-20",
+      "title": "Cohesion policy – the driving force in implementing the EU agenda for cities",
+      "type": "initiatiefverslag",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198350",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 23,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 198425,
+      "date": "2026-10-20",
+      "title": "Amendments to the Critical Raw Materials Act",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198425",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 6
+      }
+    },
     {
       "id": 198051,
       "date": "2026-10-08",
@@ -4515,6 +6200,71 @@
       "totals": {
         "agree": 22,
         "disagree": 5
+      }
+    },
+    {
+      "id": 195807,
+      "date": "2026-07-09",
+      "title": "Temporary derogation from the ePrivacy directive",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/195807",
+      "votes": {
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 9
       }
     },
     {
@@ -16641,11 +18391,6 @@
           "disagree": 0,
           "abstain": 0
         },
-        "cda": {
-          "agree": 2,
-          "disagree": 0,
-          "abstain": 0
-        },
         "gl-pvda": {
           "agree": 8,
           "disagree": 0,
@@ -16658,6 +18403,11 @@
         },
         "nsc": {
           "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
@@ -26258,6 +28008,66 @@
       }
     },
     {
+      "id": 179585,
+      "date": "2025-10-09",
+      "title": "Establishment and functioning of European Works Councils - effective enforcement",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/179585",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 20
+      }
+    },
+    {
       "id": 179295,
       "date": "2025-10-09",
       "title": "Deliberations of the Committee on Petitions in 2024",
@@ -26500,7 +28310,7 @@
     {
       "id": 179508,
       "date": "2025-10-08",
-      "title": "Objection pursuant to Rule 115(2) and (3): Genetically modified maize DP51291",
+      "title": "Objection pursuant to Rule 115(2) and (3): Genetically modified maize DP51291",
       "type": "resolutie",
       "result": "accepted",
       "resultLabel": "Aangenomen",
@@ -26560,7 +28370,7 @@
     {
       "id": 179219,
       "date": "2025-10-08",
-      "title": "Mobilisation of the European Globalisation Adjustment Fund: application EGF/2025/002 DE/Goodyear 2 - Germany",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund: application EGF/2025/002 DE/Goodyear 2 – Germany",
       "type": "begroting",
       "result": "accepted",
       "resultLabel": "Aangenomen",
@@ -26620,7 +28430,7 @@
     {
       "id": 179211,
       "date": "2025-10-08",
-      "title": "Mobilisation of the European Globalisation Adjustment Fund: application EGF/2025/001 BE/BelGaN - Belgium",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund: application EGF/2025/001 BE/BelGaN – Belgium",
       "type": "begroting",
       "result": "accepted",
       "resultLabel": "Aangenomen",
@@ -26915,7 +28725,7 @@
     {
       "id": 179558,
       "date": "2025-10-08",
-      "title": "Amending certain CAP Regulations as regards the conditionality system, types of intervention in the form of direct payment, types of intervention in certain sectors and rural development and annual performance reports, data and interoperability governance, suspensions of payments annual performance clearance and controls and penalties",
+      "title": "Amending certain CAP regulations as regards the conditionality system, types of intervention in the form of direct payment, types of intervention in certain sectors and rural development and annual performance reports, data and interoperability governance, suspensions of payments annual performance clearance and controls and penalties",
       "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
@@ -27156,7 +28966,7 @@
       "id": 179226,
       "date": "2025-10-07",
       "title": "Extension of the derogation for heavy-duty vehicles with zero emissions",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/179226",
@@ -27210,6 +29020,66 @@
       "totals": {
         "agree": 22,
         "disagree": 5
+      }
+    },
+    {
+      "id": 179411,
+      "date": "2025-10-07",
+      "title": "Extension of the derogation for heavy-duty vehicles with zero emissions",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/179411",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 1
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 21
       }
     },
     {
@@ -41690,7 +43560,7 @@
     {
       "id": 169857,
       "date": "2024-10-10",
-      "title": "The cases of unjustly imprisoned Uyghurs in China, notably Ilham Tohti and Gulshan Abbas",
+      "title": "The cases of unjustly imprisoned Uyghurs in China, notably Ilham Tohti and Gulshan Abbas",
       "type": "resolutie",
       "result": "accepted",
       "resultLabel": "Aangenomen",

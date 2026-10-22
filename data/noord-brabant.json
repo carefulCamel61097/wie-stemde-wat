@@ -3,7 +3,7 @@
     "province": "Noord-Brabant",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-10-15T12:06:45+00:00",
+    "generated_at": "2026-10-22T12:18:34+00:00",
     "source": "https://noordbrabant.bestuurlijkeinformatie.nl",
     "sourceName": "",
     "license": "Open data - Provincie Noord-Brabant (iBabs publieksportaal)",
@@ -14,8 +14,8 @@
     "note": "Stemmen zijn per fractie met aantallen geregistreerd (aangenomen én verworpen). Moties/amendementen zonder hoofdelijke stemming zijn niet opgenomen.",
     "granularity": "member",
     "counts": {
-      "moties": 645,
-      "parties": 15
+      "moties": 669,
+      "parties": 16
     },
     "types": [
       "amendement",
@@ -34,10 +34,6 @@
     {
       "slug": "d66",
       "name": "D66"
-    },
-    {
-      "slug": "groenlinks",
-      "name": "GroenLinks"
     },
     {
       "slug": "lokaal-brabant",
@@ -64,12 +60,16 @@
       "name": "Volt"
     },
     {
-      "slug": "pvda",
-      "name": "PvdA"
+      "slug": "groenlinks",
+      "name": "GroenLinks"
     },
     {
       "slug": "50plus",
       "name": "50PLUS"
+    },
+    {
+      "slug": "pvda",
+      "name": "PvdA"
     },
     {
       "slug": "christenunie-sgp",
@@ -82,9 +82,1933 @@
     {
       "slug": "fvd",
       "name": "FvD"
+    },
+    {
+      "slug": "pro-brabant",
+      "name": "PRO Brabant"
     }
   ],
   "moties": [
+    {
+      "id": 1647,
+      "date": "2026-10-16",
+      "title": "M126-2026 Ruimte voor investeringen door derden in Brabantse campussen",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/1a2cd0d3-d055-457e-9b59-45c8232e35f5",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 1646,
+      "date": "2026-10-16",
+      "title": "M125-2026 Indicatoren lening Achmea voor vastgoed ouderenzorg en gehandicaptenzorg",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/20a33ab2-3f71-4545-8534-34de2cfe885a",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 1
+      }
+    },
+    {
+      "id": 1645,
+      "date": "2026-10-16",
+      "title": "M124-2026 Stimuleren bouw studentenkamers",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/730c39f2-a578-460c-bf7b-614c40c52b4c",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 11,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 1644,
+      "date": "2026-10-16",
+      "title": "M123-2026 Schwebebahn",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/1b7b81c2-fee4-4f9e-a4f6-03350dd8c85e",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 1642,
+      "date": "2026-10-16",
+      "title": "M121-2026 Evaluatie Brainportlijnen — geld goed besteed?",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/5892a245-da0c-42a4-b62c-7e3f628d5e2c",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 1
+      }
+    },
+    {
+      "id": 1641,
+      "date": "2026-10-16",
+      "title": "M120-2026 Bijstelling natuurbeheersubsidie gescheperde schaapskuddes",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/2862031c-fd66-4702-a495-c045167d760e",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 10
+      }
+    },
+    {
+      "id": 1640,
+      "date": "2026-10-16",
+      "title": "M119-2026  Behoud van een volwaardige overmachtsregeling bij externe vertragingen",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/7a6dfd4c-6824-48f1-bbb8-c08c09b2b0da",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 8
+      }
+    },
+    {
+      "id": 1639,
+      "date": "2026-10-16",
+      "title": "M118-2026 Drastische lastenverlichting en vereenvoudiging van interne saldering",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/a2d14141-5a51-41f5-b557-9f00109403e9",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 1636,
+      "date": "2026-10-16",
+      "title": "M116-2026 Omarm een Takenagenda als kompas",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/788df194-07b9-47a3-9880-bd32d2c8ab75",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 8
+      }
+    },
+    {
+      "id": 1635,
+      "date": "2026-10-16",
+      "title": "M115-2026 Inzichtelijk maken van gevolgen niet voldoen aan KRW",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/488d626b-d2ea-46dd-96a9-a875375edebb",
+      "votes": {
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 1634,
+      "date": "2026-10-16",
+      "title": "M114-2026 Door meer bomen de bossen weer zien",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/3b869f44-5a4b-402d-9e87-bcff3379385c",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 1633,
+      "date": "2026-10-16",
+      "title": "M113-2026 Daling van het aantal fte",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/7a73c973-582a-426d-abfa-cc62e54e8fea",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 1632,
+      "date": "2026-10-16",
+      "title": "M112-2026 Externe inhuur maximeren",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/c5acd82f-4eb1-4117-bfc9-a0441f940aac",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 8
+      }
+    },
+    {
+      "id": 1637,
+      "date": "2026-10-16",
+      "title": "M111A-2026 Naar een schop in de grond voor de N629 Dongen - Oosterhout",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/c512dfc9-d599-4a87-9fea-7c021c4f516f",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 8,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 1630,
+      "date": "2026-10-16",
+      "title": "M110-2026 Geen IBT op huisvesting zolang de woningmarkt niet op orde is",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/5391cec6-29e4-48a9-9bfd-ed72066b606b",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 10
+      }
+    },
+    {
+      "id": 10000260,
+      "date": "2026-10-16",
+      "title": "A44-2026 Maak circulariteit normaal voor de Automotive Campus",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/1a845d4a-a130-47b7-a0d2-1d185b384ac5",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 10000258,
+      "date": "2026-10-16",
+      "title": "A43-2026 Geen titel",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/7679dfb6-4817-4b40-a8b3-343147f901fa",
+      "votes": {
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 10000259,
+      "date": "2026-10-16",
+      "title": "A42-2026 Geen titel",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/ee9a82e6-6d46-43cf-9419-b9700266d37f",
+      "votes": {
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 10000257,
+      "date": "2026-10-16",
+      "title": "A41-2026 Geen titel",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/4eecc68b-a6eb-464f-bd10-f1e7e32eb314",
+      "votes": {
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 10000256,
+      "date": "2026-10-16",
+      "title": "A40-2026 Geen titel",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/df0e4acd-3587-4dd9-9a9c-dc77413aa6c0",
+      "votes": {
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 10000255,
+      "date": "2026-10-16",
+      "title": "A39-2026 Geen titel",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/e6bc02cf-2dd9-459c-88b5-2168aa645276",
+      "votes": {
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 11
+      }
+    },
+    {
+      "id": 10000252,
+      "date": "2026-10-16",
+      "title": "A38-2026 Geen woningbouw dwang van GS voor gemeenten",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/56f488ce-e45d-4cef-8cb9-0d6603037bd8",
+      "votes": {
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 10000250,
+      "date": "2026-10-16",
+      "title": "A36-2026 Geen kleinschalige bebouwing in Natura 2000-gebieden",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/3f03d568-175d-48ff-8a90-ce692e19db8f",
+      "votes": {
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 10
+      }
+    },
+    {
+      "id": 10000254,
+      "date": "2026-10-16",
+      "title": "A35B-2026 Netbewust bouwen als voorwaarde voor ontwikkeling",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/c88f6cd0-5921-4e2e-afcc-c2c72b3320f9",
+      "votes": {
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie-sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro-brabant": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "lokaal-brabant": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 6
+      }
+    },
     {
       "id": 1626,
       "date": "2026-09-18",
@@ -492,7 +2416,7 @@
       "type": "amendement",
       "result": "rejected",
       "resultLabel": "Verworpen",
-      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/753d4af0-960e-4dca-8176-25963f04b538",
+      "source": "https://noordbrabant.bestuurlijkeinformatie.nl/Reports/Item/4c3132e4-86d4-444b-a9d5-083a9270879d",
       "votes": {
         "50plus": {
           "agree": 1,
