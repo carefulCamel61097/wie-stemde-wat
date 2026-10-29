@@ -3,7 +3,7 @@
     "province": "Europese fracties",
     "body": "Europees Parlement",
     "term": "2024–2029",
-    "generated_at": "2026-10-22T12:53:09+00:00",
+    "generated_at": "2026-10-29T14:17:20+00:00",
     "source": "https://howtheyvote.eu",
     "sourceName": "HowTheyVote.eu",
     "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen (roll-call) van het Europees Parlement",
@@ -14,7 +14,7 @@
     "note": "Stemmen per Europese fractie met exacte aantallen (voor/tegen/onthouding), op basis van hoofdelijke stemmingen (roll-call). Alleen eindstemmingen; stemmingen bij handopsteken worden niet hoofdelijk geregistreerd. Bron: HowTheyVote.eu (ODbL), Europees Parlement.",
     "granularity": "member",
     "counts": {
-      "moties": 709,
+      "moties": 710,
       "parties": 9
     },
     "types": [
@@ -65,12 +65,252 @@
   ],
   "moties": [
     {
+      "id": 198430,
+      "date": "2026-10-22",
+      "title": "Simplification of certain requirements and procedures for chemical products",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198430",
+      "votes": {
+        "epp": {
+          "agree": 140,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 106,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 55,
+          "disagree": 0,
+          "abstain": 14
+        },
+        "ecr": {
+          "agree": 63,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 65,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 37,
+          "disagree": 8,
+          "abstain": 1
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 35,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 10,
+          "disagree": 5,
+          "abstain": 7
+        },
+        "esn": {
+          "agree": 1,
+          "disagree": 1,
+          "abstain": 19
+        }
+      },
+      "totals": {
+        "agree": 477,
+        "disagree": 59
+      }
+    },
+    {
+      "id": 199380,
+      "date": "2026-10-22",
+      "title": "Simplification of certain requirements and procedures for chemical products",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/199380",
+      "votes": {
+        "epp": {
+          "agree": 1,
+          "disagree": 140,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 2,
+          "disagree": 107,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 71,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 0,
+          "disagree": 63,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 0,
+          "disagree": 65,
+          "abstain": 1
+        },
+        "green-efa": {
+          "agree": 46,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 37,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 7,
+          "disagree": 13,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 21,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 93,
+        "disagree": 480
+      }
+    },
+    {
+      "id": 199470,
+      "date": "2026-10-22",
+      "title": "Revised heat and fuel benchmark values for 2026-2030",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/199470",
+      "votes": {
+        "epp": {
+          "agree": 142,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 109,
+          "disagree": 1,
+          "abstain": 1
+        },
+        "pfe": {
+          "agree": 55,
+          "disagree": 0,
+          "abstain": 17
+        },
+        "ecr": {
+          "agree": 64,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 64,
+          "disagree": 2,
+          "abstain": 1
+        },
+        "green-efa": {
+          "agree": 3,
+          "disagree": 43,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 30,
+          "abstain": 7
+        },
+        "ni": {
+          "agree": 16,
+          "disagree": 4,
+          "abstain": 2
+        },
+        "esn": {
+          "agree": 21,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 474,
+        "disagree": 82
+      }
+    },
+    {
+      "id": 199560,
+      "date": "2026-10-22",
+      "title": "Revised heat and fuel benchmark values for 2026-2030",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/199560",
+      "votes": {
+        "epp": {
+          "agree": 0,
+          "disagree": 142,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 3,
+          "disagree": 107,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 6,
+          "disagree": 64,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 0,
+          "disagree": 64,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 0,
+          "disagree": 67,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 44,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 37,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 4,
+          "disagree": 17,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 21,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 94,
+        "disagree": 482
+      }
+    },
+    {
       "id": 199567,
       "date": "2026-10-22",
       "title": "Reduction of methane emissions in the energy sector: postponement of certain obligations",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
+      "result": "rejected",
+      "resultLabel": "Verworpen",
       "source": "https://howtheyvote.eu/votes/199567",
       "votes": {
         "epp": {
@@ -129,8 +369,8 @@
       "date": "2026-10-22",
       "title": "Reduction of methane emissions in the energy sector: postponement of certain obligations",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/199592",
       "votes": {
         "epp": {
@@ -185,72 +425,12 @@
       }
     },
     {
-      "id": 198405,
-      "date": "2026-10-22",
-      "title": "Establishing the Erasmus+ programme for the period 2028-2034, and repealing Regulations (EU) 2021/817 and (EU) 2021/888",
-      "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/198405",
-      "votes": {
-        "epp": {
-          "agree": 139,
-          "disagree": 2,
-          "abstain": 0
-        },
-        "sd": {
-          "agree": 112,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "pfe": {
-          "agree": 16,
-          "disagree": 15,
-          "abstain": 41
-        },
-        "ecr": {
-          "agree": 29,
-          "disagree": 7,
-          "abstain": 28
-        },
-        "renew": {
-          "agree": 67,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "green-efa": {
-          "agree": 46,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "gue-ngl": {
-          "agree": 34,
-          "disagree": 2,
-          "abstain": 0
-        },
-        "ni": {
-          "agree": 11,
-          "disagree": 4,
-          "abstain": 7
-        },
-        "esn": {
-          "agree": 0,
-          "disagree": 4,
-          "abstain": 17
-        }
-      },
-      "totals": {
-        "agree": 454,
-        "disagree": 34
-      }
-    },
-    {
       "id": 199517,
       "date": "2026-10-22",
       "title": "Escalation of Russian strikes in the EU, particularly on Black Sea shipping, threatening human life, regional stability and food security",
       "type": "resolutie",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/199517",
       "votes": {
         "epp": {
@@ -305,132 +485,72 @@
       }
     },
     {
-      "id": 199470,
+      "id": 198405,
       "date": "2026-10-22",
-      "title": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
+      "title": "Erasmus+ programme 2028-2034",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/199470",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198405",
       "votes": {
         "epp": {
-          "agree": 142,
-          "disagree": 1,
+          "agree": 139,
+          "disagree": 2,
           "abstain": 0
         },
         "sd": {
-          "agree": 109,
-          "disagree": 1,
-          "abstain": 1
-        },
-        "pfe": {
-          "agree": 55,
+          "agree": 112,
           "disagree": 0,
-          "abstain": 17
-        },
-        "ecr": {
-          "agree": 64,
-          "disagree": 1,
           "abstain": 0
         },
+        "pfe": {
+          "agree": 16,
+          "disagree": 15,
+          "abstain": 41
+        },
+        "ecr": {
+          "agree": 29,
+          "disagree": 7,
+          "abstain": 28
+        },
         "renew": {
-          "agree": 64,
-          "disagree": 2,
-          "abstain": 1
+          "agree": 67,
+          "disagree": 0,
+          "abstain": 0
         },
         "green-efa": {
-          "agree": 3,
-          "disagree": 43,
+          "agree": 46,
+          "disagree": 0,
           "abstain": 0
         },
         "gue-ngl": {
-          "agree": 0,
-          "disagree": 30,
+          "agree": 34,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 11,
+          "disagree": 4,
           "abstain": 7
         },
-        "ni": {
-          "agree": 16,
+        "esn": {
+          "agree": 0,
           "disagree": 4,
-          "abstain": 2
-        },
-        "esn": {
-          "agree": 21,
-          "disagree": 0,
-          "abstain": 0
+          "abstain": 17
         }
       },
       "totals": {
-        "agree": 474,
-        "disagree": 82
-      }
-    },
-    {
-      "id": 199560,
-      "date": "2026-10-22",
-      "title": "EU Emissions Trading System: heat and fuel benchmark values for 2026–2030",
-      "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/199560",
-      "votes": {
-        "epp": {
-          "agree": 0,
-          "disagree": 142,
-          "abstain": 0
-        },
-        "sd": {
-          "agree": 3,
-          "disagree": 107,
-          "abstain": 0
-        },
-        "pfe": {
-          "agree": 6,
-          "disagree": 64,
-          "abstain": 0
-        },
-        "ecr": {
-          "agree": 0,
-          "disagree": 64,
-          "abstain": 0
-        },
-        "renew": {
-          "agree": 0,
-          "disagree": 67,
-          "abstain": 0
-        },
-        "green-efa": {
-          "agree": 44,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "gue-ngl": {
-          "agree": 37,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "ni": {
-          "agree": 4,
-          "disagree": 17,
-          "abstain": 1
-        },
-        "esn": {
-          "agree": 0,
-          "disagree": 21,
-          "abstain": 0
-        }
-      },
-      "totals": {
-        "agree": 94,
-        "disagree": 482
+        "agree": 454,
+        "disagree": 34
       }
     },
     {
       "id": 198292,
       "date": "2026-10-22",
-      "title": "Cohesion policy in the EU’s eastern border regions: strengthening territorial resilience\nand cross-border cooperation",
+      "title": "Cohesion policy in the EU’s eastern border regions: strengthening territorial resilience and cross‑border cooperation",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198292",
       "votes": {
         "epp": {
@@ -485,132 +605,132 @@
       }
     },
     {
-      "id": 198430,
-      "date": "2026-10-22",
-      "title": "Amending Regulations (EC) No 1272/2008, (EC) No 1223/2009 and (EU) 2019/1009 as regards simplification of certain requirements and procedures for chemical products",
+      "id": 198325,
+      "date": "2026-10-21",
+      "title": "Pericles V exchange, assistance and training programme for the protection of the euro against counterfeiting 2028–2034",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/198430",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198325",
       "votes": {
         "epp": {
-          "agree": 140,
-          "disagree": 4,
+          "agree": 168,
+          "disagree": 0,
           "abstain": 0
         },
         "sd": {
-          "agree": 106,
-          "disagree": 5,
+          "agree": 129,
+          "disagree": 0,
           "abstain": 0
         },
         "pfe": {
-          "agree": 55,
-          "disagree": 0,
-          "abstain": 14
+          "agree": 73,
+          "disagree": 1,
+          "abstain": 5
         },
         "ecr": {
-          "agree": 63,
-          "disagree": 0,
-          "abstain": 0
+          "agree": 74,
+          "disagree": 1,
+          "abstain": 1
         },
         "renew": {
-          "agree": 65,
-          "disagree": 1,
+          "agree": 74,
+          "disagree": 0,
           "abstain": 0
         },
         "green-efa": {
-          "agree": 37,
-          "disagree": 8,
-          "abstain": 1
+          "agree": 47,
+          "disagree": 0,
+          "abstain": 0
         },
         "gue-ngl": {
-          "agree": 0,
-          "disagree": 35,
+          "agree": 44,
+          "disagree": 0,
           "abstain": 0
         },
         "ni": {
-          "agree": 10,
-          "disagree": 5,
-          "abstain": 7
+          "agree": 20,
+          "disagree": 1,
+          "abstain": 5
         },
         "esn": {
-          "agree": 1,
-          "disagree": 1,
-          "abstain": 19
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 20
         }
       },
       "totals": {
-        "agree": 477,
-        "disagree": 59
+        "agree": 629,
+        "disagree": 7
       }
     },
     {
-      "id": 199380,
-      "date": "2026-10-22",
-      "title": "Amending Regulations (EC) No 1272/2008, (EC) No 1223/2009 and (EU) 2019/1009 as regards simplification of certain requirements and procedures for chemical products",
-      "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/199380",
+      "id": 198947,
+      "date": "2026-10-21",
+      "title": "Objection pursuant to Rule 115(2) and (3): Genetically modified soybean MON 87769",
+      "type": "overig",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/198947",
       "votes": {
         "epp": {
-          "agree": 1,
-          "disagree": 140,
-          "abstain": 0
+          "agree": 43,
+          "disagree": 118,
+          "abstain": 1
         },
         "sd": {
-          "agree": 2,
-          "disagree": 107,
-          "abstain": 0
+          "agree": 108,
+          "disagree": 12,
+          "abstain": 2
         },
         "pfe": {
-          "agree": 0,
-          "disagree": 71,
+          "agree": 65,
+          "disagree": 13,
           "abstain": 0
         },
         "ecr": {
-          "agree": 0,
-          "disagree": 63,
-          "abstain": 0
+          "agree": 60,
+          "disagree": 13,
+          "abstain": 1
         },
         "renew": {
-          "agree": 0,
-          "disagree": 65,
+          "agree": 38,
+          "disagree": 35,
           "abstain": 1
         },
         "green-efa": {
-          "agree": 46,
-          "disagree": 0,
-          "abstain": 0
+          "agree": 40,
+          "disagree": 4,
+          "abstain": 2
         },
         "gue-ngl": {
-          "agree": 37,
+          "agree": 42,
           "disagree": 0,
           "abstain": 0
         },
         "ni": {
-          "agree": 7,
-          "disagree": 13,
-          "abstain": 1
+          "agree": 22,
+          "disagree": 1,
+          "abstain": 2
         },
         "esn": {
-          "agree": 0,
-          "disagree": 21,
+          "agree": 24,
+          "disagree": 0,
           "abstain": 0
         }
       },
       "totals": {
-        "agree": 93,
-        "disagree": 480
+        "agree": 442,
+        "disagree": 196
       }
     },
     {
       "id": 198299,
       "date": "2026-10-21",
-      "title": "Mobilisation of the European Union Solidarity Fund to provide assistance to Malta and Italy regarding storm Harry in January 2026 and to Portugal and Spain following the storms in January and February 2026",
+      "title": "Mobilisation of the European Union Solidarity Fund: assistance to Malta, Italy, Portugal and Spain with regard to storms in 2026",
       "type": "begroting",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198299",
       "votes": {
         "epp": {
@@ -667,10 +787,10 @@
     {
       "id": 198409,
       "date": "2026-10-21",
-      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers: application EGF/2026/004 FI/Etelä-Suomi and Helsinki-Uusimaa paper - Finland",
+      "title": "Mobilisation of the European Globalisation Adjustment Fund for Displaced Workers: application EGF/2026/004 FI/Etelä-Suomi and Helsinki-Uusimaa paper – Finland",
       "type": "begroting",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198409",
       "votes": {
         "epp": {
@@ -729,8 +849,8 @@
       "date": "2026-10-21",
       "title": "Guidelines for the employment policies of the Member States",
       "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198386",
       "votes": {
         "epp": {
@@ -787,10 +907,10 @@
     {
       "id": 198774,
       "date": "2026-10-21",
-      "title": "General budget of the European Union for the financial year 2027 - all sections",
+      "title": "General budget of the European Union for the financial year 2027 – all sections",
       "type": "begroting",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198774",
       "votes": {
         "epp": {
@@ -845,72 +965,12 @@
       }
     },
     {
-      "id": 198325,
-      "date": "2026-10-21",
-      "title": "Establishing the exchange, assistance and training programme for the protection of the euro against counterfeiting for the period 2028-2034 (the 'Pericles V' programme) and repealing Regulation (EU) 2021/840",
-      "type": "wetgeving",
-      "result": null,
-      "resultLabel": null,
-      "source": "https://howtheyvote.eu/votes/198325",
-      "votes": {
-        "epp": {
-          "agree": 168,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "sd": {
-          "agree": 129,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "pfe": {
-          "agree": 73,
-          "disagree": 1,
-          "abstain": 5
-        },
-        "ecr": {
-          "agree": 74,
-          "disagree": 1,
-          "abstain": 1
-        },
-        "renew": {
-          "agree": 74,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "green-efa": {
-          "agree": 47,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "gue-ngl": {
-          "agree": 44,
-          "disagree": 0,
-          "abstain": 0
-        },
-        "ni": {
-          "agree": 20,
-          "disagree": 1,
-          "abstain": 5
-        },
-        "esn": {
-          "agree": 0,
-          "disagree": 4,
-          "abstain": 20
-        }
-      },
-      "totals": {
-        "agree": 629,
-        "disagree": 7
-      }
-    },
-    {
       "id": 198357,
       "date": "2026-10-21",
-      "title": "Discharge 2024: General budget of the EU - European Council and Council",
+      "title": "Discharge 2024: EU general budget – European Council and Council",
       "type": "overig",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198357",
       "votes": {
         "epp": {
@@ -969,8 +1029,8 @@
       "date": "2026-10-21",
       "title": "Boosting skills in the Union – opportunities for vocational education and training in times of transition",
       "type": "initiatiefverslag",
-      "result": null,
-      "resultLabel": null,
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/198302",
       "votes": {
         "epp": {

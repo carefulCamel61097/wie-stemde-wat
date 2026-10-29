@@ -3,7 +3,7 @@
     "province": "2015–2019",
     "body": "Eerste Kamer",
     "term": "2015–2019",
-    "generated_at": "2026-10-22T13:09:58+00:00",
+    "generated_at": "2026-10-29T14:34:43+00:00",
     "source": "https://www.eerstekamer.nl",
     "sourceName": "",
     "license": "Open data - Eerste Kamer der Staten-Generaal (eerstekamer.nl)",
@@ -15,7 +15,7 @@
     "granularity": "fractie",
     "counts": {
       "moties": 354,
-      "parties": 20
+      "parties": 19
     },
     "types": [
       "motie",
@@ -31,6 +31,10 @@
     {
       "slug": "christenunie",
       "name": "ChristenUnie"
+    },
+    {
+      "slug": "pvda",
+      "name": "PvdA"
     },
     {
       "slug": "pvv",
@@ -51,10 +55,6 @@
     {
       "slug": "groenlinks",
       "name": "GroenLinks"
-    },
-    {
-      "slug": "pvda",
-      "name": "PvdA"
     },
     {
       "slug": "sgp",
@@ -99,10 +99,6 @@
     {
       "slug": "sophie-van-bijsterveld",
       "name": "Sophie van Bijsterveld"
-    },
-    {
-      "slug": "verheijen",
-      "name": "Verheijen"
     }
   ],
   "moties": [
@@ -16117,7 +16113,7 @@
       }
     },
     {
-      "id": 131253792307338,
+      "id": 182907898041600,
       "date": "2016-12-20",
       "title": "EU-voorstellen: Pakket vennootschapsbelasting (34.604)",
       "type": "overig",
@@ -16165,7 +16161,7 @@
           "disagree": 0,
           "abstain": 0
         },
-        "verheijen": {
+        "pvda": {
           "agree": 1,
           "disagree": 0,
           "abstain": 0
