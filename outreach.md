@@ -472,3 +472,78 @@ control, and open asking is what has actually worked on this project (§2, §3c,
 > more responsive route throughout (§2 Drenthe, §3c Noord-Brabant, §4 Utrecht). Addresses would need
 > verifying first.
 
+---
+
+## 7. Statengriffies van de 4 Notubiz-provincies — toestemming voor geautomatiseerd ophalen
+> **✅ Sent 2026-11-06** to all four. Notubiz refused an exception (§6) but **referred us here**, which is
+> the whole basis of this ask — their words are quoted verbatim in the mail so the griffie does not have to
+> take our word for it: *"Toegang tot het afgeschermde deel van de API, zoals /roles, geven wij alleen in
+> opdracht van of in overleg met onze klanten. De provincies zijn eigenaar van deze gegevens. Daarom is de
+> Statengriffie van de betreffende provincie het juiste aanspreekpunt."*
+> **Follow-up:** nudge **~20 November** if silent. CI starts failing weekly ~2026-11-22 (45-day ceiling).
+> Four parallel threads: one reply is enough to unblock that province.
+
+**Blocks:** **Zuid-Holland, Fryslân, Gelderland, Overijssel** — frozen at 2026-10-08 (see §6).
+**The ask:** have Notubiz grant either (1) access to the shielded `/roles` endpoint — pitched as the
+**lighter** route for Notubiz, which is true: API-only drops every portal fetch — or (2) a user-agent
+exception on the public portal.
+
+**Addresses** (each from an official source, 2026-11-06). NB: **Gelderland is `griffie@`, not
+`statengriffie@`** — the kind of detail that bounced Flevoland and Drenthe guesses in June:
+
+| Provincie | Adres | Bron |
+|---|---|---|
+| Zuid-Holland | `statengriffie@pzh.nl` | officielebekendmakingen.nl (prb-2023-3279) |
+| Fryslân | `statengriffie@fryslan.frl` | fryslan.frl/gast-van-de-staten |
+| Gelderland | `griffie@gelderland.nl` | gelderland.nl/themas/politiek/ps/statengriffie |
+| Overijssel | `statengriffie@overijssel.nl` | organisaties.overheid.nl/16790 |
+
+**Onderwerp:** Stemgedrag Provinciale Staten niet meer als open data beschikbaar — verzoek aan Notubiz
+
+> Geachte Statengriffie,
+>
+> Ik beheer een open, non-commercieel overzicht van het stemgedrag per fractie in de Provinciale Staten.
+> Provincie [NAAM] is daarin opgenomen sinds juni: op elke motie en elk amendement is te zien hoe elke
+> fractie stemde, met exacte aantallen, op basis van de gegevens in uw eigen vergaderportaal.
+>
+> – Website: https://carefulcamel61097.github.io/wie-stemde-wat/
+> – Broncode: https://github.com/carefulCamel61097/wie-stemde-wat
+>
+> Sinds begin oktober kan ik die gegevens niet meer bijwerken. Het publieksportaal van Notubiz geeft nu
+> een beveiligingscontrole (Cloudflare, HTTP 403) bij geautomatiseerd ophalen. Voor bezoekers is het
+> stemgedrag nog gewoon zichtbaar; alleen hergebruik als data is niet meer mogelijk.
+>
+> Ik heb dit bij Notubiz neergelegd. Zij lieten weten dat het een bewuste maatregel is waarop zij geen
+> uitzonderingen maken, en verwezen mij door naar u. Hun antwoord was duidelijk over de route:
+>
+> > "Toegang tot het afgeschermde deel van de API, zoals /roles, geven wij alleen in opdracht van of in
+> > overleg met onze klanten. De provincies zijn eigenaar van deze gegevens. Daarom is de Statengriffie
+> > van de betreffende provincie het juiste aanspreekpunt."
+>
+> Mijn verzoek is dus: zou u bij Notubiz kunnen aangeven dat u er geen bezwaar tegen heeft dat deze
+> gegevens geautomatiseerd opgehaald worden? Concreet gaat het om één van beide:
+>
+> 1. Toegang tot het afgeschermde API-onderdeel `/roles`, dat de koppeling tussen een stem en de fractie
+>    bevat. Met die toegang heb ik het portaal niet meer nodig en gebruik ik alleen de API — voor Notubiz
+>    de lichtste route.
+> 2. Of een uitzondering voor mijn collector op het publieksportaal.
+>
+> Het gaat om weinig verkeer: één keer per week, netjes gespreid, en desgewenst beperkt tot alleen nieuwe
+> vergaderingen.
+>
+> Notubiz wees mij ook op Open Raadsinformatie. Dat heb ik nagekeken: die dataset bevat voor de provincies
+> wel vergaderingen, agendapunten en documenten, maar geen stemmingen per fractie. Het stemgedrag staat
+> daar alleen in de PDF's. Het is dus geen alternatief.
+>
+> Alvast hartelijk dank voor het meedenken.
+>
+> Met vriendelijke groet,
+> Thabiso Epema
+
+> **ORI checked, 2026-11-06 (so this claim is safe to make):** `api.openraadsinformatie.nl/v1/elastic` is
+> genuinely open and provinces live in `osi_*` indices — but only **five** (Fryslân, Limburg,
+> Noord-Holland, Overijssel, Utrecht; **not** Zuid-Holland or Gelderland), and across **every** `osi_*`
+> index the only @types are MediaObject / AgendaItem / Meeting / Person / Report / Organization /
+> Membership / ImageObject. **No VoteEvent, no Vote, and no vote-, stem-, result- or count-field in the
+> mapping.** Votes exist there only inside the PDFs — the same wall as Groningen and Zeeland.
+
