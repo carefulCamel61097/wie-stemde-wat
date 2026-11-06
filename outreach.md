@@ -382,3 +382,93 @@ proposing a fix.
 > **If they offer "only new meetings":** `notubiz_events` currently re-pages the whole term every week.
 > Limiting `date_from` to the last few weeks and merging into the existing JSON would cut it to a few
 > dozen requests. The 350 figure = ~12 events pages + (41+45+43+37 meetings) × 2.
+
+---
+
+## 6. Notubiz — publieksportaal blokkeert nu ook het ophalen (Cloudflare 403)
+> **✅ Sent 2026-11-06**, as a reply on the §5 thread to **Maarten Lierop** (Product owner Bestuurlijke
+> Besluitvorming & Security) — same person who answered within hours in September. Subject amended to
+> *Publieksportaal blokkeert nu ook het ophalen van stemmingen*.
+> **Follow-up:** if silent by **~20 November** (≈2 weeks), nudge. **Hard deadline: around 22 November**
+> the four provinces pass `STALE_AFTER_DAYS` (45, counted from the last good run on 2026-10-08) and the
+> weekly CI run starts failing every week.
+>
+> _Nudge draft (reply on the same thread):_
+> > Beste Maarten,
+> >
+> > Op 6 november stuurde ik onderstaande vraag over het Cloudflare-controlescherm op de
+> > publieksportalen, waardoor het stemgedrag per fractie niet meer op te halen is. Zou u kunnen laten
+> > weten of één van de twee genoemde opties mogelijk is, of mij naar de juiste persoon kunnen
+> > verwijzen? Alvast dank!
+> >
+> > Met vriendelijke groet, Thabiso Epema
+
+**Blocks:** **Zuid-Holland, Fryslân, Gelderland, Overijssel** — frozen at **2026-10-08**. The site shows
+the "niet ververst" notice on all four (past `NOTICE_AFTER_DAYS`).
+**Why:** since early October the public portals answer **HTTP 403 with a Cloudflare "Just a moment..."
+challenge** — `pzh.notubiz.nl`, `fryslan.notubiz.nl` and the rest, from an ordinary non-datacenter
+connection that worked fine before (verified 2026-11-06). `api.notubiz.nl` itself still returns 200, but
+it keys votes by `role_id` and the `role_id → fractie` map sits behind the auth-walled `/roles` endpoint
+— exactly what was refused in §1. Portal + API together are what made this tier A, so per-fractie data
+is currently unobtainable. **We do not attempt to solve the challenge**: that is circumventing an access
+control, and open asking is what has actually worked on this project (§2, §3c, §4).
+
+**The ask (two options, either is fine):**
+1. An exception for the collector's user-agent on the public portals.
+2. Or access to `/roles`, so the portal is not needed at all — **framed as the lighter route for their
+   servers**, which is true: API-only drops every portal page fetch.
+
+**To:** reply on the §5 thread → Maarten Lierop / `info@notubiz.nl`
+**Onderwerp:** Publieksportaal blokkeert nu ook het ophalen van stemmingen
+
+> Beste Maarten,
+>
+> In september liet u weten dat verzoeken vanuit cloudomgevingen worden tegengehouden door de
+> GEO-IP-blokkade, en dat ik de verzoeken wel vanaf een gewone (niet-datacenter) verbinding kon
+> uitvoeren. Dat heb ik sindsdien gedaan, en dat werkte goed: de stemmingen van Zuid-Holland, Fryslân,
+> Gelderland en Overijssel werden wekelijks bijgewerkt.
+>
+> Sinds begin oktober lukt dat niet meer. De publieksportalen geven nu een Cloudflare-controlescherm
+> met een HTTP 403:
+>
+> - `https://pzh.notubiz.nl/vergadering/...` → 403 ("Just a moment...")
+> - `https://fryslan.notubiz.nl/` → 403, idem
+>
+> Dit geldt voor alle provincies die ik gebruik, en ook vanaf dezelfde gewone verbinding die eerder
+> prima werkte. Ik wil dat controlescherm uiteraard niet omzeilen, dus leg ik de vraag bij u neer.
+>
+> Het probleem is de combinatie van twee dingen:
+>
+> 1. `api.notubiz.nl` werkt nog wel, maar geeft de stemmen per `role_id`. De koppeling
+>    `role_id → fractie` zit achter het `/roles`-endpoint, dat authenticatie vereist — precies wat in
+>    juni niet verstrekt kon worden.
+> 2. Het portaal bevatte die fractienamen en aantallen wél, en is nu niet meer geautomatiseerd te
+>    benaderen.
+>
+> Daarmee is het stemgedrag **per fractie** op dit moment niet meer op te halen, terwijl het op het
+> portaal voor bezoekers gewoon openbaar is. Ik neem aan dat dat niet de bedoeling is van de maatregel.
+>
+> Zou één van deze twee mogelijk zijn?
+>
+> 1. Een uitzondering voor mijn collector op de publieksportalen. Die identificeert zich met de
+>    user-agent `wie-stemde-wat collector (open-data overview; contact via GitHub)`.
+> 2. Of toegang tot `/roles` (de koppeling `role_id → fractie`), zodat ik het portaal niet meer nodig
+>    heb en alleen de API gebruik. Dat is voor uw servers ook de lichtste route.
+>
+> Het gaat om weinig verkeer: één keer per week, netjes gespreid, en ik kan dat desgewenst beperken tot
+> alleen nieuwe vergaderingen.
+>
+> Het project is open en non-commercieel:
+> – Website: https://carefulcamel61097.github.io/wie-stemde-wat/
+> – Broncode: https://github.com/carefulCamel61097/wie-stemde-wat
+>
+> Alvast dank voor het meedenken.
+>
+> Met vriendelijke groet,
+> Thabiso Epema
+
+> **Fallback if Notubiz says no (not mentioned in the mail — keep it as a second step):** the four
+> **provinces** own this data, and their griffies can ask Notubiz on our behalf. Griffies have been the
+> more responsive route throughout (§2 Drenthe, §3c Noord-Brabant, §4 Utrecht). Addresses would need
+> verifying first.
+
