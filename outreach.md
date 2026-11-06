@@ -59,7 +59,13 @@ endpoint. A token lets us group votes per party.
 > (`/Leden/{slug}/votings`, not Utrecht's `/Samenstelling/...`) — so no module toggle was even needed;
 > config-only on our side. Drenthe = 443 stemmingen, 15 fracties, tier A. See data-sources.md §2b + roadmap Phase 8.
 >
-> **⏳ FLEVOLAND — still the only open outreach.** `griffie@flevoland.nl`, mailed 2026-06-11, followed up
+> **⏳ FLEVOLAND — second nudge sent 2026-11-06.** Still silent after ~5 months. This nudge leads with the
+> **Drenthe finding** (same vendor: the votes were published all along at `/Leden/...`, nothing had to be
+> switched on) and asks only one concrete question — which of the two paths is active on their install —
+> which GemeenteOplossingen can answer in a minute. If this stays silent, park Flevoland rather than
+> nudging a fourth time. Original thread below.
+>
+> `griffie@flevoland.nl`, mailed 2026-06-11, followed up
 > 2026-06-29, no reply. Same GO ask. **Given Drenthe: explicitly ask them to have GO check the `/Leden/...`
 > path** — the votes may already exist there. Get any reply moving **before the zomerreces (~mid-July)**;
 > after that, expect nothing until late Aug/Sept.
@@ -136,7 +142,20 @@ Drenthe brands its PS as the *Drents Parlement*, so its griffie lives on `@drent
 > config-only (628 items).** See §3c below and provinces.md. *(A short thank-you reply is warranted — see
 > the draft at the end of §3c.)*
 >
-> **Groningen & Zeeland:** ✅ sent 2026-07-05 to `statengriffie@provinciegroningen.nl` ·
+> **⏳ NUDGED 2026-11-06 — both, first time.** Neither had been chased since July (sent just before the
+> zomerreces). What changed:
+> - **Zeeland** now has **two** same-vendor precedents instead of one: Limburg *and* Noord-Brabant both
+>   expose per-fractie counts in the iBabs **`Stemmen`** field, and NB's turned out to be populated
+>   already. The nudge asks only whether that field can be filled for Zeeland.
+> - **Groningen's original ask is partly obsolete and the nudge says so.** The July mail argued "bij andere
+>   Notubiz-provincies kan ik het stemgedrag automatisch inlezen" — **no longer true since the portal block
+>   (§6)**. Enabling their module alone would now achieve nothing, because the portal that carries the
+>   per-fractie breakdown sits behind the same Cloudflare check. So the nudge asks for **both**: enable the
+>   module *and* tell NotuBiz they do not object to automated retrieval (`/roles`), i.e. the §7 ask. It also
+>   mentions that the same question is now with the four other Notubiz provinces — deliberate: five
+>   griffies on one supplier, and griffies talk to each other. One resolution becomes everyone's precedent.
+>
+> Originals: ✅ sent 2026-07-05 to `statengriffie@provinciegroningen.nl` ·
 > `statengriffier@zeeland.nl` (note the *-griffier* form). Cold contacts right before the **zomerreces
 > (~mid-July)** — expect little before September; **nudge late August** if silent (Drenthe playbook: mail →
 > nudge → result). NB's outcome is a useful nudge point: for Zeeland especially, "please populate the
@@ -482,6 +501,26 @@ control, and open asking is what has actually worked on this project (§2, §3c,
 > Statengriffie van de betreffende provincie het juiste aanspreekpunt."*
 > **Follow-up:** nudge **~20 November** if silent. CI starts failing weekly ~2026-11-22 (45-day ceiling).
 > Four parallel threads: one reply is enough to unblock that province.
+>
+> **⏳ GELDERLAND — engaged, same day.** The griffie's **informatiemanager** replied within 25 minutes:
+> request and both routes are clear, she is taking it up internally **and with NotuBiz**. Her one open
+> question: **what are the security risks of the two options?** She expects them to be small but wants it
+> checked. She also noted Gelderland is currently up to date (correct — our newest vote is 2026-09-23) and
+> that their next Statenvergadering is **woensdag 11 november**, which she does not expect to beat.
+> (Direct contact details are in the private notes, not here.)
+>
+> **Answered 2026-11-06** with a written risk comparison. The line that matters: **option 1 (`/roles`) is
+> the safer one and we said so ourselves** — read-only, exposes only the already-public `role_id → fractie`
+> mapping, scopeable to one organisation, revocable, credential kept out of the public repo, and it
+> *lowers* load (~90 portal requests/week → a handful of API calls). **Option 2 (UA exception) is weaker
+> and we said that too**: a user-agent is self-declared and spoofable, so an exception on it genuinely
+> loosens their protection, and it keeps the heavier portal traffic. IP allowlisting was offered as the
+> stronger variant but ruled out honestly (no fixed IP). Closed with: we are not trying to circumvent the
+> check, which is why we are asking — the sentence that has to survive being forwarded to NotuBiz security.
+>
+> **Lesson forming:** when a griffie asks about risk, naming the weakness of your own preferred ask buys
+> more credibility than reassurance does. Same pattern as the Utrecht mail (§4): give them something they
+> can forward verbatim.
 
 **Blocks:** **Zuid-Holland, Fryslân, Gelderland, Overijssel** — frozen at 2026-10-08 (see §6).
 **The ask:** have Notubiz grant either (1) access to the shielded `/roles` endpoint — pitched as the
