@@ -27,6 +27,9 @@ import urllib.request
 import urllib.error
 import urllib.parse
 from datetime import datetime, date, timezone
+# Imported by name, not as `http.client`: this module defines its own http() below, which
+# shadows the stdlib `http` module name.
+from http.client import HTTPException
 from pathlib import Path
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
@@ -434,6 +437,15 @@ def fetch(url, data=None, ctype=None, tries=3):
                 # from "Connection refused" or a DNS failure (the Notubiz CI question hinged on it).
                 reason = getattr(e, "reason", None)
                 note_failure(f"{type(e).__name__} ({reason})" if reason else type(e).__name__)
+                return None
+            time.sleep(1.5 * (attempt + 1))
+        except HTTPException as e:
+            # A response that dies mid-transfer (IncompleteRead, BadStatusLine, ...) is as transient
+            # as a dropped connection, but these are HTTPExceptions, NOT OSErrors, so they used to
+            # escape fetch() entirely and abort the whole scope: one truncated read cost
+            # Noord-Brabant all 645 stemmingen on 2026-10-08.
+            if attempt + 1 == tries:
+                note_failure(type(e).__name__)
                 return None
             time.sleep(1.5 * (attempt + 1))
     return None

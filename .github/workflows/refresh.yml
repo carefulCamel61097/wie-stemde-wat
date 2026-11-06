@@ -30,6 +30,9 @@ jobs:
         continue-on-error: true
         run: python collector/collect.py
 
+      # The push is retried: on 2026-11-05 GitHub rejected it with a server-side
+      # "fatal error in commit_refs_rules" and a 1h40m run's data was thrown away. A rebase also
+      # covers the ordinary case where the local Notubiz refresher pushed while this run was going.
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
@@ -37,10 +40,20 @@ jobs:
           git add data/
           if git diff --staged --quiet; then
             echo "No changes."
-          else
-            git commit -m "chore: refresh voting data"
-            git push
+            exit 0
           fi
+          git commit -m "chore: refresh voting data"
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push failed (attempt $attempt); rebasing on origin/main and retrying in ${attempt}0s."
+            git pull --rebase --autostash || { git rebase --abort || true; }
+            sleep ${attempt}0
+          done
+          echo "::error title=Push failed::Collected data could not be pushed after 5 attempts."
+          exit 1
 
       # Turns a silent degradation into a red run — which is what actually sends the notification
       # e-mail. Between 2026-06 and 2026-09 five provinces vanished from the site while this
