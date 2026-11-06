@@ -14,7 +14,7 @@ for why. Both are about **open data**, so there's good precedent (Utrecht alread
 > > Beste Notubiz,
 > >
 > > Vorige week (10 juni) stuurde ik onderstaand verzoek om een open-data API-token voor de stemdata
-> > van de Provinciale Staten. Ik begrijp dat het druk kan zijn — zou u kunnen laten weten of dit
+> > van de Provinciale Staten. Ik begrijp dat het druk kan zijn, zou u kunnen laten weten of dit
 > > mogelijk is, of mij naar de juiste persoon kunnen verwijzen? Alvast dank!
 > >
 > > Met vriendelijke groet, [naam]
@@ -98,7 +98,7 @@ Drenthe brands its PS as the *Drents Parlement*, so its griffie lives on `@drent
 > Geachte Statengriffie,
 >
 > Provincie Utrecht publiceert via haar stateninformatiesysteem (GemeenteOplossingen) het
-> **stemgedrag per fractie** als open data — per motie/amendement is zichtbaar welke fractie voor
+> **stemgedrag per fractie** als open data, per motie/amendement is zichtbaar welke fractie voor
 > of tegen stemde. Bij uw provincie is de GemeenteOplossingen-API wel beschikbaar, maar de
 > **'stemgedrag'-module** lijkt niet ingeschakeld, waardoor de stemmingen niet als open data
 > beschikbaar zijn.
@@ -110,7 +110,7 @@ Drenthe brands its PS as the *Drents Parlement*, so its griffie lives on `@drent
 > Het project is open en non-commercieel; u kunt het hier bekijken:
 > – Website: https://carefulcamel61097.github.io/wie-stemde-wat/
 > – Broncode: https://github.com/carefulCamel61097/wie-stemde-wat
-> (Provincie Utrecht, Noord-Holland en Limburg zijn er al in opgenomen — zo ziet het resultaat eruit.)
+> (Provincie Utrecht, Noord-Holland en Limburg zijn er al in opgenomen, zo ziet het resultaat eruit.)
 >
 > Met vriendelijke groet,
 > [naam]
@@ -174,7 +174,7 @@ Drenthe brands its PS as the *Drents Parlement*, so its griffie lives on `@drent
 > fracties voor en tegen stemden, met de aantallen. Diezelfde gegevens zijn via uw
 > vergaderportaal (Notubiz) echter **niet als open data** beschikbaar: de stemmingen-API levert voor
 > Groningen geen resultaten, terwijl dat bij andere Notubiz-provincies (Zuid-Holland, Gelderland,
-> Fryslân, Overijssel) wél het geval is — daar kan ik het stemgedrag automatisch inlezen.
+> Fryslân, Overijssel) wél het geval is, daar kan ik het stemgedrag automatisch inlezen.
 >
 > Zou u de **stemgedrag-/stemmingenmodule** in Notubiz kunnen (laten) inschakelen, zodat de stemmingen
 > die u toch al vastlegt ook als open data beschikbaar komen? Voor u is het naar verwachting een
@@ -202,7 +202,7 @@ Drenthe brands its PS as the *Drents Parlement*, so its griffie lives on `@drent
 > vermeld welke fracties voor stemden (bijvoorbeeld: *"aangenomen met de stemmen van de aanwezige leden
 > van de fracties van BBB, CDA, CU, D66, PvdA-GL, PVV, SGP en VVD voor"*). Via uw vergaderportaal
 > (iBabs) is dit stemgedrag echter **niet als open data** beschikbaar: de registers Moties,
-> Amendementen en **Stemming** zijn leeg. Bij provincie Limburg — dat hetzelfde iBabs-systeem gebruikt —
+> Amendementen en **Stemming** zijn leeg. Bij provincie Limburg, dat hetzelfde iBabs-systeem gebruikt,
 > is het stemgedrag per fractie wél als open data ontsloten, en kan ik het automatisch inlezen.
 >
 > Zou u het **stemmingenregister** kunnen (laten) vullen / het stemgedrag per fractie als open data
@@ -212,7 +212,7 @@ Drenthe brands its PS as the *Drents Parlement*, so its griffie lives on `@drent
 > Het project is open en non-commercieel; u kunt het hier bekijken:
 > – Website: https://carefulcamel61097.github.io/wie-stemde-wat/
 > – Broncode: https://github.com/carefulCamel61097/wie-stemde-wat
-> (Utrecht, Drenthe, Noord-Holland en Limburg zijn er al in opgenomen — zo ziet het resultaat eruit.)
+> (Utrecht, Drenthe, Noord-Holland en Limburg zijn er al in opgenomen, zo ziet het resultaat eruit.)
 >
 > Met vriendelijke groet,
 > [naam]
@@ -242,7 +242,7 @@ province before concluding "no structured votes".
 >
 > > Geachte mevrouw Beers,
 > >
-> > Hartelijk dank voor uw reactie en de tip. U heeft gelijk — via "toon stemmen" bij de stemuitslag zijn
+> > Hartelijk dank voor uw reactie en de tip. U heeft gelijk, via "toon stemmen" bij de stemuitslag zijn
 > > de stemmen per Statenlid inderdaad in te zien, en het blijkt dat die per fractie ook als gestructureerde
 > > data in het portaal beschikbaar zijn. Ik heb provincie Noord-Brabant daarmee inmiddels aan het overzicht
 > > kunnen toevoegen: het stemgedrag per fractie op alle moties en amendementen van deze Statenperiode wordt
@@ -301,14 +301,14 @@ Flevoland/Drenthe, the `statengriffie@` form *is* right for Utrecht.)
 > `https://www.stateninformatie.provincie-utrecht.nl/Samenstelling/{fractie}/votings`
 > gaf altijd JSON terug met het stemgedrag, maar levert nu een anti-bot-controlescherm (Anubis) in
 > plaats van de data. De endpoints onder `/api/v2/` (bijvoorbeeld `/api/v2/groups` en
-> `/api/v2/meetings`) werken wél gewoon — alleen de votings-route zit achter dat scherm.
+> `/api/v2/meetings`) werken wél gewoon, alleen de votings-route zit achter dat scherm.
 >
 > Ik ga ervan uit dat die maatregel bedoeld is tegen AI-crawlers die websites overbelasten, en niet
 > tegen hergebruik van open data. Mijn verzoek is dan ook klein; zou één van deze twee kunnen:
 >
 > 1. de user-agent van mijn collector uitzonderen in het Anubis-beleid:
 >    `wie-stemde-wat collector (open-data overview; contact via GitHub)`
-> 2. óf het stemgedrag ook via `/api/v2/` beschikbaar maken — dat deel staat immers niet achter het scherm.
+> 2. óf het stemgedrag ook via `/api/v2/` beschikbaar maken, dat deel staat immers niet achter het scherm.
 >
 > Het gaat om weinig verkeer: één keer per week ongeveer tachtig verzoeken in totaal, netjes
 > gespreid. Dat is minder belasting dan één gemiddelde bezoeker.
@@ -321,7 +321,7 @@ Flevoland/Drenthe, the `statengriffie@` form *is* right for Utrecht.)
 > Parlement. Daar bleek een vergelijkbare vraag met één instelling bij de leverancier opgelost;
 > mogelijk is dat hier ook zo.
 >
-> Op dit moment toont de site de Utrechtse gegevens nog wel, maar met de stand van 9 juli 2026 — die
+> Op dit moment toont de site de Utrechtse gegevens nog wel, maar met de stand van 9 juli 2026, die
 > loopt dus steeds verder achter. Ik hoor graag of dit mogelijk is.
 >
 > Met vriendelijke groet,
@@ -459,7 +459,7 @@ control, and open asking is what has actually worked on this project (§2, §3c,
 > Het probleem is de combinatie van twee dingen:
 >
 > 1. `api.notubiz.nl` werkt nog wel, maar geeft de stemmen per `role_id`. De koppeling
->    `role_id → fractie` zit achter het `/roles`-endpoint, dat authenticatie vereist — precies wat in
+>    `role_id → fractie` zit achter het `/roles`-endpoint, dat authenticatie vereist, precies wat in
 >    juni niet verstrekt kon worden.
 > 2. Het portaal bevatte die fractienamen en aantallen wél, en is nu niet meer geautomatiseerd te
 >    benaderen.
@@ -563,7 +563,7 @@ exception on the public portal.
 > gegevens geautomatiseerd opgehaald worden? Concreet gaat het om één van beide:
 >
 > 1. Toegang tot het afgeschermde API-onderdeel `/roles`, dat de koppeling tussen een stem en de fractie
->    bevat. Met die toegang heb ik het portaal niet meer nodig en gebruik ik alleen de API — voor Notubiz
+>    bevat. Met die toegang heb ik het portaal niet meer nodig en gebruik ik alleen de API, voor Notubiz
 >    de lichtste route.
 > 2. Of een uitzondering voor mijn collector op het publieksportaal.
 >
