@@ -3,7 +3,7 @@
     "province": "Overijssel",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-10-08T08:08:46+00:00",
+    "generated_at": "2026-11-12T08:10:37+00:00",
     "source": "https://overijssel.notubiz.nl",
     "sourceName": "",
     "license": "Open data - Provincie Overijssel (Notubiz vergaderportaal)",
@@ -14,7 +14,7 @@
     "note": "Stemmen zijn hoofdelijk (per lid) geregistreerd en hier per fractie met exacte aantallen samengevat (aangenomen én verworpen). Agendapunten zonder hoofdelijke stemming (bijv. bij acclamatie) en leden die niet deelnamen, staan niet in de telling.",
     "granularity": "member",
     "counts": {
-      "moties": 605,
+      "moties": 618,
       "parties": 16
     },
     "types": [
@@ -74,16 +74,16 @@
       "name": "OV"
     },
     {
-      "slug": "pvdd",
-      "name": "PvdD"
+      "slug": "sp",
+      "name": "SP"
     },
     {
       "slug": "fvd",
       "name": "FVD"
     },
     {
-      "slug": "sp",
-      "name": "SP"
+      "slug": "pvdd",
+      "name": "PvdD"
     },
     {
       "slug": "volt",
@@ -91,6 +91,1166 @@
     }
   ],
   "moties": [
+    {
+      "id": 10746832,
+      "date": "2026-11-11",
+      "title": "Statenvoorstel Wijzigingsverordening Verordening ambtelijke bijstand en fractieondersteuning Provinciale Staten Overijssel 2023",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 44,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 10746831,
+      "date": "2026-11-11",
+      "title": "Statenvoorstel Verordening Klankbordgesprek commissaris van de Koning",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 44,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 10751347,
+      "date": "2026-11-11",
+      "title": "Statenvoorstel Vaststelling begroting 2027",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 44,
+        "disagree": 1
+      }
+    },
+    {
+      "id": 10746833,
+      "date": "2026-11-11",
+      "title": "Statenvoorstel Onderzoek Rekenkamer Oost-Nederland naar Toegankelijkheid subsidies",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 44,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 10746834,
+      "date": "2026-11-11",
+      "title": "Statenvoorstel Onderzoek Rekenkamer Oost-Nederland naar Informatiemanagement Overijssel",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "bbb": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 43,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 10750721,
+      "date": "2026-11-11",
+      "title": "Statenvoorstel Belastingverordening 2027",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 40,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 10751353,
+      "date": "2026-11-11",
+      "title": "PS26-M97 Van goedkope energieproductie naar een betaalbaar en betrouwbaar energiesysteem (OV e.a.)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 35
+      }
+    },
+    {
+      "id": 10751352,
+      "date": "2026-11-11",
+      "title": "PS26-M93 Grip op grondwateronttrekkingen (PvdA e.a.)",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 17,
+        "disagree": 28
+      }
+    },
+    {
+      "id": 10751351,
+      "date": "2026-11-11",
+      "title": "PS26-M91 Breed gedragen ambities 2027 (PvdA, CDA e.a.)",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 42,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 10751350,
+      "date": "2026-11-11",
+      "title": "PS26-A75 Cultuurmakelaars (CDA)",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 32,
+        "disagree": 13
+      }
+    },
+    {
+      "id": 10751349,
+      "date": "2026-11-11",
+      "title": "PS26-A74 Breed gedragen ambities 2027 (PvdA, CDA e.a.)",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 42,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 10751348,
+      "date": "2026-11-11",
+      "title": "PS26-A73 Natuur voor Elkaar (JA21 e.a.)",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 16,
+        "disagree": 29
+      }
+    },
+    {
+      "id": 10750720,
+      "date": "2026-11-11",
+      "title": "PS26-A72 Eerst rekenen, dan heffen (FVD e.a.)",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://overijssel.notubiz.nl/vergadering/1394799",
+      "votes": {
+        "bbb": {
+          "agree": 0,
+          "disagree": 9,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pbo": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ov": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 36
+      }
+    },
     {
       "id": 10608723,
       "date": "2026-09-30",
@@ -150,13 +1310,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -330,13 +1490,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -510,14 +1670,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -605,14 +1765,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -700,14 +1860,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -805,14 +1965,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -895,14 +2055,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -990,14 +2150,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -1075,14 +2235,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -1270,14 +2430,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -1380,13 +2540,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -1560,13 +2720,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -1655,13 +2815,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -1750,14 +2910,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -1845,14 +3005,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -2035,14 +3195,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -2130,14 +3290,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -2320,14 +3480,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -2405,14 +3565,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -2695,13 +3855,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -2885,13 +4045,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -3000,13 +4160,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -3060,14 +4220,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -3270,13 +4430,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -3365,13 +4525,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -3455,13 +4615,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -3555,14 +4715,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -3675,14 +4835,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -3735,14 +4895,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "vvd": {
@@ -3840,13 +5000,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -3930,14 +5090,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -4030,14 +5190,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -4115,14 +5275,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -4215,14 +5375,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -4310,14 +5470,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -4405,14 +5565,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -4500,14 +5660,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -4600,14 +5760,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -4690,13 +5850,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -4785,14 +5945,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -4995,13 +6155,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -5090,13 +6250,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -5185,13 +6345,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -5280,13 +6440,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -5380,14 +6540,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -5435,13 +6595,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -5565,13 +6725,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -5660,13 +6820,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -5755,13 +6915,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -5945,13 +7105,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -6135,13 +7295,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -6230,13 +7390,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -6420,13 +7580,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -6480,14 +7640,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -6600,14 +7760,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -6765,14 +7925,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -6970,14 +8130,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -7070,13 +8230,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -7350,14 +8510,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -7640,14 +8800,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -7725,14 +8885,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -7810,14 +8970,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "bbb": {
@@ -7925,14 +9085,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -8000,13 +9160,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -8190,13 +9350,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -8300,14 +9460,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -8395,14 +9555,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -8495,14 +9655,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -8585,14 +9745,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -8685,14 +9845,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -8765,14 +9925,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "volt": {
@@ -8860,14 +10020,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "volt": {
@@ -8965,14 +10125,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -9055,14 +10215,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -9165,14 +10325,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -9250,14 +10410,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -9540,14 +10700,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -9725,13 +10885,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -9810,14 +10970,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -9915,14 +11075,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -10010,14 +11170,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -10095,14 +11255,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "volt": {
@@ -10195,13 +11355,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -10300,14 +11460,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -10420,14 +11580,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -10470,14 +11630,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -10610,14 +11770,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -10675,14 +11835,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -10775,14 +11935,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -10870,14 +12030,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -10965,14 +12125,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -11260,13 +12420,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -11350,14 +12510,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -11425,14 +12585,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -11705,14 +12865,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "volt": {
@@ -11825,14 +12985,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -11920,14 +13080,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -12015,14 +13175,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -12105,14 +13265,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -12180,13 +13340,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -12480,14 +13640,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -12585,14 +13745,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -12670,14 +13830,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "volt": {
@@ -12880,13 +14040,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -12950,13 +14110,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -13040,13 +14200,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -13150,14 +14310,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -13245,14 +14405,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -13345,14 +14505,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -13415,13 +14575,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -13630,14 +14790,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -13765,14 +14925,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "volt": {
@@ -13870,13 +15030,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -14065,14 +15225,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -14270,13 +15430,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -14365,13 +15525,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -14460,13 +15620,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -14550,13 +15710,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -14630,13 +15790,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -14720,13 +15880,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -14815,13 +15975,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -14915,13 +16075,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -15005,13 +16165,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -15085,14 +16245,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -15180,14 +16340,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -15245,13 +16405,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -15355,14 +16515,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -15450,14 +16610,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -15535,14 +16695,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -15720,14 +16880,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -15815,13 +16975,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -15905,13 +17065,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -16000,13 +17160,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -16090,13 +17250,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -16180,13 +17340,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -16360,14 +17520,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -16435,14 +17595,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -16540,14 +17700,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -16605,14 +17765,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -16720,14 +17880,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -16810,14 +17970,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -16900,14 +18060,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -16980,13 +18140,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -17080,13 +18240,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -17175,13 +18335,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -17270,13 +18430,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -17365,13 +18525,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -17440,14 +18600,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -17530,14 +18690,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -17620,14 +18780,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -17890,14 +19050,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -17980,13 +19140,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -18090,13 +19250,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -18180,13 +19340,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -18270,13 +19430,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -18570,13 +19730,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -18645,14 +19805,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -18745,13 +19905,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -18835,13 +19995,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -18925,13 +20085,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -19115,14 +20275,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -19210,13 +20370,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -19325,13 +20485,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -19410,13 +20570,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -19505,13 +20665,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -19565,13 +20725,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -19685,13 +20845,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -19770,13 +20930,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -19830,14 +20990,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -19935,13 +21095,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -20125,13 +21285,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -20200,13 +21360,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -20275,14 +21435,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "vvd": {
@@ -20450,14 +21610,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -20550,13 +21710,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -20635,13 +21795,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -20700,14 +21860,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -20790,14 +21950,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -20870,14 +22030,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -20980,13 +22140,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -21245,13 +22405,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -21320,14 +22480,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -21760,13 +22920,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -21945,13 +23105,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -22040,13 +23200,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -22385,14 +23545,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -22675,13 +23835,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -22765,13 +23925,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -22865,14 +24025,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "vvd": {
@@ -22945,13 +24105,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -23030,13 +24190,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -23110,13 +24270,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -23300,13 +24460,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -23545,13 +24705,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -23655,13 +24815,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -23725,13 +24885,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -24185,13 +25345,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -24280,13 +25440,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -24365,13 +25525,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -24455,14 +25615,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -24660,13 +25820,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -24755,13 +25915,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -24845,13 +26005,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -24935,13 +26095,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -25010,13 +26170,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -25115,13 +26275,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -25165,13 +26325,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -25270,13 +26430,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -25385,13 +26545,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -25565,13 +26725,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -25635,13 +26795,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -25750,13 +26910,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -25845,13 +27005,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -25915,14 +27075,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -26010,14 +27170,14 @@
           "disagree": 5,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -26110,14 +27270,14 @@
           "disagree": 5,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -26215,13 +27375,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -26300,14 +27460,14 @@
           "disagree": 5,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -26410,13 +27570,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -26495,13 +27655,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -26600,13 +27760,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -26765,13 +27925,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -26875,13 +28035,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -26960,13 +28120,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -27015,14 +28175,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -27120,14 +28280,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -27215,13 +28375,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -27300,14 +28460,14 @@
           "disagree": 5,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -27390,14 +28550,14 @@
           "disagree": 5,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -27595,13 +28755,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -27745,14 +28905,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -28035,13 +29195,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -28125,13 +29285,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -28210,13 +29370,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -28390,13 +29550,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -28455,13 +29615,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -28575,13 +29735,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -28665,13 +29825,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -28755,13 +29915,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -28845,13 +30005,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -28900,14 +30060,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "volt": {
@@ -29010,13 +30170,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -29090,13 +30250,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -29175,14 +30335,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -29290,13 +30450,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -29375,13 +30535,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -29470,13 +30630,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -29540,13 +30700,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -29660,14 +30820,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -29830,13 +30990,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -29990,14 +31150,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -30080,13 +31240,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -30340,14 +31500,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "vvd": {
@@ -30460,13 +31620,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -30530,13 +31690,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -30640,13 +31800,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -30720,13 +31880,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -30805,13 +31965,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -30905,13 +32065,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -31000,13 +32160,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -31065,13 +32225,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -31150,14 +32310,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -31265,13 +32425,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -31335,14 +32495,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -31415,14 +32575,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -31515,13 +32675,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -31620,13 +32780,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -31695,13 +32855,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -31810,13 +32970,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -31900,13 +33060,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -31990,13 +33150,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -32080,13 +33240,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -32170,13 +33330,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -32345,13 +33505,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -32510,14 +33670,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -32595,14 +33755,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -32675,14 +33835,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "volt": {
@@ -32780,14 +33940,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -32995,14 +34155,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "vvd": {
@@ -33075,13 +34235,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -33225,14 +34385,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -33315,14 +34475,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -33405,14 +34565,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -33495,14 +34655,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -33585,14 +34745,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -33680,14 +34840,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -33765,14 +34925,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -33855,14 +35015,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -33945,14 +35105,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -34035,14 +35195,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -34155,13 +35315,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -34235,13 +35395,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -34305,13 +35465,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -34595,13 +35755,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -34665,14 +35825,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -34755,14 +35915,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -35115,14 +36275,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -35205,14 +36365,14 @@
           "disagree": 3,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 2,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -35305,13 +36465,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -35400,13 +36560,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -35500,13 +36660,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -35585,13 +36745,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -35675,13 +36835,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -35770,13 +36930,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -35830,14 +36990,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -35935,14 +37095,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -36030,13 +37190,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -36100,13 +37260,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -36195,13 +37355,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -36310,13 +37470,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -36385,13 +37545,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -36485,13 +37645,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -36670,13 +37830,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -36760,13 +37920,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -36850,13 +38010,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -36935,13 +38095,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -37120,13 +38280,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -37210,13 +38370,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -37300,13 +38460,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -37375,13 +38535,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -37465,13 +38625,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -37630,14 +38790,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -37750,13 +38910,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -37815,14 +38975,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -37930,13 +39090,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -37990,13 +39150,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -38110,13 +39270,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -38190,13 +39350,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -38280,13 +39440,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -38460,13 +39620,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -38740,13 +39900,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -38830,13 +39990,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -38920,13 +40080,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -38995,13 +40155,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -39095,13 +40255,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -39185,13 +40345,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -39275,13 +40435,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -39365,13 +40525,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -39460,13 +40620,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -39555,13 +40715,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -39635,14 +40795,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -39815,13 +40975,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -39985,14 +41145,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -40075,14 +41235,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -40260,13 +41420,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -40340,13 +41500,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -40420,14 +41580,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "vvd": {
@@ -40510,14 +41670,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -40625,13 +41785,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -40695,14 +41855,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -40795,14 +41955,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -40990,13 +42150,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -41170,13 +42330,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -41255,13 +42415,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -41335,14 +42495,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -41520,13 +42680,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -41615,14 +42775,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -41685,14 +42845,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -41790,13 +42950,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -41880,14 +43040,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -42055,14 +43215,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -42245,13 +43405,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -42330,13 +43490,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -42420,13 +43580,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -42575,13 +43735,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -42860,14 +44020,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -42915,14 +44075,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -43100,13 +44260,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -43330,14 +44490,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -43440,13 +44600,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -43615,13 +44775,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -43705,13 +44865,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -43795,13 +44955,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -43885,13 +45045,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -43960,13 +45120,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -44065,13 +45225,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -44155,14 +45315,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -44210,14 +45370,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -44315,13 +45475,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -44405,13 +45565,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -44495,13 +45655,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -44585,14 +45745,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -44695,13 +45855,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -44785,13 +45945,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -44875,13 +46035,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -44965,13 +46125,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -45055,13 +46215,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -45145,13 +46305,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -45235,13 +46395,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -45325,13 +46485,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -45420,14 +46580,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -45595,13 +46755,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -45685,13 +46845,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -45775,13 +46935,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -45865,13 +47025,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -45955,14 +47115,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -46055,13 +47215,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -46130,13 +47290,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -46230,14 +47390,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -46305,14 +47465,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -46410,14 +47570,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -46495,13 +47655,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -46585,13 +47745,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -46675,13 +47835,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 2,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 2,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -46765,13 +47925,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -46850,13 +48010,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -46945,14 +48105,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -47040,13 +48200,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -47110,14 +48270,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -47395,13 +48555,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -47480,13 +48640,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -47575,13 +48735,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -47665,13 +48825,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -47845,13 +49005,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -48005,14 +49165,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -48120,14 +49280,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -48220,14 +49380,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sp": {
@@ -48495,14 +49655,14 @@
           "disagree": 4,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         }
       },
@@ -48565,13 +49725,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -48675,13 +49835,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         }
@@ -48745,13 +49905,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -48930,13 +50090,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -49005,14 +50165,14 @@
           "disagree": 2,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
@@ -49090,13 +50250,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -49205,13 +50365,13 @@
           "disagree": 0,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 1,
+        "pvda": {
+          "agree": 3,
           "disagree": 0,
           "abstain": 0
         },
-        "pvda": {
-          "agree": 3,
+        "pvdd": {
+          "agree": 1,
           "disagree": 0,
           "abstain": 0
         },
@@ -49290,14 +50450,14 @@
           "disagree": 1,
           "abstain": 0
         },
-        "pvdd": {
-          "agree": 0,
-          "disagree": 1,
-          "abstain": 0
-        },
         "pvda": {
           "agree": 0,
           "disagree": 3,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
           "abstain": 0
         },
         "sgp": {
