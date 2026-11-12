@@ -3,7 +3,7 @@
     "province": "Nederlandse afvaardiging",
     "body": "Europees Parlement",
     "term": "2019–2024",
-    "generated_at": "2026-10-29T14:34:43+00:00",
+    "generated_at": "2026-11-12T16:51:01+00:00",
     "source": "https://howtheyvote.eu",
     "sourceName": "HowTheyVote.eu",
     "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen (roll-call) van het Europees Parlement",
@@ -14,7 +14,7 @@
     "note": "De 31 Nederlandse Europarlementariërs, gegroepeerd per Nederlandse partij, met exacte aantallen (voor/tegen/onthouding). Alleen hoofdelijke eindstemmingen. Bron: HowTheyVote.eu (ODbL) + Europees Parlement Open Data (fractie-indeling).",
     "granularity": "member",
     "counts": {
-      "moties": 1807,
+      "moties": 1811,
       "parties": 10
     },
     "types": [
@@ -415,7 +415,7 @@
       "id": 168997,
       "date": "2024-04-25",
       "title": "Gradual roll-out of Eudamed, information obligation in case of interruption of supply and the transitional provisions for certain in vitro diagnostic medical devices",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/168997",
@@ -1435,7 +1435,7 @@
       "id": 168681,
       "date": "2024-04-24",
       "title": "Simplification of certain CAP rules",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/168681",
@@ -1489,6 +1489,66 @@
       "totals": {
         "agree": 15,
         "disagree": 11
+      }
+    },
+    {
+      "id": 168864,
+      "date": "2024-04-24",
+      "title": "Simplification of certain CAP rules",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/168864",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cu": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 13
       }
     },
     {
@@ -1789,6 +1849,66 @@
       "totals": {
         "agree": 16,
         "disagree": 9
+      }
+    },
+    {
+      "id": 168702,
+      "date": "2024-04-24",
+      "title": "Plants obtained by certain new genomic techniques and their food and feed",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/168702",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 1
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 6
+        },
+        "groenlinks": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cu": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 15
       }
     },
     {
@@ -5682,6 +5802,71 @@
       }
     },
     {
+      "id": 168066,
+      "date": "2024-04-11",
+      "title": "Union’s electricity market design: Regulation",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/168066",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "cu": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 2,
+        "disagree": 22
+      }
+    },
+    {
       "id": 167334,
       "date": "2024-04-11",
       "title": "Union’s electricity market design: Directive",
@@ -5744,6 +5929,71 @@
       "totals": {
         "agree": 20,
         "disagree": 4
+      }
+    },
+    {
+      "id": 168060,
+      "date": "2024-04-11",
+      "title": "Union’s electricity market design: Directive",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/168060",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvda": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "cu": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 20
       }
     },
     {
@@ -13460,7 +13710,7 @@
       "id": 166653,
       "date": "2024-03-14",
       "title": "Subscription by the Union to additional shares in the capital of the EBRD and amendment of the Agreement establishing the EBRD",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/166653",

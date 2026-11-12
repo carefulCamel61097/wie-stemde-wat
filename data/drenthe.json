@@ -3,7 +3,7 @@
     "province": "Drenthe",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-10-29T12:46:07+00:00",
+    "generated_at": "2026-11-12T15:02:00+00:00",
     "source": "https://www.drentsparlement.nl",
     "sourceName": "",
     "license": "Open data - Provincie Drenthe / Statengriffie (Drents Parlement)",
@@ -14,7 +14,7 @@
     "note": "",
     "granularity": "member",
     "counts": {
-      "moties": 480,
+      "moties": 511,
       "parties": 15
     },
     "types": [
@@ -87,6 +87,2889 @@
     }
   ],
   "moties": [
+    {
+      "id": 30249,
+      "documentId": 30334,
+      "meetingItemId": 9481,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "Statenstuk 2026-65, Wijziging verordening vergoeding Statenfracties",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30334",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 15,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 39,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 30459,
+      "documentId": 30291,
+      "meetingItemId": 9464,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "Statenstuk 2026-61; OV-bureau Groningen-Drenthe, Tarieven 2027, Concept-Dienstregeling 2027 en Concept-Nota van uitgangspunten nieuwe busconcessie",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30291",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 36,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 30332,
+      "documentId": 30080,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "Statenstuk 2026-58, Begroting 2027",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30080",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 1,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 36,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 30248,
+      "documentId": 30026,
+      "meetingItemId": 9461,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "Statenstuk 2026-56, Verordening uitvoering en handhaving (omgevingsrecht) Drenthe ",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30026",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 15,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 39,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 30462,
+      "documentId": 29746,
+      "meetingItemId": 9306,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "Statenstuk 2026-51 HERZIEN, Intensivering duurzame drinkwaterbescherming",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/29746",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 36,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 30458,
+      "documentId": 29747,
+      "meetingItemId": 9308,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "Statenstuk 2026-46 HERZIEN, Monumentenzorg in Drenthe",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/29747",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 35,
+        "disagree": 1
+      }
+    },
+    {
+      "id": 30464,
+      "documentId": 29786,
+      "meetingItemId": 9327,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "Statenstuk 2026-35; Drenthe digitaal - Beleidsaanpak Versnelling Digitalisering Mkb Drenthe",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/29786",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 32,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 30463,
+      "documentId": 30412,
+      "meetingItemId": 9306,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-77 Motie Grip op indirecte lozingen, ingediend door D66 Volt GL SP",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30412",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 35,
+        "disagree": 1
+      }
+    },
+    {
+      "id": 30359,
+      "documentId": 30398,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-73 Motie Onderzoek naar een doelmatige omvang van het provinciale ambtelijk apparaat, ingediend door JA21 SLD BBB FVD PVV",
+      "type": "motie",
+      "result": "suspended",
+      "resultLabel": "Stemmen staken",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30398",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 20,
+        "disagree": 20
+      }
+    },
+    {
+      "id": 30356,
+      "documentId": 30396,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-70 Motie Maak vergunningverlening voor evenementen eenvoudiger en meerjarig, ingediend door SLD JA21 VVD FVD BBB",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30396",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 28,
+        "disagree": 12
+      }
+    },
+    {
+      "id": 30355,
+      "documentId": 30393,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-69 Motie Wie zit er in de cockpit?, ingediend door FVD PVV",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30393",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 22
+      }
+    },
+    {
+      "id": 30352,
+      "documentId": 30391,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-67 Motie Boycot Israël, ingediend door PvdD LP",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30391",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 12,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 9,
+        "disagree": 30
+      }
+    },
+    {
+      "id": 30351,
+      "documentId": 30390,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-66 Motie Toekomstmuziek, ingediend door PvdD PvdA LP Volt GL",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30390",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 30,
+        "disagree": 10
+      }
+    },
+    {
+      "id": 30348,
+      "documentId": 30389,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-65 Motie Drents masterplan zwemvoorzieningen, ingediend door SP GL BBB SLD",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30389",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 24,
+        "disagree": 16
+      }
+    },
+    {
+      "id": 30347,
+      "documentId": 30388,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-64 Motie Verkenning provinciale grondbank voor betaalbare woningbouw, ingediend door SP PvdA",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30388",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 14,
+        "disagree": 26
+      }
+    },
+    {
+      "id": 30346,
+      "documentId": 30387,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-63 Motie Asbest, ingediend door SP GL CU BBB CDA",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30387",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 34,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 30340,
+      "documentId": 30382,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-60 Motie Drenthe bereikbaar tot 2040, ingediend door VVD SLD BBB CDA",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30382",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 37,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 30339,
+      "documentId": 30383,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-59 Motie Structureel ruimte voor sportevenementen, ingediend door VVD CDA SLD",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30383",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 30,
+        "disagree": 10
+      }
+    },
+    {
+      "id": 30338,
+      "documentId": 30380,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-58 Motie Wolf ongewenst in Drenthe, bescherm wat kwetsbaar is, ingediend door PVV BBB FVD",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30380",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 17,
+        "disagree": 23
+      }
+    },
+    {
+      "id": 30337,
+      "documentId": 30377,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-57 Motie Sociaaljuridische bijstand mag niet afhangen van je postcode!, ingediend door PvdA GL ",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30377",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 22
+      }
+    },
+    {
+      "id": 30336,
+      "documentId": 30378,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-56 Motie Betaalbaar Wonen in het Drentse Zonnetje, ingediend door PvdA GL CDA",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30378",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 22,
+        "disagree": 18
+      }
+    },
+    {
+      "id": 30335,
+      "documentId": 30379,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "M 2026-55 Motie Steun de Drentse Woningcorporaties, ingediend door PvdA GL SLD",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30379",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 20,
+        "disagree": 19
+      }
+    },
+    {
+      "id": 30465,
+      "documentId": 30413,
+      "meetingItemId": 9327,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "A 2026-44 Amendement Digitalisering Mkb, ingediend door BBB PVV",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30413",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 30,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 30460,
+      "documentId": 30411,
+      "meetingItemId": 9464,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "A 2026-43 Amendement Vereenvoudiging tariefstelsel en digitale toegankelijkheid OV, ingediend door Volt PvdA GL SLD",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30411",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 36,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 30455,
+      "documentId": 30409,
+      "meetingItemId": 9308,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "A 2026-42 Amendement Eerst inzicht, dan oormerken, ingediend door FVD JA21",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30409",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 33
+      }
+    },
+    {
+      "id": 30454,
+      "documentId": 30407,
+      "meetingItemId": 9308,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "A 2026-41 Amendement Monumentenzorg op orde, ingediend door CU BBB CDA PvdA GL VVD",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30407",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 34,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 30365,
+      "documentId": 30399,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "A 2026-40 Amendement Noaberschap versterken - Investeren in de kracht van inwoners, ingediend door LP SP GL PvdD SLD JA21 PvdA CDA",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30399",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 37,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 30353,
+      "documentId": 30394,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "A 2026-39 Amendement Programma Veilige School Drenthe, ingediend door Volt GL PvdA CDA",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30394",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 14,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 23,
+        "disagree": 17
+      }
+    },
+    {
+      "id": 30350,
+      "documentId": 30386,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "A 2026-38 Amendement 'Drèents meer veur 't voetlocht', ingediend door CDA BBB SLD",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30386",
+      "votes": {
+        "pvda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 38,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 30334,
+      "documentId": 30376,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "A 2026-37 Amendement Bevriezing gelden Toekomstgericht Landelijk Gebied Drenthe (TLGD), ingediend door BBB FVD",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30376",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 17,
+        "disagree": 23
+      }
+    },
+    {
+      "id": 30333,
+      "documentId": 30375,
+      "meetingItemId": 9459,
+      "meetingId": 1405,
+      "date": "2026-11-11",
+      "title": "A 2026-36 Amendement Versterken OV Drenthe, ingediend door BBB JA21 SLD SP LP FVD",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.drentsparlement.nl/vergaderingen/document/30375",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sterk-lokaal-drenthe": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "lijstpormes": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 25,
+        "disagree": 15
+      }
+    },
     {
       "id": 29623,
       "documentId": 29725,

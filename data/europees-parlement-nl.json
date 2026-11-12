@@ -3,7 +3,7 @@
     "province": "Nederlandse afvaardiging",
     "body": "Europees Parlement",
     "term": "2024–2029",
-    "generated_at": "2026-10-29T14:17:20+00:00",
+    "generated_at": "2026-11-12T16:32:20+00:00",
     "source": "https://howtheyvote.eu",
     "sourceName": "HowTheyVote.eu",
     "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen (roll-call) van het Europees Parlement",
@@ -14,7 +14,7 @@
     "note": "De 31 Nederlandse Europarlementariërs, gegroepeerd per Nederlandse partij, met exacte aantallen (voor/tegen/onthouding). Alleen hoofdelijke eindstemmingen. Bron: HowTheyVote.eu (ODbL) + Europees Parlement Open Data (fractie-indeling).",
     "granularity": "member",
     "counts": {
-      "moties": 710,
+      "moties": 728,
       "parties": 10
     },
     "types": [
@@ -122,6 +122,786 @@
     }
   ],
   "moties": [
+    {
+      "id": 200101,
+      "date": "2026-11-12",
+      "title": "Union Civil Protection Mechanism and Union support for health emergency preparedness and response, and repealing Decision No 1313/2013/EU (Union Civil Protection Mechanism)",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200101",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 20,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 200346,
+      "date": "2026-11-12",
+      "title": "Union Civil Protection Mechanism and Union support for health emergency preparedness and response, and repealing Decision No 1313/2013/EU (Union Civil Protection Mechanism)",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200346",
+      "votes": {
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 22
+      }
+    },
+    {
+      "id": 200503,
+      "date": "2026-11-12",
+      "title": "Ukrainian children forcibly deported to Russia or living in Russian occupied territories in Ukraine",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200503",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 4
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 23,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 199983,
+      "date": "2026-11-12",
+      "title": "Institutional aspects of artificial intelligence in the context of European integration",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199983",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 20,
+        "disagree": 5
+      }
+    },
+    {
+      "id": 200049,
+      "date": "2026-11-12",
+      "title": "From prototypes to capabilities – enabling new defence actors to scale up",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200049",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 22,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 200032,
+      "date": "2026-11-12",
+      "title": "Europe’s Beating Cancer Plan",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200032",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 20,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 199991,
+      "date": "2026-11-12",
+      "title": "European Chemicals Agency and amending Regulations (EC) No 1907/2006, (EU) No 528/2012, (EU) No 649/2012 and (EU) 2019/1021",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199991",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 23,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 200011,
+      "date": "2026-11-12",
+      "title": "EU agri-food promotion policy",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200011",
+      "votes": {
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 12
+      }
+    },
+    {
+      "id": 199979,
+      "date": "2026-11-12",
+      "title": "Amendments to the Decision of the European Parliament of 28 September 2005 adopting the Statute for Members of the European Parliament, regarding proxy voting",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199979",
+      "votes": {
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 27,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 199987,
+      "date": "2026-11-12",
+      "title": "Amending Regulation (EU) No 1286/2014 as regards the modernisation of the key information document",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199987",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 13,
+        "disagree": 14
+      }
+    },
+    {
+      "id": 199981,
+      "date": "2026-11-12",
+      "title": "Amending Regulation (EU) 2019/1753 as regards amendments adopted by the Assembly of the Lisbon Union on 14 July 2025 to the Common Regulations under the Lisbon Agreement on Appellations of Origin and Geographical Indications",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199981",
+      "votes": {
+        "pvv": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 27,
+        "disagree": 0
+      }
+    },
+    {
+      "id": 199985,
+      "date": "2026-11-12",
+      "title": "Amending Directives (EU) 2009/65/EC, 2009/138/EC, 2011/61/EU, 2014/65/EU and (EU) 2016/97 as regards the Union retail investor protection rules",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199985",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 8,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 13,
+        "disagree": 14
+      }
+    },
+    {
+      "id": 199977,
+      "date": "2026-11-12",
+      "title": "Amending Decision (EU) 2021/1764 on the Association of the Overseas Countries and Territories with the European Union including relations between the European Union on the one hand, and Greenland and the Kingdom of Denmark on the other",
+      "type": "overig",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/199977",
+      "votes": {
+        "pvv": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 21,
+        "disagree": 4
+      }
+    },
     {
       "id": 198430,
       "date": "2026-10-22",
@@ -31891,7 +32671,7 @@
       "id": 178111,
       "date": "2025-07-09",
       "title": "European Climate Law",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "rejected",
       "resultLabel": "Verworpen",
       "source": "https://howtheyvote.eu/votes/178111",
@@ -33738,6 +34518,66 @@
       }
     },
     {
+      "id": 177055,
+      "date": "2025-06-17",
+      "title": "Financing for development – ahead of the Fourth International Conference on Financing for Development in Seville",
+      "type": "initiatiefverslag",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/177055",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 3
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 12
+      }
+    },
+    {
       "id": 177034,
       "date": "2025-06-17",
       "title": "Electoral rights of mobile Union citizens in European Parliament elections",
@@ -33921,7 +34761,7 @@
       "id": 176982,
       "date": "2025-06-17",
       "title": "Amending Regulation (EU) No 228/2013 as regards additional assistance and further flexibility to outermost regions affected by severe natural disasters and in the context of cyclone Chido devastating Mayotte",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/176982",
@@ -34158,6 +34998,66 @@
       }
     },
     {
+      "id": 176875,
+      "date": "2025-05-22",
+      "title": "Granting equivalence to Moldova and Ukraine for field inspections and seed production",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/176875",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 3,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 7,
+        "disagree": 17
+      }
+    },
+    {
       "id": 176681,
       "date": "2025-05-22",
       "title": "Euratom Research and Training Programme for the period 2026-2027 complementing Horizon Europe",
@@ -34281,7 +35181,7 @@
       "id": 176743,
       "date": "2025-05-22",
       "title": "Amendments to the Capital Requirements Regulation as regards securities financing transactions under the net stable funding ratio",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/176743",
@@ -34335,6 +35235,66 @@
       "totals": {
         "agree": 14,
         "disagree": 10
+      }
+    },
+    {
+      "id": 176901,
+      "date": "2025-05-22",
+      "title": "Amendments to the Capital Requirements Regulation as regards securities financing transactions under the net stable funding ratio",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/176901",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 4
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 3,
+        "disagree": 16
       }
     },
     {
@@ -34521,7 +35481,7 @@
       "id": 176241,
       "date": "2025-05-08",
       "title": "The protection status of the wolf (Canis lupus)",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/176241",
@@ -34575,6 +35535,66 @@
       "totals": {
         "agree": 17,
         "disagree": 12
+      }
+    },
+    {
+      "id": 176305,
+      "date": "2025-05-08",
+      "title": "The protection status of the wolf (Canis lupus)",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/176305",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 17
       }
     },
     {
@@ -35001,7 +36021,7 @@
       "id": 176302,
       "date": "2025-05-08",
       "title": "CO2 emission performance standards for new passenger cars and new light commercial vehicles for 2025 to 2027",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/176302",
@@ -36561,7 +37581,7 @@
       "id": 176090,
       "date": "2025-05-07",
       "title": "Amending of the ERDF, Cohesion Fund and Just Transition Fund as regards specific measures to address strategic challenges in the context of the mid-term review",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/176090",
@@ -36621,7 +37641,7 @@
       "id": 176091,
       "date": "2025-05-07",
       "title": "Amending of Regulation (EU) 2021/1057 establishing the European Social Fund + (ESF+) as regards specific measures to address strategic challenges",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/176091",
@@ -37341,7 +38361,7 @@
       "id": 174971,
       "date": "2025-04-03",
       "title": "Amending Directives (EU) 2022/2464 and (EU) 2024/1760 as regards the dates from which Member States are to apply certain corporate sustainability reporting and due diligence requirements",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/174971",
@@ -37395,6 +38415,66 @@
       "totals": {
         "agree": 30,
         "disagree": 0
+      }
+    },
+    {
+      "id": 174989,
+      "date": "2025-04-03",
+      "title": "Amending Directives (EU) 2022/2464 and (EU) 2024/1760 as regards the dates from which Member States are to apply certain corporate sustainability reporting and due diligence requirements",
+      "type": "wetgeving",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://howtheyvote.eu/votes/174989",
+      "votes": {
+        "vvd": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "gl-pvda": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "nsc": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 0,
+        "disagree": 28
       }
     },
     {
@@ -38291,7 +39371,7 @@
       "id": 174288,
       "date": "2025-04-01",
       "title": "Amending Directives (EU) 2022/2464 and (EU) 2024/1760 as regards the dates from which Member States are to apply certain corporate sustainability reporting and due diligence requirements",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/174288",
@@ -42911,7 +43991,7 @@
       "id": 170398,
       "date": "2024-11-14",
       "title": "Deforestation Regulation: provisions relating to the date of application",
-      "type": "overig",
+      "type": "wetgeving",
       "result": "accepted",
       "resultLabel": "Aangenomen",
       "source": "https://howtheyvote.eu/votes/170398",

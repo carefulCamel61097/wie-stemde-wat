@@ -3,7 +3,7 @@
     "province": "Utrecht",
     "body": "Provinciale Staten",
     "term": "2023-2027",
-    "generated_at": "2026-10-29T12:42:29+00:00",
+    "generated_at": "2026-11-12T14:58:25+00:00",
     "source": "https://www.stateninformatie.provincie-utrecht.nl",
     "sourceName": "",
     "license": "Open data - Provincie Utrecht / Statengriffie",
@@ -14,7 +14,7 @@
     "note": "",
     "granularity": "member",
     "counts": {
-      "moties": 614,
+      "moties": 642,
       "parties": 16
     },
     "types": [
@@ -91,6 +91,2470 @@
     }
   ],
   "moties": [
+    {
+      "id": 30419,
+      "documentId": 66115,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "Ontwerp-Statenbesluit Programmabegroting 2027",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66115",
+      "votes": {
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 29,
+        "disagree": 19
+      }
+    },
+    {
+      "id": 30414,
+      "documentId": 66368,
+      "meetingItemId": 25888,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "Ontwerp-Statenbesluit Herziening Reglement van Orde najaar 2026",
+      "type": "besluit",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66368",
+      "votes": {
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 44,
+        "disagree": 4
+      }
+    },
+    {
+      "id": 30421,
+      "documentId": 66400,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-99 Eerst financieel inzicht in (aangepaste) instructieregels, ingediend door BBB",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66400",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 30
+      }
+    },
+    {
+      "id": 30420,
+      "documentId": 66440,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-98 De overheid moet de mens achter het boerenbedrijf weer zien, ingediend door BBB & SGP",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66440",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 30
+      }
+    },
+    {
+      "id": 30411,
+      "documentId": 66317,
+      "meetingItemId": 25899,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-97 Een eerlijke warmtemarkt, ingediend door VVD e.a.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66317",
+      "votes": {
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 2,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 46,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 30410,
+      "documentId": 66217,
+      "meetingItemId": 25871,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-96 Geen onomkeerbare besluiten over omstreden windprojecten voor de verkiezingen ingediend door BBB e.a.",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66217",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 33
+      }
+    },
+    {
+      "id": 30409,
+      "documentId": 66219,
+      "meetingItemId": 25871,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-95 Betrokkenheid PS bij compensatie van planuitval windenergie ingediend door BBB, Forum voor Democratie & 50PLUS",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66219",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 30
+      }
+    },
+    {
+      "id": 30408,
+      "documentId": 66218,
+      "meetingItemId": 25871,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-94 Geen provinciale overname windproject Isselt zonder uitspraak van PS ingediend door BBB e.a.",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66218",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 33
+      }
+    },
+    {
+      "id": 30407,
+      "documentId": 66220,
+      "meetingItemId": 25871,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-93 Herbeoordeling provinciale windprojecten bij gewijzigde omstandigheden, ingediend door BBB, Forum voor Democratie & 50PLUS",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66220",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 33
+      }
+    },
+    {
+      "id": 30406,
+      "documentId": 66119,
+      "meetingItemId": 25860,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-92 Maak beheer en herstelmaatregelen toetsbaar en afrekenbaar, ingediend door BBB & SGP",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66119",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 27,
+        "disagree": 21
+      }
+    },
+    {
+      "id": 30405,
+      "documentId": 66118,
+      "meetingItemId": 25860,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-91 Tijdige invoering rekenkundige ondergrens, ingediend door BBB",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66118",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 33
+      }
+    },
+    {
+      "id": 30432,
+      "documentId": 66413,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-115 Zicht op onderbelichte handhavingstaken, ingediend door ChristenUnie e.a.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66413",
+      "votes": {
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 39,
+        "disagree": 8
+      }
+    },
+    {
+      "id": 30431,
+      "documentId": 66424,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-113 Houd Utrechtse bossen overeind, ingediend door Partij voor de Dieren",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66424",
+      "votes": {
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 20,
+        "disagree": 28
+      }
+    },
+    {
+      "id": 30430,
+      "documentId": 66459,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-112a Reclamevrije bushokjes, ingediend door Partij voor de Dieren, SP & SGP",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66459",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 17,
+        "disagree": 31
+      }
+    },
+    {
+      "id": 30429,
+      "documentId": 66422,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-111 Ecologische en jurdische uitspraken afwachten, ingediend door Partij voor de Dieren, UtrechtNu! & SP",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66422",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 34
+      }
+    },
+    {
+      "id": 30428,
+      "documentId": 66421,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-110 Dierenwelzijn telt mee in UPLG, ingediend door Partij voor de Dieren",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66421",
+      "votes": {
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 17,
+        "disagree": 31
+      }
+    },
+    {
+      "id": 30427,
+      "documentId": 66420,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-109 Bereken schade uitstel van natuurdoelen, ingediend door Partij voor de Dieren",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66420",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 6,
+        "disagree": 42
+      }
+    },
+    {
+      "id": 30426,
+      "documentId": 66397,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-108 Maak ondermijning zichtbaar, ingediend door CDA e.a.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66397",
+      "votes": {
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 41,
+        "disagree": 7
+      }
+    },
+    {
+      "id": 30425,
+      "documentId": 66398,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-107 Van goede raad naar groene daad, ingediend door CDA e.a.",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66398",
+      "votes": {
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 36,
+        "disagree": 12
+      }
+    },
+    {
+      "id": 30424,
+      "documentId": 66429,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-105 Huizen erbij, beweegruimte erbij, ingediend door UtrechtNu!",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66429",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 13,
+        "disagree": 35
+      }
+    },
+    {
+      "id": 30423,
+      "documentId": 66401,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-102 Geen onteigening voor windenergie, ingediend door BBB, SGP & 50PLUS",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66401",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 15,
+        "disagree": 33
+      }
+    },
+    {
+      "id": 30422,
+      "documentId": 66458,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "M26-100a Provinciaal Garantiefonds t.b.v. investeringen om aan stikstof-, natuur- en waterdoelen te voldoen, ingediend door BBB & Volt",
+      "type": "motie",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66458",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 21,
+        "disagree": 27
+      }
+    },
+    {
+      "id": 30418,
+      "documentId": 66399,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "A26-42 Sociale veiligheid expliciet benoemen in P&C documenten bij beleidsdoel Bereikbaarheid Gezond en veilig, ingediend door Volt e.a.",
+      "type": "amendement",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66399",
+      "votes": {
+        "pvda": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 6,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 45,
+        "disagree": 3
+      }
+    },
+    {
+      "id": 30417,
+      "documentId": 66419,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "A26-41 Vergeet de reiziger niet in 2027, ingediend door Partij voor de Dieren",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66419",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 1,
+          "disagree": 3,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 12,
+        "disagree": 36
+      }
+    },
+    {
+      "id": 30416,
+      "documentId": 66418,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "A26-40 Repareer Circulair, ingediend door Partij voor de Dieren",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66418",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 44
+      }
+    },
+    {
+      "id": 30415,
+      "documentId": 66417,
+      "meetingItemId": 25841,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "A26-39 Natuurgeld is voor natuur, ingediend door Partij voor de Dieren",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66417",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 4,
+        "disagree": 44
+      }
+    },
+    {
+      "id": 30413,
+      "documentId": 66457,
+      "meetingItemId": 25888,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "A26-38a Bouwen aan democratische veerkracht, grondwet als toets bij benoemingen, ingediend door Partij voor de Dieren",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66457",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 3,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 11,
+        "disagree": 37
+      }
+    },
+    {
+      "id": 30412,
+      "documentId": 66404,
+      "meetingItemId": 25888,
+      "meetingId": 11151,
+      "date": "2026-11-11",
+      "title": "A26-37 Geen schijnzekerheid met een VOG, ingediend door UtrechtNu!",
+      "type": "amendement",
+      "result": "rejected",
+      "resultLabel": "Verworpen",
+      "source": "https://www.stateninformatie.provincie-utrecht.nl/vergaderingen/document/66404",
+      "votes": {
+        "pvda": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 0,
+          "disagree": 6,
+          "abstain": 0
+        },
+        "groenlinks": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "partij-voor-de-dieren": {
+          "agree": 0,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "forum-voor-democratie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 7,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "utrechtnu": {
+          "agree": 4,
+          "disagree": 0,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 5,
+        "disagree": 43
+      }
+    },
     {
       "id": 29651,
       "documentId": 65945,
