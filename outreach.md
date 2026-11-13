@@ -189,6 +189,29 @@ Drenthe brands its PS as the *Drents Parlement*, so its griffie lives on `@drent
 > [naam]
 
 ### 3b. Zeeland (iBabs)
+> **⏳ ANSWERED 2026-11-10 — "not yet", not "no". Parked on their side; they will tell us.** The
+> coördinerend functioneel beheerder replied to the 2026-11-06 nudge (apologising for the delay, internal
+> reorganisation). Substance:
+> - Zeeland **does** use iBabs, and the **auto-filled vote field per motie/amendement works in their
+>   environment too**, same as Limburg and Noord-Brabant.
+> - What is missing is the **overzichten** (the Moties / Amendementen / Stemming registers). At Zeeland
+>   those are **manually curated** and currently unused.
+> - Reason: they **do not use the iBabs publieksportaal**. `zeeland.bestuurlijkeinformatie.nl` is live but
+>   serves only as a source for their own site, zeeland.nl.
+> - **They are in the middle of adopting the portal properly, including populated overzichten**, and
+>   offered to mail us when it is ready.
+>
+> **Verified 2026-11-13:** all three registers return **0 rows**, and `/Agenda` gives **403** while
+> `/Calendar` is 200 — consistent with a portal that is live but not in use. So there is no way in via
+> agenda items either; the registers really are the blocker.
+>
+> **Replied 2026-11-13:** accepted the offer, and told them **which half we actually need**, because a
+> populated register on its own would list moties with no votes. The ask: when the Moties and Amendementen
+> overzichten are set up, make sure the per-item **`Stemmen`** field comes with them. No deadline given.
+>
+> **Next:** nothing to chase. This is now **inbound** — wait for their mail. If nothing by **~mid-February
+> 2027** (≈3 months), a light "hoe staat het ermee?" is fair.
+
 **To:** `statengriffier@zeeland.nl` (✅ **sent 2026-07-05**. NB: it's `statengriffie**r**@zeeland.nl`
 — the *-griffier* form, not `statengriffie@…` which was the wrong guess.)
 **Onderwerp:** Verzoek: stemgedrag per fractie als open data publiceren (iBabs stemmingenregister)
