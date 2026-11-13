@@ -522,8 +522,31 @@ control, and open asking is what has actually worked on this project (§2, §3c,
 > take our word for it: *"Toegang tot het afgeschermde deel van de API, zoals /roles, geven wij alleen in
 > opdracht van of in overleg met onze klanten. De provincies zijn eigenaar van deze gegevens. Daarom is de
 > Statengriffie van de betreffende provincie het juiste aanspreekpunt."*
-> **Follow-up:** nudge **~20 November** if silent. CI starts failing weekly ~2026-11-22 (45-day ceiling).
+> **⚠️ PREMISE CHANGED 2026-11-12: the portal block lifted on its own.** All four portals returned 200
+> again and the scheduled task collected normally (ZH 1337, Fryslân 960, Gelderland 513, Overijssel 618,
+> through 2026-11-11). **Cause unknown**, and we did not claim it was us; these mails were in flight.
+> The 45-day CI deadline is gone. **The threads stay open anyway**, for one honest reason: today's access
+> exists only while Notubiz leaves the portal reachable, and `/roles` would end that dependency. Every
+> reply from here says plainly that it is **no longer urgent** before restating the ask. Chasing a request
+> whose premise has evaporated is how you get filed under "persistent".
+>
+> **Follow-up:** nudge Zuid-Holland ~20 November (the only one still silent).
 > Four parallel threads: one reply is enough to unblock that province.
+>
+> **Replies so far (3 of 4):**
+> - **Gelderland — engaged** (see below). Still the most promising.
+> - **Overijssel — acknowledged 2026-11-11** by a griffiemedewerker, as "uw tip" that they will "zorgvuldig
+>   bekijken". Triage language: no owner, no timeline. Answered 2026-11-13 with the de-escalated update plus
+>   **the exact sentence the griffie would need to send Notubiz**, and a question about who picks it up.
+>   Mentioned Gelderland is looking at the same question.
+> - **Fryslân — answered 2026-11-11** by a Statenadviseur, outside the original thread. Three points, two of
+>   them worth correcting: (a) he cannot judge the consequences of `/roles` (same question Gelderland asked,
+>   so the same written answer serves both); (b) "alle stemuitslagen staan al per fractie in Notubiz", true
+>   of the **portal**, not of the **API**, which returns a `role_id` and no party name, which is the whole
+>   point of `/roles`; (c) "Notubiz maakt geen uitzonderingen", **half right and the thread-killer if left
+>   alone** — not on their own initiative, but their own words are "in opdracht van of in overleg met onze
+>   klanten", so the province can ask. He also suggested parsing the post-meeting PDF; declined politely
+>   (layout drifts, one change breaks it, and the portal data is exact and structured).
 >
 > **⏳ GELDERLAND — engaged, same day.** The griffie's **informatiemanager** replied within 25 minutes:
 > request and both routes are clear, she is taking it up internally **and with NotuBiz**. Her one open
