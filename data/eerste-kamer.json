@@ -3,7 +3,7 @@
     "province": "2023–2027",
     "body": "Eerste Kamer",
     "term": "2023–2027",
-    "generated_at": "2026-11-12T16:09:29+00:00",
+    "generated_at": "2026-11-19T16:42:57+00:00",
     "source": "https://www.eerstekamer.nl",
     "sourceName": "",
     "license": "Open data - Eerste Kamer der Staten-Generaal (eerstekamer.nl)",
@@ -14,8 +14,8 @@
     "note": "Stemmen zijn op fractieniveau geregistreerd (voor/tegen, zonder zetelaantallen): de Eerste Kamer stemt meestal bij zitten en opstaan. Beide zijden worden expliciet vermeld (niets afgeleid). Hamerstukken (zonder stemming aangenomen) zijn niet opgenomen.",
     "granularity": "fractie",
     "counts": {
-      "moties": 553,
-      "parties": 33
+      "moties": 558,
+      "parties": 32
     },
     "types": [
       "motie",
@@ -151,13 +151,584 @@
     {
       "slug": "roel-van-gurp",
       "name": "Roel van Gurp"
-    },
-    {
-      "slug": "saskia-kluit",
-      "name": "Saskia Kluit"
     }
   ],
   "moties": [
+    {
+      "id": 273842236086408,
+      "date": "2026-11-17",
+      "title": "Motie-Van der Goot (OPNL) c.s. over een notitie over toegankelijke en bereikbare rechtsstatelijke voorzieningen (36.600 VI, I)",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261117/moties_staat_van_de_rechtsstaat",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 19,
+        "disagree": 1
+      }
+    },
+    {
+      "id": 264387826885070,
+      "date": "2026-11-17",
+      "title": "Motie-Schalk (SGP) c.s. over voldoende capaciteit om bij massale wetsovertredingen de overtreders te vervolgen en eventuele schade te verhalen (36.600 VI, J)",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261117/moties_staat_van_de_rechtsstaat",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 14,
+        "disagree": 6
+      }
+    },
+    {
+      "id": 246470606052761,
+      "date": "2026-11-17",
+      "title": "Motie-Doornhof (CDA) c.s. over onderzoek verbetering rechtmatigheidstoetsing door de Eerste Kamer (36.600 VI, H)",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261117/moties_staat_van_de_rechtsstaat",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 179729310176830,
+      "date": "2026-11-17",
+      "title": "Motie-Dittrich (D66) c.s. over werkgroep om te verkennen welke rol de Eerste Kamer kan spelen bij tegengaan negatieve polarisatie in het publieke debat (36.600 VI, G)",
+      "type": "motie",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261117/moties_staat_van_de_rechtsstaat",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 238758766541058,
+      "date": "2026-11-17",
+      "title": "Alcoholmeter (36.585)",
+      "type": "wetsvoorstel",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://www.eerstekamer.nl/verslagdeel/20261117/alcoholmeterwet",
+      "votes": {
+        "50plus": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "bbb": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "cda": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "christenunie": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "d66": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-beukering": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-gasteren": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-van-de-sanden": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-visseren-hamakers": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fractie-walenkamp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ja21": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "opnl": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pro": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pvv": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sgp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sp": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "vvd": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "volt": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "fvd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pvdd": {
+          "agree": 0,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 18,
+        "disagree": 2
+      }
+    },
     {
       "id": 114668158780749,
       "date": "2026-11-10",
@@ -10494,7 +11065,7 @@
       }
     },
     {
-      "id": 253501431824396,
+      "id": 154422867943412,
       "date": "2026-06-23",
       "title": "Novelle Wet versterking regie volkshuisvesting (36.881)",
       "type": "wetsvoorstel",
@@ -10572,11 +11143,6 @@
           "disagree": 0,
           "abstain": 0
         },
-        "saskia-kluit": {
-          "agree": 1,
-          "disagree": 0,
-          "abstain": 0
-        },
         "fvd": {
           "agree": 0,
           "disagree": 1,
@@ -10604,7 +11170,7 @@
         }
       },
       "totals": {
-        "agree": 15,
+        "agree": 14,
         "disagree": 5
       }
     },
