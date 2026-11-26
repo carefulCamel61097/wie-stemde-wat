@@ -3,7 +3,7 @@
     "province": "Europese fracties",
     "body": "Europees Parlement",
     "term": "2024–2029",
-    "generated_at": "2026-11-19T17:05:09+00:00",
+    "generated_at": "2026-11-26T18:22:42+00:00",
     "source": "https://howtheyvote.eu",
     "sourceName": "HowTheyVote.eu",
     "license": "Open data - HowTheyVote.eu (ODbL 1.0) op basis van hoofdelijke stemmingen (roll-call) van het Europees Parlement",
@@ -14,7 +14,7 @@
     "note": "Stemmen per Europese fractie met exacte aantallen (voor/tegen/onthouding), op basis van hoofdelijke stemmingen (roll-call). Alleen eindstemmingen; stemmingen bij handopsteken worden niet hoofdelijk geregistreerd. Bron: HowTheyVote.eu (ODbL), Europees Parlement.",
     "granularity": "member",
     "counts": {
-      "moties": 729,
+      "moties": 766,
       "parties": 9
     },
     "types": [
@@ -64,6 +64,2226 @@
     }
   ],
   "moties": [
+    {
+      "id": 201321,
+      "date": "2026-11-26",
+      "title": "Reduction of methane emissions in the energy sector: postponement of certain obligations",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201321",
+      "votes": {
+        "epp": {
+          "agree": 144,
+          "disagree": 4,
+          "abstain": 1
+        },
+        "sd": {
+          "agree": 6,
+          "disagree": 98,
+          "abstain": 4
+        },
+        "pfe": {
+          "agree": 67,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 71,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "renew": {
+          "agree": 24,
+          "disagree": 21,
+          "abstain": 21
+        },
+        "green-efa": {
+          "agree": 0,
+          "disagree": 45,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 38,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 10,
+          "disagree": 11,
+          "abstain": 3
+        },
+        "esn": {
+          "agree": 19,
+          "disagree": 2,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 341,
+        "disagree": 224
+      }
+    },
+    {
+      "id": 201499,
+      "date": "2026-11-26",
+      "title": "Reduction of methane emissions in the energy sector: postponement of certain obligations",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201499",
+      "votes": {
+        "epp": {
+          "agree": 2,
+          "disagree": 147,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 41,
+          "disagree": 9,
+          "abstain": 59
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 71,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 0,
+          "disagree": 72,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 2,
+          "disagree": 63,
+          "abstain": 1
+        },
+        "green-efa": {
+          "agree": 45,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 37,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 9,
+          "disagree": 14,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 22,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 136,
+        "disagree": 398
+      }
+    },
+    {
+      "id": 201490,
+      "date": "2026-11-26",
+      "title": "Condemnation of pro-democracy activist and former lawmaker Au Kam San in Macao",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201490",
+      "votes": {
+        "epp": {
+          "agree": 148,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 100,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 22,
+          "disagree": 1,
+          "abstain": 41
+        },
+        "ecr": {
+          "agree": 66,
+          "disagree": 0,
+          "abstain": 4
+        },
+        "renew": {
+          "agree": 63,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 45,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 17,
+          "disagree": 4,
+          "abstain": 10
+        },
+        "ni": {
+          "agree": 6,
+          "disagree": 2,
+          "abstain": 15
+        },
+        "esn": {
+          "agree": 2,
+          "disagree": 2,
+          "abstain": 17
+        }
+      },
+      "totals": {
+        "agree": 469,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 201496,
+      "date": "2026-11-26",
+      "title": "Case of Paata Burchuladze and political prisoners under the Georgian Dream Regime",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201496",
+      "votes": {
+        "epp": {
+          "agree": 148,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 106,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 5,
+          "disagree": 10,
+          "abstain": 49
+        },
+        "ecr": {
+          "agree": 47,
+          "disagree": 4,
+          "abstain": 18
+        },
+        "renew": {
+          "agree": 64,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 44,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 22,
+          "disagree": 1,
+          "abstain": 11
+        },
+        "ni": {
+          "agree": 5,
+          "disagree": 11,
+          "abstain": 7
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 21,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 441,
+        "disagree": 47
+      }
+    },
+    {
+      "id": 201482,
+      "date": "2026-11-26",
+      "title": "Case of Eritrean Swedish journalist Dawit Isaak, arbitrarily detained in Eritrea",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201482",
+      "votes": {
+        "epp": {
+          "agree": 145,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 90,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 54,
+          "disagree": 0,
+          "abstain": 10
+        },
+        "ecr": {
+          "agree": 69,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "renew": {
+          "agree": 63,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 45,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 34,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 12,
+          "disagree": 2,
+          "abstain": 10
+        },
+        "esn": {
+          "agree": 17,
+          "disagree": 0,
+          "abstain": 3
+        }
+      },
+      "totals": {
+        "agree": 529,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 200572,
+      "date": "2026-11-25",
+      "title": "VAT reverse-charge mechanism",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200572",
+      "votes": {
+        "epp": {
+          "agree": 156,
+          "disagree": 3,
+          "abstain": 5
+        },
+        "sd": {
+          "agree": 105,
+          "disagree": 1,
+          "abstain": 4
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 79,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 0,
+          "disagree": 72,
+          "abstain": 6
+        },
+        "renew": {
+          "agree": 74,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 40,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "gue-ngl": {
+          "agree": 15,
+          "disagree": 2,
+          "abstain": 9
+        },
+        "ni": {
+          "agree": 18,
+          "disagree": 6,
+          "abstain": 2
+        },
+        "esn": {
+          "agree": 1,
+          "disagree": 22,
+          "abstain": 2
+        }
+      },
+      "totals": {
+        "agree": 409,
+        "disagree": 185
+      }
+    },
+    {
+      "id": 200586,
+      "date": "2026-11-25",
+      "title": "VAT fraud: extension of the application period of the optional reverse charge mechanism and Quick Reaction Mechanism",
+      "type": "overig",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200586",
+      "votes": {
+        "epp": {
+          "agree": 168,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 122,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 78,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 74,
+          "disagree": 0,
+          "abstain": 3
+        },
+        "renew": {
+          "agree": 74,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 47,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 36,
+          "disagree": 0,
+          "abstain": 3
+        },
+        "ni": {
+          "agree": 20,
+          "disagree": 1,
+          "abstain": 5
+        },
+        "esn": {
+          "agree": 10,
+          "disagree": 0,
+          "abstain": 15
+        }
+      },
+      "totals": {
+        "agree": 629,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 200608,
+      "date": "2026-11-25",
+      "title": "Towards an EU strategy to protect and strengthen the international justice system and its institutions, mechanisms and partners",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200608",
+      "votes": {
+        "epp": {
+          "agree": 154,
+          "disagree": 0,
+          "abstain": 6
+        },
+        "sd": {
+          "agree": 120,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 73,
+          "abstain": 6
+        },
+        "ecr": {
+          "agree": 2,
+          "disagree": 62,
+          "abstain": 13
+        },
+        "renew": {
+          "agree": 73,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 37,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 4,
+          "disagree": 9,
+          "abstain": 11
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 24,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 438,
+        "disagree": 168
+      }
+    },
+    {
+      "id": 201352,
+      "date": "2026-11-25",
+      "title": "Speeding-up environmental assessments",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201352",
+      "votes": {
+        "epp": {
+          "agree": 2,
+          "disagree": 165,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 20,
+          "disagree": 97,
+          "abstain": 6
+        },
+        "pfe": {
+          "agree": 1,
+          "disagree": 78,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 0,
+          "disagree": 80,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 0,
+          "disagree": 75,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 46,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 38,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 13,
+          "disagree": 12,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 24,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 120,
+        "disagree": 533
+      }
+    },
+    {
+      "id": 201445,
+      "date": "2026-11-25",
+      "title": "Speeding-up environmental assessments",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201445",
+      "votes": {
+        "epp": {
+          "agree": 165,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 0,
+          "disagree": 121,
+          "abstain": 1
+        },
+        "pfe": {
+          "agree": 73,
+          "disagree": 5,
+          "abstain": 1
+        },
+        "ecr": {
+          "agree": 78,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "renew": {
+          "agree": 21,
+          "disagree": 46,
+          "abstain": 7
+        },
+        "green-efa": {
+          "agree": 0,
+          "disagree": 48,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 37,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 11,
+          "disagree": 7,
+          "abstain": 8
+        },
+        "esn": {
+          "agree": 19,
+          "disagree": 1,
+          "abstain": 5
+        }
+      },
+      "totals": {
+        "agree": 367,
+        "disagree": 268
+      }
+    },
+    {
+      "id": 200977,
+      "date": "2026-11-25",
+      "title": "Research and training programme of the European Atomic Energy Community for the period 2028-2032, complementing Horizon Europe, the Framework Programme for Research and Innovation, and providing for the Community’s contribution to the ITER project",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200977",
+      "votes": {
+        "epp": {
+          "agree": 161,
+          "disagree": 0,
+          "abstain": 8
+        },
+        "sd": {
+          "agree": 102,
+          "disagree": 17,
+          "abstain": 2
+        },
+        "pfe": {
+          "agree": 63,
+          "disagree": 5,
+          "abstain": 10
+        },
+        "ecr": {
+          "agree": 72,
+          "disagree": 0,
+          "abstain": 4
+        },
+        "renew": {
+          "agree": 73,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "green-efa": {
+          "agree": 0,
+          "disagree": 46,
+          "abstain": 2
+        },
+        "gue-ngl": {
+          "agree": 3,
+          "disagree": 23,
+          "abstain": 12
+        },
+        "ni": {
+          "agree": 14,
+          "disagree": 5,
+          "abstain": 7
+        },
+        "esn": {
+          "agree": 24,
+          "disagree": 0,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 512,
+        "disagree": 96
+      }
+    },
+    {
+      "id": 201176,
+      "date": "2026-11-25",
+      "title": "Objection pursuant to Rule 115(2) and (3) of the Rules of Procedure on the draft Commission Implementing Decision amending Implementing Decision (EU) 2016/2323 as regards updates to the European List of ship recycling facilities (D117805)",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201176",
+      "votes": {
+        "epp": {
+          "agree": 71,
+          "disagree": 76,
+          "abstain": 11
+        },
+        "sd": {
+          "agree": 112,
+          "disagree": 3,
+          "abstain": 1
+        },
+        "pfe": {
+          "agree": 8,
+          "disagree": 61,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 26,
+          "disagree": 44,
+          "abstain": 2
+        },
+        "renew": {
+          "agree": 61,
+          "disagree": 3,
+          "abstain": 2
+        },
+        "green-efa": {
+          "agree": 45,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 39,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 14,
+          "disagree": 4,
+          "abstain": 8
+        },
+        "esn": {
+          "agree": 1,
+          "disagree": 23,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 377,
+        "disagree": 214
+      }
+    },
+    {
+      "id": 201258,
+      "date": "2026-11-25",
+      "title": "Media freedom and rule of law in the Czech Republic: threats to the independence of public broadcasters",
+      "type": "resolutie",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201258",
+      "votes": {
+        "epp": {
+          "agree": 157,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 118,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 2,
+          "disagree": 77,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 6,
+          "disagree": 31,
+          "abstain": 39
+        },
+        "renew": {
+          "agree": 70,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 37,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 4,
+          "disagree": 15,
+          "abstain": 7
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 25,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 442,
+        "disagree": 158
+      }
+    },
+    {
+      "id": 200563,
+      "date": "2026-11-25",
+      "title": "Laying a framework for strengthening the availability and security of supply of critical medicinal products as well as the availability of, and accessibility of, medicinal products of common interest, and amending Regulation (EU) 2024/795",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200563",
+      "votes": {
+        "epp": {
+          "agree": 168,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 121,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 64,
+          "disagree": 2,
+          "abstain": 10
+        },
+        "ecr": {
+          "agree": 70,
+          "disagree": 3,
+          "abstain": 6
+        },
+        "renew": {
+          "agree": 75,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 38,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 6,
+          "disagree": 8,
+          "abstain": 12
+        },
+        "esn": {
+          "agree": 2,
+          "disagree": 22,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 592,
+        "disagree": 35
+      }
+    },
+    {
+      "id": 201175,
+      "date": "2026-11-25",
+      "title": "Laying a framework for strengthening the availability and security of supply of critical medicinal products as well as the availability of, and accessibility of, medicinal products of common interest, and amending Regulation (EU) 2024/795",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201175",
+      "votes": {
+        "epp": {
+          "agree": 0,
+          "disagree": 169,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 0,
+          "disagree": 122,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 7,
+          "disagree": 63,
+          "abstain": 8
+        },
+        "ecr": {
+          "agree": 8,
+          "disagree": 68,
+          "abstain": 1
+        },
+        "renew": {
+          "agree": 2,
+          "disagree": 72,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 0,
+          "disagree": 48,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 39,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 5,
+          "disagree": 13,
+          "abstain": 5
+        },
+        "esn": {
+          "agree": 24,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 46,
+        "disagree": 595
+      }
+    },
+    {
+      "id": 200558,
+      "date": "2026-11-25",
+      "title": "Interim report in view of the consent procedure on a broad package of agreements to consolidate, deepen and expand the bilateral relations with the Swiss Confederation",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200558",
+      "votes": {
+        "epp": {
+          "agree": 167,
+          "disagree": 1,
+          "abstain": 1
+        },
+        "sd": {
+          "agree": 121,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 48,
+          "disagree": 7,
+          "abstain": 23
+        },
+        "ecr": {
+          "agree": 76,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "renew": {
+          "agree": 73,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 47,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 14,
+          "disagree": 0,
+          "abstain": 24
+        },
+        "ni": {
+          "agree": 6,
+          "disagree": 14,
+          "abstain": 6
+        },
+        "esn": {
+          "agree": 2,
+          "disagree": 0,
+          "abstain": 23
+        }
+      },
+      "totals": {
+        "agree": 554,
+        "disagree": 22
+      }
+    },
+    {
+      "id": 200606,
+      "date": "2026-11-25",
+      "title": "General budget of the European Union for the financial year 2027 - all sections",
+      "type": "begroting",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200606",
+      "votes": {
+        "epp": {
+          "agree": 160,
+          "disagree": 0,
+          "abstain": 9
+        },
+        "sd": {
+          "agree": 120,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 70,
+          "abstain": 8
+        },
+        "ecr": {
+          "agree": 8,
+          "disagree": 32,
+          "abstain": 39
+        },
+        "renew": {
+          "agree": 67,
+          "disagree": 3,
+          "abstain": 5
+        },
+        "green-efa": {
+          "agree": 46,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 37,
+          "abstain": 2
+        },
+        "ni": {
+          "agree": 5,
+          "disagree": 17,
+          "abstain": 4
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 25,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 406,
+        "disagree": 184
+      }
+    },
+    {
+      "id": 201345,
+      "date": "2026-11-25",
+      "title": "Establishing the Union support for asylum, migration and integration for the period from 2028 to 2034",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201345",
+      "votes": {
+        "epp": {
+          "agree": 163,
+          "disagree": 0,
+          "abstain": 7
+        },
+        "sd": {
+          "agree": 122,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 79,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 0,
+          "disagree": 80,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 75,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 35,
+          "disagree": 3,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 2,
+          "disagree": 22,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 24,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 445,
+        "disagree": 208
+      }
+    },
+    {
+      "id": 201349,
+      "date": "2026-11-25",
+      "title": "Establishing the European Social Fund as part of the National and Regional Partnership Plan set out in Regulation (EU) […] [NRPPlan] establishing conditions for the implementation of the Union support to quality employment, skills and social inclusion for the period from 2028 to 2034",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201349",
+      "votes": {
+        "epp": {
+          "agree": 159,
+          "disagree": 9,
+          "abstain": 1
+        },
+        "sd": {
+          "agree": 123,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 9,
+          "disagree": 68,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 5,
+          "disagree": 74,
+          "abstain": 1
+        },
+        "renew": {
+          "agree": 59,
+          "disagree": 16,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 38,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 16,
+          "disagree": 8,
+          "abstain": 2
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 23,
+          "abstain": 2
+        }
+      },
+      "totals": {
+        "agree": 457,
+        "disagree": 199
+      }
+    },
+    {
+      "id": 201348,
+      "date": "2026-11-25",
+      "title": "Establishing the Connecting Europe Facility for the period 2028-2034, amending Regulation (EU) 2024/1679 and repealing Regulation (EU) 2021/1153",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201348",
+      "votes": {
+        "epp": {
+          "agree": 169,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 123,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 7,
+          "disagree": 65,
+          "abstain": 7
+        },
+        "ecr": {
+          "agree": 3,
+          "disagree": 75,
+          "abstain": 2
+        },
+        "renew": {
+          "agree": 75,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 16,
+          "disagree": 16,
+          "abstain": 5
+        },
+        "ni": {
+          "agree": 10,
+          "disagree": 15,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 2,
+          "abstain": 23
+        }
+      },
+      "totals": {
+        "agree": 451,
+        "disagree": 173
+      }
+    },
+    {
+      "id": 201344,
+      "date": "2026-11-25",
+      "title": "Establishing the 'AgoraEU' programme for the period 2028-2034, and repealing Regulations (EU) 2021/692 and (EU) 2021/818",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201344",
+      "votes": {
+        "epp": {
+          "agree": 162,
+          "disagree": 5,
+          "abstain": 2
+        },
+        "sd": {
+          "agree": 123,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 79,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 0,
+          "disagree": 80,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 75,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 37,
+          "disagree": 1,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 3,
+          "disagree": 16,
+          "abstain": 7
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 25,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 448,
+        "disagree": 206
+      }
+    },
+    {
+      "id": 201347,
+      "date": "2026-11-25",
+      "title": "Establishing Horizon Europe, the Framework Programme for Research and Innovation, for the period 2028-2034 laying down its rules for participation and dissemination, and repealing Regulation (EU) 2021/695",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201347",
+      "votes": {
+        "epp": {
+          "agree": 170,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 121,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 8,
+          "disagree": 70,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 3,
+          "disagree": 77,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 74,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 24,
+          "disagree": 3,
+          "abstain": 12
+        },
+        "ni": {
+          "agree": 10,
+          "disagree": 15,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 25,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 458,
+        "disagree": 190
+      }
+    },
+    {
+      "id": 200609,
+      "date": "2026-11-25",
+      "title": "Establishing Global Europe",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200609",
+      "votes": {
+        "epp": {
+          "agree": 161,
+          "disagree": 3,
+          "abstain": 3
+        },
+        "sd": {
+          "agree": 123,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 7,
+          "disagree": 71,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 0,
+          "disagree": 79,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 73,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 47,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 3,
+          "disagree": 32,
+          "abstain": 4
+        },
+        "ni": {
+          "agree": 2,
+          "disagree": 23,
+          "abstain": 1
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 24,
+          "abstain": 1
+        }
+      },
+      "totals": {
+        "agree": 416,
+        "disagree": 233
+      }
+    },
+    {
+      "id": 200604,
+      "date": "2026-11-25",
+      "title": "EU-Syria political relations",
+      "type": "initiatiefverslag",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200604",
+      "votes": {
+        "epp": {
+          "agree": 155,
+          "disagree": 3,
+          "abstain": 5
+        },
+        "sd": {
+          "agree": 117,
+          "disagree": 1,
+          "abstain": 4
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 71,
+          "abstain": 7
+        },
+        "ecr": {
+          "agree": 3,
+          "disagree": 13,
+          "abstain": 61
+        },
+        "renew": {
+          "agree": 69,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "green-efa": {
+          "agree": 46,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 22,
+          "disagree": 1,
+          "abstain": 12
+        },
+        "ni": {
+          "agree": 3,
+          "disagree": 13,
+          "abstain": 10
+        },
+        "esn": {
+          "agree": 1,
+          "disagree": 24,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 416,
+        "disagree": 126
+      }
+    },
+    {
+      "id": 201185,
+      "date": "2026-11-25",
+      "title": "Draft amending budget no 3 to the general budget 2026 adjustments in expenditure, update of revenues and other technical updates",
+      "type": "begroting",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201185",
+      "votes": {
+        "epp": {
+          "agree": 165,
+          "disagree": 2,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 112,
+          "disagree": 0,
+          "abstain": 9
+        },
+        "pfe": {
+          "agree": 0,
+          "disagree": 23,
+          "abstain": 55
+        },
+        "ecr": {
+          "agree": 4,
+          "disagree": 35,
+          "abstain": 40
+        },
+        "renew": {
+          "agree": 66,
+          "disagree": 7,
+          "abstain": 2
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 36,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 10,
+          "disagree": 5,
+          "abstain": 11
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 22,
+          "abstain": 3
+        }
+      },
+      "totals": {
+        "agree": 441,
+        "disagree": 97
+      }
+    },
+    {
+      "id": 200559,
+      "date": "2026-11-25",
+      "title": "Conclusion of a broad package of agreements to consolidate, deepen and expand the bilateral relations with the Swiss Confederation",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200559",
+      "votes": {
+        "epp": {
+          "agree": 167,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 121,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 58,
+          "disagree": 8,
+          "abstain": 13
+        },
+        "ecr": {
+          "agree": 74,
+          "disagree": 1,
+          "abstain": 2
+        },
+        "renew": {
+          "agree": 75,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 24,
+          "disagree": 0,
+          "abstain": 15
+        },
+        "ni": {
+          "agree": 12,
+          "disagree": 4,
+          "abstain": 10
+        },
+        "esn": {
+          "agree": 5,
+          "disagree": 0,
+          "abstain": 20
+        }
+      },
+      "totals": {
+        "agree": 584,
+        "disagree": 13
+      }
+    },
+    {
+      "id": 200537,
+      "date": "2026-11-25",
+      "title": "Amendments to Parliament’s Rules of Procedure on proxy voting during pregnancy and immediately after childbirth",
+      "type": "overig",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200537",
+      "votes": {
+        "epp": {
+          "agree": 168,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 122,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 71,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 77,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 72,
+          "disagree": 3,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 39,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 22,
+          "disagree": 1,
+          "abstain": 3
+        },
+        "esn": {
+          "agree": 8,
+          "disagree": 15,
+          "abstain": 2
+        }
+      },
+      "totals": {
+        "agree": 627,
+        "disagree": 25
+      }
+    },
+    {
+      "id": 200637,
+      "date": "2026-11-25",
+      "title": "Amending Directives 2001/18/EC and 2010/53/EU as regards the placing on the market of genetically modified micro-organisms and the processing of organs",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/200637",
+      "votes": {
+        "epp": {
+          "agree": 157,
+          "disagree": 9,
+          "abstain": 4
+        },
+        "sd": {
+          "agree": 87,
+          "disagree": 17,
+          "abstain": 17
+        },
+        "pfe": {
+          "agree": 4,
+          "disagree": 33,
+          "abstain": 41
+        },
+        "ecr": {
+          "agree": 26,
+          "disagree": 27,
+          "abstain": 27
+        },
+        "renew": {
+          "agree": 67,
+          "disagree": 0,
+          "abstain": 7
+        },
+        "green-efa": {
+          "agree": 7,
+          "disagree": 39,
+          "abstain": 2
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 29,
+          "abstain": 8
+        },
+        "ni": {
+          "agree": 3,
+          "disagree": 18,
+          "abstain": 5
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 4,
+          "abstain": 21
+        }
+      },
+      "totals": {
+        "agree": 351,
+        "disagree": 176
+      }
+    },
+    {
+      "id": 201119,
+      "date": "2026-11-25",
+      "title": "Amending Directives 2001/18/EC and 2010/53/EU as regards the placing on the market of genetically modified micro-organisms and the processing of organs",
+      "type": "wetgeving",
+      "result": null,
+      "resultLabel": null,
+      "source": "https://howtheyvote.eu/votes/201119",
+      "votes": {
+        "epp": {
+          "agree": 5,
+          "disagree": 163,
+          "abstain": 2
+        },
+        "sd": {
+          "agree": 4,
+          "disagree": 91,
+          "abstain": 26
+        },
+        "pfe": {
+          "agree": 6,
+          "disagree": 41,
+          "abstain": 32
+        },
+        "ecr": {
+          "agree": 7,
+          "disagree": 54,
+          "abstain": 18
+        },
+        "renew": {
+          "agree": 0,
+          "disagree": 75,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 42,
+          "disagree": 5,
+          "abstain": 1
+        },
+        "gue-ngl": {
+          "agree": 30,
+          "disagree": 0,
+          "abstain": 8
+        },
+        "ni": {
+          "agree": 19,
+          "disagree": 4,
+          "abstain": 3
+        },
+        "esn": {
+          "agree": 5,
+          "disagree": 3,
+          "abstain": 17
+        }
+      },
+      "totals": {
+        "agree": 118,
+        "disagree": 436
+      }
+    },
+    {
+      "id": 200529,
+      "date": "2026-11-24",
+      "title": "Protection of the Union’s financial interests in the post-2027 multiannual financial framework through the revision of the anti-fraud architecture",
+      "type": "initiatiefverslag",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/200529",
+      "votes": {
+        "epp": {
+          "agree": 171,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 127,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 31,
+          "disagree": 5,
+          "abstain": 43
+        },
+        "ecr": {
+          "agree": 58,
+          "disagree": 0,
+          "abstain": 21
+        },
+        "renew": {
+          "agree": 75,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 43,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 37,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "ni": {
+          "agree": 7,
+          "disagree": 1,
+          "abstain": 18
+        },
+        "esn": {
+          "agree": 3,
+          "disagree": 3,
+          "abstain": 17
+        }
+      },
+      "totals": {
+        "agree": 552,
+        "disagree": 9
+      }
+    },
+    {
+      "id": 200577,
+      "date": "2026-11-24",
+      "title": "Organic production: amending certain production, labelling and certification rules and certain rules on trade with third countries",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/200577",
+      "votes": {
+        "epp": {
+          "agree": 168,
+          "disagree": 0,
+          "abstain": 3
+        },
+        "sd": {
+          "agree": 125,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "pfe": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 70
+        },
+        "ecr": {
+          "agree": 49,
+          "disagree": 2,
+          "abstain": 27
+        },
+        "renew": {
+          "agree": 74,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 1,
+          "disagree": 28,
+          "abstain": 10
+        },
+        "ni": {
+          "agree": 11,
+          "disagree": 8,
+          "abstain": 7
+        },
+        "esn": {
+          "agree": 1,
+          "disagree": 0,
+          "abstain": 22
+        }
+      },
+      "totals": {
+        "agree": 486,
+        "disagree": 39
+      }
+    },
+    {
+      "id": 200557,
+      "date": "2026-11-24",
+      "title": "Multiannual plan for the fisheries exploiting demersal stocks in the western Mediterranean Sea",
+      "type": "initiatiefverslag",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/200557",
+      "votes": {
+        "epp": {
+          "agree": 159,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 110,
+          "disagree": 11,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 77,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 67,
+          "disagree": 5,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 71,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 1,
+          "disagree": 44,
+          "abstain": 1
+        },
+        "gue-ngl": {
+          "agree": 1,
+          "disagree": 30,
+          "abstain": 5
+        },
+        "ni": {
+          "agree": 7,
+          "disagree": 7,
+          "abstain": 8
+        },
+        "esn": {
+          "agree": 22,
+          "disagree": 1,
+          "abstain": 0
+        }
+      },
+      "totals": {
+        "agree": 515,
+        "disagree": 99
+      }
+    },
+    {
+      "id": 200575,
+      "date": "2026-11-24",
+      "title": "Market stability reserve for the EU Emissions Trading System (EU ETS): ceasing the invalidation of allowances",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/200575",
+      "votes": {
+        "epp": {
+          "agree": 132,
+          "disagree": 0,
+          "abstain": 27
+        },
+        "sd": {
+          "agree": 120,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 9,
+          "disagree": 53,
+          "abstain": 14
+        },
+        "ecr": {
+          "agree": 7,
+          "disagree": 6,
+          "abstain": 63
+        },
+        "renew": {
+          "agree": 69,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 45,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "gue-ngl": {
+          "agree": 10,
+          "disagree": 12,
+          "abstain": 15
+        },
+        "ni": {
+          "agree": 11,
+          "disagree": 7,
+          "abstain": 8
+        },
+        "esn": {
+          "agree": 0,
+          "disagree": 0,
+          "abstain": 18
+        }
+      },
+      "totals": {
+        "agree": 403,
+        "disagree": 78
+      }
+    },
+    {
+      "id": 200541,
+      "date": "2026-11-24",
+      "title": "Amending certain Regulations as regards the extension of certain mitigating measures available for small and medium sized enterprises to small mid-cap enterprises and further simplification measures (Omnibus IV)",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/200541",
+      "votes": {
+        "epp": {
+          "agree": 171,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 120,
+          "disagree": 1,
+          "abstain": 5
+        },
+        "pfe": {
+          "agree": 78,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 77,
+          "disagree": 0,
+          "abstain": 2
+        },
+        "renew": {
+          "agree": 74,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 33,
+          "disagree": 0,
+          "abstain": 10
+        },
+        "gue-ngl": {
+          "agree": 0,
+          "disagree": 38,
+          "abstain": 1
+        },
+        "ni": {
+          "agree": 12,
+          "disagree": 5,
+          "abstain": 9
+        },
+        "esn": {
+          "agree": 7,
+          "disagree": 0,
+          "abstain": 15
+        }
+      },
+      "totals": {
+        "agree": 572,
+        "disagree": 44
+      }
+    },
+    {
+      "id": 200533,
+      "date": "2026-11-24",
+      "title": "Amending certain Regulations as regards digitalisation and common specifications (Omnibus IV)",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/200533",
+      "votes": {
+        "epp": {
+          "agree": 170,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 126,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 76,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ecr": {
+          "agree": 76,
+          "disagree": 0,
+          "abstain": 3
+        },
+        "renew": {
+          "agree": 74,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 48,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "gue-ngl": {
+          "agree": 30,
+          "disagree": 0,
+          "abstain": 9
+        },
+        "ni": {
+          "agree": 14,
+          "disagree": 2,
+          "abstain": 10
+        },
+        "esn": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 15
+        }
+      },
+      "totals": {
+        "agree": 622,
+        "disagree": 2
+      }
+    },
+    {
+      "id": 200539,
+      "date": "2026-11-24",
+      "title": "Amending certain Directives as regards the extension of certain mitigating measures available for small and medium sized enterprises to small mid-cap enterprises and further simplifying measures (Omnibus IV)***I",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/200539",
+      "votes": {
+        "epp": {
+          "agree": 170,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 120,
+          "disagree": 1,
+          "abstain": 4
+        },
+        "pfe": {
+          "agree": 79,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "ecr": {
+          "agree": 79,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 74,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 37,
+          "disagree": 0,
+          "abstain": 4
+        },
+        "gue-ngl": {
+          "agree": 1,
+          "disagree": 38,
+          "abstain": 0
+        },
+        "ni": {
+          "agree": 6,
+          "disagree": 7,
+          "abstain": 13
+        },
+        "esn": {
+          "agree": 9,
+          "disagree": 0,
+          "abstain": 13
+        }
+      },
+      "totals": {
+        "agree": 575,
+        "disagree": 46
+      }
+    },
+    {
+      "id": 200531,
+      "date": "2026-11-24",
+      "title": "Amending certain Directives as regards digitalisation and common specifications (Omnibus IV)",
+      "type": "wetgeving",
+      "result": "accepted",
+      "resultLabel": "Aangenomen",
+      "source": "https://howtheyvote.eu/votes/200531",
+      "votes": {
+        "epp": {
+          "agree": 171,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "sd": {
+          "agree": 126,
+          "disagree": 1,
+          "abstain": 0
+        },
+        "pfe": {
+          "agree": 78,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "ecr": {
+          "agree": 79,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "renew": {
+          "agree": 75,
+          "disagree": 0,
+          "abstain": 0
+        },
+        "green-efa": {
+          "agree": 47,
+          "disagree": 0,
+          "abstain": 1
+        },
+        "gue-ngl": {
+          "agree": 29,
+          "disagree": 0,
+          "abstain": 10
+        },
+        "ni": {
+          "agree": 14,
+          "disagree": 3,
+          "abstain": 9
+        },
+        "esn": {
+          "agree": 8,
+          "disagree": 0,
+          "abstain": 15
+        }
+      },
+      "totals": {
+        "agree": 627,
+        "disagree": 4
+      }
+    },
     {
       "id": 199985,
       "date": "2026-11-12",
